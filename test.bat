@@ -15,4 +15,5 @@ IF EXIST PCTesterScript (
 )
 git clone https://github.com/eltoroit/PCTesterScript.git
 CD PCTesterScript
-node tester.js &
+REM node tester.js -test
+    node tester.js &
