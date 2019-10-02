@@ -37,8 +37,8 @@
 	},
 	{
 		"id": "BM_6",
-		"title": "[BAR][Trailhead Bootcamp]",
-		"urlExpected": "https://trailhead.salesforce.com/bootcamps/spain",
+		"title": "[BAR][Dreamforce Website]",
+		"urlExpected": "https://www.salesforce.com/dreamforce/",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,
@@ -47,7 +47,7 @@
 	{
 		"id": "BM_7",
 		"title": "[BAR][Mimeo EBook]",
-		"urlExpected": "https://salesforce.mimeo.digital/",
+		"urlExpected": "https://salesforce.mimeo.digital/login",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,
