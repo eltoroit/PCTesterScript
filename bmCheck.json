@@ -29,7 +29,7 @@
 	{
 		"id": "BM_5",
 		"title": "[BAR][Bootcamp Session Survey]",
-		"urlExpected": "https://www.surveymonkey.com/r/barcelonabootcamp",
+		"urlExpected": "https://www.surveymonkey.com/r/Dreamforce19Bootcamp",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,
