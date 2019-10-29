@@ -806,7 +806,7 @@ function doAll() {
 	bookmarksChecks();
 
 	// Copy ETEPL files
-	doEach(["xx", "yy", "zz", "pause"]).then(() => {
+	doEach(["AAA", "BBB", "CCC", "pause"]).then(() => {
 		console.log("DONE COPY");
 		menuChooseEvent(data);
 	});
