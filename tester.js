@@ -789,17 +789,21 @@ function bookmarksChecks() {
 
 const data = loadFileJson("./data.json");
 function doEach(arCmds) {
+	console.log(`ARRAY: ${json.stringify(arCmds)}`);
 	return new Promise((resolve, reject) => {
+		console.log(`length: ${arCmds.length}`);
 		if (arCmds.length === 0) {
+			console.log(`EXIT`);
 			resolve();
+		} else {
+			const cmd = arCmds.shift();
+			console.log(`CMD: ${json.stringify(cmd)}`);
+			cmdETEPL(cmd).then(() => {
+				doEach(arCmds).then(() => {
+					resolve();
+				});
+			});
 		}
-		const cmd = arCmds.shift();
-		console.error(cmd);
-		// cmdETEPL(cmd).then(() => {
-		doEach(arCmds).then(() => {
-			resolve();
-		});
-		// });
 	});
 }
 function doAll() {
