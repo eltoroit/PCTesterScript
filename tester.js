@@ -800,9 +800,16 @@ function doEach(arCmds) {
 	});
 }
 function doAll() {
+	const sourcePath = path.join("C:/TH/PCTesterScript/copy/src");
 	const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
+	const cmds = [];
+
 	// Copy ETEPL files
-	doEach([`DEL /Q /S ${destPath} > NUL`, `RMDIR /Q /S ${destPath} > NUL`, `RMDIR /Q /S ${destPath} > NUL`]).then(() => {
+	cmds.push(`DEL /Q /S "${destPath}" > NUL`);
+	cmds.push(`RMDIR /Q /S "${destPath}" > NUL`);
+	cmds.push(`mkdir ${destPath}`);
+	cmds.push(`xcopy /v /q /s /e /y "${sourcePath}" "${destPath}"`);
+	doEach(cmds).then(() => {
 		console.log("DONE COPY");
 
 		// log.clearScreen();
