@@ -794,20 +794,21 @@ function doEach(arCmds) {
 			resolve();
 		}
 		const cmd = arCmds.shift();
-		cmdETEPL(cmd).then(() => {
-			doEach(arCmds).then(() => {
-				resolve();
-			});
+		console.error(cmd);
+		// cmdETEPL(cmd).then(() => {
+		doEach(arCmds).then(() => {
+			resolve();
 		});
+		// });
 	});
 }
 function doAll() {
-	log.clearScreen();
-	log.promptMsg(`Version: ${data.now}`);
-	bookmarksChecks();
-
 	// Copy ETEPL files
 	doEach(["AAA", "BBB", "CCC"]).then(() => {
+		// log.clearScreen();
+		log.promptMsg(`Version: ${data.now}`);
+		bookmarksChecks();
+
 		console.log("DONE COPY");
 		menuChooseEvent(data);
 	});
