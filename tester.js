@@ -786,21 +786,30 @@ function bookmarksChecks() {
 		throw new Error(msg);
 	}
 }
+
+const data = loadFileJson("./data.json");
+function doEach(arCmds) {
+	return new Promise((resolve, reject) => {
+		if (arCmds.length === 0) {
+			resolve();
+		}
+		const cmd = arCmds.shift();
+		cmdETEPL(cmd).then(() => {
+			doEach(arCmds);
+			resolve();
+		});
+	});
+}
 function doAll() {
 	log.clearScreen();
 	log.promptMsg(`Version: ${data.now}`);
 	bookmarksChecks();
 
 	// Copy ETEPL files
-	cmdETEPL("xx xx xx")
-		.then(() => {
-			console.log("DONE COPY");
-		})
-		.then(() => {
-			// Launch menu
-			menuChooseEvent(data);
-		});
+	doEach(["xx", "yy", "zz", "pause"]).then(() => {
+		console.log("DONE COPY");
+		menuChooseEvent(data);
+	});
 }
 
-const data = loadFileJson("./data.json");
 doAll();
