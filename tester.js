@@ -795,8 +795,9 @@ function doEach(arCmds) {
 		}
 		const cmd = arCmds.shift();
 		cmdETEPL(cmd).then(() => {
-			doEach(arCmds);
-			resolve();
+			doEach(arCmds).then(() => {
+				resolve();
+			});
 		});
 	});
 }
