@@ -145,9 +145,9 @@ function cmdETEPL(cmd) {
 		console.log(`Command: ${cmd}`);
 		exec(cmd, (error, stdout, stderr) => {
 			const result = {
-				error: error.trim(),
-				stderr: stderr.trim(),
-				stdout: stdout.trim()
+				error,
+				stderr,
+				stdout
 			};
 			if (result.error) {
 				console.error(result.error);
