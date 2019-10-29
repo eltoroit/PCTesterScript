@@ -140,6 +140,24 @@ function executeCommand(instruction) {
 		instruction.callback(output);
 	});
 }
+function cmdETEPL(cmd) {
+	return new Promise((resolve, reject) => {
+		console.log(`Command: ${cmd}`);
+		exec(cmd, (error, stdout, stderr) => {
+			if (error) {
+				console.error(errortrim());
+				reject(error.trim());
+			}
+			if (stderr) {
+				console.error(stderrtrim());
+				reject(stderr.trim());
+			}
+			console.log(stdout.trim());
+			resolve(stdout.trim());
+		});
+	});
+}
+
 function checkExact(instruction) {
 	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
 	instruction.callback = function(output) {
@@ -766,4 +784,14 @@ if (doesFileExist(bmCheckPath)) {
 	throw new Error(msg);
 }
 
-menuChooseEvent(data);
+async function doAll() {
+	// Copy ETEPL files
+	cmdETEPL("xx xx xx").then(() => {
+		console.log("DONE COPY");
+	});
+
+	// Launch menu
+	menuChooseEvent(data);
+}
+
+doAll();
