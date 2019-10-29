@@ -149,15 +149,7 @@ function cmdETEPL(cmd) {
 				stderr,
 				stdout
 			};
-			if (result.error) {
-				console.error(result.error);
-			}
-			if (result.stderr) {
-				console.error(result.stderr);
-			}
-			if (result.stdout) {
-				console.log(result.stdout);
-			}
+			console.log(JSON.stringify(result, null, 4));
 			resolve(result);
 		});
 	});
@@ -809,11 +801,11 @@ function doEach(arCmds) {
 function doAll() {
 	// Copy ETEPL files
 	doEach(["AAA", "BBB", "CCC"]).then(() => {
+		console.log("DONE COPY");
+
 		// log.clearScreen();
 		log.promptMsg(`Version: ${data.now}`);
 		bookmarksChecks();
-
-		console.log("DONE COPY");
 		menuChooseEvent(data);
 	});
 }
