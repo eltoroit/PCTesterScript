@@ -144,16 +144,21 @@ function cmdETEPL(cmd) {
 	return new Promise((resolve, reject) => {
 		console.log(`Command: ${cmd}`);
 		exec(cmd, (error, stdout, stderr) => {
-			if (error) {
-				console.error(errortrim());
-				reject(error.trim());
+			const result = {
+				error: error.trim(),
+				stderr: stderr.trim(),
+				stdout: stdout.trim()
+			};
+			if (result.error) {
+				console.error(result.error);
 			}
-			if (stderr) {
-				console.error(stderrtrim());
-				reject(stderr.trim());
+			if (result.stderr) {
+				console.error(result.stderr);
 			}
-			console.log(stdout.trim());
-			resolve(stdout.trim());
+			if (result.stdout) {
+				console.log(result.stdout);
+			}
+			resolve(result);
 		});
 	});
 }
@@ -760,38 +765,42 @@ function menuChooseEvent(data) {
 
 	forEver();
 }
-
-const data = loadFileJson("./data.json");
-log.clearScreen();
-log.promptMsg(`Version: ${data.now}`);
-if (doesFileExist(bmPretendPath)) {
-	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
-	log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
-	log.error("Delete the file is this is a real test!");
-}
-if (doesFileExist(bmCheckPath)) {
-	var bmChecks = loadFileJson(bmCheckPath);
-	if (!(bmChecks.length > 0)) {
+function bookmarksChecks() {
+	if (doesFileExist(bmPretendPath)) {
+		log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
+		log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
+		log.error("Delete the file is this is a real test!");
+	}
+	if (doesFileExist(bmCheckPath)) {
+		var bmChecks = loadFileJson(bmCheckPath);
+		if (!(bmChecks.length > 0)) {
+			log.error("BOOKMARKS CAN NOT PROCESSED!!!");
+			var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
+			log.error(msg);
+			throw new Error(msg);
+		}
+	} else {
 		log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-		var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
+		var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
 		log.error(msg);
 		throw new Error(msg);
 	}
-} else {
-	log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-	var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
-	log.error(msg);
-	throw new Error(msg);
 }
+function doAll() {
+	log.clearScreen();
+	log.promptMsg(`Version: ${data.now}`);
+	bookmarksChecks();
 
-async function doAll() {
 	// Copy ETEPL files
-	cmdETEPL("xx xx xx").then(() => {
-		console.log("DONE COPY");
-	});
-
-	// Launch menu
-	menuChooseEvent(data);
+	cmdETEPL("xx xx xx")
+		.then(() => {
+			console.log("DONE COPY");
+		})
+		.then(() => {
+			// Launch menu
+			menuChooseEvent(data);
+		});
 }
 
+const data = loadFileJson("./data.json");
 doAll();
