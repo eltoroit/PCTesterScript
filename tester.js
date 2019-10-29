@@ -10,6 +10,7 @@ const { exec, execSync, spawn, spawnSync } = require("child_process");
 const url = require("url");
 const http = require("http");
 const https = require("https");
+const path = require("path");
 const log = require("./colorLogs.js");
 const minimist = require("minimist");
 const args = minimist(process.argv.slice(2), {
