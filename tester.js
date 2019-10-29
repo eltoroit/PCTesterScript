@@ -799,8 +799,9 @@ function doEach(arCmds) {
 	});
 }
 function doAll() {
+	const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
 	// Copy ETEPL files
-	doEach(["AAA", "BBB", "CCC"]).then(() => {
+	doEach([`DEL /Q /S ${destPath} > NUL`, `RMDIR /Q /S ${destPath} > NUL`, `RMDIR /Q /S ${destPath} > NUL`]).then(() => {
 		console.log("DONE COPY");
 
 		// log.clearScreen();
