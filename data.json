@@ -1,6 +1,15 @@
 {
-  "now": "2019-10-29T22:53:08.175Z",
+  "now": "2019-10-30T12:16:22.553Z",
   "events": [
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a022F000003i3ogQAA"
+      },
+      "Id": "a022F000003i3ogQAA",
+      "Name": "Copy ETEPL",
+      "Order__c": 4
+    },
     {
       "attributes": {
         "type": "Event__c",
@@ -903,6 +912,127 @@
         "Operation__c": "Check Path",
         "Order__c": 62,
         "Count_Events__c": 1
+      }
+    ],
+    "a022F000003i3ogQAA": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNZQA2"
+        },
+        "Id": "a002F000003cFNZQA2",
+        "Name": "ACT-0062",
+        "AppName__c": "ETEPL - Check source path",
+        "Command__c": "DIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "src",
+        "Message__c": "Checking path: DIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\\"",
+        "Operation__c": "Check Path",
+        "Order__c": 63,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNeQAM"
+        },
+        "Id": "a002F000003cFNeQAM",
+        "Name": "ACT-0063",
+        "AppName__c": "ETEPL - Delete old contents",
+        "Command__c": "DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Delete old contents (DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "A1",
+        "Message__c": "Validating: ETEPL - Delete old contents (DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 64,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNjQAM"
+        },
+        "Id": "a002F000003cFNjQAM",
+        "Name": "ACT-0064",
+        "AppName__c": "ETEPL - Remove Directory",
+        "Command__c": "RMDIR /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" > NUL",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RMDIR /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" > NUL)",
+        "Expected__c": "B1",
+        "Message__c": "Validating: ETEPL - Remove Directory (RMDIR /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" > NUL)",
+        "Operation__c": "Check Contains",
+        "Order__c": 65,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNoQAM"
+        },
+        "Id": "a002F000003cFNoQAM",
+        "Name": "ACT-0065",
+        "AppName__c": "ETEPL - Make Directory",
+        "Command__c": "MKDIR C:\\TH\\ETTrailheadTester\\resources\\app\\src",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR C:\\TH\\ETTrailheadTester\\resources\\app\\src)",
+        "Expected__c": "C1",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR C:\\TH\\ETTrailheadTester\\resources\\app\\src)",
+        "Operation__c": "Check Contains",
+        "Order__c": 66,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNfQAM"
+        },
+        "Id": "a002F000003cFNfQAM",
+        "Name": "ACT-0066",
+        "AppName__c": "ETEPL - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "D1",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 67,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNtQAM"
+        },
+        "Id": "a002F000003cFNtQAM",
+        "Name": "ACT-0067",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 68,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u4HkQAI"
+              },
+              "Action__c": "a002F000003cFNtQAM",
+              "Id": "a032F000003u4HkQAI",
+              "Name": "JSON-0002",
+              "Key__c": "production",
+              "Path__c": "pages:servers",
+              "UniqueAction__c": "a002F000003cFNtQAM",
+              "Value__c": "ERROR-https://et-epl.herokuapp.com"
+            }
+          ]
+        }
       }
     ]
   }

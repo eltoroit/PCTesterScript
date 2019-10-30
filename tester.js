@@ -141,21 +141,20 @@ function executeCommand(instruction) {
 		instruction.callback(output);
 	});
 }
-function cmdETEPL(cmd) {
-	return new Promise((resolve, reject) => {
-		console.log(`Command: ${cmd}`);
-		exec(cmd, (error, stdout, stderr) => {
-			const result = {
-				error,
-				stderr,
-				stdout
-			};
-			console.log(JSON.stringify(result, null, 4));
-			resolve(result);
-		});
-	});
-}
-
+// function cmdETEPL(cmd) {
+// 	return new Promise((resolve, reject) => {
+// 		console.log(`Command: ${cmd}`);
+// 		exec(cmd, (error, stdout, stderr) => {
+// 			const result = {
+// 				error,
+// 				stderr,
+// 				stdout
+// 			};
+// 			console.log(JSON.stringify(result, null, 4));
+// 			resolve(result);
+// 		});
+// 	});
+// }
 function checkExact(instruction) {
 	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
 	instruction.callback = function(output) {
@@ -513,13 +512,11 @@ function validateBookmarks(instruction) {
 }
 // Bookmarks -- END
 
-function jsonFile_Edit(instruction) {
-	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
-
+function jsonFile_FindPath(instruction) {
 	if (debug) log.debug("Reading JSON_Action__c");
 	var JSON_Action;
 	JSON_Action = instruction.JSON_Actions__r;
-	if (JSON_Action.totalSize != 1) throw new Error("Multiple JSON Actions are not allowed!");
+	if (JSON_Action.totalSize !== 1) throw new Error("Multiple JSON Actions are not allowed!");
 	JSON_Action = JSON_Action.records[0];
 
 	if (debug) log.debug("Reading JSON file");
@@ -560,6 +557,10 @@ function jsonFile_Edit(instruction) {
 			}
 		}
 	}
+}
+function jsonFile_Edit(instruction) {
+	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
+	var data = jsonFile_FindPath(instruction);
 
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
 	data[JSON_Action.Key__c] = JSON_Action.Value__c;
@@ -574,6 +575,21 @@ function jsonFile_Edit(instruction) {
 			nextInstruction();
 		}
 	});
+}
+function jsonFile_Check(instruction) {
+	if (verbose) log.info("Reading JSON File: " + instruction.AppName__c);
+	var data = jsonFile_FindPath(instruction);
+
+	if (debug) log.debug("Value found: " + log.getPrettyJson(data));
+
+	if (data[JSON_Action.Key__c] === JSON_Action.Value__c) {
+		if (verbose) log.success(`VALID: [${instruction.instruction.AppName__c}]`);
+		nextInstruction();
+	} else {
+		instruction.returned = data[JSON_Action.Key__c];
+		reportError(instruction);
+		nextInstruction();
+	}
 }
 function loadFileJson(path) {
 	return JSON.parse(loadFile(path));
@@ -652,7 +668,7 @@ function executeInstruction() {
 			nextInstruction();
 			break;
 		case "JSON File - Check":
-			stopAndFix = true;
+			jsonFile_Check(instruction);
 			break;
 		case "JSON File - Edit":
 			jsonFile_Edit(instruction);
@@ -781,42 +797,42 @@ function bookmarksChecks() {
 }
 
 const data = loadFileJson("./data.json");
-function doEach(arCmds) {
-	console.log(`ARRAY: ${JSON.stringify(arCmds)}`);
-	return new Promise((resolve, reject) => {
-		console.log(`length: ${arCmds.length}`);
-		if (arCmds.length === 0) {
-			console.log(`EXIT`);
-			resolve();
-		} else {
-			const cmd = arCmds.shift();
-			console.log(`CMD: ${JSON.stringify(cmd)}`);
-			cmdETEPL(cmd).then(() => {
-				doEach(arCmds).then(() => {
-					resolve();
-				});
-			});
-		}
-	});
-}
-function doAll() {
-	const sourcePath = path.join("C:/TH/PCTesterScript/copy/src");
-	const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
-	const cmds = [];
+// function doEach(arCmds) {
+// 	console.log(`ARRAY: ${JSON.stringify(arCmds)}`);
+// 	return new Promise((resolve, reject) => {
+// 		console.log(`length: ${arCmds.length}`);
+// 		if (arCmds.length === 0) {
+// 			console.log(`EXIT`);
+// 			resolve();
+// 		} else {
+// 			const cmd = arCmds.shift();
+// 			console.log(`CMD: ${JSON.stringify(cmd)}`);
+// 			cmdETEPL(cmd).then(() => {
+// 				doEach(arCmds).then(() => {
+// 					resolve();
+// 				});
+// 			});
+// 		}
+// 	});
+// }
+// function doAll() {
+// const sourcePath = path.join("C:/TH/PCTesterScript/copy/src");
+// const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
+// const cmds = [];
 
-	// Copy ETEPL files
-	cmds.push(`DEL /Q /S "${destPath}" > NUL`);
-	cmds.push(`RMDIR /Q /S "${destPath}" > NUL`);
-	cmds.push(`mkdir ${destPath}`);
-	cmds.push(`xcopy /v /q /s /e /y "${sourcePath}" "${destPath}"`);
-	doEach(cmds).then(() => {
-		console.log("DONE COPY");
+// // Copy ETEPL files
+// cmds.push(`DEL /Q /S "${destPath}" > NUL`);
+// cmds.push(`RMDIR /Q /S "${destPath}" > NUL`);
+// cmds.push(`mkdir ${destPath}`);
+// cmds.push(`xcopy /v /q /s /e /y "${sourcePath}" "${destPath}"`);
+// doEach(cmds).then(() => {
+// 	console.log("DONE COPY");
 
-		// log.clearScreen();
-		log.promptMsg(`Version: ${data.now}`);
-		bookmarksChecks();
-		menuChooseEvent(data);
-	});
-}
+// log.clearScreen();
+log.promptMsg(`Version: ${data.now}`);
+bookmarksChecks();
+menuChooseEvent(data);
+// });
+// }
 
-doAll();
+// doAll();
