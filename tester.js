@@ -608,6 +608,8 @@ function jsonFile_Check(instruction) {
 	} else {
 		instruction.returned = data[JSON_Action.Key__c];
 		reportError(instruction);
+		reportError(`Actual: ${data[JSON_Action.Key__c]}`);
+		reportError(`Expected: ${JSON_Action.Value__c}`);
 		nextInstruction();
 	}
 }
