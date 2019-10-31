@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T20:12:46.962Z",
+  "now": "2019-10-31T20:20:20.959Z",
   "events": [
     {
       "attributes": {
@@ -918,6 +918,22 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIQpQAM"
+        },
+        "Id": "a002F000003cIQpQAM",
+        "Name": "ACT-0069",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 63,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNZQA2"
         },
         "Id": "a002F000003cFNZQA2",
@@ -929,22 +945,6 @@
         "Expected__c": "elMain.js",
         "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "Operation__c": "Check Path",
-        "Order__c": 63,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIQpQAM"
-        },
-        "Id": "a002F000003cIQpQAM",
-        "Name": "ACT-0069",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
         "Order__c": 64,
         "Count_Events__c": 1
       },
@@ -955,13 +955,12 @@
         },
         "Id": "a002F000003cFNeQAM",
         "Name": "ACT-0063",
-        "AppName__c": "ETEPL - Delete old contents",
+        "AppName__c": "ETEPL - Delete folder",
         "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Delete old contents (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "Deleted file - C:\\TH\\ETTrailheadTester\\resources\\app\\src",
-        "Message__c": "Validating: ETEPL - Delete old contents (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
+        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
         "Order__c": 65,
         "Count_Events__c": 1
       },
@@ -977,7 +976,7 @@
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
+        "Operation__c": "Execute",
         "Order__c": 66,
         "Count_Events__c": 1
       },
@@ -993,7 +992,7 @@
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
+        "Operation__c": "Execute",
         "Order__c": 67,
         "Count_Events__c": 1
       },
@@ -1009,7 +1008,7 @@
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
+        "Operation__c": "Execute",
         "Order__c": 68,
         "Count_Events__c": 1
       },
@@ -1029,6 +1028,40 @@
         "Operation__c": "Check Contains",
         "Order__c": 69,
         "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNtQAM"
+        },
+        "Id": "a002F000003cFNtQAM",
+        "Name": "ACT-0067",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 70,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u4HkQAI"
+              },
+              "Action__c": "a002F000003cFNtQAM",
+              "Id": "a032F000003u4HkQAI",
+              "Name": "JSON-0002",
+              "Key__c": "production",
+              "Path__c": "pages:servers",
+              "UniqueAction__c": "a002F000003cFNtQAM",
+              "Value__c": "ERROR-https://et-epl.herokuapp.com"
+            }
+          ]
+        }
       }
     ]
   }
