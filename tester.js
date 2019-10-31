@@ -107,7 +107,7 @@ function promptYesNo(instruction) {
 	}
 }
 function spawnCommand(instruction) {
-	instruction.Command__c = JSON.parse(instruction.Command__c);
+	instruction.Command__c = JSON.parse(instruction.Command__c.replace(/\\/g, "\\\\"));
 	if (debug) log.debug("SPAWNING: " + log.getPrettyJson(instruction.Command__c));
 
 	var process;
