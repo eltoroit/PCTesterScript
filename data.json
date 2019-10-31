@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T17:43:01.636Z",
+  "now": "2019-10-31T17:46:09.791Z",
   "events": [
     {
       "attributes": {
@@ -943,7 +943,7 @@
         "Command__c": "DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Delete old contents (DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "A1",
+        "Expected__c": "Deleted file - C:\\TH\\ETTrailheadTester\\resources\\app\\src",
         "Message__c": "Validating: ETEPL - Delete old contents (DEL /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
         "Order__c": 64,
