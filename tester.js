@@ -179,7 +179,13 @@ function checkContains(instruction) {
 		if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
 
 		if (valid) {
-			if (verbose) log.success("VALID: [" + instruction.Expected__c + "]");
+			if (verbose) {
+				if (instruction.Expected__c) {
+					log.success("VALID: [" + instruction.Expected__c + "]");
+				} else {
+					log.success(`VALID: [${instruction.Command__c}]`);
+				}
+			}
 		} else {
 			instruction.returned = output;
 			reportError(instruction);
