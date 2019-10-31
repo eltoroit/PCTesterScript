@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T19:04:15.492Z",
+  "now": "2019-10-31T19:36:14.034Z",
   "events": [
     {
       "attributes": {
@@ -935,6 +935,23 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIQpQAM"
+        },
+        "Id": "a002F000003cIQpQAM",
+        "Name": "ACT-0069",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "ETTrailheadTester.exe",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 64,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNeQAM"
         },
         "Id": "a002F000003cFNeQAM",
@@ -946,7 +963,7 @@
         "Expected__c": "Deleted file - C:\\TH\\ETTrailheadTester\\resources\\app\\src",
         "Message__c": "Validating: ETEPL - Delete old contents (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 64,
+        "Order__c": 65,
         "Count_Events__c": 1
       },
       {
@@ -962,7 +979,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 65,
+        "Order__c": 66,
         "Count_Events__c": 1
       },
       {
@@ -978,7 +995,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 66,
+        "Order__c": 67,
         "Count_Events__c": 1
       },
       {
@@ -994,7 +1011,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 67,
+        "Order__c": 68,
         "Count_Events__c": 1
       },
       {
@@ -1011,7 +1028,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 68,
+        "Order__c": 69,
         "Count_Events__c": 1
       }
     ]
