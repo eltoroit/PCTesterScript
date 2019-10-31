@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T18:20:49.483Z",
+  "now": "2019-10-31T18:28:05.537Z",
   "events": [
     {
       "attributes": {
@@ -947,6 +947,40 @@
         "Message__c": "Validating: ETEPL - Delete old contents (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
         "Order__c": 64,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNjQAM"
+        },
+        "Id": "a002F000003cFNjQAM",
+        "Name": "ACT-0064",
+        "AppName__c": "ETEPL - Remove Directory",
+        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "B1a",
+        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 65,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIEoQAM"
+        },
+        "Id": "a002F000003cIEoQAM",
+        "Name": "ACT-0068",
+        "AppName__c": "ETEPL - Remove Directory (2)",
+        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "B1b",
+        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 66,
         "Count_Events__c": 1
       }
     ]
