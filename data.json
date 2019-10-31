@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T18:28:05.537Z",
+  "now": "2019-10-31T18:31:11.269Z",
   "events": [
     {
       "attributes": {
@@ -960,7 +960,6 @@
         "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "B1a",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
         "Order__c": 65,
@@ -977,7 +976,6 @@
         "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "B1b",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
         "Order__c": 66,
