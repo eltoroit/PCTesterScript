@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T23:52:44.206Z",
+  "now": "2019-10-31T23:54:06.780Z",
   "events": [
     {
       "attributes": {
@@ -1105,7 +1105,7 @@
         "Id": "a003F0000039MdZQAU",
         "Name": "ACT-0145",
         "AppName__c": "ETEPL - Execute App",
-        "Command__c": "{cmd:\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\", params:\"\"}",
+        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\", \"params\":\"\"}",
         "EnabledAction__c": true,
         "Operation__c": "Execute Async",
         "Order__c": 72,
