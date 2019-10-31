@@ -612,8 +612,6 @@ function jsonFile_Check(instruction) {
 			Actual: data[JSON_Action.Key__c],
 			expected: JSON_Action.Value__c
 		});
-		reportError(`Actual: ${data[JSON_Action.Key__c]}`);
-		reportError(`Expected: ${JSON_Action.Value__c}`);
 		nextInstruction();
 	}
 }

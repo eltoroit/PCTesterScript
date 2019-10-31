@@ -6,7 +6,7 @@
 			"staging": "https://et-epl-stage.herokuapp.com",
 			"production": "https://et-epl.herokuapp.com"
 		},
-		"pingServer": "http://localhost:5000"
+		"pingServer": "https://et-epl.herokuapp.com"
 	},
 	"timer": {
 		"master": {
