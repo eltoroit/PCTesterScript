@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T22:09:51.389Z",
+  "now": "2019-10-31T22:26:14.917Z",
   "events": [
     {
       "attributes": {
@@ -1036,7 +1036,7 @@
         },
         "Id": "a002F000003cFNtQAM",
         "Name": "ACT-0067",
-        "AppName__c": "ETEPL - Check version",
+        "AppName__c": "ETEPL - Check Server 1",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
@@ -1058,7 +1058,75 @@
               "Key__c": "production",
               "Path__c": "pages:servers",
               "UniqueAction__c": "a002F000003cFNtQAM",
-              "Value__c": "ERROR-https://et-epl.herokuapp.com"
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIaqQAE"
+        },
+        "Id": "a002F000003cIaqQAE",
+        "Name": "ACT-0070",
+        "AppName__c": "ETEPL - Check version 2",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 71,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u8pUQAQ"
+              },
+              "Action__c": "a002F000003cIaqQAE",
+              "Id": "a032F000003u8pUQAQ",
+              "Name": "JSON-0004",
+              "Key__c": "pingServer",
+              "Path__c": "pages",
+              "UniqueAction__c": "a002F000003cIaqQAE",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIavQAE"
+        },
+        "Id": "a002F000003cIavQAE",
+        "Name": "ACT-0071",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 72,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u8thQAA"
+              },
+              "Action__c": "a002F000003cIavQAE",
+              "Id": "a032F000003u8thQAA",
+              "Name": "JSON-0005",
+              "Key__c": "pingServer",
+              "Path__c": ":",
+              "UniqueAction__c": "a002F000003cIavQAE",
+              "Value__c": "2019-10-30V01"
             }
           ]
         }
