@@ -111,6 +111,7 @@ function spawnCommand(instruction) {
 
 	var process;
 	try {
+		instruction.Command__c = JSON.parse(instruction.Command__c);
 		if (instruction.Command__c.params && instruction.Command__c.params !== "") {
 			process = spawn(instruction.Command__c.cmd, instruction.Command__c.params);
 		} else {
