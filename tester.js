@@ -126,7 +126,7 @@ function spawnCommand(instruction) {
 		reportErrorMessage(msg);
 	});
 	setTimeout(function() {
-		promptYesNo(instruction);
+		promptYesNo(`Did the application [${instruction.Command__c.cmd}] launch?`);
 	}, timerDelay * 10);
 }
 function executeCommand(instruction) {
