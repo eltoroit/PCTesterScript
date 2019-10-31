@@ -573,6 +573,7 @@ function jsonFile_FindPath(instruction) {
 			}
 		}
 	}
+	return data;
 }
 function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
