@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-30T12:16:22.553Z",
+  "now": "2019-10-31T17:39:29.900Z",
   "events": [
     {
       "attributes": {
@@ -7,8 +7,8 @@
         "url": "/services/data/v42.0/sobjects/Event__c/a022F000003i3ogQAA"
       },
       "Id": "a022F000003i3ogQAA",
-      "Name": "Copy ETEPL",
-      "Order__c": 4
+      "Name": "Install Event Proctor Login",
+      "Order__c": 1
     },
     {
       "attributes": {
@@ -17,7 +17,7 @@
       },
       "Id": "a022F000003i2qlQAA",
       "Name": "Dreamforce '19",
-      "Order__c": 5
+      "Order__c": 2
     },
     {
       "attributes": {
@@ -26,7 +26,7 @@
       },
       "Id": "a022F000003i2qnQAA",
       "Name": "Logout Apps",
-      "Order__c": 99
+      "Order__c": 10
     }
   ],
   "actionsByEvent": {
@@ -923,11 +923,11 @@
         "Id": "a002F000003cFNZQA2",
         "Name": "ACT-0062",
         "AppName__c": "ETEPL - Check source path",
-        "Command__c": "DIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\\"",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "src",
-        "Message__c": "Checking path: DIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\\"",
+        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src",
         "Operation__c": "Check Path",
         "Order__c": 63,
         "Count_Events__c": 1
