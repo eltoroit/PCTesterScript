@@ -181,7 +181,7 @@ function checkContains(instruction, isExecute) {
 		var valid = false;
 
 		if (isExecute) {
-			valid = !(output.stderr || output.error);
+			valid = !output.error;
 		} else {
 			if (!instruction.Expected__c) valid = true;
 			if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
