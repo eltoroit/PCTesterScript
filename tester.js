@@ -169,7 +169,8 @@ function checkExact(instruction) {
 	};
 	executeCommand(instruction);
 }
-function checkContains(instruction, isExecute) {
+function checkContains(instruction) {
+	let isExecute = instruction.Operation__c !== "Check Contains";
 	if (verbose) {
 		if (isExecute) {
 			log.info("EXECUTING: [" + instruction.Command__c + "]");
@@ -202,7 +203,11 @@ function checkContains(instruction, isExecute) {
 		}
 		nextInstruction();
 	};
-	executeCommand(instruction);
+	if (instruction.Operation__c === "Execute Async") {
+		spawnCommand(instruction);
+	} else {
+		executeCommand(instruction);
+	}
 }
 function checkPath(instruction) {
 	if (verbose) log.info("CHECK PATH: [" + instruction.Command__c + "]");
@@ -675,10 +680,13 @@ function executeInstruction() {
 
 	switch (instruction.Operation__c) {
 		case "Check Contains":
-			checkContains(instruction, false);
+			checkContains(instruction);
 			break;
 		case "Execute":
-			checkContains(instruction, true);
+			checkContains(instruction);
+			break;
+		case "Execute Async":
+			checkContains(instruction);
 			break;
 		case "Check Exact":
 			checkExact(instruction);
