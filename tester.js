@@ -133,7 +133,7 @@ function executeCommand(instruction) {
 	var process = exec(instruction.Command__c, function(error, stdout, stderr) {
 		var output = {
 			cmd: instruction.Command__c,
-			error: error
+			error
 		};
 		output.stdout = stdout ? stdout.trim() : "";
 		output.stderr = stderr ? stderr.trim() : "";
@@ -169,14 +169,24 @@ function checkExact(instruction) {
 	};
 	executeCommand(instruction);
 }
-function checkContains(instruction) {
-	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
+function checkContains(instruction, isExecute) {
+	if (verbose) {
+		if (isExecute) {
+			log.info("EXECUTING: [" + instruction.Command__c + "]");
+		} else {
+			log.info("CHECKING: [" + instruction.Command__c + "]");
+		}
+	}
 	instruction.callback = function(output) {
 		var valid = false;
 
-		if (!instruction.Expected__c) valid = true;
-		if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
-		if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
+		if (isExecute) {
+			valid = !(output.stderr || output.error);
+		} else {
+			if (!instruction.Expected__c) valid = true;
+			if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
+			if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
+		}
 
 		if (valid) {
 			if (verbose) {
@@ -657,7 +667,10 @@ function executeInstruction() {
 
 	switch (instruction.Operation__c) {
 		case "Check Contains":
-			checkContains(instruction);
+			checkContains(instruction, false);
+			break;
+		case "Execute":
+			checkContains(instruction, true);
 			break;
 		case "Check Exact":
 			checkExact(instruction);

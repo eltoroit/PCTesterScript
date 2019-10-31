@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T19:36:14.034Z",
+  "now": "2019-10-31T19:51:06.795Z",
   "events": [
     {
       "attributes": {
@@ -943,7 +943,6 @@
         "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "ETTrailheadTester.exe",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 64,
