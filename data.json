@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T22:37:00.619Z",
+  "now": "2019-10-31T22:41:01.265Z",
   "events": [
     {
       "attributes": {
@@ -1070,7 +1070,7 @@
         },
         "Id": "a002F000003cIaqQAE",
         "Name": "ACT-0070",
-        "AppName__c": "ETEPL - Check version 2",
+        "AppName__c": "ETEPL - Check server 2",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
@@ -1123,7 +1123,7 @@
               "Action__c": "a002F000003cIavQAE",
               "Id": "a032F000003u8thQAA",
               "Name": "JSON-0005",
-              "Key__c": "pingServer",
+              "Key__c": "version",
               "Path__c": ":",
               "UniqueAction__c": "a002F000003cIavQAE",
               "Value__c": "2019-10-30V01"
