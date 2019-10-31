@@ -530,8 +530,7 @@ function validateBookmarks(instruction) {
 
 function jsonFile_FindPath(instruction) {
 	if (debug) log.debug("Reading JSON_Action__c");
-	var JSON_Action;
-	JSON_Action = instruction.JSON_Actions__r;
+	var JSON_Action = instruction.JSON_Actions__r;
 	if (JSON_Action.totalSize !== 1) throw new Error("Multiple JSON Actions are not allowed!");
 	JSON_Action = JSON_Action.records[0];
 
@@ -577,7 +576,8 @@ function jsonFile_FindPath(instruction) {
 }
 function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
-	var data = jsonFile_FindPath(instruction);
+	const data = jsonFile_FindPath(instruction);
+	const JSON_Action = instruction.JSON_Actions__r.records[0];
 
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
 	data[JSON_Action.Key__c] = JSON_Action.Value__c;
@@ -595,7 +595,8 @@ function jsonFile_Edit(instruction) {
 }
 function jsonFile_Check(instruction) {
 	if (verbose) log.info("Reading JSON File: " + instruction.AppName__c);
-	var data = jsonFile_FindPath(instruction);
+	const data = jsonFile_FindPath(instruction);
+	const JSON_Action = instruction.JSON_Actions__r.records[0];
 
 	if (debug) log.debug("Value found: " + log.getPrettyJson(data));
 
