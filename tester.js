@@ -535,8 +535,7 @@ function jsonFile_FindPath(instruction) {
 	JSON_Action = JSON_Action.records[0];
 
 	if (debug) log.debug("Reading JSON file");
-	var fileContents = loadFileJson(instruction.Command__c);
-	var data = fileContents;
+	let data = loadFileJson(instruction.Command__c);
 	var paths = JSON_Action.Path__c.split(":");
 
 	if (debug) log.debug("Processing JSON path: " + JSON_Action.Path__c);
@@ -578,6 +577,7 @@ function jsonFile_Edit(instruction) {
 	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
 	const data = jsonFile_FindPath(instruction);
 	const JSON_Action = instruction.JSON_Actions__r.records[0];
+	const fileContents = loadFileJson(instruction.Command__c);
 
 	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
