@@ -603,7 +603,7 @@ function jsonFile_Check(instruction) {
 	if (debug) log.debug("Looking here: " + log.getPrettyJson(data));
 
 	if (data[JSON_Action.Key__c] === JSON_Action.Value__c) {
-		if (verbose) log.success(`VALID: [${instruction.instruction.AppName__c}]`);
+		if (verbose) log.success(`VALID: [${instruction.AppName__c}]`);
 		nextInstruction();
 	} else {
 		instruction.returned = data[JSON_Action.Key__c];
