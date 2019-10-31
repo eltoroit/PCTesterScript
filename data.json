@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T18:50:31.848Z",
+  "now": "2019-10-31T18:52:29.488Z",
   "events": [
     {
       "attributes": {
@@ -1008,7 +1008,7 @@
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "D1",
+        "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
         "Order__c": 68,
