@@ -579,6 +579,7 @@ function jsonFile_Edit(instruction) {
 	const data = jsonFile_FindPath(instruction);
 	const JSON_Action = instruction.JSON_Actions__r.records[0];
 
+	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
 	data[JSON_Action.Key__c] = JSON_Action.Value__c;
 	fs.writeFile(instruction.Command__c, log.getPrettyJson(fileContents), function(err) {
@@ -598,7 +599,8 @@ function jsonFile_Check(instruction) {
 	const data = jsonFile_FindPath(instruction);
 	const JSON_Action = instruction.JSON_Actions__r.records[0];
 
-	if (debug) log.debug("Value found: " + log.getPrettyJson(data));
+	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
+	if (debug) log.debug("Looking here: " + log.getPrettyJson(data));
 
 	if (data[JSON_Action.Key__c] === JSON_Action.Value__c) {
 		if (verbose) log.success(`VALID: [${instruction.instruction.AppName__c}]`);
