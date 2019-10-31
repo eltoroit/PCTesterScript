@@ -607,9 +607,13 @@ function jsonFile_Check(instruction) {
 		nextInstruction();
 	} else {
 		instruction.returned = data[JSON_Action.Key__c];
-		reportError(instruction);
-		reportError(`Actual: ${data[JSON_Action.Key__c]}`);
-		reportError(`Expected: ${JSON_Action.Value__c}`);
+		reportError(
+			log.getPrettyJson({
+				instruction,
+				Actual: data[JSON_Action.Key__c],
+				expected: JSON_Action.Value__c
+			})
+		);
 		nextInstruction();
 	}
 }
