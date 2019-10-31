@@ -1,5 +1,5 @@
 {
-  "now": "2019-10-31T17:39:29.900Z",
+  "now": "2019-10-31T17:43:01.636Z",
   "events": [
     {
       "attributes": {
@@ -923,11 +923,11 @@
         "Id": "a002F000003cFNZQA2",
         "Name": "ACT-0062",
         "AppName__c": "ETEPL - Check source path",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "src",
-        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src",
+        "Expected__c": "elMain.js",
+        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "Operation__c": "Check Path",
         "Order__c": 63,
         "Count_Events__c": 1
