@@ -1,43 +1,43 @@
 {
-  "now": "2019-10-31T23:16:55.419Z",
+  "now": "2019-10-31T23:38:00.777Z",
   "events": [
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022F000003i3ogQAA"
+        "url": "/services/data/v42.0/sobjects/Event__c/a023F00001as50qQAA"
       },
-      "Id": "a022F000003i3ogQAA",
+      "Id": "a023F00001as50qQAA",
       "Name": "Install Event Proctor Login",
       "Order__c": 1
     },
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022F000003i2qlQAA"
+        "url": "/services/data/v42.0/sobjects/Event__c/a023F00001as50rQAA"
       },
-      "Id": "a022F000003i2qlQAA",
+      "Id": "a023F00001as50rQAA",
       "Name": "Dreamforce '19",
       "Order__c": 2
     },
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022F000003i2qnQAA"
+        "url": "/services/data/v42.0/sobjects/Event__c/a023F00001as50sQAA"
       },
-      "Id": "a022F000003i2qnQAA",
+      "Id": "a023F00001as50sQAA",
       "Name": "Logout Apps",
       "Order__c": 10
     }
   ],
   "actionsByEvent": {
-    "a022F000003i2qnQAA": [
+    "a023F00001as50sQAA": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJKQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdGQAU"
         },
-        "Id": "a002F000003cFJKQA2",
-        "Name": "ACT-0020",
+        "Id": "a003F0000039MdGQAU",
+        "Name": "ACT-0126",
         "AppName__c": "Logout SFDX",
         "Command__c": "sfdx force:auth:logout --all --noprompt",
         "EnabledAction__c": true,
@@ -50,10 +50,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJLQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdHQAU"
         },
-        "Id": "a002F000003cFJLQA2",
-        "Name": "ACT-0021",
+        "Id": "a003F0000039MdHQAU",
+        "Name": "ACT-0127",
         "AppName__c": "Logout Heroku",
         "Command__c": "heroku logout",
         "EnabledAction__c": true,
@@ -64,14 +64,14 @@
         "Count_Events__c": 1
       }
     ],
-    "a022F000003i2qlQAA": [
+    "a023F00001as50rQAA": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ1QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McPQAU"
         },
-        "Id": "a002F000003cFJ1QAM",
-        "Name": "ACT-0001",
+        "Id": "a003F0000039McPQAU",
+        "Name": "ACT-0073",
         "AppName__c": "Clear Screen",
         "EnabledAction__c": true,
         "Operation__c": "Clear",
@@ -81,10 +81,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJdQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McQQAU"
         },
-        "Id": "a002F000003cFJdQAM",
-        "Name": "ACT-0039",
+        "Id": "a003F0000039McQQAU",
+        "Name": "ACT-0074",
         "AppName__c": "Say Hi",
         "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
         "EnabledAction__c": true,
@@ -95,10 +95,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJIQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McRQAU"
         },
-        "Id": "a002F000003cFJIQA2",
-        "Name": "ACT-0018",
+        "Id": "a003F0000039McRQAU",
+        "Name": "ACT-0075",
         "AppName__c": "MANUAL CHECKS",
         "Command__c": "=== === === MANUAL CHECKS === === ===",
         "EnabledAction__c": true,
@@ -109,10 +109,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ5QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McTQAU"
         },
-        "Id": "a002F000003cFJ5QAM",
-        "Name": "ACT-0005",
+        "Id": "a003F0000039McTQAU",
+        "Name": "ACT-0077",
         "AppName__c": "Desktop Image",
         "Command__c": "Computer background image?",
         "EnabledAction__c": true,
@@ -126,10 +126,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJuQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McVQAU"
         },
-        "Id": "a002F000003cFJuQAM",
-        "Name": "ACT-0056",
+        "Id": "a003F0000039McVQAU",
+        "Name": "ACT-0079",
         "AppName__c": "Desktop: Notepad++",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Notepad++.lnk\"",
         "EnabledAction__c": true,
@@ -143,10 +143,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJAQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McWQAU"
         },
-        "Id": "a002F000003cFJAQA2",
-        "Name": "ACT-0010",
+        "Id": "a003F0000039McWQAU",
+        "Name": "ACT-0080",
         "AppName__c": "Firefox + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
         "EnabledAction__c": true,
@@ -160,10 +160,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJCQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McXQAU"
         },
-        "Id": "a002F000003cFJCQA2",
-        "Name": "ACT-0012",
+        "Id": "a003F0000039McXQAU",
+        "Name": "ACT-0081",
         "AppName__c": "Chrome + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
         "EnabledAction__c": true,
@@ -177,10 +177,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ8QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McYQAU"
         },
-        "Id": "a002F000003cFJ8QAM",
-        "Name": "ACT-0008",
+        "Id": "a003F0000039McYQAU",
+        "Name": "ACT-0082",
         "AppName__c": "Chrome: Plugin",
         "Command__c": "Chrome Plugin to split screen",
         "EnabledAction__c": true,
@@ -194,10 +194,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJOQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McbQAE"
         },
-        "Id": "a002F000003cFJOQA2",
-        "Name": "ACT-0024",
+        "Id": "a003F0000039McbQAE",
+        "Name": "ACT-0085",
         "AppName__c": "VS Code",
         "Command__c": "code",
         "EnabledAction__c": true,
@@ -211,10 +211,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJgQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MccQAE"
         },
-        "Id": "a002F000003cFJgQAM",
-        "Name": "ACT-0042",
+        "Id": "a003F0000039MccQAE",
+        "Name": "ACT-0086",
         "AppName__c": "Powerpoint (MS Office)",
         "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
         "EnabledAction__c": true,
@@ -229,10 +229,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJeQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McdQAE"
         },
-        "Id": "a002F000003cFJeQAM",
-        "Name": "ACT-0040",
+        "Id": "a003F0000039McdQAE",
+        "Name": "ACT-0087",
         "AppName__c": "Excel (MS Office)",
         "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
         "EnabledAction__c": true,
@@ -247,10 +247,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJtQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MceQAE"
         },
-        "Id": "a002F000003cFJtQAM",
-        "Name": "ACT-0055",
+        "Id": "a003F0000039MceQAE",
+        "Name": "ACT-0088",
         "AppName__c": "AUTOMATED TESTS",
         "Command__c": "=== === === AUTOMATED CHECKS === === ===",
         "EnabledAction__c": true,
@@ -261,10 +261,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ7QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McfQAE"
         },
-        "Id": "a002F000003cFJ7QAM",
-        "Name": "ACT-0007",
+        "Id": "a003F0000039McfQAE",
+        "Name": "ACT-0089",
         "AppName__c": "Chrome: Plugin Resize",
         "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "EnabledAction__c": true,
@@ -279,10 +279,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ3QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McgQAE"
         },
-        "Id": "a002F000003cFJ3QAM",
-        "Name": "ACT-0003",
+        "Id": "a003F0000039McgQAE",
+        "Name": "ACT-0090",
         "AppName__c": "Check Java version",
         "Command__c": "java -version",
         "EnabledAction__c": true,
@@ -297,10 +297,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJGQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MchQAE"
         },
-        "Id": "a002F000003cFJGQA2",
-        "Name": "ACT-0016",
+        "Id": "a003F0000039MchQAE",
+        "Name": "ACT-0091",
         "AppName__c": "Java 8",
         "Command__c": "C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
         "EnabledAction__c": true,
@@ -315,10 +315,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJJQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McjQAE"
         },
-        "Id": "a002F000003cFJJQA2",
-        "Name": "ACT-0019",
+        "Id": "a003F0000039McjQAE",
+        "Name": "ACT-0093",
         "AppName__c": "Notepad",
         "Command__c": "C:\\Windows\\Notepad.exe",
         "EnabledAction__c": true,
@@ -333,10 +333,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJvQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McmQAE"
         },
-        "Id": "a002F000003cFJvQAM",
-        "Name": "ACT-0057",
+        "Id": "a003F0000039McmQAE",
+        "Name": "ACT-0096",
         "AppName__c": "Postman",
         "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
         "EnabledAction__c": true,
@@ -351,10 +351,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJwQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McnQAE"
         },
-        "Id": "a002F000003cFJwQAM",
-        "Name": "ACT-0058",
+        "Id": "a003F0000039McnQAE",
+        "Name": "ACT-0097",
         "AppName__c": "SoapUI",
         "Command__c": "C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "EnabledAction__c": true,
@@ -369,10 +369,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ2QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McoQAE"
         },
-        "Id": "a002F000003cFJ2QAM",
-        "Name": "ACT-0002",
+        "Id": "a003F0000039McoQAE",
+        "Name": "ACT-0098",
         "AppName__c": "SFDX Update",
         "Command__c": "sfdx update",
         "EnabledAction__c": true,
@@ -387,10 +387,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJrQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McpQAE"
         },
-        "Id": "a002F000003cFJrQAM",
-        "Name": "ACT-0053",
+        "Id": "a003F0000039McpQAE",
+        "Name": "ACT-0099",
         "AppName__c": "VS Code Version",
         "Command__c": "code --version",
         "EnabledAction__c": true,
@@ -404,10 +404,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJsQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McqQAE"
         },
-        "Id": "a002F000003cFJsQAM",
-        "Name": "ACT-0054",
+        "Id": "a003F0000039McqQAE",
+        "Name": "ACT-0100",
         "AppName__c": "VS Code Plugin (1)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-46.*",
         "EnabledAction__c": true,
@@ -422,10 +422,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ4QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McrQAE"
         },
-        "Id": "a002F000003cFJ4QAM",
-        "Name": "ACT-0004",
+        "Id": "a003F0000039McrQAE",
+        "Name": "ACT-0101",
         "AppName__c": "VS Code Plugin (2)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-46.*",
         "EnabledAction__c": true,
@@ -440,10 +440,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJPQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McsQAE"
         },
-        "Id": "a002F000003cFJPQA2",
-        "Name": "ACT-0025",
+        "Id": "a003F0000039McsQAE",
+        "Name": "ACT-0102",
         "AppName__c": "VS Code Plugin (3)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-46.*",
         "EnabledAction__c": true,
@@ -458,10 +458,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ6QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MctQAE"
         },
-        "Id": "a002F000003cFJ6QAM",
-        "Name": "ACT-0006",
+        "Id": "a003F0000039MctQAE",
+        "Name": "ACT-0103",
         "AppName__c": "VS Code Plugin (4)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-46.*",
         "EnabledAction__c": true,
@@ -476,10 +476,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ0QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McuQAE"
         },
-        "Id": "a002F000003cFJ0QAM",
-        "Name": "ACT-0000",
+        "Id": "a003F0000039McuQAE",
+        "Name": "ACT-0104",
         "AppName__c": "VS Code Plugin (5)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-46.*",
         "EnabledAction__c": true,
@@ -494,10 +494,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJFQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McvQAE"
         },
-        "Id": "a002F000003cFJFQA2",
-        "Name": "ACT-0015",
+        "Id": "a003F0000039McvQAE",
+        "Name": "ACT-0105",
         "AppName__c": "VS Code Plugin (6)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-46.*",
         "EnabledAction__c": true,
@@ -512,10 +512,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJxQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McwQAE"
         },
-        "Id": "a002F000003cFJxQAM",
-        "Name": "ACT-0059",
+        "Id": "a003F0000039McwQAE",
+        "Name": "ACT-0106",
         "AppName__c": "VS Code Plugin (7)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-46.*",
         "EnabledAction__c": true,
@@ -530,10 +530,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJkQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McxQAE"
         },
-        "Id": "a002F000003cFJkQAM",
-        "Name": "ACT-0046",
+        "Id": "a003F0000039McxQAE",
+        "Name": "ACT-0107",
         "AppName__c": "VS Code Plugin (8)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-46.*",
         "EnabledAction__c": true,
@@ -548,10 +548,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJjQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039McyQAE"
         },
-        "Id": "a002F000003cFJjQAM",
-        "Name": "ACT-0045",
+        "Id": "a003F0000039McyQAE",
+        "Name": "ACT-0108",
         "AppName__c": "VS Code Plugin (9)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "EnabledAction__c": true,
@@ -566,10 +566,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJlQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MczQAE"
         },
-        "Id": "a002F000003cFJlQAM",
-        "Name": "ACT-0047",
+        "Id": "a003F0000039MczQAE",
+        "Name": "ACT-0109",
         "AppName__c": "VS Code Plugin (10)",
         "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-10.*",
         "EnabledAction__c": true,
@@ -584,10 +584,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJmQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md0QAE"
         },
-        "Id": "a002F000003cFJmQAM",
-        "Name": "ACT-0048",
+        "Id": "a003F0000039Md0QAE",
+        "Name": "ACT-0110",
         "AppName__c": "SFDX (Shell)",
         "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
@@ -603,14 +603,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u2YsQAI"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a033F000003AVvTQAW"
               },
-              "Action__c": "a002F000003cFJmQAM",
-              "Id": "a032F000003u2YsQAI",
-              "Name": "JSON-0001",
+              "Action__c": "a003F0000039Md0QAE",
+              "Id": "a033F000003AVvTQAW",
+              "Name": "JSON-0016",
               "Key__c": "terminal.integrated.shell.windows",
               "Path__c": ":",
-              "UniqueAction__c": "a002F000003cFJmQAM",
+              "UniqueAction__c": "a003F0000039Md0QAE",
               "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
             }
           ]
@@ -619,10 +619,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJNQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md1QAE"
         },
-        "Id": "a002F000003cFJNQA2",
-        "Name": "ACT-0023",
+        "Id": "a003F0000039Md1QAE",
+        "Name": "ACT-0111",
         "AppName__c": "SFDX (Java)",
         "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
@@ -638,14 +638,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u2YrQAI"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a033F000003AVvSQAW"
               },
-              "Action__c": "a002F000003cFJNQA2",
-              "Id": "a032F000003u2YrQAI",
-              "Name": "JSON-0000",
+              "Action__c": "a003F0000039Md1QAE",
+              "Id": "a033F000003AVvSQAW",
+              "Name": "JSON-0015",
               "Key__c": "salesforcedx-vscode-apex.java.home",
               "Path__c": ":",
-              "UniqueAction__c": "a002F000003cFJNQA2",
+              "UniqueAction__c": "a003F0000039Md1QAE",
               "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
             }
           ]
@@ -654,10 +654,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJnQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md2QAE"
         },
-        "Id": "a002F000003cFJnQAM",
-        "Name": "ACT-0049",
+        "Id": "a003F0000039Md2QAE",
+        "Name": "ACT-0112",
         "AppName__c": "Git 2.23",
         "Command__c": "git --version",
         "EnabledAction__c": true,
@@ -672,10 +672,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJHQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md3QAE"
         },
-        "Id": "a002F000003cFJHQA2",
-        "Name": "ACT-0017",
+        "Id": "a003F0000039Md3QAE",
+        "Name": "ACT-0113",
         "AppName__c": "Git config email",
         "Command__c": "git config --global user.email \"you@example.com\"",
         "EnabledAction__c": true,
@@ -688,10 +688,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJ9QAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md4QAE"
         },
-        "Id": "a002F000003cFJ9QAM",
-        "Name": "ACT-0009",
+        "Id": "a003F0000039Md4QAE",
+        "Name": "ACT-0114",
         "AppName__c": "Git config name",
         "Command__c": "git config --global user.name \"Your Name\"",
         "EnabledAction__c": true,
@@ -704,10 +704,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJDQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md5QAE"
         },
-        "Id": "a002F000003cFJDQA2",
-        "Name": "ACT-0013",
+        "Id": "a003F0000039Md5QAE",
+        "Name": "ACT-0115",
         "AppName__c": "7-Zip",
         "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
         "EnabledAction__c": true,
@@ -721,10 +721,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJoQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md6QAE"
         },
-        "Id": "a002F000003cFJoQAM",
-        "Name": "ACT-0050",
+        "Id": "a003F0000039Md6QAE",
+        "Name": "ACT-0116",
         "AppName__c": "Node",
         "Command__c": "node --version",
         "EnabledAction__c": true,
@@ -738,10 +738,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJyQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md7QAE"
         },
-        "Id": "a002F000003cFJyQAM",
-        "Name": "ACT-0060",
+        "Id": "a003F0000039Md7QAE",
+        "Name": "ACT-0117",
         "AppName__c": "Checking all bookmarks",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Checking all bookmarks",
@@ -754,10 +754,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJXQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md8QAE"
         },
-        "Id": "a002F000003cFJXQA2",
-        "Name": "ACT-0033",
+        "Id": "a003F0000039Md8QAE",
+        "Name": "ACT-0118",
         "AppName__c": "SalesforceSans Font (1)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "EnabledAction__c": true,
@@ -772,10 +772,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJYQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039Md9QAE"
         },
-        "Id": "a002F000003cFJYQA2",
-        "Name": "ACT-0034",
+        "Id": "a003F0000039Md9QAE",
+        "Name": "ACT-0119",
         "AppName__c": "SalesforceSans Font (2)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "EnabledAction__c": true,
@@ -790,10 +790,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJaQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdAQAU"
         },
-        "Id": "a002F000003cFJaQAM",
-        "Name": "ACT-0036",
+        "Id": "a003F0000039MdAQAU",
+        "Name": "ACT-0120",
         "AppName__c": "SalesforceSans Font (3)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "EnabledAction__c": true,
@@ -808,10 +808,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJbQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdBQAU"
         },
-        "Id": "a002F000003cFJbQAM",
-        "Name": "ACT-0037",
+        "Id": "a003F0000039MdBQAU",
+        "Name": "ACT-0121",
         "AppName__c": "SalesforceSans Font (4)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "EnabledAction__c": true,
@@ -826,10 +826,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJSQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdCQAU"
         },
-        "Id": "a002F000003cFJSQA2",
-        "Name": "ACT-0028",
+        "Id": "a003F0000039MdCQAU",
+        "Name": "ACT-0122",
         "AppName__c": "SalesforceSans Font (5)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "EnabledAction__c": true,
@@ -844,10 +844,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJVQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdDQAU"
         },
-        "Id": "a002F000003cFJVQA2",
-        "Name": "ACT-0031",
+        "Id": "a003F0000039MdDQAU",
+        "Name": "ACT-0123",
         "AppName__c": "SalesforceSans Font (6)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "EnabledAction__c": true,
@@ -862,10 +862,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJQQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdEQAU"
         },
-        "Id": "a002F000003cFJQQA2",
-        "Name": "ACT-0026",
+        "Id": "a003F0000039MdEQAU",
+        "Name": "ACT-0124",
         "AppName__c": "SalesforceSans Font (7)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "EnabledAction__c": true,
@@ -880,10 +880,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJTQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdFQAU"
         },
-        "Id": "a002F000003cFJTQA2",
-        "Name": "ACT-0029",
+        "Id": "a003F0000039MdFQAU",
+        "Name": "ACT-0125",
         "AppName__c": "SalesforceSans Font (8)",
         "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "EnabledAction__c": true,
@@ -898,10 +898,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFJfQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdOQAU"
         },
-        "Id": "a002F000003cFJfQAM",
-        "Name": "ACT-0041",
+        "Id": "a003F0000039MdOQAU",
+        "Name": "ACT-0134",
         "AppName__c": "Word (MS Office)",
         "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "EnabledAction__c": true,
@@ -914,14 +914,14 @@
         "Count_Events__c": 1
       }
     ],
-    "a022F000003i3ogQAA": [
+    "a023F00001as50qQAA": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIQpQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdPQAU"
         },
-        "Id": "a002F000003cIQpQAM",
-        "Name": "ACT-0069",
+        "Id": "a003F0000039MdPQAU",
+        "Name": "ACT-0135",
         "AppName__c": "ETEPL - Kill App",
         "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
         "EnabledAction__c": true,
@@ -934,10 +934,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNZQA2"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdQQAU"
         },
-        "Id": "a002F000003cFNZQA2",
-        "Name": "ACT-0062",
+        "Id": "a003F0000039MdQQAU",
+        "Name": "ACT-0136",
         "AppName__c": "ETEPL - Check source path",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "EnabledAction__c": true,
@@ -951,10 +951,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNeQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdRQAU"
         },
-        "Id": "a002F000003cFNeQAM",
-        "Name": "ACT-0063",
+        "Id": "a003F0000039MdRQAU",
+        "Name": "ACT-0137",
         "AppName__c": "ETEPL - Delete folder",
         "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
@@ -967,10 +967,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNjQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdSQAU"
         },
-        "Id": "a002F000003cFNjQAM",
-        "Name": "ACT-0064",
+        "Id": "a003F0000039MdSQAU",
+        "Name": "ACT-0138",
         "AppName__c": "ETEPL - Remove Directory",
         "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
@@ -983,10 +983,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIEoQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdTQAU"
         },
-        "Id": "a002F000003cIEoQAM",
-        "Name": "ACT-0068",
+        "Id": "a003F0000039MdTQAU",
+        "Name": "ACT-0139",
         "AppName__c": "ETEPL - Remove Directory (2)",
         "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
@@ -999,10 +999,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNoQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdUQAU"
         },
-        "Id": "a002F000003cFNoQAM",
-        "Name": "ACT-0065",
+        "Id": "a003F0000039MdUQAU",
+        "Name": "ACT-0140",
         "AppName__c": "ETEPL - Make Directory",
         "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
@@ -1015,10 +1015,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNfQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdVQAU"
         },
-        "Id": "a002F000003cFNfQAM",
-        "Name": "ACT-0066",
+        "Id": "a003F0000039MdVQAU",
+        "Name": "ACT-0141",
         "AppName__c": "ETEPL - XCopy",
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
         "EnabledAction__c": true,
@@ -1032,10 +1032,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cFNtQAM"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdWQAU"
         },
-        "Id": "a002F000003cFNtQAM",
-        "Name": "ACT-0067",
+        "Id": "a003F0000039MdWQAU",
+        "Name": "ACT-0142",
         "AppName__c": "ETEPL - Check Server 1",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
         "EnabledAction__c": true,
@@ -1050,14 +1050,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u4HkQAI"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a033F000003AVvRQAW"
               },
-              "Action__c": "a002F000003cFNtQAM",
-              "Id": "a032F000003u4HkQAI",
-              "Name": "JSON-0002",
+              "Action__c": "a003F0000039MdWQAU",
+              "Id": "a033F000003AVvRQAW",
+              "Name": "JSON-0014",
               "Key__c": "production",
               "Path__c": "pages:servers",
-              "UniqueAction__c": "a002F000003cFNtQAM",
+              "UniqueAction__c": "a003F0000039MdWQAU",
               "Value__c": "https://et-epl.herokuapp.com"
             }
           ]
@@ -1066,10 +1066,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIaqQAE"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdXQAU"
         },
-        "Id": "a002F000003cIaqQAE",
-        "Name": "ACT-0070",
+        "Id": "a003F0000039MdXQAU",
+        "Name": "ACT-0143",
         "AppName__c": "ETEPL - Check server 2",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
         "EnabledAction__c": true,
@@ -1084,14 +1084,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u8pUQAQ"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a033F000003AVvUQAW"
               },
-              "Action__c": "a002F000003cIaqQAE",
-              "Id": "a032F000003u8pUQAQ",
-              "Name": "JSON-0004",
+              "Action__c": "a003F0000039MdXQAU",
+              "Id": "a033F000003AVvUQAW",
+              "Name": "JSON-0017",
               "Key__c": "pingServer",
               "Path__c": "pages",
-              "UniqueAction__c": "a002F000003cIaqQAE",
+              "UniqueAction__c": "a003F0000039MdXQAU",
               "Value__c": "https://et-epl.herokuapp.com"
             }
           ]
@@ -1100,10 +1100,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIavQAE"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdYQAU"
         },
-        "Id": "a002F000003cIavQAE",
-        "Name": "ACT-0071",
+        "Id": "a003F0000039MdYQAU",
+        "Name": "ACT-0144",
         "AppName__c": "ETEPL - Check version",
         "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
         "EnabledAction__c": true,
@@ -1118,14 +1118,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a032F000003u8thQAA"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a033F000003AVvVQAW"
               },
-              "Action__c": "a002F000003cIavQAE",
-              "Id": "a032F000003u8thQAA",
-              "Name": "JSON-0005",
+              "Action__c": "a003F0000039MdYQAU",
+              "Id": "a033F000003AVvVQAW",
+              "Name": "JSON-0018",
               "Key__c": "version",
               "Path__c": ":",
-              "UniqueAction__c": "a002F000003cIavQAE",
+              "UniqueAction__c": "a003F0000039MdYQAU",
               "Value__c": "2019-10-30V01"
             }
           ]
@@ -1134,14 +1134,14 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002F000003cIgeQAE"
+          "url": "/services/data/v42.0/sobjects/Action__c/a003F0000039MdZQAU"
         },
-        "Id": "a002F000003cIgeQAE",
-        "Name": "ACT-0072",
+        "Id": "a003F0000039MdZQAU",
+        "Name": "ACT-0145",
         "AppName__c": "ETEPL - Execute App",
         "Command__c": "C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe",
         "EnabledAction__c": true,
-        "Operation__c": "Execute",
+        "Operation__c": "Execute Async",
         "Order__c": 73,
         "Count_Events__c": 1
       }
