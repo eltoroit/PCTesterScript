@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-01T03:13:24.133Z",
+  "now": "2019-11-01T03:17:18.011Z",
   "events": [
     {
       "attributes": {
@@ -1105,10 +1105,13 @@
         "Id": "a003F0000039MdZQAU",
         "Name": "ACT-0145",
         "AppName__c": "ETEPL - Execute App",
-        "Command__c": "{\"cmd\":\"START\", \"params\":[\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"]}",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
         "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Execute App\"",
         "Expected__c": "User validated: Did ETEPL Launch?",
-        "Operation__c": "Execute Async",
+        "Fix__c": "{\"cmd\":\"START\", \"params\":[\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"]}",
+        "Message__c": "Opening Application: \"ETEPL - Execute App\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 72,
         "Count_Events__c": 1
       },
