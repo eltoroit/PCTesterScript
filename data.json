@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-01T00:04:33.898Z",
+  "now": "2019-11-01T00:07:13.924Z",
   "events": [
     {
       "attributes": {
@@ -1105,7 +1105,7 @@
         "Id": "a003F0000039MdZQAU",
         "Name": "ACT-0145",
         "AppName__c": "ETEPL - Execute App",
-        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\", \"params\":\"\"}",
+        "Command__c": "{\"cmd\":\"START\", \"params\":\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"}",
         "EnabledAction__c": true,
         "Expected__c": "User validated: Did ETEPL Launch?",
         "Operation__c": "Execute Async",
