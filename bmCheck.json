@@ -18,8 +18,17 @@
 		"checkChrome": true
 	},
 	{
+		"id": "BM_3",
+		"title": "[BAR][Pardot Login]",
+		"urlExpected": "https://pi.pardot.com/",
+		"hasFF": true,
+		"hasChrome": true,
+		"checkFF": true,
+		"checkChrome": true
+	},
+	{
 		"id": "BM_4",
-		"title": "[BAR][Data Loader]",
+		"title": "[BAR][Dataloader]",
 		"urlExpected": "https://dataloader.io/",
 		"hasFF": true,
 		"hasChrome": true,
@@ -29,7 +38,7 @@
 	{
 		"id": "BM_5",
 		"title": "[BAR][Bootcamp Session Survey]",
-		"urlExpected": "https://www.surveymonkey.com/r/Dreamforce19Bootcamp",
+		"urlExpected": "https://www.surveymonkey.com/r/goldcoastbootcamp",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,
@@ -37,8 +46,8 @@
 	},
 	{
 		"id": "BM_6",
-		"title": "[BAR][Dreamforce Website]",
-		"urlExpected": "https://www.salesforce.com/dreamforce/",
+		"title": "[BAR][Trailhead Bootcamp]",
+		"urlExpected": "https://trailhead.salesforce.com/bootcamps/australia",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,
@@ -47,7 +56,7 @@
 	{
 		"id": "BM_7",
 		"title": "[BAR][Mimeo EBook]",
-		"urlExpected": "https://salesforce.mimeo.digital/login",
+		"urlExpected": "https://salesforce.mimeo.digital/",
 		"hasFF": true,
 		"hasChrome": true,
 		"checkFF": true,

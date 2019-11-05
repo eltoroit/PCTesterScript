@@ -10,18 +10,11 @@ const { exec, execSync, spawn, spawnSync } = require("child_process");
 const url = require("url");
 const http = require("http");
 const https = require("https");
-const path = require("path");
 const log = require("./colorLogs.js");
-const minimist = require("minimist");
-const args = minimist(process.argv.slice(2), {
-	alias: {
-		t: "test"
-	}
-});
 
 // Configure execution...
 var timerDelay = 250;
-var testType = args.test ? "TEST" : "PROD"; // TEST | PROD
+var testType = "TEST"; // TEST | PROD
 
 // Depending on execution (TEST | PROD)
 var debug = false;
@@ -59,8 +52,8 @@ const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
-const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Bookmarks";
-const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
+const bmChromePath = "C:\\Users\\Client\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
+const bmFirefoxPath = ["C:\\Users\\Client\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
 
 function reportError(instruction) {
 	if (debug) log.debug("ERROR FOR: " + log.getPrettyJson(instruction));
@@ -107,12 +100,11 @@ function promptYesNo(instruction) {
 	}
 }
 function spawnCommand(instruction) {
-	instruction.Command__c = JSON.parse(instruction.Command__c.replace(/\\/g, "\\\\"));
 	if (debug) log.debug("SPAWNING: " + log.getPrettyJson(instruction.Command__c));
 
 	var process;
 	try {
-		if (instruction.Command__c.params && instruction.Command__c.params !== "") {
+		if (instruction.Command__c.params) {
 			process = spawn(instruction.Command__c.cmd, instruction.Command__c.params);
 		} else {
 			process = spawn(instruction.Command__c.cmd);
@@ -134,7 +126,7 @@ function executeCommand(instruction) {
 	var process = exec(instruction.Command__c, function(error, stdout, stderr) {
 		var output = {
 			cmd: instruction.Command__c,
-			error
+			error: error
 		};
 		output.stdout = stdout ? stdout.trim() : "";
 		output.stderr = stderr ? stderr.trim() : "";
@@ -142,20 +134,6 @@ function executeCommand(instruction) {
 		instruction.callback(output);
 	});
 }
-// function cmdETEPL(cmd) {
-// 	return new Promise((resolve, reject) => {
-// 		console.log(`Command: ${cmd}`);
-// 		exec(cmd, (error, stdout, stderr) => {
-// 			const result = {
-// 				error,
-// 				stderr,
-// 				stdout
-// 			};
-// 			console.log(JSON.stringify(result, null, 4));
-// 			resolve(result);
-// 		});
-// 	});
-// }
 function checkExact(instruction) {
 	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
 	instruction.callback = function(output) {
@@ -171,44 +149,23 @@ function checkExact(instruction) {
 	executeCommand(instruction);
 }
 function checkContains(instruction) {
-	let isExecute = instruction.Operation__c !== "Check Contains";
-	if (verbose) {
-		if (isExecute) {
-			log.info("EXECUTING: [" + instruction.Command__c + "]");
-		} else {
-			log.info("CHECKING: [" + instruction.Command__c + "]");
-		}
-	}
+	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
 	instruction.callback = function(output) {
 		var valid = false;
 
-		if (isExecute) {
-			valid = true;
-		} else {
-			if (!instruction.Expected__c) valid = true;
-			if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
-			if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
-		}
+		if (!instruction.Expected__c) valid = true;
+		if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
+		if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
 
 		if (valid) {
-			if (verbose) {
-				if (instruction.Expected__c) {
-					log.success("VALID: [" + instruction.Expected__c + "]");
-				} else {
-					log.success(`VALID: [${instruction.Command__c}]`);
-				}
-			}
+			if (verbose) log.success("VALID: [" + instruction.Expected__c + "]");
 		} else {
 			instruction.returned = output;
 			reportError(instruction);
 		}
 		nextInstruction();
 	};
-	if (instruction.Operation__c === "Execute Async") {
-		spawnCommand(instruction);
-	} else {
-		executeCommand(instruction);
-	}
+	executeCommand(instruction);
 }
 function checkPath(instruction) {
 	if (verbose) log.info("CHECK PATH: [" + instruction.Command__c + "]");
@@ -534,14 +491,18 @@ function validateBookmarks(instruction) {
 }
 // Bookmarks -- END
 
-function jsonFile_FindPath(instruction) {
+function jsonFile_Edit(instruction) {
+	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
+
 	if (debug) log.debug("Reading JSON_Action__c");
-	var JSON_Action = instruction.JSON_Actions__r;
-	if (JSON_Action.totalSize !== 1) throw new Error("Multiple JSON Actions are not allowed!");
+	var JSON_Action;
+	JSON_Action = instruction.JSON_Actions__r;
+	if (JSON_Action.totalSize != 1) throw new Error("Multiple JSON Actions are not allowed!");
 	JSON_Action = JSON_Action.records[0];
 
 	if (debug) log.debug("Reading JSON file");
-	let data = loadFileJson(instruction.Command__c);
+	var fileContents = loadFileJson(instruction.Command__c);
+	var data = fileContents;
 	var paths = JSON_Action.Path__c.split(":");
 
 	if (debug) log.debug("Processing JSON path: " + JSON_Action.Path__c);
@@ -577,15 +538,7 @@ function jsonFile_FindPath(instruction) {
 			}
 		}
 	}
-	return data;
-}
-function jsonFile_Edit(instruction) {
-	if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
-	const data = jsonFile_FindPath(instruction);
-	const JSON_Action = instruction.JSON_Actions__r.records[0];
-	const fileContents = loadFileJson(instruction.Command__c);
 
-	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
 	data[JSON_Action.Key__c] = JSON_Action.Value__c;
 	fs.writeFile(instruction.Command__c, log.getPrettyJson(fileContents), function(err) {
@@ -599,27 +552,6 @@ function jsonFile_Edit(instruction) {
 			nextInstruction();
 		}
 	});
-}
-function jsonFile_Check(instruction) {
-	if (verbose) log.info("Reading JSON File: " + instruction.AppName__c);
-	const data = jsonFile_FindPath(instruction);
-	const JSON_Action = instruction.JSON_Actions__r.records[0];
-
-	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
-	if (debug) log.debug("Looking here: " + log.getPrettyJson(data));
-
-	if (data[JSON_Action.Key__c] === JSON_Action.Value__c) {
-		if (verbose) log.success(`VALID: [${instruction.AppName__c}]`);
-		nextInstruction();
-	} else {
-		instruction.returned = data[JSON_Action.Key__c];
-		reportError(instruction);
-		reportError({
-			Actual: data[JSON_Action.Key__c],
-			expected: JSON_Action.Value__c
-		});
-		nextInstruction();
-	}
 }
 function loadFileJson(path) {
 	return JSON.parse(loadFile(path));
@@ -683,12 +615,6 @@ function executeInstruction() {
 		case "Check Contains":
 			checkContains(instruction);
 			break;
-		case "Execute":
-			checkContains(instruction);
-			break;
-		case "Execute Async":
-			checkContains(instruction);
-			break;
 		case "Check Exact":
 			checkExact(instruction);
 			break;
@@ -704,7 +630,7 @@ function executeInstruction() {
 			nextInstruction();
 			break;
 		case "JSON File - Check":
-			jsonFile_Check(instruction);
+			stopAndFix = true;
 			break;
 		case "JSON File - Edit":
 			jsonFile_Edit(instruction);
@@ -810,65 +736,28 @@ function menuChooseEvent(data) {
 
 	forEver();
 }
-function bookmarksChecks() {
-	if (doesFileExist(bmPretendPath)) {
-		log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
-		log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
-		log.error("Delete the file is this is a real test!");
-	}
-	if (doesFileExist(bmCheckPath)) {
-		var bmChecks = loadFileJson(bmCheckPath);
-		if (!(bmChecks.length > 0)) {
-			log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-			var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
-			log.error(msg);
-			throw new Error(msg);
-		}
-	} else {
+
+const data = loadFileJson("./data.json");
+log.clearScreen();
+log.promptMsg(`Version: ${data.now}`);
+if (doesFileExist(bmPretendPath)) {
+	log.error("BOOKMARKS ARE NOT PROCESSED FROM THE BROWSERS!!!");
+	log.error("Bookmarks are procesed from file [" + bmPretendPath + "]");
+	log.error("Delete the file is this is a real test!");
+}
+if (doesFileExist(bmCheckPath)) {
+	var bmChecks = loadFileJson(bmCheckPath);
+	if (!(bmChecks.length > 0)) {
 		log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-		var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
+		var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
 		log.error(msg);
 		throw new Error(msg);
 	}
+} else {
+	log.error("BOOKMARKS CAN NOT PROCESSED!!!");
+	var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
+	log.error(msg);
+	throw new Error(msg);
 }
 
-const data = loadFileJson("./data.json");
-// function doEach(arCmds) {
-// 	console.log(`ARRAY: ${JSON.stringify(arCmds)}`);
-// 	return new Promise((resolve, reject) => {
-// 		console.log(`length: ${arCmds.length}`);
-// 		if (arCmds.length === 0) {
-// 			console.log(`EXIT`);
-// 			resolve();
-// 		} else {
-// 			const cmd = arCmds.shift();
-// 			console.log(`CMD: ${JSON.stringify(cmd)}`);
-// 			cmdETEPL(cmd).then(() => {
-// 				doEach(arCmds).then(() => {
-// 					resolve();
-// 				});
-// 			});
-// 		}
-// 	});
-// }
-// function doAll() {
-// const sourcePath = path.join("C:/TH/PCTesterScript/copy/src");
-// const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
-// const cmds = [];
-
-// // Copy ETEPL files
-// cmds.push(`DEL /Q /S "${destPath}" > NUL`);
-// cmds.push(`RMDIR /Q /S "${destPath}" > NUL`);
-// cmds.push(`mkdir ${destPath}`);
-// cmds.push(`xcopy /v /q /s /e /y "${sourcePath}" "${destPath}"`);
-// doEach(cmds).then(() => {
-// 	console.log("DONE COPY");
-
-// log.clearScreen();
-log.promptMsg(`Version: ${data.now}`);
-bookmarksChecks();
 menuChooseEvent(data);
-// });
-// }
-
-// doAll();
