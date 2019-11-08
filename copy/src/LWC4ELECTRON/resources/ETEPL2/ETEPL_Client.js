@@ -29,7 +29,11 @@ module.exports = class ETEPL_Client {
 	}
 
 	_startClock() {
-		config.logger.logs.addMessage(config.logger.levels.info, "Start Clock", `Starting master clock. Interval: ${(config.timer.master.value / 1000).toFixed(2)} seconds`); // ET_TIME
+		config.logger.logs.addMessage(
+			config.logger.levels.info,
+			"Start Clock",
+			`Starting master clock. Interval: ${(config.timer.master.value / 1000).toFixed(2)} seconds`
+		); // ET_TIME
 
 		// Schedule future ticks
 		// eslint-disable-next-line @lwc/lwc/no-async-operation
@@ -93,7 +97,9 @@ module.exports = class ETEPL_Client {
 							console.log(
 								`${JSON.stringify({
 									dttm: new Date(),
-									response: `${method} ${reqUrl} ${String(reqUrl).indexOf("handshake" > 0) ? "(" + output.output.action + ")" : ""}`,
+									response: `${method} ${reqUrl} ${
+										String(reqUrl).indexOf("handshake" > 0) ? "(" + output.output.action + ")" : ""
+									}`,
 									receives: output
 								})},`
 							);

@@ -6,7 +6,7 @@
 			"staging": "https://et-epl-stage.herokuapp.com",
 			"production": "https://et-epl.herokuapp.com"
 		},
-		"pingServer": "https://et-epl.herokuapp.com"
+		"pingServer": "https://et-epl-stage.herokuapp.com"
 	},
 	"timer": {
 		"master": {
@@ -38,5 +38,5 @@
 		"useFakeIPAddress": false,
 		"interruptWithDialog": false
 	},
-	"version": "2019-11-05V01"
+	"version": "2019-11-07V01"
 }

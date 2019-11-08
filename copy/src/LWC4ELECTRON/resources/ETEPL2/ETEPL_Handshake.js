@@ -70,14 +70,18 @@ module.exports = class ETEPL_Handshake {
 						that.data.readyToRemove = true;
 						break;
 					}
-					// Perform setup stpes, with optional showing of the screen to set the room and the computer number
+					// Perform setup steps, with optional showing of the screen to set the room and the computer number
 					case "SETUP": {
 						config.logger.logs.addMessage(config.logger.levels.info, "Handshake", "SETUP requested by server");
 						if (electronJson.resetStrength > 0) {
 							config.actions.add(new ETEPL_ComputerSetup(config, { ...response.output, ...electronJson }));
 						} else {
 							if (electronJson.computerId) {
-								config.logger.logs.addMessage(config.logger.levels.info, "Handshake", `SETUP skippped because I have ComputerId=${electronJson.computerId}`);
+								config.logger.logs.addMessage(
+									config.logger.levels.info,
+									"Handshake",
+									`SETUP skippped because I have ComputerId=${electronJson.computerId}`
+								);
 								electronJson.forceReset = null;
 								config.etEpl.writeElectronJson(electronJson);
 							} else {

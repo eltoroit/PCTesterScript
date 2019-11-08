@@ -95,40 +95,66 @@ module.exports = class ETEPL_ComputerLogin {
 			if (config.debug.openDevTools) {
 				script += "debugger;\n";
 				config.electron.mainWindow.webContents.openDevTools();
-			}
+			} 
+			
+			// setFormFieldsAsync()
+			script += `function setFormFieldsAsync() {\n`;
+			script += `\treturn new Promise((resolve, reject) => {\n`;
+			script += `\t\twindow.setTimeout(() => {\n`;
+			script += `\t\t\telInput = document.querySelector("${control.un[0]}");\n`;
+			script += '\t\t\telInput.dispatchEvent(new Event("focus", { bubbles: true, composed: true }));\n';
+			script += `\t\t\telInput.value = "${control.un[1]}";\n`;
+			script += '\t\t\telInput.dispatchEvent(new Event("input", { bubbles: true, composed: true }));\n';
+			script += `\t\t\telButton = document.querySelector("${control.button[0]}");\n`;
+			script += '\t\t\telButton.dispatchEvent(new Event("focus", { bubbles: true, composed: true }));\n';
+			script += `\t\t\telInput = document.querySelector("${control.pw[0]}");\n`;
+			script += '\t\t\telInput.dispatchEvent(new Event("focus", { bubbles: true, composed: true }));\n';
+			script += `\t\t\telInput.value = "${control.pw[1]}";\n`;
+			script += '\t\t\telInput.dispatchEvent(new Event("input", { bubbles: true, composed: true }));\n';
+			script += `\t\t\telButton = document.querySelector("${control.button[0]}");\n`;
+			script += '\t\t\telButton.dispatchEvent(new Event("focus", { bubbles: true, composed: true }));\n';
+			script += `\t\t\tresolve();\n`;
+			script += `\t\t}, 500);\n`;
+			script += `\t});\n`;
+			script += `}\n`;
+			script += `\n`;
 
-			for (let i = 0; i < 3; i++) {
-				script += "window.setTimeout(function() {\n";
-
-				// Username
-				script += `elInput = document.querySelector("${control.un[0]}");\n`;
-				script += 'elInput.dispatchEvent(new Event("focus", { bubbles: true }));\n';
-				script += `elInput.value = "${control.un[1]}";\n`;
-				script += 'elInput.dispatchEvent(new Event("input", { bubbles: true }));\n';
-				script += `elButton = document.querySelector("${control.button[0]}");\n`;
-				script += 'elButton.dispatchEvent(new Event("focus", { bubbles: true }));\n';
-
-				// Password
-				script += `elInput = document.querySelector("${control.pw[0]}");\n`;
-				script += 'elInput.dispatchEvent(new Event("focus", { bubbles: true }));\n';
-				script += `elInput.value = "${control.pw[1]}";\n`;
-				script += 'elInput.dispatchEvent(new Event("input", { bubbles: true }));\n';
-				script += `elButton = document.querySelector("${control.button[0]}");\n`;
-				script += 'elButton.dispatchEvent(new Event("focus", { bubbles: true }));\n';
-
-				script += `}, 10);\n`;
-			}
-
-			// Login Button
-			script += "window.setTimeout(function() {\n";
+			// login()
+			script += `function login() {\n`;
 			script += `\telInput = document.querySelector("${control.un[0]}");\n`;
 			script += `\tconsole.log('Valid UN: ' + (elInput.value === "${control.un[1]}"));\n`;
 			script += `\telInput = document.querySelector("${control.pw[0]}");\n`;
 			script += `\tconsole.log('Valid PW: ' + (elInput.value === "${control.pw[1]}"));\n`;
 			script += `\telButton = document.querySelector("${control.button[0]}");\n`;
-			script += '\telButton.dispatchEvent(new Event("focus", { bubbles: true }));\n';
-			script += '\telButton.dispatchEvent(new Event("click", { bubbles: true }));\n';
+			script += '\telButton.dispatchEvent(new Event("focus", { bubbles: true, composed: true }));\n';
+			script += '\telButton.dispatchEvent(new Event("click", { bubbles: true, composed: true }));\n';
+			script += `}\n`;
+			script += `\n`;
+
+			// processForm()
+			script += `async function processForm() {\n`;
+			script += `\tfor (let i = 1; i <= 3; i++) {\n`;
+			if (config.debug.openDevTools) {
+				script += `\t\tconsole.log("Set form fields #" + i);\n`;
+			}
+			script += `\t\tawait setFormFieldsAsync();\n`;
+			script += `\t}\n`;
+			if (config.debug.openDevTools) {
+				script += `\tconsole.log("Form has been filled, logging in");\n`;
+			}
+			script += `\tlogin();\n`;
+			script += `}\n`;
+			script += `\n`;
+
+			// Main
+			script += `window.setInterval(() => {\n`;
+			if (config.debug.openDevTools) {
+				script += `\tconsole.log("Trying to login again");\n`;
+			}
+			script += `\tprocessForm();\n`;
+			script += "\tdebugger;\n";
 			script += `}, ${100 + config.timer.autoClick.value});\n`;
+			script += `processForm();\n`;
 
 			// console.log(script);
 			config.electron.mainWindow.webContents.executeJavaScript(script);

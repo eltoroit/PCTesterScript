@@ -36,10 +36,11 @@ module.exports = class ETEPL_Actions {
 	reset(isForced) {
 		config.logger.logs.addMessage(config.logger.levels.fatal, "ABORT", config.actions.fifo[0]);
 		// config.actions.fifo[0].data.maxTime = 0;
+		this.resetPeek();
 		config.actions.fifo = [];
 		config.actions.closePage();
 		config.etEpl.resetTest();
-		this.resetPeek();
+		this.peekData.lastAction = null;
 		if (!isForced) {
 			config.actions.add(new ETEPL_PauseMilliseconds(config, config.timer.reset.value)); // ET_TIME
 		}
@@ -108,7 +109,9 @@ module.exports = class ETEPL_Actions {
 					config.logger.logs.addMessage(
 						config.logger.levels.error,
 						"Master Tick",
-						`ABORT "${action.data.name}" now! It expired at ${action.data.abort.toISOString()} (${action.data.abort.toLocaleTimeString()})`
+						`ABORT "${
+							action.data.name
+						}" now! It expired at ${action.data.abort.toISOString()} (${action.data.abort.toLocaleTimeString()})`
 					);
 					config.actions.reset(false);
 					that.resetPeek();
@@ -157,10 +160,15 @@ module.exports = class ETEPL_Actions {
 						.catch(err => {
 							config.logger.logs.addMessage(config.logger.levels.fatal, "Peek", `Error on Webservice callout`);
 							config.electron.mainHelper.handleCriticalError(err);
+							config.actions.reset(true);
 						});
 					// }
 				} else {
-					config.logger.logs.addMessage(config.logger.levels.trace, "Peek", `Skip ${this.peekData.counter} of ${config.debug.peekInterval}`);
+					config.logger.logs.addMessage(
+						config.logger.levels.trace,
+						"Peek",
+						`Skip ${this.peekData.counter} of ${config.debug.peekInterval}`
+					);
 				}
 			}
 		} else {
