@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-11T21:00:49.958Z",
+  "now": "2019-11-11T21:05:51.831Z",
   "events": [
     {
       "attributes": {
@@ -8,7 +8,7 @@
       },
       "Id": "a021D000002wnnaQAA",
       "Name": "Dreamforce '19",
-      "Order__c": 0.5
+      "Order__c": 1
     },
     {
       "attributes": {
@@ -17,7 +17,7 @@
       },
       "Id": "a021D000002wnnZQAQ",
       "Name": "Re-Install Event Proctor Login",
-      "Order__c": 1
+      "Order__c": 2
     },
     {
       "attributes": {
@@ -26,10 +26,37 @@
       },
       "Id": "a021D000002wnnbQAA",
       "Name": "Logout Apps",
-      "Order__c": 10
+      "Order__c": 3
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a021D000002ws1JQAQ"
+      },
+      "Id": "a021D000002ws1JQAQ",
+      "Name": "DO NOT USE -- Kill Event Proctor Login",
+      "Order__c": 4
     }
   ],
   "actionsByEvent": {
+    "a021D000002ws1JQAQ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFVQA2"
+        },
+        "Id": "a001D0000034CFVQA2",
+        "Name": "ACT-0062",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 4,
+        "Count_Events__c": 4
+      }
+    ],
     "a021D000002wnnbQAA": [
       {
         "attributes": {
@@ -45,7 +72,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 4,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
@@ -61,22 +88,6 @@
         "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Operation__c": "Check Contains",
         "Order__c": 66,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFNQA2"
-        },
-        "Id": "a001D0000034CFNQA2",
-        "Name": "ACT-0054",
-        "AppName__c": "Logout Heroku",
-        "Command__c": "heroku logout",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
-        "Message__c": "Validating: Logout Heroku (heroku logout)",
-        "Operation__c": "Check Contains",
-        "Order__c": 67,
         "Count_Events__c": 1
       }
     ],
@@ -95,7 +106,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 4,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
@@ -371,7 +382,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 4,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
