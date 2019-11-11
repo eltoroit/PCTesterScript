@@ -1,15 +1,6 @@
 {
-  "now": "2019-11-08T04:18:55.084Z",
+  "now": "2019-11-11T21:00:49.958Z",
   "events": [
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a021D000002wnnZQAQ"
-      },
-      "Id": "a021D000002wnnZQAQ",
-      "Name": "Install Event Proctor Login",
-      "Order__c": 1
-    },
     {
       "attributes": {
         "type": "Event__c",
@@ -17,7 +8,16 @@
       },
       "Id": "a021D000002wnnaQAA",
       "Name": "Dreamforce '19",
-      "Order__c": 2
+      "Order__c": 0.5
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a021D000002wnnZQAQ"
+      },
+      "Id": "a021D000002wnnZQAQ",
+      "Name": "Re-Install Event Proctor Login",
+      "Order__c": 1
     },
     {
       "attributes": {
@@ -34,6 +34,22 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFVQA2"
+        },
+        "Id": "a001D0000034CFVQA2",
+        "Name": "ACT-0062",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 4,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFMQA2"
         },
         "Id": "a001D0000034CFMQA2",
@@ -44,7 +60,7 @@
         "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Operation__c": "Check Contains",
-        "Order__c": 54,
+        "Order__c": 66,
         "Count_Events__c": 1
       },
       {
@@ -60,9 +76,11 @@
         "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
         "Message__c": "Validating: Logout Heroku (heroku logout)",
         "Operation__c": "Check Contains",
-        "Order__c": 55,
+        "Order__c": 67,
         "Count_Events__c": 1
-      },
+      }
+    ],
+    "a021D000002wnnZQAQ": [
       {
         "attributes": {
           "type": "Action__c",
@@ -76,7 +94,224 @@
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 63,
+        "Order__c": 4,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFWQA2"
+        },
+        "Id": "a001D0000034CFWQA2",
+        "Name": "ACT-0063",
+        "AppName__c": "ETEPL - Check source path",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "elMain.js",
+        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "Operation__c": "Check Path",
+        "Order__c": 5,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFXQA2"
+        },
+        "Id": "a001D0000034CFXQA2",
+        "Name": "ACT-0064",
+        "AppName__c": "ETEPL - Delete folder",
+        "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 6,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFYQA2"
+        },
+        "Id": "a001D0000034CFYQA2",
+        "Name": "ACT-0065",
+        "AppName__c": "ETEPL - Remove Directory",
+        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 7,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFZQA2"
+        },
+        "Id": "a001D0000034CFZQA2",
+        "Name": "ACT-0066",
+        "AppName__c": "ETEPL - Remove Directory (2)",
+        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 8,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFaQAM"
+        },
+        "Id": "a001D0000034CFaQAM",
+        "Name": "ACT-0067",
+        "AppName__c": "ETEPL - Make Directory",
+        "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 9,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFbQAM"
+        },
+        "Id": "a001D0000034CFbQAM",
+        "Name": "ACT-0068",
+        "AppName__c": "ETEPL - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 10,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFcQAM"
+        },
+        "Id": "a001D0000034CFcQAM",
+        "Name": "ACT-0069",
+        "AppName__c": "ETEPL - Check Server 1",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 11,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0bzQAA"
+              },
+              "Action__c": "a001D0000034CFcQAM",
+              "Id": "a031D000002w0bzQAA",
+              "Name": "JSON-0000",
+              "Key__c": "production",
+              "Path__c": "pages:servers",
+              "UniqueAction__c": "a001D0000034CFcQAM",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFdQAM"
+        },
+        "Id": "a001D0000034CFdQAM",
+        "Name": "ACT-0070",
+        "AppName__c": "ETEPL - Check server 2",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 12,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c2QAA"
+              },
+              "Action__c": "a001D0000034CFdQAM",
+              "Id": "a031D000002w0c2QAA",
+              "Name": "JSON-0003",
+              "Key__c": "pingServer",
+              "Path__c": "pages",
+              "UniqueAction__c": "a001D0000034CFdQAM",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFeQAM"
+        },
+        "Id": "a001D0000034CFeQAM",
+        "Name": "ACT-0071",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 13,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c3QAA"
+              },
+              "Action__c": "a001D0000034CFeQAM",
+              "Id": "a031D000002w0c3QAA",
+              "Name": "JSON-0004",
+              "Key__c": "version",
+              "Path__c": ":",
+              "UniqueAction__c": "a001D0000034CFeQAM",
+              "Value__c": "2019-11-05V01"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFfQAM"
+        },
+        "Id": "a001D0000034CFfQAM",
+        "Name": "ACT-0072",
+        "AppName__c": "ETEPL - Event Proctor Login",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Event Proctor Login\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Event Proctor Login\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 14,
         "Count_Events__c": 2
       }
     ],
@@ -111,6 +346,253 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034JaGQAU"
+        },
+        "Id": "a001D0000034JaGQAU",
+        "Name": "ACT-0073",
+        "AppName__c": "MANUAL CHECKS",
+        "Command__c": "=== === === INSTALL ET-EPL === === ===",
+        "EnabledAction__c": true,
+        "Operation__c": "Write",
+        "Order__c": 3,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFVQA2"
+        },
+        "Id": "a001D0000034CFVQA2",
+        "Name": "ACT-0062",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 4,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFWQA2"
+        },
+        "Id": "a001D0000034CFWQA2",
+        "Name": "ACT-0063",
+        "AppName__c": "ETEPL - Check source path",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "elMain.js",
+        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "Operation__c": "Check Path",
+        "Order__c": 5,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFXQA2"
+        },
+        "Id": "a001D0000034CFXQA2",
+        "Name": "ACT-0064",
+        "AppName__c": "ETEPL - Delete folder",
+        "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 6,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFYQA2"
+        },
+        "Id": "a001D0000034CFYQA2",
+        "Name": "ACT-0065",
+        "AppName__c": "ETEPL - Remove Directory",
+        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 7,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFZQA2"
+        },
+        "Id": "a001D0000034CFZQA2",
+        "Name": "ACT-0066",
+        "AppName__c": "ETEPL - Remove Directory (2)",
+        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 8,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFaQAM"
+        },
+        "Id": "a001D0000034CFaQAM",
+        "Name": "ACT-0067",
+        "AppName__c": "ETEPL - Make Directory",
+        "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 9,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFbQAM"
+        },
+        "Id": "a001D0000034CFbQAM",
+        "Name": "ACT-0068",
+        "AppName__c": "ETEPL - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 10,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFcQAM"
+        },
+        "Id": "a001D0000034CFcQAM",
+        "Name": "ACT-0069",
+        "AppName__c": "ETEPL - Check Server 1",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 11,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0bzQAA"
+              },
+              "Action__c": "a001D0000034CFcQAM",
+              "Id": "a031D000002w0bzQAA",
+              "Name": "JSON-0000",
+              "Key__c": "production",
+              "Path__c": "pages:servers",
+              "UniqueAction__c": "a001D0000034CFcQAM",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFdQAM"
+        },
+        "Id": "a001D0000034CFdQAM",
+        "Name": "ACT-0070",
+        "AppName__c": "ETEPL - Check server 2",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 12,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c2QAA"
+              },
+              "Action__c": "a001D0000034CFdQAM",
+              "Id": "a031D000002w0c2QAA",
+              "Name": "JSON-0003",
+              "Key__c": "pingServer",
+              "Path__c": "pages",
+              "UniqueAction__c": "a001D0000034CFdQAM",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFeQAM"
+        },
+        "Id": "a001D0000034CFeQAM",
+        "Name": "ACT-0071",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 13,
+        "Count_Events__c": 2,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c3QAA"
+              },
+              "Action__c": "a001D0000034CFeQAM",
+              "Id": "a031D000002w0c3QAA",
+              "Name": "JSON-0004",
+              "Key__c": "version",
+              "Path__c": ":",
+              "UniqueAction__c": "a001D0000034CFeQAM",
+              "Value__c": "2019-11-05V01"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFfQAM"
+        },
+        "Id": "a001D0000034CFfQAM",
+        "Name": "ACT-0072",
+        "AppName__c": "ETEPL - Event Proctor Login",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Event Proctor Login\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Event Proctor Login\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 14,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CEXQA2"
         },
         "Id": "a001D0000034CEXQA2",
@@ -119,7 +601,7 @@
         "Command__c": "=== === === MANUAL CHECKS === === ===",
         "EnabledAction__c": true,
         "Operation__c": "Write",
-        "Order__c": 3,
+        "Order__c": 15,
         "Count_Events__c": 3
       },
       {
@@ -136,7 +618,7 @@
         "Expected__c": "User validated: Computer background image?",
         "Message__c": "User validated: Computer background image?",
         "Operation__c": "Manual",
-        "Order__c": 5,
+        "Order__c": 17,
         "Count_Events__c": 3
       },
       {
@@ -153,7 +635,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 7,
+        "Order__c": 19,
         "Count_Events__c": 3
       },
       {
@@ -170,7 +652,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 8,
+        "Order__c": 20,
         "Count_Events__c": 3
       },
       {
@@ -187,7 +669,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 9,
+        "Order__c": 21,
         "Count_Events__c": 3
       },
       {
@@ -204,7 +686,7 @@
         "Expected__c": "User validated: Chrome Plugin to split screen",
         "Message__c": "User validated: Chrome Plugin to split screen",
         "Operation__c": "Manual",
-        "Order__c": 10,
+        "Order__c": 22,
         "Count_Events__c": 3
       },
       {
@@ -221,7 +703,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 13,
+        "Order__c": 25,
         "Count_Events__c": 3
       },
       {
@@ -239,7 +721,7 @@
         "Fix__c": "Powerpoint (MS Office) is not installed",
         "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 14,
+        "Order__c": 26,
         "Count_Events__c": 1
       },
       {
@@ -257,7 +739,7 @@
         "Fix__c": "Excel (MS Office) is not installed",
         "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 15,
+        "Order__c": 27,
         "Count_Events__c": 1
       },
       {
@@ -271,7 +753,7 @@
         "Command__c": "=== === === AUTOMATED CHECKS === === ===",
         "EnabledAction__c": true,
         "Operation__c": "Write",
-        "Order__c": 16,
+        "Order__c": 28,
         "Count_Events__c": 3
       },
       {
@@ -289,7 +771,7 @@
         "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
-        "Order__c": 17,
+        "Order__c": 29,
         "Count_Events__c": 3
       },
       {
@@ -307,7 +789,7 @@
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 18,
+        "Order__c": 30,
         "Count_Events__c": 3
       },
       {
@@ -325,7 +807,7 @@
         "Fix__c": "Please ensure Java JDK is installed.",
         "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
         "Operation__c": "Check Path",
-        "Order__c": 19,
+        "Order__c": 31,
         "Count_Events__c": 3
       },
       {
@@ -343,7 +825,7 @@
         "Fix__c": "Notepad is missing!",
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
-        "Order__c": 21,
+        "Order__c": 33,
         "Count_Events__c": 3
       },
       {
@@ -361,7 +843,7 @@
         "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
         "Operation__c": "Check Path",
-        "Order__c": 24,
+        "Order__c": 36,
         "Count_Events__c": 3
       },
       {
@@ -379,7 +861,7 @@
         "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
         "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
-        "Order__c": 25,
+        "Order__c": 37,
         "Count_Events__c": 3
       },
       {
@@ -397,7 +879,7 @@
         "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
-        "Order__c": 26,
+        "Order__c": 38,
         "Count_Events__c": 3
       },
       {
@@ -414,7 +896,7 @@
         "Expected__c": "1.3",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 27,
+        "Order__c": 39,
         "Count_Events__c": 3
       },
       {
@@ -432,7 +914,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 28,
+        "Order__c": 40,
         "Count_Events__c": 3
       },
       {
@@ -450,7 +932,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 29,
+        "Order__c": 41,
         "Count_Events__c": 3
       },
       {
@@ -468,7 +950,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 30,
+        "Order__c": 42,
         "Count_Events__c": 3
       },
       {
@@ -486,7 +968,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 31,
+        "Order__c": 43,
         "Count_Events__c": 3
       },
       {
@@ -504,7 +986,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 32,
+        "Order__c": 44,
         "Count_Events__c": 3
       },
       {
@@ -522,7 +1004,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 33,
+        "Order__c": 45,
         "Count_Events__c": 3
       },
       {
@@ -540,7 +1022,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 34,
+        "Order__c": 46,
         "Count_Events__c": 3
       },
       {
@@ -558,7 +1040,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-46.*",
         "Operation__c": "Check Path",
-        "Order__c": 35,
+        "Order__c": 47,
         "Count_Events__c": 3
       },
       {
@@ -576,7 +1058,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "Operation__c": "Check Path",
-        "Order__c": 36,
+        "Order__c": 48,
         "Count_Events__c": 3
       },
       {
@@ -594,7 +1076,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-10.*",
         "Operation__c": "Check Path",
-        "Order__c": 37,
+        "Order__c": 49,
         "Count_Events__c": 3
       },
       {
@@ -610,7 +1092,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 38,
+        "Order__c": 50,
         "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -645,7 +1127,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 39,
+        "Order__c": 51,
         "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -682,7 +1164,7 @@
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git 2.23 (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 40,
+        "Order__c": 52,
         "Count_Events__c": 3
       },
       {
@@ -698,7 +1180,7 @@
         "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 41,
+        "Order__c": 53,
         "Count_Events__c": 3
       },
       {
@@ -714,7 +1196,7 @@
         "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 42,
+        "Order__c": 54,
         "Count_Events__c": 3
       },
       {
@@ -731,7 +1213,7 @@
         "Expected__c": "7-Zip 19.00 (x64)",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 43,
+        "Order__c": 55,
         "Count_Events__c": 3
       },
       {
@@ -748,7 +1230,7 @@
         "Expected__c": "v10.16.3",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 44,
+        "Order__c": 56,
         "Count_Events__c": 3
       },
       {
@@ -764,7 +1246,7 @@
         "Expected__c": "Bookmarks are correct",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 45,
+        "Order__c": 57,
         "Count_Events__c": 3
       },
       {
@@ -782,7 +1264,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 46,
+        "Order__c": 58,
         "Count_Events__c": 3
       },
       {
@@ -800,7 +1282,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 47,
+        "Order__c": 59,
         "Count_Events__c": 3
       },
       {
@@ -818,7 +1300,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 48,
+        "Order__c": 60,
         "Count_Events__c": 3
       },
       {
@@ -836,7 +1318,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 49,
+        "Order__c": 61,
         "Count_Events__c": 3
       },
       {
@@ -854,7 +1336,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 50,
+        "Order__c": 62,
         "Count_Events__c": 3
       },
       {
@@ -872,7 +1354,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 51,
+        "Order__c": 63,
         "Count_Events__c": 3
       },
       {
@@ -890,7 +1372,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 52,
+        "Order__c": 64,
         "Count_Events__c": 3
       },
       {
@@ -908,7 +1390,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 53,
+        "Order__c": 65,
         "Count_Events__c": 3
       },
       {
@@ -926,242 +1408,7 @@
         "Fix__c": "Word (MS Office) is not installed",
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
-        "Order__c": 62,
-        "Count_Events__c": 1
-      }
-    ],
-    "a021D000002wnnZQAQ": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFVQA2"
-        },
-        "Id": "a001D0000034CFVQA2",
-        "Name": "ACT-0062",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 63,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFWQA2"
-        },
-        "Id": "a001D0000034CFWQA2",
-        "Name": "ACT-0063",
-        "AppName__c": "ETEPL - Check source path",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "elMain.js",
-        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
-        "Operation__c": "Check Path",
-        "Order__c": 64,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFXQA2"
-        },
-        "Id": "a001D0000034CFXQA2",
-        "Name": "ACT-0064",
-        "AppName__c": "ETEPL - Delete folder",
-        "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 65,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFYQA2"
-        },
-        "Id": "a001D0000034CFYQA2",
-        "Name": "ACT-0065",
-        "AppName__c": "ETEPL - Remove Directory",
-        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 66,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFZQA2"
-        },
-        "Id": "a001D0000034CFZQA2",
-        "Name": "ACT-0066",
-        "AppName__c": "ETEPL - Remove Directory (2)",
-        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 67,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFaQAM"
-        },
-        "Id": "a001D0000034CFaQAM",
-        "Name": "ACT-0067",
-        "AppName__c": "ETEPL - Make Directory",
-        "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 68,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFbQAM"
-        },
-        "Id": "a001D0000034CFbQAM",
-        "Name": "ACT-0068",
-        "AppName__c": "ETEPL - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 69,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFcQAM"
-        },
-        "Id": "a001D0000034CFcQAM",
-        "Name": "ACT-0069",
-        "AppName__c": "ETEPL - Check Server 1",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 70,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0bzQAA"
-              },
-              "Action__c": "a001D0000034CFcQAM",
-              "Id": "a031D000002w0bzQAA",
-              "Name": "JSON-0000",
-              "Key__c": "production",
-              "Path__c": "pages:servers",
-              "UniqueAction__c": "a001D0000034CFcQAM",
-              "Value__c": "https://et-epl.herokuapp.com"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFdQAM"
-        },
-        "Id": "a001D0000034CFdQAM",
-        "Name": "ACT-0070",
-        "AppName__c": "ETEPL - Check server 2",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 71,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c2QAA"
-              },
-              "Action__c": "a001D0000034CFdQAM",
-              "Id": "a031D000002w0c2QAA",
-              "Name": "JSON-0003",
-              "Key__c": "pingServer",
-              "Path__c": "pages",
-              "UniqueAction__c": "a001D0000034CFdQAM",
-              "Value__c": "https://et-epl.herokuapp.com"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFeQAM"
-        },
-        "Id": "a001D0000034CFeQAM",
-        "Name": "ACT-0071",
-        "AppName__c": "ETEPL - Check version",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 72,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a031D000002w0c3QAA"
-              },
-              "Action__c": "a001D0000034CFeQAM",
-              "Id": "a031D000002w0c3QAA",
-              "Name": "JSON-0004",
-              "Key__c": "version",
-              "Path__c": ":",
-              "UniqueAction__c": "a001D0000034CFeQAM",
-              "Value__c": "2019-11-05V01"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a001D0000034CFfQAM"
-        },
-        "Id": "a001D0000034CFfQAM",
-        "Name": "ACT-0072",
-        "AppName__c": "ETEPL - Event Proctor Login",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL - Event Proctor Login\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL - Event Proctor Login\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 73,
+        "Order__c": 74,
         "Count_Events__c": 1
       }
     ]

@@ -36,11 +36,19 @@ module.exports = class ETEPL_ComputerLogin {
 					that.updateElectronJson(that.loginData.testStep + 1);
 					that.data.readyToRemove = true;
 				} else {
-					config.logger.logs.addMessage(config.logger.levels.fatal, "Computer Login", `Navigate to an unexpected page. Expected [${that.loginData.urlAfter}], Actual [${newUrl}]`);
+					config.logger.logs.addMessage(
+						config.logger.levels.fatal,
+						"Computer Login",
+						`Navigate to an unexpected page. Expected [${that.loginData.urlAfter}], Actual [${newUrl}]`
+					);
 				}
 				break;
 			default:
-				config.logger.logs.addMessage(config.logger.levels.fatal, "Computer Login", `Was not expecting this message type: ${message.type}. Expecting: "PageLoad"`);
+				config.logger.logs.addMessage(
+					config.logger.levels.fatal,
+					"Computer Login",
+					`Was not expecting this message type: ${message.type}. Expecting: "PageLoad"`
+				);
 				break;
 		}
 	}
@@ -72,7 +80,9 @@ module.exports = class ETEPL_ComputerLogin {
 				that._navigate(that, config);
 				break;
 			default:
-				// Other steps are driven by the user.
+				// Other steps are driven by the user, therefore
+				// they are processed with handleMessage(message)
+				// function defined above.
 				break;
 		}
 	}
@@ -95,8 +105,8 @@ module.exports = class ETEPL_ComputerLogin {
 			if (config.debug.openDevTools) {
 				script += "debugger;\n";
 				config.electron.mainWindow.webContents.openDevTools();
-			} 
-			
+			}
+
 			// setFormFieldsAsync()
 			script += `function setFormFieldsAsync() {\n`;
 			script += `\treturn new Promise((resolve, reject) => {\n`;
@@ -165,20 +175,22 @@ module.exports = class ETEPL_ComputerLogin {
 
 	async _navigate(that, config, startAnywhere) {
 		if (startAnywhere || config.electron.url === that.loginData.urlBefore) {
-			config.electron.mainHelper
-				.loadPage(that.loginData.urlAfter)
-				.then(newUrl => {
-					if (that.loginData.urlAfter === newUrl) {
-						// NOTHING
-					} else {
-						throw new Error("Page loaded is not the requested");
-					}
-				})
-				.catch(err => {
-					config.logger.logs.addMessage(config.logger.levels.error, "Computer Login", `Failed to load page: ${newUrl}`);
-					config.electron.mainHelper.handleCriticalError(err);
-					config.actions.reset();
-				});
+			if (that.loginData.urlAfter) {
+				config.electron.mainHelper
+					.loadPage(that.loginData.urlAfter)
+					.then(newUrl => {
+						if (that.loginData.urlAfter === newUrl) {
+							// NOTHING
+						} else {
+							throw new Error("Page loaded is not the requested");
+						}
+					})
+					.catch(err => {
+						config.logger.logs.addMessage(config.logger.levels.error, "Computer Login", `Failed to load page: ${newUrl}`);
+						config.electron.mainHelper.handleCriticalError(err);
+						config.actions.reset();
+					});
+			}
 		} else {
 			config.electron.mainHelper.handleCriticalError(`Not on the expected page [${that.loginData.urlBefore}]`);
 			config.actions.reset();

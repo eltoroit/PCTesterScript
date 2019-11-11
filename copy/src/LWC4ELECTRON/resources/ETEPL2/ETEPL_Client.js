@@ -154,6 +154,7 @@ module.exports = class ETEPL_Client {
 	writeElectronJson(data) {
 		try {
 			fs.writeFileSync(config.local.electronJson, JSON.stringify(data, null, 2));
+			config.logger.logs.addMessage(config.logger.levels.warn, "Wrote electron.json", data);
 		} catch (ex) {
 			config.electron.mainHelper.handleCriticalError(ex);
 			config.logger.logs.addException(config.logger.levels.fatal, "write File", ex);

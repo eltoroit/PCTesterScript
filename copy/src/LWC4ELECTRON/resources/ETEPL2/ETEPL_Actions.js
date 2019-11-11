@@ -142,12 +142,12 @@ module.exports = class ETEPL_Actions {
 					// } else {
 					this.resetPeek();
 					let electronJson = config.etEpl.readElectronJson();
-					that.showStatus(`Peek (${config.debug.peekInterval} cycles): ...`);
+					that.showStatus(`Peeking...`);
 					config.etEpl
 						.requestWS(config.pages.peek, "POST", electronJson)
 						.then(response => {
 							config.logger.logs.addMessage(config.logger.levels.trace, "Peek", `Reply => ${response.serverDTTM}`);
-							that.showStatus(`Peek (${config.debug.peekInterval} cycles): ${response.output.action}`);
+							that.showStatus(`Peeked: ${response.output.action}`);
 							if (that.peekData.lastAction !== response.output.action) {
 								if (response.output.action !== "SLEEP") {
 									// CLEAR_ACTIONS
@@ -181,7 +181,7 @@ module.exports = class ETEPL_Actions {
 	}
 
 	showStatus(msg) {
-		console.error(`*** ${msg}`);
+		console.error(`*** ${msg} (Peek: ${this.peekData.counter})`);
 		if (config.debug.updateStatus.icon) {
 			config.electron.tray.setToolTip(msg);
 		} else {
