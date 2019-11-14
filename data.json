@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-14T03:22:29.724Z",
+  "now": "2019-11-14T03:28:34.437Z",
   "events": [
     {
       "attributes": {
@@ -10,81 +10,9 @@
       "Name": "Dreamforce '19",
       "Order__c": 1,
       "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UEycAAG"
-      },
-      "Id": "a022a000002UEycAAG",
-      "Name": "Logout Apps",
-      "Order__c": 3,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UEyZAAW"
-      },
-      "Id": "a022a000002UEyZAAW",
-      "Name": "DO NOT USE -- Kill Event Proctor Login",
-      "Order__c": 4,
-      "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
-    "a022a000002UEyZAAW": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttacAAA"
-        },
-        "Id": "a002a000009ttacAAA",
-        "Name": "ACT-0557",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 65,
-        "Count_Events__c": 3
-      }
-    ],
-    "a022a000002UEycAAG": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttaIAAQ"
-        },
-        "Id": "a002a000009ttaIAAQ",
-        "Name": "ACT-0537",
-        "AppName__c": "Logout SFDX",
-        "Command__c": "sfdx force:auth:logout --all --noprompt",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Operation__c": "Check Contains",
-        "Order__c": 56,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttacAAA"
-        },
-        "Id": "a002a000009ttacAAA",
-        "Name": "ACT-0557",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 65,
-        "Count_Events__c": 3
-      }
-    ],
     "a022a000002UEybAAG": [
       {
         "attributes": {
