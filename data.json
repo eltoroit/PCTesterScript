@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-15T14:20:40.945Z",
+  "now": "2019-11-15T15:03:26.633Z",
   "events": [
     {
       "attributes": {
@@ -24,61 +24,25 @@
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UEycAAG"
+        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UI37AAG"
       },
-      "Id": "a022a000002UEycAAG",
-      "Name": "Logout Apps",
+      "Id": "a022a000002UI37AAG",
+      "Name": "Install VS Code Extensions",
       "Order__c": 3,
       "ActiveEvent__c": true
     },
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UI37AAG"
+        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UEycAAG"
       },
-      "Id": "a022a000002UI37AAG",
-      "Name": "Install VS Code Extensions",
-      "Order__c": 4,
+      "Id": "a022a000002UEycAAG",
+      "Name": "Logout Apps",
+      "Order__c": 10,
       "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
-    "a022a000002UI37AAG": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqWXAAY"
-        },
-        "Id": "a002a000009uqWXAAY",
-        "Name": "ACT-0596",
-        "AppName__c": "VSCode - Prettier - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\x\\esbenp.prettier-vscode-3.6.0\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\x\\esbenp.prettier-vscode-3.6.0\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\x\\esbenp.prettier-vscode-3.6.0\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 76,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqWcAAI"
-        },
-        "Id": "a002a000009uqWcAAI",
-        "Name": "ACT-0597",
-        "AppName__c": "VSCode - XML - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 77,
-        "Count_Events__c": 1
-      }
-    ],
     "a022a000002UEycAAG": [
       {
         "attributes": {
@@ -111,6 +75,42 @@
         "Operation__c": "Execute",
         "Order__c": 65,
         "Count_Events__c": 3
+      }
+    ],
+    "a022a000002UI37AAG": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqWXAAY"
+        },
+        "Id": "a002a000009uqWXAAY",
+        "Name": "ACT-0596",
+        "AppName__c": "VSCode - Prettier - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 76,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqWcAAI"
+        },
+        "Id": "a002a000009uqWcAAI",
+        "Name": "ACT-0597",
+        "AppName__c": "VSCode - XML - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 77,
+        "Count_Events__c": 1
       }
     ],
     "a022a000002UEyaAAG": [
@@ -231,6 +231,23 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
+        },
+        "Id": "a002a000009ttayAAA",
+        "Name": "ACT-0579",
+        "AppName__c": "ETEPL - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 72,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttavAAA"
         },
         "Id": "a002a000009ttavAAA",
@@ -240,7 +257,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 72,
+        "Order__c": 73,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -274,7 +291,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 73,
+        "Order__c": 74,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -308,7 +325,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 74,
+        "Order__c": 75,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -329,23 +346,6 @@
             }
           ]
         }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
-        },
-        "Id": "a002a000009ttayAAA",
-        "Name": "ACT-0579",
-        "AppName__c": "ETEPL - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 75,
-        "Count_Events__c": 1
       }
     ],
     "a022a000002UEybAAG": [
@@ -493,6 +493,23 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
+        },
+        "Id": "a002a000009ttayAAA",
+        "Name": "ACT-0579",
+        "AppName__c": "ETEPL - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 72,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttavAAA"
         },
         "Id": "a002a000009ttavAAA",
@@ -502,7 +519,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 72,
+        "Order__c": 73,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -536,7 +553,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 73,
+        "Order__c": 74,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -570,7 +587,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 74,
+        "Order__c": 75,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -591,23 +608,6 @@
             }
           ]
         }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
-        },
-        "Id": "a002a000009ttayAAA",
-        "Name": "ACT-0579",
-        "AppName__c": "ETEPL - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 75,
-        "Count_Events__c": 1
       },
       {
         "attributes": {
