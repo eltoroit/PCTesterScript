@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:41:56.800Z",
+  "now": "2019-11-16T02:49:52.746Z",
   "events": [
     {
       "attributes": {
@@ -47,7 +47,7 @@
         "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
         "Operation__c": "Check Contains",
-        "Order__c": 57,
+        "Order__c": 58,
         "Count_Events__c": 1
       },
       {
@@ -63,7 +63,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 66,
+        "Order__c": 67,
         "Count_Events__c": 3
       }
     ],
@@ -82,7 +82,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 79,
+        "Order__c": 80,
         "Count_Events__c": 1
       },
       {
@@ -92,14 +92,14 @@
         },
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
-        "AppName__c": "StartOnReboot",
+        "AppName__c": "ETEPL (+Reboot) - Configuring computer room and number",
         "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 80,
+        "Order__c": 81,
         "Count_Events__c": 1
       }
     ],
@@ -144,7 +144,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 66,
+        "Order__c": 67,
         "Count_Events__c": 3
       },
       {
@@ -161,7 +161,7 @@
         "Expected__c": "elMain.js",
         "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "Operation__c": "Check Path",
-        "Order__c": 67,
+        "Order__c": 68,
         "Count_Events__c": 1
       },
       {
@@ -177,7 +177,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 68,
+        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -193,7 +193,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 69,
+        "Order__c": 70,
         "Count_Events__c": 1
       },
       {
@@ -209,7 +209,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 70,
+        "Order__c": 71,
         "Count_Events__c": 1
       },
       {
@@ -225,7 +225,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 71,
+        "Order__c": 72,
         "Count_Events__c": 1
       },
       {
@@ -242,7 +242,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 72,
+        "Order__c": 73,
         "Count_Events__c": 1
       },
       {
@@ -257,7 +257,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 73,
+        "Order__c": 74,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -291,7 +291,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 74,
+        "Order__c": 75,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -325,7 +325,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 75,
+        "Order__c": 76,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -350,18 +350,35 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqlxAAA"
         },
-        "Id": "a002a000009ttayAAA",
-        "Name": "ACT-0579",
-        "AppName__c": "ETEPL - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "Id": "a002a000009uqlxAAA",
+        "Name": "ACT-0599",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 80,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqm2AAA"
+        },
+        "Id": "a002a000009uqm2AAA",
+        "Name": "ACT-0600",
+        "AppName__c": "ETEPL (+Reboot) - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 76,
+        "Order__c": 81,
         "Count_Events__c": 1
       },
       {
@@ -375,7 +392,7 @@
         "Command__c": "=== === === MANUAL CHECKS === === ===",
         "EnabledAction__c": true,
         "Operation__c": "Write",
-        "Order__c": 5,
+        "Order__c": 6,
         "Count_Events__c": 3
       },
       {
@@ -392,7 +409,7 @@
         "Expected__c": "User validated: Computer background image?",
         "Message__c": "User validated: Computer background image?",
         "Operation__c": "Manual",
-        "Order__c": 7,
+        "Order__c": 8,
         "Count_Events__c": 3
       },
       {
@@ -409,7 +426,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 9,
+        "Order__c": 10,
         "Count_Events__c": 3
       },
       {
@@ -426,7 +443,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 10,
+        "Order__c": 11,
         "Count_Events__c": 3
       },
       {
@@ -443,7 +460,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 11,
+        "Order__c": 12,
         "Count_Events__c": 3
       },
       {
@@ -460,7 +477,7 @@
         "Expected__c": "User validated: Chrome Plugin to split screen",
         "Message__c": "User validated: Chrome Plugin to split screen",
         "Operation__c": "Manual",
-        "Order__c": 12,
+        "Order__c": 13,
         "Count_Events__c": 3
       },
       {
@@ -477,7 +494,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 15,
+        "Order__c": 16,
         "Count_Events__c": 3
       },
       {
@@ -495,7 +512,7 @@
         "Fix__c": "Powerpoint (MS Office) is not installed",
         "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 16,
+        "Order__c": 17,
         "Count_Events__c": 1
       },
       {
@@ -513,7 +530,7 @@
         "Fix__c": "Excel (MS Office) is not installed",
         "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 17,
+        "Order__c": 18,
         "Count_Events__c": 1
       },
       {
@@ -527,7 +544,7 @@
         "Command__c": "=== === === AUTOMATED CHECKS === === ===",
         "EnabledAction__c": true,
         "Operation__c": "Write",
-        "Order__c": 18,
+        "Order__c": 19,
         "Count_Events__c": 3
       },
       {
@@ -544,7 +561,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 77,
+        "Order__c": 78,
         "Count_Events__c": 1
       },
       {
@@ -561,7 +578,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 78,
+        "Order__c": 79,
         "Count_Events__c": 1
       },
       {
@@ -579,7 +596,7 @@
         "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
-        "Order__c": 20,
+        "Order__c": 21,
         "Count_Events__c": 3
       },
       {
@@ -597,7 +614,7 @@
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 21,
+        "Order__c": 22,
         "Count_Events__c": 3
       },
       {
@@ -615,7 +632,7 @@
         "Fix__c": "Please ensure Java JDK is installed.",
         "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
         "Operation__c": "Check Path",
-        "Order__c": 22,
+        "Order__c": 23,
         "Count_Events__c": 3
       },
       {
@@ -633,7 +650,7 @@
         "Fix__c": "Notepad is missing!",
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
-        "Order__c": 24,
+        "Order__c": 25,
         "Count_Events__c": 3
       },
       {
@@ -651,7 +668,7 @@
         "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
         "Operation__c": "Check Path",
-        "Order__c": 27,
+        "Order__c": 28,
         "Count_Events__c": 3
       },
       {
@@ -669,7 +686,7 @@
         "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
         "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
         "Operation__c": "Check Path",
-        "Order__c": 28,
+        "Order__c": 29,
         "Count_Events__c": 3
       },
       {
@@ -687,7 +704,7 @@
         "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
-        "Order__c": 29,
+        "Order__c": 30,
         "Count_Events__c": 3
       },
       {
@@ -704,7 +721,7 @@
         "Expected__c": "1.",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 30,
+        "Order__c": 31,
         "Count_Events__c": 3
       },
       {
@@ -722,7 +739,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 31,
+        "Order__c": 32,
         "Count_Events__c": 3
       },
       {
@@ -740,7 +757,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 32,
+        "Order__c": 33,
         "Count_Events__c": 3
       },
       {
@@ -758,7 +775,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 33,
+        "Order__c": 34,
         "Count_Events__c": 3
       },
       {
@@ -776,7 +793,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 34,
+        "Order__c": 35,
         "Count_Events__c": 3
       },
       {
@@ -794,7 +811,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 35,
+        "Order__c": 36,
         "Count_Events__c": 3
       },
       {
@@ -812,7 +829,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 36,
+        "Order__c": 37,
         "Count_Events__c": 3
       },
       {
@@ -830,7 +847,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 37,
+        "Order__c": 38,
         "Count_Events__c": 3
       },
       {
@@ -848,7 +865,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
         "Operation__c": "Check Path",
-        "Order__c": 38,
+        "Order__c": 39,
         "Count_Events__c": 3
       },
       {
@@ -866,7 +883,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "Operation__c": "Check Path",
-        "Order__c": 39,
+        "Order__c": 40,
         "Count_Events__c": 3
       },
       {
@@ -884,7 +901,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
         "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\eamodio.gitlens-10.*",
         "Operation__c": "Check Path",
-        "Order__c": 40,
+        "Order__c": 41,
         "Count_Events__c": 3
       },
       {
@@ -900,7 +917,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 41,
+        "Order__c": 42,
         "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -935,7 +952,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 42,
+        "Order__c": 43,
         "Count_Events__c": 3,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -972,7 +989,7 @@
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git 2.23 (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 43,
+        "Order__c": 44,
         "Count_Events__c": 3
       },
       {
@@ -988,7 +1005,7 @@
         "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 44,
+        "Order__c": 45,
         "Count_Events__c": 3
       },
       {
@@ -1004,7 +1021,7 @@
         "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 45,
+        "Order__c": 46,
         "Count_Events__c": 3
       },
       {
@@ -1021,7 +1038,7 @@
         "Expected__c": "7-Zip 19.00 (x64)",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 46,
+        "Order__c": 47,
         "Count_Events__c": 3
       },
       {
@@ -1038,7 +1055,7 @@
         "Expected__c": "v10.16.3",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 47,
+        "Order__c": 48,
         "Count_Events__c": 3
       },
       {
@@ -1054,7 +1071,7 @@
         "Expected__c": "Bookmarks are correct",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 48,
+        "Order__c": 49,
         "Count_Events__c": 3
       },
       {
@@ -1072,7 +1089,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 49,
+        "Order__c": 50,
         "Count_Events__c": 3
       },
       {
@@ -1090,7 +1107,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 50,
+        "Order__c": 51,
         "Count_Events__c": 3
       },
       {
@@ -1108,7 +1125,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 51,
+        "Order__c": 52,
         "Count_Events__c": 3
       },
       {
@@ -1126,7 +1143,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 52,
+        "Order__c": 53,
         "Count_Events__c": 3
       },
       {
@@ -1144,7 +1161,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 53,
+        "Order__c": 54,
         "Count_Events__c": 3
       },
       {
@@ -1162,7 +1179,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 54,
+        "Order__c": 55,
         "Count_Events__c": 3
       },
       {
@@ -1180,7 +1197,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 55,
+        "Order__c": 56,
         "Count_Events__c": 3
       },
       {
@@ -1198,7 +1215,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 56,
+        "Order__c": 57,
         "Count_Events__c": 3
       },
       {
@@ -1216,41 +1233,7 @@
         "Fix__c": "Word (MS Office) is not installed",
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
-        "Order__c": 65,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqlxAAA"
-        },
-        "Id": "a002a000009uqlxAAA",
-        "Name": "ACT-0599",
-        "AppName__c": "StartOnReboot - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 79,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqm2AAA"
-        },
-        "Id": "a002a000009uqm2AAA",
-        "Name": "ACT-0600",
-        "AppName__c": "StartOnReboot",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 80,
+        "Order__c": 66,
         "Count_Events__c": 1
       }
     ]
