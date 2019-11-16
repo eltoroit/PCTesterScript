@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T05:36:59.256Z",
+  "now": "2019-11-16T05:41:16.581Z",
   "events": [
     {
       "attributes": {
@@ -83,6 +83,23 @@
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
         "Order__c": 80,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqmCAAQ"
+        },
+        "Id": "a002a000009uqmCAAQ",
+        "Name": "ACT-0602",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 81,
         "Count_Events__c": 1
       },
       {
@@ -362,6 +379,23 @@
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
         "Order__c": 80,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqmCAAQ"
+        },
+        "Id": "a002a000009uqmCAAQ",
+        "Name": "ACT-0602",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 81,
         "Count_Events__c": 1
       },
       {
