@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T06:02:09.042Z",
+  "now": "2019-11-16T06:11:09.866Z",
   "events": [
     {
       "attributes": {
@@ -110,12 +110,12 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
-        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
         "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Execute Async",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 82,
         "Count_Events__c": 1
       }
@@ -423,12 +423,12 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
-        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
         "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Execute Async",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 82,
         "Count_Events__c": 1
       },
