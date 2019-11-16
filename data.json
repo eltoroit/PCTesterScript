@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:49:52.746Z",
+  "now": "2019-11-16T05:36:59.256Z",
   "events": [
     {
       "attributes": {
@@ -99,7 +99,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 81,
+        "Order__c": 82,
         "Count_Events__c": 1
       }
     ],
@@ -378,7 +378,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 81,
+        "Order__c": 82,
         "Count_Events__c": 1
       },
       {
