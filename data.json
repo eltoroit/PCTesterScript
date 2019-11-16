@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T06:21:48.875Z",
+  "now": "2019-11-16T06:32:40.601Z",
   "events": [
     {
       "attributes": {
@@ -17,7 +17,7 @@
         "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UIU6AAO"
       },
       "Id": "a022a000002UIU6AAO",
-      "Name": "Start on reboot",
+      "Name": "Start on crash or reboot",
       "Order__c": 4,
       "ActiveEvent__c": true
     },
@@ -71,6 +71,22 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqmMAAQ"
+        },
+        "Id": "a002a000009uqmMAAQ",
+        "Name": "ACT-0603",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 68,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqlxAAA"
         },
         "Id": "a002a000009uqlxAAA",
@@ -82,7 +98,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 80,
+        "Order__c": 81,
         "Count_Events__c": 1
       },
       {
@@ -99,7 +115,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 81,
+        "Order__c": 82,
         "Count_Events__c": 1
       },
       {
@@ -116,7 +132,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 82,
+        "Order__c": 83,
         "Count_Events__c": 1
       }
     ],
@@ -178,7 +194,7 @@
         "Expected__c": "elMain.js",
         "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "Operation__c": "Check Path",
-        "Order__c": 68,
+        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -194,7 +210,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 69,
+        "Order__c": 70,
         "Count_Events__c": 1
       },
       {
@@ -210,7 +226,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 70,
+        "Order__c": 71,
         "Count_Events__c": 1
       },
       {
@@ -226,7 +242,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 71,
+        "Order__c": 72,
         "Count_Events__c": 1
       },
       {
@@ -242,7 +258,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 72,
+        "Order__c": 73,
         "Count_Events__c": 1
       },
       {
@@ -259,7 +275,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 73,
+        "Order__c": 74,
         "Count_Events__c": 1
       },
       {
@@ -274,7 +290,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 74,
+        "Order__c": 75,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -308,7 +324,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 75,
+        "Order__c": 76,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -342,7 +358,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 76,
+        "Order__c": 77,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -378,7 +394,23 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 77,
+        "Order__c": 78,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqmMAAQ"
+        },
+        "Id": "a002a000009uqmMAAQ",
+        "Name": "ACT-0603",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 68,
         "Count_Events__c": 1
       },
       {
@@ -395,7 +427,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 80,
+        "Order__c": 81,
         "Count_Events__c": 1
       },
       {
@@ -412,7 +444,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 81,
+        "Order__c": 82,
         "Count_Events__c": 1
       },
       {
@@ -429,7 +461,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 82,
+        "Order__c": 83,
         "Count_Events__c": 1
       },
       {
@@ -612,7 +644,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 78,
+        "Order__c": 79,
         "Count_Events__c": 1
       },
       {
@@ -629,7 +661,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 79,
+        "Order__c": 80,
         "Count_Events__c": 1
       },
       {
