@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:38:34.554Z",
+  "now": "2019-11-16T02:41:56.800Z",
   "events": [
     {
       "attributes": {
@@ -93,11 +93,12 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "StartOnReboot",
-        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Operation__c": "Execute Async",
+        "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 80,
         "Count_Events__c": 1
       }
@@ -1243,11 +1244,12 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "StartOnReboot",
-        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Operation__c": "Execute Async",
+        "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 80,
         "Count_Events__c": 1
       }
