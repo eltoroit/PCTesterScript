@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T05:50:02.814Z",
+  "now": "2019-11-16T05:59:46.118Z",
   "events": [
     {
       "attributes": {
@@ -109,13 +109,13 @@
         },
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
-        "AppName__c": "ETEPL (+Reboot) - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
+        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Operation__c": "Execute Async",
         "Order__c": 82,
         "Count_Events__c": 1
       }
@@ -367,6 +367,23 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttayAAA"
+        },
+        "Id": "a002a000009ttayAAA",
+        "Name": "ACT-0579",
+        "AppName__c": "ETEPL - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 77,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqlxAAA"
         },
         "Id": "a002a000009uqlxAAA",
@@ -405,13 +422,13 @@
         },
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
-        "AppName__c": "ETEPL (+Reboot) - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
+        "Command__c": "{\"cmd\":\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",\"params\":\"\"}",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Operation__c": "Execute Async",
         "Order__c": 82,
         "Count_Events__c": 1
       },

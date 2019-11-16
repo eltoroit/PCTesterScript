@@ -129,9 +129,9 @@ function spawnCommand(instruction) {
 		var msg = "child process exited with an error: " + err;
 		reportErrorMessage(msg);
 	});
-	setTimeout(function() {
-		promptYesNo(instruction);
-	}, timerDelay * 10);
+	// setTimeout(function() {
+	// 	promptYesNo(instruction);
+	// }, timerDelay * 10);
 }
 function executeCommand(instruction) {
 	if (debug) log.debug("EXECUTING: " + instruction.Command__c);
