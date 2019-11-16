@@ -60,7 +60,11 @@ const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Bookmarks";
-const bmFirefoxPath = ["C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\", "*.default", "places.sqlite"];
+const bmFirefoxPath = [
+	"C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\",
+	"*.default",
+	"places.sqlite"
+];
 
 function reportError(instruction) {
 	if (debug) log.debug("ERROR FOR: " + log.getPrettyJson(instruction));
@@ -115,7 +119,7 @@ function spawnCommand(instruction) {
 		if (instruction.Command__c.params && instruction.Command__c.params !== "") {
 			process = spawn(instruction.Command__c.cmd, instruction.Command__c.params);
 		} else {
-			process = spawn(instruction.Command__c.cmd);
+			process = spawn(instruction.Command__c.cmd, "");
 		}
 	} catch (ex) {
 		log.debug(ex);
@@ -302,7 +306,8 @@ function findBookmarks_Firefox() {
 	var cmd = "";
 	cmd += "sqlite3 -header -line ";
 	cmd += '"' + sqlitepath + '" ';
-	cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
+	cmd +=
+		'"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
 	cmd += "> " + bmTempFFLinePath;
 	if (verbose) log.debug("Execting command: " + cmd);
 
@@ -659,12 +664,25 @@ function executeInstruction() {
 		case "Write":
 			break;
 		default:
-			log.info(">>> Instruction #" + idxInstructions + ": " + instruction.Name + " | " + instruction.AppName__c + " | " + instruction.Operation__c);
+			log.info(
+				">>> Instruction #" +
+					idxInstructions +
+					": " +
+					instruction.Name +
+					" | " +
+					instruction.AppName__c +
+					" | " +
+					instruction.Operation__c
+			);
 			if (debug) log.debug(log.getPrettyJson(instruction));
 
 			// Check every record has an AppName__c
 			if (!instruction.AppName__c) {
-				var msg = "Instruction #" + idxInstructions + ". Does not have a valid AppName__c. " + log.getPrettyJson(instruction);
+				var msg =
+					"Instruction #" +
+					idxInstructions +
+					". Does not have a valid AppName__c. " +
+					log.getPrettyJson(instruction);
 				reportErrorMessage(msg);
 				throw msg;
 			}
@@ -672,7 +690,11 @@ function executeInstruction() {
 			// Check unique record AppName__c
 			instruction.AppName__c = instruction.AppName__c.toUpperCase();
 			if (errorCodes[instruction.AppName__c]) {
-				var msg = "Instruction #" + idxInstructions + ". You can not reuse AppName__c. " + log.getPrettyJson(instruction);
+				var msg =
+					"Instruction #" +
+					idxInstructions +
+					". You can not reuse AppName__c. " +
+					log.getPrettyJson(instruction);
 				reportErrorMessage(msg);
 				throw new Error(msg);
 			}
@@ -788,7 +810,9 @@ function menuChooseEvent(data) {
 	});
 
 	var forEver = function() {
-		inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function(answer) {
+		inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function(
+			answer
+		) {
 			if (answer == 0) {
 				process.exit(0);
 			} else if (answer >= 1 && answer <= events.length) {
