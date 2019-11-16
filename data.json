@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:33:15.975Z",
+  "now": "2019-11-16T02:37:15.127Z",
   "events": [
     {
       "attributes": {
@@ -93,7 +93,7 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "StartOnReboot",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "Command__c": "{cmd:\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",params:\"\"}",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
         "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
@@ -1243,7 +1243,7 @@
         "Id": "a002a000009uqm2AAA",
         "Name": "ACT-0600",
         "AppName__c": "StartOnReboot",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "Command__c": "{cmd:\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\",params:\"\"}",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
         "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",

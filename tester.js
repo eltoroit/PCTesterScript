@@ -119,7 +119,7 @@ function spawnCommand(instruction) {
 		if (instruction.Command__c.params && instruction.Command__c.params !== "") {
 			process = spawn(instruction.Command__c.cmd, instruction.Command__c.params);
 		} else {
-			process = spawn(instruction.Command__c.cmd, "");
+			process = spawn(instruction.Command__c.cmd);
 		}
 	} catch (ex) {
 		log.debug(ex);
