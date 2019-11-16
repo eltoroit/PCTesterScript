@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T06:43:55.808Z",
+  "now": "2019-11-16T06:47:31.106Z",
   "events": [
     {
       "attributes": {
@@ -64,10 +64,26 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 67,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       }
     ],
     "a022a000002UIU6AAO": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttacAAA"
+        },
+        "Id": "a002a000009ttacAAA",
+        "Name": "ACT-0557",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 67,
+        "Count_Events__c": 4
+      },
       {
         "attributes": {
           "type": "Action__c",
@@ -195,7 +211,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 67,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
@@ -413,6 +429,22 @@
         "Operation__c": "Open Application",
         "Order__c": 77,
         "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttacAAA"
+        },
+        "Id": "a002a000009ttacAAA",
+        "Name": "ACT-0557",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 67,
+        "Count_Events__c": 4
       },
       {
         "attributes": {
