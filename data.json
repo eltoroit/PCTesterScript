@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:26:17.825Z",
+  "now": "2019-11-16T02:27:53.828Z",
   "events": [
     {
       "attributes": {
@@ -97,7 +97,7 @@
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
         "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Operation__c": "Check Contains",
+        "Operation__c": "Execute Async",
         "Order__c": 80,
         "Count_Events__c": 1
       }
@@ -1247,7 +1247,7 @@
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
         "Message__c": "Validating: StartOnReboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
-        "Operation__c": "Check Contains",
+        "Operation__c": "Execute Async",
         "Order__c": 80,
         "Count_Events__c": 1
       }
