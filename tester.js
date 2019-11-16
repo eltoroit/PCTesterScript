@@ -146,20 +146,6 @@ function executeCommand(instruction) {
 		instruction.callback(output);
 	});
 }
-// function cmdETEPL(cmd) {
-// 	return new Promise((resolve, reject) => {
-// 		console.log(`Command: ${cmd}`);
-// 		exec(cmd, (error, stdout, stderr) => {
-// 			const result = {
-// 				error,
-// 				stderr,
-// 				stdout
-// 			};
-// 			console.log(JSON.stringify(result, null, 4));
-// 			resolve(result);
-// 		});
-// 	});
-// }
 function checkExact(instruction) {
 	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
 	instruction.callback = function(output) {

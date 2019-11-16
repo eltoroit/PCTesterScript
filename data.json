@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T06:11:09.866Z",
+  "now": "2019-11-16T06:17:20.896Z",
   "events": [
     {
       "attributes": {
@@ -112,10 +112,9 @@
         "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
         "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "ErrorMessage__c": "Could not validate: ETEPL (+Reboot) - Ensure ETEPL starts on reboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
+        "Message__c": "Validating: ETEPL (+Reboot) - Ensure ETEPL starts on reboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
+        "Operation__c": "Check Contains",
         "Order__c": 82,
         "Count_Events__c": 1
       }
@@ -425,10 +424,9 @@
         "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
         "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "ErrorMessage__c": "Could not validate: ETEPL (+Reboot) - Ensure ETEPL starts on reboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
+        "Message__c": "Validating: ETEPL (+Reboot) - Ensure ETEPL starts on reboot (\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\")",
+        "Operation__c": "Check Contains",
         "Order__c": 82,
         "Count_Events__c": 1
       },
