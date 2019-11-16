@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-16T02:07:23.738Z",
+  "now": "2019-11-16T02:14:55.498Z",
   "events": [
     {
       "attributes": {
@@ -82,7 +82,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 78,
+        "Order__c": 79,
         "Count_Events__c": 1
       },
       {
@@ -98,7 +98,7 @@
         "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
-        "Operation__c": "Open Application",
+        "Operation__c": "Execute",
         "Order__c": 80,
         "Count_Events__c": 1
       }
@@ -361,7 +361,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 79,
+        "Order__c": 76,
         "Count_Events__c": 1
       },
       {
@@ -544,7 +544,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 76,
+        "Order__c": 77,
         "Count_Events__c": 1
       },
       {
@@ -561,7 +561,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 77,
+        "Order__c": 78,
         "Count_Events__c": 1
       },
       {
@@ -1217,6 +1217,40 @@
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
         "Order__c": 65,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqlxAAA"
+        },
+        "Id": "a002a000009uqlxAAA",
+        "Name": "ACT-0599",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 79,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqm2AAA"
+        },
+        "Id": "a002a000009uqm2AAA",
+        "Name": "ACT-0600",
+        "AppName__c": "StartOnReboot",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"StartOnReboot\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnReboot\". Was this succesful?",
+        "Operation__c": "Execute",
+        "Order__c": 80,
         "Count_Events__c": 1
       }
     ]
