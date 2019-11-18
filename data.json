@@ -1,5 +1,5 @@
 {
-  "now": "2019-11-18T00:45:15.636Z",
+  "now": "2019-11-18T01:00:17.315Z",
   "events": [
     {
       "attributes": {
@@ -19,6 +19,16 @@
       "Id": "a022a000002UIU6AAO",
       "Name": "Start on crash or reboot",
       "Order__c": 4,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a022a000002UIeHAAW"
+      },
+      "Id": "a022a000002UIeHAAW",
+      "Name": "KILL ETEPL",
+      "Order__c": 9,
       "ActiveEvent__c": true
     },
     {
@@ -64,7 +74,41 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 67,
-        "Count_Events__c": 4
+        "Count_Events__c": 5
+      }
+    ],
+    "a022a000002UIeHAAW": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009ttacAAA"
+        },
+        "Id": "a002a000009ttacAAA",
+        "Name": "ACT-0557",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 67,
+        "Count_Events__c": 5
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a002a000009uqmMAAQ"
+        },
+        "Id": "a002a000009uqmMAAQ",
+        "Name": "ACT-0603",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 80,
+        "Count_Events__c": 2
       }
     ],
     "a022a000002UIU6AAO": [
@@ -82,7 +126,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 67,
-        "Count_Events__c": 4
+        "Count_Events__c": 5
       },
       {
         "attributes": {
@@ -115,7 +159,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 80,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -211,7 +255,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 67,
-        "Count_Events__c": 4
+        "Count_Events__c": 5
       },
       {
         "attributes": {
@@ -244,7 +288,7 @@
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
         "Order__c": 80,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
