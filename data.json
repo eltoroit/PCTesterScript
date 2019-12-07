@@ -1,0 +1,1906 @@
+{
+  "now": "2019-12-07T22:12:48.180Z",
+  "events": [
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv94AAB"
+      },
+      "Id": "a025400000Ffv94AAB",
+      "Name": "Dreamforce '19",
+      "Order__c": 1,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv91AAB"
+      },
+      "Id": "a025400000Ffv91AAB",
+      "Name": "Start on crash or reboot",
+      "Order__c": 2,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv8zAAB"
+      },
+      "Id": "a025400000Ffv8zAAB",
+      "Name": "KILL ETEPL",
+      "Order__c": 3,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv95AAB"
+      },
+      "Id": "a025400000Ffv95AAB",
+      "Name": "Logout Apps",
+      "Order__c": 4,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv9iAAB"
+      },
+      "Id": "a025400000Ffv9iAAB",
+      "Name": "_Salesforce Fonts_",
+      "Order__c": 22,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv9dAAB"
+      },
+      "Id": "a025400000Ffv9dAAB",
+      "Name": "_Salesforce Development (SFDX, VS Code, etc)_",
+      "Order__c": 24,
+      "ActiveEvent__c": true
+    }
+  ],
+  "actionsByEvent": {
+    "a025400000Ffv9dAAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jkAAA"
+        },
+        "Id": "a0054000003b7jkAAA",
+        "Name": "ACT-0101",
+        "AppName__c": "Java 8",
+        "Command__c": "C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "java.exe",
+        "Fix__c": "Please ensure Java JDK is installed.",
+        "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "Operation__c": "Check Path",
+        "Order__c": 24,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jrAAA"
+        },
+        "Id": "a0054000003b7jrAAA",
+        "Name": "ACT-0108",
+        "AppName__c": "SFDX Update",
+        "Command__c": "sfdx update",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
+        "Expected__c": "sfdx-cli: Updat",
+        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
+        "Message__c": "Validating: SFDX Update (sfdx update)",
+        "Operation__c": "Check Contains",
+        "Order__c": 31,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jsAAA"
+        },
+        "Id": "a0054000003b7jsAAA",
+        "Name": "ACT-0109",
+        "AppName__c": "VS Code Version",
+        "Command__c": "code --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VS Code Version (code --version)",
+        "Expected__c": "1.",
+        "Message__c": "Validating: VS Code Version (code --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 32,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k2AAA"
+        },
+        "Id": "a0054000003b7k2AAA",
+        "Name": "ACT-0119",
+        "AppName__c": "VS Code Plugin (1)",
+        "Command__c": "C:\\Users\\Student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 33,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k3AAA"
+        },
+        "Id": "a0054000003b7k3AAA",
+        "Name": "ACT-0120",
+        "AppName__c": "VS Code Plugin (2)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 34,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k4AAA"
+        },
+        "Id": "a0054000003b7k4AAA",
+        "Name": "ACT-0121",
+        "AppName__c": "VS Code Plugin (3)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 35,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k5AAA"
+        },
+        "Id": "a0054000003b7k5AAA",
+        "Name": "ACT-0122",
+        "AppName__c": "VS Code Plugin (4)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-core-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 36,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kDAAQ"
+        },
+        "Id": "a0054000003b7kDAAQ",
+        "Name": "ACT-0130",
+        "AppName__c": "VS Code Plugin (5)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-lightning-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 37,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jbAAA"
+        },
+        "Id": "a0054000003b7jbAAA",
+        "Name": "ACT-0092",
+        "AppName__c": "VS Code Plugin (6)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-visualforce-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 38,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kAAAQ"
+        },
+        "Id": "a0054000003b7kAAAQ",
+        "Name": "ACT-0127",
+        "AppName__c": "VS Code Plugin (7)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-replay-debugger-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 39,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kBAAQ"
+        },
+        "Id": "a0054000003b7kBAAQ",
+        "Name": "ACT-0128",
+        "AppName__c": "VS Code Plugin (8)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-lwc-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 40,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kCAAQ"
+        },
+        "Id": "a0054000003b7kCAAQ",
+        "Name": "ACT-0129",
+        "AppName__c": "VS Code Plugin (9)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "dbaeumer.vscode-eslint-1.9.1",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "Operation__c": "Check Path",
+        "Order__c": 41,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kEAAQ"
+        },
+        "Id": "a0054000003b7kEAAQ",
+        "Name": "ACT-0131",
+        "AppName__c": "VS Code Plugin (10)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\eamodio.gitlens-10.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "eamodio.gitlens-10",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\eamodio.gitlens-10.*",
+        "Operation__c": "Check Path",
+        "Order__c": 42,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kFAAQ"
+        },
+        "Id": "a0054000003b7kFAAQ",
+        "Name": "ACT-0132",
+        "AppName__c": "SFDX (Shell)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 43,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNNAA4"
+              },
+              "Action__c": "a0054000003b7kFAAQ",
+              "Id": "a0354000002RPNNAA4",
+              "Name": "JSON-0009",
+              "Key__c": "terminal.integrated.shell.windows",
+              "Path__c": ":",
+              "UniqueAction__c": "a0054000003b7kFAAQ",
+              "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kGAAQ"
+        },
+        "Id": "a0054000003b7kGAAQ",
+        "Name": "ACT-0133",
+        "AppName__c": "SFDX (Java)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 44,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNKAA4"
+              },
+              "Action__c": "a0054000003b7kGAAQ",
+              "Id": "a0354000002RPNKAA4",
+              "Name": "JSON-0006",
+              "Key__c": "salesforcedx-vscode-apex.java.home",
+              "Path__c": ":",
+              "UniqueAction__c": "a0054000003b7kGAAQ",
+              "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kdAAA"
+        },
+        "Id": "a0054000003b7kdAAA",
+        "Name": "ACT-0156",
+        "AppName__c": "VSCode - Prettier - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 80,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jMAAQ"
+        },
+        "Id": "a0054000003b7jMAAQ",
+        "Name": "ACT-0077",
+        "AppName__c": "VSCode - XML - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 81,
+        "Count_Events__c": 1
+      }
+    ],
+    "a025400000Ffv9iAAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jWAAQ"
+        },
+        "Id": "a0054000003b7jWAAQ",
+        "Name": "ACT-0087",
+        "AppName__c": "SalesforceSans Font (1)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Bold.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 52,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jXAAQ"
+        },
+        "Id": "a0054000003b7jXAAQ",
+        "Name": "ACT-0088",
+        "AppName__c": "SalesforceSans Font (2)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-BoldItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 53,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jZAAQ"
+        },
+        "Id": "a0054000003b7jZAAQ",
+        "Name": "ACT-0090",
+        "AppName__c": "SalesforceSans Font (3)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Italic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 54,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jaAAA"
+        },
+        "Id": "a0054000003b7jaAAA",
+        "Name": "ACT-0091",
+        "AppName__c": "SalesforceSans Font (4)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Light.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 55,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jcAAA"
+        },
+        "Id": "a0054000003b7jcAAA",
+        "Name": "ACT-0093",
+        "AppName__c": "SalesforceSans Font (5)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-LightItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 56,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jdAAA"
+        },
+        "Id": "a0054000003b7jdAAA",
+        "Name": "ACT-0094",
+        "AppName__c": "SalesforceSans Font (6)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Regular.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 57,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jeAAA"
+        },
+        "Id": "a0054000003b7jeAAA",
+        "Name": "ACT-0095",
+        "AppName__c": "SalesforceSans Font (7)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Thin.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 58,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jfAAA"
+        },
+        "Id": "a0054000003b7jfAAA",
+        "Name": "ACT-0096",
+        "AppName__c": "SalesforceSans Font (8)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-ThinItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 59,
+        "Count_Events__c": 1
+      }
+    ],
+    "a025400000Ffv95AAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jgAAA"
+        },
+        "Id": "a0054000003b7jgAAA",
+        "Name": "ACT-0097",
+        "AppName__c": "Logout SFDX",
+        "Command__c": "sfdx force:auth:logout --all --noprompt",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Operation__c": "Check Contains",
+        "Order__c": 60,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
+        },
+        "Id": "a0054000003b7k0AAA",
+        "Name": "ACT-0117",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 69,
+        "Count_Events__c": 4
+      }
+    ],
+    "a025400000Ffv8zAAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
+        },
+        "Id": "a0054000003b7k0AAA",
+        "Name": "ACT-0117",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 69,
+        "Count_Events__c": 4
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jLAAQ"
+        },
+        "Id": "a0054000003b7jLAAQ",
+        "Name": "ACT-0076",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 82,
+        "Count_Events__c": 2
+      }
+    ],
+    "a025400000Ffv91AAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
+        },
+        "Id": "a0054000003b7k0AAA",
+        "Name": "ACT-0117",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 69,
+        "Count_Events__c": 4
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kMAAQ"
+        },
+        "Id": "a0054000003b7kMAAQ",
+        "Name": "ACT-0139",
+        "AppName__c": "ETEPL - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 79,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jLAAQ"
+        },
+        "Id": "a0054000003b7jLAAQ",
+        "Name": "ACT-0076",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 82,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jOAAQ"
+        },
+        "Id": "a0054000003b7jOAAQ",
+        "Name": "ACT-0079",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 83,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jKAAQ"
+        },
+        "Id": "a0054000003b7jKAAQ",
+        "Name": "ACT-0075",
+        "AppName__c": "StartOnReboot Shortcut - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 84,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jPAAQ"
+        },
+        "Id": "a0054000003b7jPAAQ",
+        "Name": "ACT-0080",
+        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 85,
+        "Count_Events__c": 1
+      }
+    ],
+    "a025400000Ffv94AAB": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kNAAQ"
+        },
+        "Id": "a0054000003b7kNAAQ",
+        "Name": "ACT-0140",
+        "AppName__c": "Clear Screen",
+        "EnabledAction__c": true,
+        "Operation__c": "Clear",
+        "Order__c": 1,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kRAAQ"
+        },
+        "Id": "a0054000003b7kRAAQ",
+        "Name": "ACT-0144",
+        "AppName__c": "Say Hi",
+        "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
+        "EnabledAction__c": true,
+        "Operation__c": "Write",
+        "Order__c": 2,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k1AAA"
+        },
+        "Id": "a0054000003b7k1AAA",
+        "Name": "ACT-0118",
+        "AppName__c": "ETEPL - Check source path",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "elMain.js",
+        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
+        "Operation__c": "Check Path",
+        "Order__c": 70,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k6AAA"
+        },
+        "Id": "a0054000003b7k6AAA",
+        "Name": "ACT-0123",
+        "AppName__c": "ETEPL - Delete folder",
+        "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 71,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k7AAA"
+        },
+        "Id": "a0054000003b7k7AAA",
+        "Name": "ACT-0124",
+        "AppName__c": "ETEPL - Remove Directory",
+        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 72,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k8AAA"
+        },
+        "Id": "a0054000003b7k8AAA",
+        "Name": "ACT-0125",
+        "AppName__c": "ETEPL - Remove Directory (2)",
+        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 73,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k9AAA"
+        },
+        "Id": "a0054000003b7k9AAA",
+        "Name": "ACT-0126",
+        "AppName__c": "ETEPL - Make Directory",
+        "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 74,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kIAAQ"
+        },
+        "Id": "a0054000003b7kIAAQ",
+        "Name": "ACT-0135",
+        "AppName__c": "ETEPL - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 75,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kJAAQ"
+        },
+        "Id": "a0054000003b7kJAAQ",
+        "Name": "ACT-0136",
+        "AppName__c": "ETEPL - Check Server 1",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 76,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNJAA4"
+              },
+              "Action__c": "a0054000003b7kJAAQ",
+              "Id": "a0354000002RPNJAA4",
+              "Name": "JSON-0005",
+              "Key__c": "production",
+              "Path__c": "pages:servers",
+              "UniqueAction__c": "a0054000003b7kJAAQ",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kKAAQ"
+        },
+        "Id": "a0054000003b7kKAAQ",
+        "Name": "ACT-0137",
+        "AppName__c": "ETEPL - Check server 2",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 77,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNLAA4"
+              },
+              "Action__c": "a0054000003b7kKAAQ",
+              "Id": "a0354000002RPNLAA4",
+              "Name": "JSON-0007",
+              "Key__c": "pingServer",
+              "Path__c": "pages",
+              "UniqueAction__c": "a0054000003b7kKAAQ",
+              "Value__c": "https://et-epl.herokuapp.com"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kLAAQ"
+        },
+        "Id": "a0054000003b7kLAAQ",
+        "Name": "ACT-0138",
+        "AppName__c": "ETEPL - Check version",
+        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
+        "EnabledAction__c": true,
+        "Expected__c": "JSON CHECK",
+        "Operation__c": "JSON File - Check",
+        "Order__c": 78,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNMAA4"
+              },
+              "Action__c": "a0054000003b7kLAAQ",
+              "Id": "a0354000002RPNMAA4",
+              "Name": "JSON-0008",
+              "Key__c": "version",
+              "Path__c": ":",
+              "UniqueAction__c": "a0054000003b7kLAAQ",
+              "Value__c": "2019-11-11V02"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
+        },
+        "Id": "a0054000003b7k0AAA",
+        "Name": "ACT-0117",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 69,
+        "Count_Events__c": 4
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kMAAQ"
+        },
+        "Id": "a0054000003b7kMAAQ",
+        "Name": "ACT-0139",
+        "AppName__c": "ETEPL - Configuring computer room and number",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 79,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jLAAQ"
+        },
+        "Id": "a0054000003b7jLAAQ",
+        "Name": "ACT-0076",
+        "AppName__c": "StartOnCrash - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 82,
+        "Count_Events__c": 2
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jOAAQ"
+        },
+        "Id": "a0054000003b7jOAAQ",
+        "Name": "ACT-0079",
+        "AppName__c": "StartOnReboot - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 83,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jKAAQ"
+        },
+        "Id": "a0054000003b7jKAAQ",
+        "Name": "ACT-0075",
+        "AppName__c": "StartOnReboot Shortcut - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 84,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jPAAQ"
+        },
+        "Id": "a0054000003b7jPAAQ",
+        "Name": "ACT-0080",
+        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
+        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 85,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kSAAQ"
+        },
+        "Id": "a0054000003b7kSAAQ",
+        "Name": "ACT-0145",
+        "AppName__c": "MANUAL CHECKS",
+        "Command__c": "=== === === MANUAL CHECKS === === ===",
+        "EnabledAction__c": true,
+        "Operation__c": "Write",
+        "Order__c": 7,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kQAAQ"
+        },
+        "Id": "a0054000003b7kQAAQ",
+        "Name": "ACT-0143",
+        "AppName__c": "Desktop Image",
+        "Command__c": "Computer background image?",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "User could not validate: Computer background image?",
+        "Expected__c": "User validated: Computer background image?",
+        "Message__c": "User validated: Computer background image?",
+        "Operation__c": "Manual",
+        "Order__c": 9,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kXAAQ"
+        },
+        "Id": "a0054000003b7kXAAQ",
+        "Name": "ACT-0150",
+        "AppName__c": "Desktop: Notepad++",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Notepad++.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Desktop: Notepad++\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 11,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kYAAQ"
+        },
+        "Id": "a0054000003b7kYAAQ",
+        "Name": "ACT-0151",
+        "AppName__c": "Firefox + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 12,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kaAAA"
+        },
+        "Id": "a0054000003b7kaAAA",
+        "Name": "ACT-0153",
+        "AppName__c": "Chrome + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 13,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kbAAA"
+        },
+        "Id": "a0054000003b7kbAAA",
+        "Name": "ACT-0154",
+        "AppName__c": "Chrome: Plugin",
+        "Command__c": "Chrome Plugin to split screen",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
+        "Expected__c": "User validated: Chrome Plugin to split screen",
+        "Message__c": "User validated: Chrome Plugin to split screen",
+        "Operation__c": "Manual",
+        "Order__c": 14,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kPAAQ"
+        },
+        "Id": "a0054000003b7kPAAQ",
+        "Name": "ACT-0142",
+        "AppName__c": "VS Code",
+        "Command__c": "code",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kUAAQ"
+        },
+        "Id": "a0054000003b7kUAAQ",
+        "Name": "ACT-0147",
+        "AppName__c": "Powerpoint (MS Office)",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
+        "Expected__c": "Application runs with no errors",
+        "Fix__c": "Powerpoint (MS Office) is not installed",
+        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 18,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kVAAQ"
+        },
+        "Id": "a0054000003b7kVAAQ",
+        "Name": "ACT-0148",
+        "AppName__c": "Excel (MS Office)",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
+        "Expected__c": "Application runs with no errors",
+        "Fix__c": "Excel (MS Office) is not installed",
+        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 19,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jzAAA"
+        },
+        "Id": "a0054000003b7jzAAA",
+        "Name": "ACT-0116",
+        "AppName__c": "Word (MS Office)",
+        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "Word 2016.lnk",
+        "Fix__c": "Word (MS Office) is not installed",
+        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
+        "Operation__c": "Check Path",
+        "Order__c": 68,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kWAAQ"
+        },
+        "Id": "a0054000003b7kWAAQ",
+        "Name": "ACT-0149",
+        "AppName__c": "AUTOMATED TESTS",
+        "Command__c": "=== === === AUTOMATED CHECKS === === ===",
+        "EnabledAction__c": true,
+        "Operation__c": "Write",
+        "Order__c": 20,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jkAAA"
+        },
+        "Id": "a0054000003b7jkAAA",
+        "Name": "ACT-0101",
+        "AppName__c": "Java 8",
+        "Command__c": "C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "java.exe",
+        "Fix__c": "Please ensure Java JDK is installed.",
+        "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "Operation__c": "Check Path",
+        "Order__c": 24,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jrAAA"
+        },
+        "Id": "a0054000003b7jrAAA",
+        "Name": "ACT-0108",
+        "AppName__c": "SFDX Update",
+        "Command__c": "sfdx update",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: SFDX Update (sfdx update)",
+        "Expected__c": "sfdx-cli: Updat",
+        "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
+        "Message__c": "Validating: SFDX Update (sfdx update)",
+        "Operation__c": "Check Contains",
+        "Order__c": 31,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jsAAA"
+        },
+        "Id": "a0054000003b7jsAAA",
+        "Name": "ACT-0109",
+        "AppName__c": "VS Code Version",
+        "Command__c": "code --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VS Code Version (code --version)",
+        "Expected__c": "1.",
+        "Message__c": "Validating: VS Code Version (code --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 32,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k2AAA"
+        },
+        "Id": "a0054000003b7k2AAA",
+        "Name": "ACT-0119",
+        "AppName__c": "VS Code Plugin (1)",
+        "Command__c": "C:\\Users\\Student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\Student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 33,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k3AAA"
+        },
+        "Id": "a0054000003b7k3AAA",
+        "Name": "ACT-0120",
+        "AppName__c": "VS Code Plugin (2)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 34,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k4AAA"
+        },
+        "Id": "a0054000003b7k4AAA",
+        "Name": "ACT-0121",
+        "AppName__c": "VS Code Plugin (3)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 35,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k5AAA"
+        },
+        "Id": "a0054000003b7k5AAA",
+        "Name": "ACT-0122",
+        "AppName__c": "VS Code Plugin (4)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-core-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 36,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kDAAQ"
+        },
+        "Id": "a0054000003b7kDAAQ",
+        "Name": "ACT-0130",
+        "AppName__c": "VS Code Plugin (5)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-lightning-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 37,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jbAAA"
+        },
+        "Id": "a0054000003b7jbAAA",
+        "Name": "ACT-0092",
+        "AppName__c": "VS Code Plugin (6)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-visualforce-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 38,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kAAAQ"
+        },
+        "Id": "a0054000003b7kAAAQ",
+        "Name": "ACT-0127",
+        "AppName__c": "VS Code Plugin (7)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-apex-replay-debugger-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 39,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kBAAQ"
+        },
+        "Id": "a0054000003b7kBAAQ",
+        "Name": "ACT-0128",
+        "AppName__c": "VS Code Plugin (8)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "salesforce.salesforcedx-vscode-lwc-47",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "Operation__c": "Check Path",
+        "Order__c": 40,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kCAAQ"
+        },
+        "Id": "a0054000003b7kCAAQ",
+        "Name": "ACT-0129",
+        "AppName__c": "VS Code Plugin (9)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "dbaeumer.vscode-eslint-1.9.1",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "Operation__c": "Check Path",
+        "Order__c": 41,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kEAAQ"
+        },
+        "Id": "a0054000003b7kEAAQ",
+        "Name": "ACT-0131",
+        "AppName__c": "VS Code Plugin (10)",
+        "Command__c": "C:\\Users\\student\\.vscode\\extensions\\eamodio.gitlens-10.*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "eamodio.gitlens-10",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+        "Message__c": "Checking path: C:\\Users\\student\\.vscode\\extensions\\eamodio.gitlens-10.*",
+        "Operation__c": "Check Path",
+        "Order__c": 42,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kFAAQ"
+        },
+        "Id": "a0054000003b7kFAAQ",
+        "Name": "ACT-0132",
+        "AppName__c": "SFDX (Shell)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 43,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNNAA4"
+              },
+              "Action__c": "a0054000003b7kFAAQ",
+              "Id": "a0354000002RPNNAA4",
+              "Name": "JSON-0009",
+              "Key__c": "terminal.integrated.shell.windows",
+              "Path__c": ":",
+              "UniqueAction__c": "a0054000003b7kFAAQ",
+              "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kGAAQ"
+        },
+        "Id": "a0054000003b7kGAAQ",
+        "Name": "ACT-0133",
+        "AppName__c": "SFDX (Java)",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
+        "Operation__c": "JSON File - Edit",
+        "Order__c": 44,
+        "Count_Events__c": 1,
+        "JSON_Actions__r": {
+          "totalSize": 1,
+          "done": true,
+          "records": [
+            {
+              "attributes": {
+                "type": "JSON_Action__c",
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNKAA4"
+              },
+              "Action__c": "a0054000003b7kGAAQ",
+              "Id": "a0354000002RPNKAA4",
+              "Name": "JSON-0006",
+              "Key__c": "salesforcedx-vscode-apex.java.home",
+              "Path__c": ":",
+              "UniqueAction__c": "a0054000003b7kGAAQ",
+              "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
+            }
+          ]
+        }
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kdAAA"
+        },
+        "Id": "a0054000003b7kdAAA",
+        "Name": "ACT-0156",
+        "AppName__c": "VSCode - Prettier - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 80,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jMAAQ"
+        },
+        "Id": "a0054000003b7jMAAQ",
+        "Name": "ACT-0077",
+        "AppName__c": "VSCode - XML - XCopy",
+        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Expected__c": "File(s) copied",
+        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 81,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jiAAA"
+        },
+        "Id": "a0054000003b7jiAAA",
+        "Name": "ACT-0099",
+        "AppName__c": "Chrome: Plugin Resize",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "package.json",
+        "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
+        "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Operation__c": "Check Path",
+        "Order__c": 22,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jjAAA"
+        },
+        "Id": "a0054000003b7jjAAA",
+        "Name": "ACT-0100",
+        "AppName__c": "Check Java version",
+        "Command__c": "java -version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Check Java version (java -version)",
+        "Expected__c": "openjdk version \"1.8.0_222\"",
+        "Fix__c": "Please ensure Java is installed",
+        "Message__c": "Validating: Check Java version (java -version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 23,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jmAAA"
+        },
+        "Id": "a0054000003b7jmAAA",
+        "Name": "ACT-0103",
+        "AppName__c": "Notepad",
+        "Command__c": "C:\\Windows\\Notepad.exe",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "Notepad.exe",
+        "Fix__c": "Notepad is missing!",
+        "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
+        "Operation__c": "Check Path",
+        "Order__c": 26,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jpAAA"
+        },
+        "Id": "a0054000003b7jpAAA",
+        "Name": "ACT-0106",
+        "AppName__c": "Postman",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "Update.exe",
+        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
+        "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Postman\\Update.exe",
+        "Operation__c": "Check Path",
+        "Order__c": 29,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jqAAA"
+        },
+        "Id": "a0054000003b7jqAAA",
+        "Name": "ACT-0107",
+        "AppName__c": "SoapUI",
+        "Command__c": "C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SoapUI-5.5.0.exe",
+        "Fix__c": "SoapUI is missing, install from here: http://www.softpedia.com/get/Internet/Other-Internet-Related/soapUI.shtml",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
+        "Operation__c": "Check Path",
+        "Order__c": 30,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kHAAQ"
+        },
+        "Id": "a0054000003b7kHAAQ",
+        "Name": "ACT-0134",
+        "AppName__c": "Git 2.23",
+        "Command__c": "git --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Git 2.23 (git --version)",
+        "Expected__c": "git version 2.23",
+        "Fix__c": "Download from here: https://git-scm.com/download/win",
+        "Message__c": "Validating: Git 2.23 (git --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 45,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jSAAQ"
+        },
+        "Id": "a0054000003b7jSAAQ",
+        "Name": "ACT-0083",
+        "AppName__c": "Git config email",
+        "Command__c": "git config --global user.email \"you@example.com\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
+        "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 46,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jTAAQ"
+        },
+        "Id": "a0054000003b7jTAAQ",
+        "Name": "ACT-0084",
+        "AppName__c": "Git config name",
+        "Command__c": "git config --global user.name \"Your Name\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
+        "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
+        "Operation__c": "Check Contains",
+        "Order__c": 47,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jUAAQ"
+        },
+        "Id": "a0054000003b7jUAAQ",
+        "Name": "ACT-0085",
+        "AppName__c": "7-Zip",
+        "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
+        "Expected__c": "7-Zip 19.00 (x64)",
+        "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 48,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jVAAQ"
+        },
+        "Id": "a0054000003b7jVAAQ",
+        "Name": "ACT-0086",
+        "AppName__c": "Node",
+        "Command__c": "node --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "v10.16.3",
+        "Message__c": "Checking exact: node --version",
+        "Operation__c": "Check Exact",
+        "Order__c": 49,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jWAAQ"
+        },
+        "Id": "a0054000003b7jWAAQ",
+        "Name": "ACT-0087",
+        "AppName__c": "SalesforceSans Font (1)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Bold.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 52,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jXAAQ"
+        },
+        "Id": "a0054000003b7jXAAQ",
+        "Name": "ACT-0088",
+        "AppName__c": "SalesforceSans Font (2)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-BoldItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 53,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jZAAQ"
+        },
+        "Id": "a0054000003b7jZAAQ",
+        "Name": "ACT-0090",
+        "AppName__c": "SalesforceSans Font (3)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Italic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 54,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jaAAA"
+        },
+        "Id": "a0054000003b7jaAAA",
+        "Name": "ACT-0091",
+        "AppName__c": "SalesforceSans Font (4)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Light.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 55,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jcAAA"
+        },
+        "Id": "a0054000003b7jcAAA",
+        "Name": "ACT-0093",
+        "AppName__c": "SalesforceSans Font (5)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-LightItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 56,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jdAAA"
+        },
+        "Id": "a0054000003b7jdAAA",
+        "Name": "ACT-0094",
+        "AppName__c": "SalesforceSans Font (6)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Regular.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 57,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jeAAA"
+        },
+        "Id": "a0054000003b7jeAAA",
+        "Name": "ACT-0095",
+        "AppName__c": "SalesforceSans Font (7)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Thin.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 58,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jfAAA"
+        },
+        "Id": "a0054000003b7jfAAA",
+        "Name": "ACT-0096",
+        "AppName__c": "SalesforceSans Font (8)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-ThinItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 59,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jYAAQ"
+        },
+        "Id": "a0054000003b7jYAAQ",
+        "Name": "ACT-0089",
+        "AppName__c": "Checking all bookmarks",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Checking all bookmarks",
+        "Expected__c": "Bookmarks are correct",
+        "Message__c": "Validating: Checking all bookmarks",
+        "Operation__c": "Bookmark",
+        "Order__c": 51,
+        "Count_Events__c": 3
+      }
+    ]
+  }
+}
