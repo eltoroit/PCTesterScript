@@ -276,7 +276,6 @@ function findBookmarks_Firefox() {
 	tmp.URLs = {};
 
 	// Find sqlite path
-	// sqlitepath = bmFirefoxPath[0];
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${bmFirefoxPath[0]}`);
 	var folders = fs.readdirSync(bmFirefoxPath[0]);
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
