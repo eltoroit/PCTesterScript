@@ -276,9 +276,9 @@ function findBookmarks_Firefox() {
 	tmp.URLs = {};
 
 	// Find sqlite path
-	sqlitepath = ;
-	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${sqlitepath}`);
-	var folders = fs.readdirSync(sqlitepath);
+	// sqlitepath = bmFirefoxPath[0];
+	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${bmFirefoxPath[0]}`);
+	var folders = fs.readdirSync(bmFirefoxPath[0]);
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
 	let validFolders = folders.filter(folder => {
 		let tmp = `bmFirefoxPath[0]\\${folder}\\bmFirefoxPath[2]`;
@@ -287,7 +287,7 @@ function findBookmarks_Firefox() {
 	});
 	if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
 	if (validFolders.length == 1) {
-		sqlitepath += `\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
+		sqlitepath = `bmFirefoxPath[0]\\${validFolders[0]}\\bmFirefoxPath[2]`;
 		if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
 	} else {
 		var msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
