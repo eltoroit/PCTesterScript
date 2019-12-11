@@ -62,7 +62,7 @@ const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
 const bmFirefoxPath = [
 	"C:\\Users\\Dell-7480\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\",
-	"*.default",
+	"*.default-release",
 	"places.sqlite"
 ];
 
