@@ -281,8 +281,11 @@ function findBookmarks_Firefox() {
 	var folders = fs.readdirSync(sqlitepath);
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
 	let validFolders = folders.filter(folder => {
-		return fs.existsSync(`${sqlitepath}\\${folder}\\bmFirefoxPath[2]`);
+		let tmp = `${sqlitepath}\\${folder}\\bmFirefoxPath[2]`;
+		if (debug) console.log(`Checking path: ${tmp}`);
+		return fs.existsSync(tmp);
 	});
+	if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
 	if (validFolders.length == 1) {
 		sqlitepath += `\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
 		if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
