@@ -286,7 +286,7 @@ function findBookmarks_Firefox() {
 	});
 	if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
 	if (validFolders.length == 1) {
-		sqlitepath = `bmFirefoxPath[0]\\${validFolders[0]}\\bmFirefoxPath[2]`;
+		sqlitepath = `bmFirefoxPath[0]\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
 		if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
 	} else {
 		var msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
