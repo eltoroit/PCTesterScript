@@ -280,7 +280,7 @@ function findBookmarks_Firefox() {
 	var folders = fs.readdirSync(bmFirefoxPath[0]);
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
 	let validFolders = folders.filter(folder => {
-		let tmp = `bmFirefoxPath[0]\\${folder}\\bmFirefoxPath[2]`;
+		let tmp = `bmFirefoxPath[0]\\${folder}\\${bmFirefoxPath[2]}`;
 		if (debug) console.log(`Checking path: ${tmp}`);
 		return fs.existsSync(tmp);
 	});
