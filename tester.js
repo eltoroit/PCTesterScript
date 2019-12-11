@@ -61,7 +61,7 @@ const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
 const bmFirefoxPath = [
-	"C:\\Users\\Dell-7480\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\",
+	"C:\\Users\\Dell-7480\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles",
 	"*.default-release",
 	"places.sqlite"
 ];
@@ -276,12 +276,12 @@ function findBookmarks_Firefox() {
 	tmp.URLs = {};
 
 	// Find sqlite path
-	sqlitepath = bmFirefoxPath[0];
+	sqlitepath = ;
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${sqlitepath}`);
 	var folders = fs.readdirSync(sqlitepath);
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
 	let validFolders = folders.filter(folder => {
-		let tmp = `${sqlitepath}\\${folder}\\bmFirefoxPath[2]`;
+		let tmp = `bmFirefoxPath[0]\\${folder}\\bmFirefoxPath[2]`;
 		if (debug) console.log(`Checking path: ${tmp}`);
 		return fs.existsSync(tmp);
 	});
