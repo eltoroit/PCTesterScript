@@ -1,5 +1,5 @@
 {
-  "now": "2019-12-12T02:14:30.320Z",
+  "now": "2019-12-12T02:38:33.216Z",
   "events": [
     {
       "attributes": {
@@ -104,9 +104,10 @@
         "AppName__c": "StartOnCrash - Kill App",
         "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
+        "ErrorMessage__c": "Unable to open application: \"StartOnCrash - Kill App\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnCrash - Kill App\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 84,
         "Count_Events__c": 2
       }
@@ -155,9 +156,10 @@
         "AppName__c": "StartOnCrash - Kill App",
         "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
+        "ErrorMessage__c": "Unable to open application: \"StartOnCrash - Kill App\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnCrash - Kill App\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 84,
         "Count_Events__c": 2
       },
@@ -208,7 +210,7 @@
         "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Execute",
+        "Operation__c": "Open Application",
         "Order__c": 87,
         "Count_Events__c": 1
       }
@@ -518,9 +520,10 @@
         "AppName__c": "StartOnCrash - Kill App",
         "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
+        "ErrorMessage__c": "Unable to open application: \"StartOnCrash - Kill App\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"StartOnCrash - Kill App\". Was this succesful?",
+        "Operation__c": "Open Application",
         "Order__c": 84,
         "Count_Events__c": 2
       },
@@ -571,7 +574,7 @@
         "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Execute",
+        "Operation__c": "Open Application",
         "Order__c": 87,
         "Count_Events__c": 1
       },
