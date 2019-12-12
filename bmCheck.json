@@ -1,65 +1,57 @@
 [
-	{
-		"id": "BM_1",
-		"title": "[BAR][Salesforce Login]",
-		"urlExpected": "https://login.salesforce.com/",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_2",
-		"title": "[BAR][Marketing Cloud Login]",
-		"urlExpected": "https://mc.exacttarget.com/",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_4",
-		"title": "[BAR][Data Loader]",
-		"urlExpected": "https://dataloader.io/",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_5",
-		"title": "[BAR][Bootcamp Session Survey]",
-		"urlExpected": "https://www.surveymonkey.com/r/Dreamforce19Bootcamp",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_6",
-		"title": "[BAR][Dreamforce Website]",
-		"urlExpected": "https://www.salesforce.com/dreamforce/",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_7",
-		"title": "[BAR][Mimeo EBook]",
-		"urlExpected": "https://salesforce.mimeo.digital/login",
-		"hasFF": true,
-		"hasChrome": true,
-		"checkFF": true,
-		"checkChrome": true
-	},
-	{
-		"id": "BM_8",
-		"title": "[BAR][Salesforce Certification]",
-		"urlExpected": "https://www.webassessor.com/salesforce",
-		"hasFF": false,
-		"hasChrome": true,
-		"checkFF": false,
-		"checkChrome": true
-	}
+    {
+        "id": "BM_1",
+        "title": "[BAR][Salesforce login]",
+        "urlChrome": "https://www.salesforce.com/in/",
+        "urlFirefox": "https://www.salesforce.com/in/",
+        "urlExpected": "https://www.salesforce.com/in/",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_2",
+        "title": "[BAR][Trailhead HOW Login]",
+        "urlChrome": "https://sforce.co/36ycG8F",
+        "urlFirefox": "https://sforce.co/36ycG8F",
+        "urlExpected": "https://sforce.co/36ycG8F",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_3",
+        "title": "[BAR][TDX India Website]",
+        "urlChrome": "https://www.salesforce.com/in/trailheadx",
+        "urlFirefox": "https://www.salesforce.com/in/trailheadx",
+        "urlExpected": "https://www.salesforce.com/in/trailheadx",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_4",
+        "title": "[BAR][Thursday Trailmix]",
+        "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
+        "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
+        "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    },
+    {
+        "id": "BM_5",
+        "title": "[BAR][Friday Trailmix]",
+        "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
+        "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
+        "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
+        "hasFF": true,
+        "hasChrome": true,
+        "checkFF": true,
+        "checkChrome": true
+    }
 ]

@@ -1,5 +1,5 @@
 {
-  "now": "2019-12-12T02:49:33.294Z",
+  "now": "2019-12-12T21:24:07.099Z",
   "events": [
     {
       "attributes": {
@@ -697,42 +697,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kUAAQ"
-        },
-        "Id": "a0054000003b7kUAAQ",
-        "Name": "ACT-0147",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kVAAQ"
-        },
-        "Id": "a0054000003b7kVAAQ",
-        "Name": "ACT-0148",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jpAAA"
         },
         "Id": "a0054000003b7jpAAA",
@@ -746,24 +710,6 @@
         "Message__c": "Opening Application: \"Postman\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 29,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jzAAA"
-        },
-        "Id": "a0054000003b7jzAAA",
-        "Name": "ACT-0116",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 68,
         "Count_Events__c": 1
       },
       {
@@ -788,12 +734,12 @@
         "Id": "a0054000003b7jkAAA",
         "Name": "ACT-0101",
         "AppName__c": "Java 8",
-        "Command__c": "C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "Command__c": "C:\\Program Files\\Java\\zulu8.40.0.25-ca-jdk8.0.222-win_x64\\bin\\java.exe*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "java.exe",
         "Fix__c": "Please ensure Java JDK is installed.",
-        "Message__c": "Checking path: C:\\Program Files\\Zulu\\zulu-8\\jre\\bin\\java.exe*",
+        "Message__c": "Checking path: C:\\Program Files\\Java\\zulu8.40.0.25-ca-jdk8.0.222-win_x64\\bin\\java.exe*",
         "Operation__c": "Check Path",
         "Order__c": 24,
         "Count_Events__c": 3
@@ -998,24 +944,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kEAAQ"
-        },
-        "Id": "a0054000003b7kEAAQ",
-        "Name": "ACT-0131",
-        "AppName__c": "VS Code Plugin (10)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\eamodio.gitlens-10.*",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "eamodio.gitlens-10",
-        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\eamodio.gitlens-10.*",
-        "Operation__c": "Check Path",
-        "Order__c": 42,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kFAAQ"
         },
         "Id": "a0054000003b7kFAAQ",
@@ -1125,12 +1053,12 @@
         "Id": "a0054000003b7jiAAA",
         "Name": "ACT-0099",
         "AppName__c": "Chrome: Plugin Resize",
-        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Command__c": "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "package.json",
         "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
-        "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Message__c": "Checking path: C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
         "Order__c": 22,
         "Count_Events__c": 3
