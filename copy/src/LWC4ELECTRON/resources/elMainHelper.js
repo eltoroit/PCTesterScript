@@ -19,6 +19,7 @@ const child_process = require("child_process");
 // Other libraries
 const Config = require("./ETEPL2/config");
 const ETEPL_Client = require("./ETEPL2/ETEPL_Client");
+const ETEPL_QRCode = require("./ETEPL2/ETEPL_QRCode");
 
 // Other static variables
 let config;
@@ -163,9 +164,20 @@ module.exports = class ELMainHelper {
 
 		// QRCode
 		trayMenu.push({
-			label: "Who am I?",
+			label: "Show QR Code",
 			click: (/* menuItem, browserWindow, event */) => {
-				config.electron.mainHelper.loadPage(config.local.setup);
+				config.actions.reset(true);
+				let electronJson = config.etEpl.readElectronJson();
+				config.logger.logs.addMessage(config.logger.levels.info, "Handshake", "QRCode requested by client");
+				config.actions.add(
+					new ETEPL_QRCode(config, {
+						action: "SHOW_QR_CODE",
+						data: {
+							fromClient: true
+						},
+						electronJson
+					})
+				);
 			}
 		});
 

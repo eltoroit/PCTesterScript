@@ -6,7 +6,7 @@
 			"staging": "https://et-epl-stage.herokuapp.com",
 			"production": "https://et-epl.herokuapp.com"
 		},
-		"pingServer": "http://localhost:5000"
+		"pingServer": "https://et-epl-stage.herokuapp.com"
 	},
 	"electronJson": {
 		"mac": "/Users/aperez/C1MW1077J1WV-2/Projects/2019/12-DEC/ET_EPL/electron.json",
@@ -29,12 +29,12 @@
 	},
 	"debug": {
 		"modes": ["fatal", "error", "warn", "info", "debug", "trace", "stack", "data"],
-		"mode": "info",
+		"mode": "fatal",
 		"fullMenus": false,
 		"peekInterval": 10,
 		"preventQuit": true,
-		"openDevTools": true,
-		"showCallouts": true,
+		"openDevTools": false,
+		"showCallouts": false,
 		"updateStatus": {
 			"icon": false,
 			"title": false
@@ -43,5 +43,5 @@
 		"useFakeIPAddress": false,
 		"interruptWithDialog": false
 	},
-	"version": "2019-12-07V01"
+	"version": "2019-12-11V01"
 }
