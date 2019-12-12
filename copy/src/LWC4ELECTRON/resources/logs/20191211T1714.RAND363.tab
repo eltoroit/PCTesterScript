@@ -1,0 +1,14 @@
+Id	DTTM_UTC	DTTM_Local	Name	Line_Number	Log_Level	Message
+8	2019-12-11T22:14:11.775Z	5:14:11 PM	ABORT               	ETEPL_Actions.js:37           	fatal	{"data":{"name":"ETEPL_PauseCycles","cycles":4,"maxTime":-1,"abort":null,"readyToRemove":false}}	
+9	2019-12-11T22:14:11.781Z	5:14:11 PM	Wrote electron.json 	ETEPL_Client.js:165           	warn	{"roomId":"a0356000002nVr3AAE","roomName":"_ELTORO (Andres Perez) Test -- Do Not Use","computerNumber":2,"eventId":"a0056000003XkxfAAC","siInfo":{"manufacturer":"Apple Inc.","model":"MacBookAir7,2","version":"1.0","serial":"C1MW1077J1WV","uuid":"5DE781CA-8E9F-5310-92A7-CCAD7683D0F1","sku":"Mac-937CB26E2E02BB01"},"IPAddress":"127.0.0.1","IPAddressId":"a01560000021zG5AAI","locationId":"a0256000003imTTAAY","computerId":65,"machineId":"a0456000003JkifAAC","action":"REGISTER"}	
+10	2019-12-11T22:14:11.783Z	5:14:11 PM	New Hanshake        	ETEPL_Client.js:51            	info	Nothing to do, so let's handshake!	
+11	2019-12-11T22:14:11.784Z	5:14:11 PM	Handshake           	ETEPL_Handshake.js:24         	info	Accion Added	
+12	2019-12-11T22:14:12.793Z	5:14:12 PM	Handshake           	ETEPL_Handshake.js:38         	info	Call server	
+13	2019-12-11T22:14:12.803Z	5:14:12 PM	Handshake           	ETEPL_Handshake.js:142        	fatal	Error on Webservice callout	
+14	2019-12-11T22:14:12.804Z	5:14:12 PM	ERROR               	elMainHelper.js:321           	fatal	net::ERR_CONNECTION_REFUSED	
+15	2019-12-11T22:14:13.742Z	5:14:13 PM	ABORT               	ETEPL_Actions.js:37           	fatal	{"data":{"name":"ETEPL_Handshake","maxTime":120000,"abort":"2019-12-11T22:16:12.788Z","readyToRemove":false}}	
+16	2019-12-11T22:14:13.744Z	5:14:13 PM	Wrote electron.json 	ETEPL_Client.js:165           	warn	{"roomId":"a0356000002nVr3AAE","roomName":"_ELTORO (Andres Perez) Test -- Do Not Use","computerNumber":2,"eventId":"a0056000003XkxfAAC","siInfo":{"manufacturer":"Apple Inc.","model":"MacBookAir7,2","version":"1.0","serial":"C1MW1077J1WV","uuid":"5DE781CA-8E9F-5310-92A7-CCAD7683D0F1","sku":"Mac-937CB26E2E02BB01"},"IPAddress":"127.0.0.1","IPAddressId":"a01560000021zG5AAI","locationId":"a0256000003imTTAAY","computerId":65,"machineId":"a0456000003JkifAAC","action":"REGISTER"}	
+17	2019-12-11T22:14:13.746Z	5:14:13 PM	Pause Milliseconds  	ETEPL_PauseMilliseconds.js:20 	info	Pause for 600.00 seconds	
+18	2019-12-11T22:14:13.792Z	5:14:13 PM	Pause Milliseconds  	ETEPL_PauseMilliseconds.js:42 	info	Sleeping until 5:24:13 PM (600.00 seconds)	
+19	2019-12-11T22:14:23.086Z	5:14:23 PM	Peek                	ETEPL_Actions.js:157          	fatal	Error on Webservice callout	
+20	2019-12-11T22:14:23.087Z	5:14:23 PM	ERROR               	elMainHelper.js:321           	fatal	net::ERR_CONNECTION_REFUSED	

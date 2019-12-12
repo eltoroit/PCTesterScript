@@ -136,10 +136,6 @@ module.exports = class ETEPL_Actions {
 			} else {
 				this.peekData.counter--;
 				if (this.peekData.counter <= 0) {
-					// if (action.data.name === "ETEPL_ComputerLogin") {
-					// config.actions.peekData.counter = 60;
-					// debugger;
-					// } else {
 					this.resetPeek();
 					let electronJson = config.etEpl.readElectronJson();
 					that.showStatus(`Peeking...`);
@@ -162,7 +158,6 @@ module.exports = class ETEPL_Actions {
 							config.electron.mainHelper.handleCriticalError(err);
 							config.actions.reset(true);
 						});
-					// }
 				} else {
 					config.logger.logs.addMessage(
 						config.logger.levels.trace,

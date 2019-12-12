@@ -1,5 +1,5 @@
 {
-  "now": "2019-12-11T04:04:16.693Z",
+  "now": "2019-12-12T00:07:53.124Z",
   "events": [
     {
       "attributes": {
@@ -696,6 +696,24 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jpAAA"
+        },
+        "Id": "a0054000003b7jpAAA",
+        "Name": "ACT-0106",
+        "AppName__c": "Postman",
+        "Command__c": "\"C:\\Users\\Dell-7480\\Desktop\\Postman.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Postman\"",
+        "Expected__c": "Application runs with no errors",
+        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
+        "Message__c": "Opening Application: \"Postman\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 29,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jzAAA"
         },
         "Id": "a0054000003b7jzAAA",
@@ -1114,24 +1132,6 @@
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
         "Order__c": 26,
-        "Count_Events__c": 3
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jpAAA"
-        },
-        "Id": "a0054000003b7jpAAA",
-        "Name": "ACT-0106",
-        "AppName__c": "Postman",
-        "Command__c": "\"C:\\Users\\Dell-7480\\Desktop\\Postman.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Postman\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
-        "Message__c": "Opening Application: \"Postman\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 29,
         "Count_Events__c": 3
       },
       {

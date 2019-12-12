@@ -6,6 +6,7 @@ const electron = require("electron");
 const net = electron.net;
 const fs = require("fs");
 const url = require("url");
+const si = require("systeminformation");
 
 // Other files
 const ETEPL_PauseCycles = require("./ETEPL_PauseCycles");
@@ -17,15 +18,21 @@ const ETEPL_PauseMilliseconds = require("./ETEPL_PauseMilliseconds");
 let config;
 
 module.exports = class ETEPL_Client {
+	SYSTEM_INFO = null;
+
 	constructor(_config) {
 		config = _config;
 		config.etEpl = this;
-		// Actions
-		config.actions = new ETEPL_Actions(config);
-		config.actions.add(new ETEPL_PauseCycles(config, 5));
-		config.etEpl.resetTest();
-		// Start clock...
-		this._startClock();
+		// Get System Information
+		si.system().then(data => {
+			this.SYSTEM_INFO = data;
+			// Actions
+			config.actions = new ETEPL_Actions(config);
+			config.actions.add(new ETEPL_PauseCycles(config, 5));
+			config.etEpl.resetTest();
+			// Start clock...
+			this._startClock();
+		});
 	}
 
 	_startClock() {
@@ -143,6 +150,7 @@ module.exports = class ETEPL_Client {
 
 		try {
 			electronJson = JSON.parse(fs.readFileSync(config.local.electronJson));
+			electronJson.siInfo = this.SYSTEM_INFO;
 		} catch (ex) {
 			config.electron.mainHelper.handleCriticalError(ex);
 			config.logger.logs.addException(config.logger.levels.fatal, "Read File", ex);

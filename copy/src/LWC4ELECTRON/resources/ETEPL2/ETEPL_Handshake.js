@@ -2,10 +2,11 @@
 "use strict";
 
 // Other files
-const ETEPL_PauseMilliseconds = require("./ETEPL_PauseMilliseconds");
+const ETEPL_QRCode = require("./ETEPL_QRCode");
+const ETEPL_ShowHide = require("./ETEPL_ShowHide");
 const ETEPL_ComputerSetup = require("./ETEPL_ComputerSetup");
 const ETEPL_ComputerLogin = require("./ETEPL_ComputerLogin");
-const ETEPL_ShowHide = require("./ETEPL_ShowHide");
+const ETEPL_PauseMilliseconds = require("./ETEPL_PauseMilliseconds");
 
 let config;
 
@@ -77,11 +78,7 @@ module.exports = class ETEPL_Handshake {
 							config.actions.add(new ETEPL_ComputerSetup(config, { ...response.output, ...electronJson }));
 						} else {
 							if (electronJson.computerId) {
-								config.logger.logs.addMessage(
-									config.logger.levels.info,
-									"Handshake",
-									`SETUP skippped because I have ComputerId=${electronJson.computerId}`
-								);
+								config.logger.logs.addMessage(config.logger.levels.info, "Handshake", `SETUP skippped because I have ComputerId=${electronJson.computerId}`);
 								electronJson.forceReset = null;
 								config.etEpl.writeElectronJson(electronJson);
 							} else {
@@ -117,6 +114,14 @@ module.exports = class ETEPL_Handshake {
 					// Sets the debug levels
 					case "DEBUG": {
 						config.debug = response.output.debug;
+						that.data.readyToRemove = true;
+						break;
+					}
+					// Shows QRCode
+					case "SHOW_QR_CODE": {
+						let data = { ...response.output, electronJson };
+						config.logger.logs.addMessage(config.logger.levels.info, "Handshake", "QRCode requested by server");
+						config.actions.add(new ETEPL_QRCode(config, data));
 						that.data.readyToRemove = true;
 						break;
 					}

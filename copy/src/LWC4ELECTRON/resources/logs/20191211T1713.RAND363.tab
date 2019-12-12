@@ -1,0 +1,8 @@
+Id	DTTM_UTC	DTTM_Local	Name	Line_Number	Log_Level	Message
+1	2019-12-11T22:13:31.693Z	5:13:31 PM	Pause Cycles        	ETEPL_PauseCycles.js:19       	info	Pause for 5 cycles	
+2	2019-12-11T22:13:31.739Z	5:13:31 PM	Wrote electron.json 	ETEPL_Client.js:165           	warn	{"roomId":"a0356000002nVr3AAE","roomName":"_ELTORO (Andres Perez) Test -- Do Not Use","computerNumber":2,"eventId":"a0056000003XkxfAAC","siInfo":{"manufacturer":"Apple Inc.","model":"MacBookAir7,2","version":"1.0","serial":"C1MW1077J1WV","uuid":"5DE781CA-8E9F-5310-92A7-CCAD7683D0F1","sku":"Mac-937CB26E2E02BB01"},"IPAddress":"127.0.0.1","IPAddressId":"a01560000021zG5AAI","locationId":"a0256000003imTTAAY","computerId":65,"machineId":"a0456000003JkifAAC","action":"REGISTER"}	
+3	2019-12-11T22:13:31.741Z	5:13:31 PM	Start Clock         	ETEPL_Client.js:39            	info	Starting master clock. Interval: 1.00 seconds	
+4	2019-12-11T22:13:32.531Z	5:13:32 PM	Navigated           	elMainHelper.js:251           	info	Page loaded: [HTTP 200: OK] https://trailhead.salesforce.com/en/home	
+5	2019-12-11T22:13:32.545Z	5:13:32 PM	Handle Message      	ETEPL_Actions.js:54           	info	Message for ETEPL_PauseCycles	
+6	2019-12-11T22:13:32.771Z	5:13:32 PM	Peek                	ETEPL_Actions.js:157          	fatal	Error on Webservice callout	
+7	2019-12-11T22:13:32.775Z	5:13:32 PM	ERROR               	elMainHelper.js:321           	fatal	net::ERR_CONNECTION_REFUSED	

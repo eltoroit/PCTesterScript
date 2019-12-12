@@ -3,7 +3,6 @@
 // System files
 const fs = require("fs");
 const path = require("path");
-const { parse, stringify } = require("flatted/cjs"); // https://github.com/WebReflection/flatted#flatted
 
 let config;
 
@@ -112,7 +111,7 @@ const Logger = {
 					try {
 						data.message = JSON.stringify(message);
 					} catch (ex) {
-						data.message = `[JSON.stringify() failed] => ${stringify(message)}`;
+						data.message = `[JSON.stringify() failed] => ${JSON.stringify(ex)}`;
 					}
 				}
 

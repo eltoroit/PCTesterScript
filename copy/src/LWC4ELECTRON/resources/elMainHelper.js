@@ -145,6 +145,7 @@ module.exports = class ELMainHelper {
 			}
 		});
 
+		// Network speed
 		trayMenu.push({
 			label: "Network Speed",
 			click: () => {
@@ -152,10 +153,19 @@ module.exports = class ELMainHelper {
 			}
 		});
 
+		// Abort
 		trayMenu.push({
 			label: "Abort",
 			click: (/* menuItem, browserWindow, event */) => {
 				config.actions.reset();
+			}
+		});
+
+		// QRCode
+		trayMenu.push({
+			label: "Who am I?",
+			click: (/* menuItem, browserWindow, event */) => {
+				config.electron.mainHelper.loadPage(config.local.setup);
 			}
 		});
 

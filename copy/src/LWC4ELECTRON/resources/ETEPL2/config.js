@@ -37,6 +37,7 @@ module.exports = class Config {
 		config.pages = configValues.pages;
 		config.timer = configValues.timer;
 		config.debug = configValues.debug;
+		config.local.electronJson = `${configValues.electronJson.current}`;
 
 		// Set defaults
 		if (!"peekInterval" in config.debug) config.debug.peekInterval = 60;
@@ -70,12 +71,12 @@ module.exports = class Config {
 
 		// Local Files
 		config.local.root = rootFolder;
+		config.local.qrCode = `file://${rootFolder}/qrCode.html`;
 		config.local.demo = `file://${rootFolder}/demo.html`;
 		config.local.blank = `file://${rootFolder}/blank.html`;
 		config.local.bye = `file://${rootFolder}/bye.html`;
 		config.local.setup = `file://${rootFolder}/setup.html`;
 		config.local.computerInfo = `file://${rootFolder}/computerInfo.html`;
-		config.local.electronJson = `${rootFolder}/data/electron.json`;
 		config.local.icon = `${rootFolder}/icons/TrailheadBgNone32.png`;
 
 		// Timer
@@ -115,7 +116,11 @@ module.exports = class Config {
 		ms += pattern[1] * 1000; // seconds
 		ms += pattern[2] * 1; // milliseconds
 
-		config.logger.logs.addMessage(config.logger.levels.debug, "Timers", `${name}: ${pattern[0]} minutes, ${pattern[1]} seconds, ${pattern[2]} milliseconds => ${(ms / 1000).toFixed(2)}`);
+		config.logger.logs.addMessage(
+			config.logger.levels.debug,
+			"Timers",
+			`${name}: ${pattern[0]} minutes, ${pattern[1]} seconds, ${pattern[2]} milliseconds => ${(ms / 1000).toFixed(2)}`
+		);
 		return ms;
 	}
 

@@ -1,89 +1,46 @@
 [
-    {
-        "id": "BM_1",
-        "title": "[BAR][Salesforce Login]",
-        "urlChrome": "https://login.salesforce.com/",
-        "urlFirefox": "https://login.salesforce.com/",
-        "urlExpected": "https://login.salesforce.com/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_2",
-        "title": "[BAR][Marketing Cloud Login]",
-        "urlChrome": "https://mc.exacttarget.com/",
-        "urlFirefox": "https://mc.exacttarget.com/",
-        "urlExpected": "https://mc.exacttarget.com/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_3",
-        "title": "[BAR][Pardot Login]",
-        "urlChrome": "https://pi.pardot.com/",
-        "urlFirefox": "https://pi.pardot.com/",
-        "urlExpected": "https://pi.pardot.com/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_4",
-        "title": "[BAR][Dataloader]",
-        "urlChrome": "https://dataloader.io/",
-        "urlFirefox": "https://dataloader.io/",
-        "urlExpected": "https://dataloader.io/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_5",
-        "title": "[BAR][Bootcamp Session Survey]",
-        "urlChrome": "https://www.surveymonkey.com/r/goldcoastbootcamp",
-        "urlFirefox": "https://www.surveymonkey.com/r/goldcoastbootcamp",
-        "urlExpected": "https://www.surveymonkey.com/r/goldcoastbootcamp",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_6",
-        "title": "[BAR][Trailhead Bootcamp]",
-        "urlChrome": "https://trailhead.salesforce.com/bootcamps/australia",
-        "urlFirefox": "https://trailhead.salesforce.com/bootcamps/australia",
-        "urlExpected": "https://trailhead.salesforce.com/bootcamps/australia",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_7",
-        "title": "[BAR][Mimeo EBook]",
-        "urlChrome": "https://salesforce.mimeo.digital/",
-        "urlFirefox": "https://salesforce.mimeo.digital/",
-        "urlExpected": "https://salesforce.mimeo.digital/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_8",
-        "title": "[BAR][Salesforce Certification]",
-        "urlChrome": "https://www.webassessor.com/salesforce",
-        "urlExpected": "NO_IDEA",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    }
+	{
+		"id": "BM_1",
+		"title": "[BAR][CRM Software: Cloud Computing Solutions For Every Business - Salesforce IN]",
+		"urlChrome": "https://www.salesforce.com/in/",
+		"urlFirefox": "https://www.salesforce.com/in/",
+		"urlExpected": "https://www.salesforce.com/in/",
+		"hasFF": true,
+		"hasChrome": true,
+		"checkFF": true,
+		"checkChrome": true
+	},
+	{
+		"id": "BM_2",
+		"title": "[BAR][Trailhead | The fun way to learn]",
+		"urlChrome": "https://trailhead.salesforce.com/en/home?utm_campaign=TDX_INDIA_how&utm_content=onsite&utm_medium=event_other&utm_source=event",
+		"urlFirefox": "https://trailhead.salesforce.com/en/home?utm_campaign",
+		"urlExpected": "https://trailhead.salesforce.com/en/home?utm_campaign",
+		"hasFF": true,
+		"hasChrome": true,
+		"checkFF": true,
+		"checkChrome": true
+	},
+	{
+		"id": "BM_3",
+		"title": "[BAR][TrailheaDX India | Bengaluru | 19-20 December 2019]",
+		"urlChrome": "https://www.salesforce.com/in/trailheadx",
+		"urlFirefox": "https://www.salesforce.com/in/trailheadx",
+		"urlExpected": "https://www.salesforce.com/in/trailheadx",
+		"hasFF": true,
+		"hasChrome": true,
+		"checkFF": true,
+		"checkChrome": true
+	},
+	{
+		"id": "BM_4",
+		"title": "[BAR][Trailmixes | Salesforce Trailhead]",
+		"urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
+		"urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
+		"urlExpected": "NO_IDEA",
+		"hasFF": true,
+		"hasChrome": true,
+		"checkFF": true,
+		"checkChrome": true
+	}
 ]

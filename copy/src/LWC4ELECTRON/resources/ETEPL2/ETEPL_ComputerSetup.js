@@ -26,6 +26,7 @@ module.exports = class ETEPL_ComputerSetup {
 				const formTimeout = config.timer.user.value; // ET_TIME
 				this.data.abort = config.etEpl.addMilliseconds(new Date(), formTimeout);
 
+				// Return by reference
 				message.data = {
 					formTimeout,
 					setupData: this.setupData
@@ -55,7 +56,11 @@ module.exports = class ETEPL_ComputerSetup {
 		this.setupData.roomId = electronJson.roomId;
 		this.setupData.computerNumber = electronJson.computerNumber;
 
-		if ((this.setupData.resetStrength >= 1 && this.setupData.resetStrength <= 2) || isNaN(this.setupData.computerNumber) || this.setupData.roomId.length !== 18) {
+		if (
+			(this.setupData.resetStrength >= 1 && this.setupData.resetStrength <= 2) ||
+			isNaN(this.setupData.computerNumber) ||
+			this.setupData.roomId.length !== 18
+		) {
 			// Ask for data
 			config.logger.logs.addMessage(config.logger.levels.info, "Computer Setup", `Opening the Setup form`);
 			config.electron.mainHelper
@@ -89,7 +94,9 @@ module.exports = class ETEPL_ComputerSetup {
 		electronJson.roomName = message.data.roomName;
 		electronJson.computerNumber = message.data.computerNumber;
 		if (config.debug.useFakeIPAddress) {
-			electronJson.IPAddress = `${Math.floor(Math.random() * 200)}.${Math.floor(Math.random() * 200)}.${Math.floor(Math.random() * 200)}.${Math.floor(Math.random() * 200)}`;
+			electronJson.IPAddress = `${Math.floor(Math.random() * 200)}.${Math.floor(Math.random() * 200)}.${Math.floor(
+				Math.random() * 200
+			)}.${Math.floor(Math.random() * 200)}`;
 		}
 		config.etEpl.writeElectronJson(electronJson);
 		return electronJson;
