@@ -1,5 +1,5 @@
 {
-  "now": "2019-12-12T02:46:14.571Z",
+  "now": "2019-12-12T02:49:33.294Z",
   "events": [
     {
       "attributes": {
@@ -142,7 +142,7 @@
         "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Execute",
+        "Operation__c": "Open Application",
         "Order__c": 81,
         "Count_Events__c": 1
       },
@@ -506,7 +506,7 @@
         "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Execute",
+        "Operation__c": "Open Application",
         "Order__c": 81,
         "Count_Events__c": 1
       },
