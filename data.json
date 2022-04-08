@@ -1,255 +1,53 @@
 {
-  "now": "2019-12-13T11:38:37.301Z",
+  "now": "2022-04-08T13:45:54.921Z",
   "events": [
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv94AAB"
+        "url": "/services/data/v42.0/sobjects/Event__c/a0221000005wFO6AAM"
       },
-      "Id": "a025400000Ffv94AAB",
-      "Name": "India TDX '19",
+      "Id": "a0221000005wFO6AAM",
+      "Name": "TrailblazerDX 22",
       "Order__c": 1,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv91AAB"
-      },
-      "Id": "a025400000Ffv91AAB",
-      "Name": "Start on crash or reboot",
-      "Order__c": 2,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv8zAAB"
-      },
-      "Id": "a025400000Ffv8zAAB",
-      "Name": "KILL ETEPL",
-      "Order__c": 3,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a025400000Ffv95AAB"
-      },
-      "Id": "a025400000Ffv95AAB",
-      "Name": "Logout Apps",
-      "Order__c": 4,
       "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
-    "a025400000Ffv95AAB": [
+    "a0221000005wFO6AAM": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jgAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzIAAW"
         },
-        "Id": "a0054000003b7jgAAA",
-        "Name": "ACT-0097",
-        "AppName__c": "Logout SFDX",
-        "Command__c": "sfdx force:auth:logout --all --noprompt",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Operation__c": "Check Contains",
-        "Order__c": 60,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
-        },
-        "Id": "a0054000003b7k0AAA",
-        "Name": "ACT-0117",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 69,
-        "Count_Events__c": 4
-      }
-    ],
-    "a025400000Ffv8zAAB": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
-        },
-        "Id": "a0054000003b7k0AAA",
-        "Name": "ACT-0117",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 69,
-        "Count_Events__c": 4
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jLAAQ"
-        },
-        "Id": "a0054000003b7jLAAQ",
+        "Id": "a0021000009LPzIAAW",
         "Name": "ACT-0076",
-        "AppName__c": "StartOnCrash - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"StartOnCrash - Kill App\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"StartOnCrash - Kill App\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 84,
-        "Count_Events__c": 2
-      }
-    ],
-    "a025400000Ffv91AAB": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k0AAA"
-        },
-        "Id": "a0054000003b7k0AAA",
-        "Name": "ACT-0117",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 69,
-        "Count_Events__c": 4
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kMAAQ"
-        },
-        "Id": "a0054000003b7kMAAQ",
-        "Name": "ACT-0139",
-        "AppName__c": "ETEPL - Configuring computer room and number",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL - Configuring computer room and number\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL - Configuring computer room and number\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 81,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jLAAQ"
-        },
-        "Id": "a0054000003b7jLAAQ",
-        "Name": "ACT-0076",
-        "AppName__c": "StartOnCrash - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"RestartOnCrash.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"StartOnCrash - Kill App\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"StartOnCrash - Kill App\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 84,
-        "Count_Events__c": 2
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jOAAQ"
-        },
-        "Id": "a0054000003b7jOAAQ",
-        "Name": "ACT-0079",
-        "AppName__c": "StartOnReboot - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 85,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jKAAQ"
-        },
-        "Id": "a0054000003b7jKAAQ",
-        "Name": "ACT-0075",
-        "AppName__c": "StartOnReboot Shortcut - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 86,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jPAAQ"
-        },
-        "Id": "a0054000003b7jPAAQ",
-        "Name": "ACT-0080",
-        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 87,
-        "Count_Events__c": 1
-      }
-    ],
-    "a025400000Ffv94AAB": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kNAAQ"
-        },
-        "Id": "a0054000003b7kNAAQ",
-        "Name": "ACT-0140",
         "AppName__c": "Clear Screen",
         "EnabledAction__c": true,
         "Operation__c": "Clear",
         "Order__c": 1,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kRAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzMAAW"
         },
-        "Id": "a0054000003b7kRAAQ",
-        "Name": "ACT-0144",
+        "Id": "a0021000009LPzMAAW",
+        "Name": "ACT-0080",
         "AppName__c": "Say Hi",
         "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
         "EnabledAction__c": true,
         "Operation__c": "Write",
         "Order__c": 2,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kSAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzNAAW"
         },
-        "Id": "a0054000003b7kSAAQ",
-        "Name": "ACT-0145",
+        "Id": "a0021000009LPzNAAW",
+        "Name": "ACT-0081",
         "AppName__c": "MANUAL CHECKS",
         "Command__c": "=== === === MANUAL CHECKS === === ===",
         "EnabledAction__c": true,
@@ -260,10 +58,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kQAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzLAAW"
         },
-        "Id": "a0054000003b7kQAAQ",
-        "Name": "ACT-0143",
+        "Id": "a0021000009LPzLAAW",
+        "Name": "ACT-0079",
         "AppName__c": "Desktop Image",
         "Command__c": "Computer background image?",
         "EnabledAction__c": true,
@@ -277,10 +75,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kXAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy8AAG"
         },
-        "Id": "a0054000003b7kXAAQ",
-        "Name": "ACT-0150",
+        "Id": "a0021000009LPy8AAG",
+        "Name": "ACT-0004",
         "AppName__c": "Desktop: Notepad++",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Notepad++.lnk\"",
         "EnabledAction__c": true,
@@ -294,10 +92,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kYAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy9AAG"
         },
-        "Id": "a0054000003b7kYAAQ",
-        "Name": "ACT-0151",
+        "Id": "a0021000009LPy9AAG",
+        "Name": "ACT-0005",
         "AppName__c": "Firefox + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
         "EnabledAction__c": true,
@@ -311,10 +109,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kaAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyBAAW"
         },
-        "Id": "a0054000003b7kaAAA",
-        "Name": "ACT-0153",
+        "Id": "a0021000009LPyBAAW",
+        "Name": "ACT-0007",
         "AppName__c": "Chrome + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
         "EnabledAction__c": true,
@@ -328,10 +126,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kbAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyCAAW"
         },
-        "Id": "a0054000003b7kbAAA",
-        "Name": "ACT-0154",
+        "Id": "a0021000009LPyCAAW",
+        "Name": "ACT-0008",
         "AppName__c": "Chrome: Plugin",
         "Command__c": "Chrome Plugin to split screen",
         "EnabledAction__c": true,
@@ -345,10 +143,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kPAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzKAAW"
         },
-        "Id": "a0054000003b7kPAAQ",
-        "Name": "ACT-0142",
+        "Id": "a0021000009LPzKAAW",
+        "Name": "ACT-0078",
         "AppName__c": "VS Code",
         "Command__c": "code",
         "EnabledAction__c": true,
@@ -362,10 +160,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jpAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPykAAG"
         },
-        "Id": "a0054000003b7jpAAA",
-        "Name": "ACT-0106",
+        "Id": "a0021000009LPykAAG",
+        "Name": "ACT-0042",
         "AppName__c": "Postman",
         "Command__c": "\"C:\\Users\\Dell-7480\\Desktop\\Postman.lnk\"",
         "EnabledAction__c": true,
@@ -380,24 +178,24 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kWAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy7AAG"
         },
-        "Id": "a0054000003b7kWAAQ",
-        "Name": "ACT-0149",
+        "Id": "a0021000009LPy7AAG",
+        "Name": "ACT-0003",
         "AppName__c": "AUTOMATED TESTS",
         "Command__c": "=== === === AUTOMATED CHECKS === === ===",
         "EnabledAction__c": true,
         "Operation__c": "Write",
         "Order__c": 20,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jkAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyfAAG"
         },
-        "Id": "a0054000003b7jkAAA",
-        "Name": "ACT-0101",
+        "Id": "a0021000009LPyfAAG",
+        "Name": "ACT-0037",
         "AppName__c": "Java 8",
         "Command__c": "C:\\Program Files\\Java\\zulu8.40.0.25-ca-jdk8.0.222-win_x64\\bin\\java.exe*",
         "EnabledAction__c": true,
@@ -412,10 +210,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jrAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPymAAG"
         },
-        "Id": "a0054000003b7jrAAA",
-        "Name": "ACT-0108",
+        "Id": "a0021000009LPymAAG",
+        "Name": "ACT-0044",
         "AppName__c": "SFDX Update",
         "Command__c": "sfdx update",
         "EnabledAction__c": true,
@@ -430,10 +228,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jsAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPynAAG"
         },
-        "Id": "a0054000003b7jsAAA",
-        "Name": "ACT-0109",
+        "Id": "a0021000009LPynAAG",
+        "Name": "ACT-0045",
         "AppName__c": "VS Code Version",
         "Command__c": "code --version",
         "EnabledAction__c": true,
@@ -447,10 +245,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k2AAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPywAAG"
         },
-        "Id": "a0054000003b7k2AAA",
-        "Name": "ACT-0119",
+        "Id": "a0021000009LPywAAG",
+        "Name": "ACT-0054",
         "AppName__c": "VS Code Plugin (1)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
         "EnabledAction__c": true,
@@ -465,10 +263,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k3AAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyxAAG"
         },
-        "Id": "a0054000003b7k3AAA",
-        "Name": "ACT-0120",
+        "Id": "a0021000009LPyxAAG",
+        "Name": "ACT-0055",
         "AppName__c": "VS Code Plugin (2)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
         "EnabledAction__c": true,
@@ -483,10 +281,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k4AAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyyAAG"
         },
-        "Id": "a0054000003b7k4AAA",
-        "Name": "ACT-0121",
+        "Id": "a0021000009LPyyAAG",
+        "Name": "ACT-0056",
         "AppName__c": "VS Code Plugin (3)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
         "EnabledAction__c": true,
@@ -501,10 +299,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7k5AAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyzAAG"
         },
-        "Id": "a0054000003b7k5AAA",
-        "Name": "ACT-0122",
+        "Id": "a0021000009LPyzAAG",
+        "Name": "ACT-0057",
         "AppName__c": "VS Code Plugin (4)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
         "EnabledAction__c": true,
@@ -519,10 +317,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kDAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz8AAG"
         },
-        "Id": "a0054000003b7kDAAQ",
-        "Name": "ACT-0130",
+        "Id": "a0021000009LPz8AAG",
+        "Name": "ACT-0066",
         "AppName__c": "VS Code Plugin (5)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
         "EnabledAction__c": true,
@@ -537,10 +335,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jbAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyWAAW"
         },
-        "Id": "a0054000003b7jbAAA",
-        "Name": "ACT-0092",
+        "Id": "a0021000009LPyWAAW",
+        "Name": "ACT-0028",
         "AppName__c": "VS Code Plugin (6)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
         "EnabledAction__c": true,
@@ -555,10 +353,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kAAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz4AAG"
         },
-        "Id": "a0054000003b7kAAAQ",
-        "Name": "ACT-0127",
+        "Id": "a0021000009LPz4AAG",
+        "Name": "ACT-0062",
         "AppName__c": "VS Code Plugin (7)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
         "EnabledAction__c": true,
@@ -573,10 +371,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kBAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz6AAG"
         },
-        "Id": "a0054000003b7kBAAQ",
-        "Name": "ACT-0128",
+        "Id": "a0021000009LPz6AAG",
+        "Name": "ACT-0064",
         "AppName__c": "VS Code Plugin (8)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
         "EnabledAction__c": true,
@@ -591,10 +389,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kCAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz7AAG"
         },
-        "Id": "a0054000003b7kCAAQ",
-        "Name": "ACT-0129",
+        "Id": "a0021000009LPz7AAG",
+        "Name": "ACT-0065",
         "AppName__c": "VS Code Plugin (9)",
         "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "EnabledAction__c": true,
@@ -609,10 +407,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kFAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzAAAW"
         },
-        "Id": "a0054000003b7kFAAQ",
-        "Name": "ACT-0132",
+        "Id": "a0021000009LPzAAAW",
+        "Name": "ACT-0068",
         "AppName__c": "SFDX (Shell)",
         "Command__c": "C:\\Users\\DELL-7480\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
@@ -628,14 +426,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNNAA4"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlMaAAK"
               },
-              "Action__c": "a0054000003b7kFAAQ",
-              "Id": "a0354000002RPNNAA4",
-              "Name": "JSON-0009",
+              "Action__c": "a0021000009LPzAAAW",
+              "Id": "a0321000005TlMaAAK",
+              "Name": "JSON-0004",
               "Key__c": "terminal.integrated.shell.windows",
               "Path__c": ":",
-              "UniqueAction__c": "a0054000003b7kFAAQ",
+              "UniqueAction__c": "a0021000009LPzAAAW",
               "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
             }
           ]
@@ -644,10 +442,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kGAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzBAAW"
         },
-        "Id": "a0054000003b7kGAAQ",
-        "Name": "ACT-0133",
+        "Id": "a0021000009LPzBAAW",
+        "Name": "ACT-0069",
         "AppName__c": "SFDX (Java)",
         "Command__c": "C:\\Users\\DELL-7480\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
@@ -663,14 +461,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0354000002RPNKAA4"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlMXAA0"
               },
-              "Action__c": "a0054000003b7kGAAQ",
-              "Id": "a0354000002RPNKAA4",
-              "Name": "JSON-0006",
+              "Action__c": "a0021000009LPzBAAW",
+              "Id": "a0321000005TlMXAA0",
+              "Name": "JSON-0001",
               "Key__c": "salesforcedx-vscode-apex.java.home",
               "Path__c": ":",
-              "UniqueAction__c": "a0054000003b7kGAAQ",
+              "UniqueAction__c": "a0021000009LPzBAAW",
               "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
             }
           ]
@@ -679,10 +477,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kdAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyEAAW"
         },
-        "Id": "a0054000003b7kdAAA",
-        "Name": "ACT-0156",
+        "Id": "a0021000009LPyEAAW",
+        "Name": "ACT-0010",
         "AppName__c": "VSCode - Prettier - XCopy",
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
         "EnabledAction__c": true,
@@ -696,10 +494,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jMAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyHAAW"
         },
-        "Id": "a0054000003b7jMAAQ",
-        "Name": "ACT-0077",
+        "Id": "a0021000009LPyHAAW",
+        "Name": "ACT-0013",
         "AppName__c": "VSCode - XML - XCopy",
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
         "EnabledAction__c": true,
@@ -713,10 +511,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jiAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPydAAG"
         },
-        "Id": "a0054000003b7jiAAA",
-        "Name": "ACT-0099",
+        "Id": "a0021000009LPydAAG",
+        "Name": "ACT-0035",
         "AppName__c": "Chrome: Plugin Resize",
         "Command__c": "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "EnabledAction__c": true,
@@ -726,15 +524,15 @@
         "Message__c": "Checking path: C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
         "Order__c": 22,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jjAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyeAAG"
         },
-        "Id": "a0054000003b7jjAAA",
-        "Name": "ACT-0100",
+        "Id": "a0021000009LPyeAAG",
+        "Name": "ACT-0036",
         "AppName__c": "Check Java version",
         "Command__c": "java -version",
         "EnabledAction__c": true,
@@ -744,15 +542,15 @@
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
         "Order__c": 23,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jmAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyhAAG"
         },
-        "Id": "a0054000003b7jmAAA",
-        "Name": "ACT-0103",
+        "Id": "a0021000009LPyhAAG",
+        "Name": "ACT-0039",
         "AppName__c": "Notepad",
         "Command__c": "C:\\Windows\\Notepad.exe",
         "EnabledAction__c": true,
@@ -762,15 +560,15 @@
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
         "Order__c": 26,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7kHAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzCAAW"
         },
-        "Id": "a0054000003b7kHAAQ",
-        "Name": "ACT-0134",
+        "Id": "a0021000009LPzCAAW",
+        "Name": "ACT-0070",
         "AppName__c": "Git 2.24",
         "Command__c": "git --version",
         "EnabledAction__c": true,
@@ -780,15 +578,15 @@
         "Message__c": "Validating: Git 2.24 (git --version)",
         "Operation__c": "Check Contains",
         "Order__c": 45,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jSAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyNAAW"
         },
-        "Id": "a0054000003b7jSAAQ",
-        "Name": "ACT-0083",
+        "Id": "a0021000009LPyNAAW",
+        "Name": "ACT-0019",
         "AppName__c": "Git config email",
         "Command__c": "git config --global user.email \"you@example.com\"",
         "EnabledAction__c": true,
@@ -796,15 +594,15 @@
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
         "Order__c": 46,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jTAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyOAAW"
         },
-        "Id": "a0054000003b7jTAAQ",
-        "Name": "ACT-0084",
+        "Id": "a0021000009LPyOAAW",
+        "Name": "ACT-0020",
         "AppName__c": "Git config name",
         "Command__c": "git config --global user.name \"Your Name\"",
         "EnabledAction__c": true,
@@ -812,15 +610,15 @@
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
         "Order__c": 47,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jUAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyPAAW"
         },
-        "Id": "a0054000003b7jUAAQ",
-        "Name": "ACT-0085",
+        "Id": "a0021000009LPyPAAW",
+        "Name": "ACT-0021",
         "AppName__c": "7-Zip",
         "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
         "EnabledAction__c": true,
@@ -829,15 +627,15 @@
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
         "Order__c": 48,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jVAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyQAAW"
         },
-        "Id": "a0054000003b7jVAAQ",
-        "Name": "ACT-0086",
+        "Id": "a0021000009LPyQAAW",
+        "Name": "ACT-0022",
         "AppName__c": "Node",
         "Command__c": "node --version",
         "EnabledAction__c": true,
@@ -846,15 +644,15 @@
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
         "Order__c": 49,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       },
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jWAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyRAAW"
         },
-        "Id": "a0054000003b7jWAAQ",
-        "Name": "ACT-0087",
+        "Id": "a0021000009LPyRAAW",
+        "Name": "ACT-0023",
         "AppName__c": "SalesforceSans Font (1)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "EnabledAction__c": true,
@@ -869,10 +667,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jXAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPySAAW"
         },
-        "Id": "a0054000003b7jXAAQ",
-        "Name": "ACT-0088",
+        "Id": "a0021000009LPySAAW",
+        "Name": "ACT-0024",
         "AppName__c": "SalesforceSans Font (2)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "EnabledAction__c": true,
@@ -887,10 +685,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jZAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyUAAW"
         },
-        "Id": "a0054000003b7jZAAQ",
-        "Name": "ACT-0090",
+        "Id": "a0021000009LPyUAAW",
+        "Name": "ACT-0026",
         "AppName__c": "SalesforceSans Font (3)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "EnabledAction__c": true,
@@ -905,10 +703,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jaAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyVAAW"
         },
-        "Id": "a0054000003b7jaAAA",
-        "Name": "ACT-0091",
+        "Id": "a0021000009LPyVAAW",
+        "Name": "ACT-0027",
         "AppName__c": "SalesforceSans Font (4)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "EnabledAction__c": true,
@@ -923,10 +721,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jcAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyXAAW"
         },
-        "Id": "a0054000003b7jcAAA",
-        "Name": "ACT-0093",
+        "Id": "a0021000009LPyXAAW",
+        "Name": "ACT-0029",
         "AppName__c": "SalesforceSans Font (5)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "EnabledAction__c": true,
@@ -941,10 +739,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jdAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyYAAW"
         },
-        "Id": "a0054000003b7jdAAA",
-        "Name": "ACT-0094",
+        "Id": "a0021000009LPyYAAW",
+        "Name": "ACT-0030",
         "AppName__c": "SalesforceSans Font (6)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "EnabledAction__c": true,
@@ -959,10 +757,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jeAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyZAAW"
         },
-        "Id": "a0054000003b7jeAAA",
-        "Name": "ACT-0095",
+        "Id": "a0021000009LPyZAAW",
+        "Name": "ACT-0031",
         "AppName__c": "SalesforceSans Font (7)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "EnabledAction__c": true,
@@ -977,10 +775,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jfAAA"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyaAAG"
         },
-        "Id": "a0054000003b7jfAAA",
-        "Name": "ACT-0096",
+        "Id": "a0021000009LPyaAAG",
+        "Name": "ACT-0032",
         "AppName__c": "SalesforceSans Font (8)",
         "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "EnabledAction__c": true,
@@ -995,10 +793,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0054000003b7jYAAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyTAAW"
         },
-        "Id": "a0054000003b7jYAAQ",
-        "Name": "ACT-0089",
+        "Id": "a0021000009LPyTAAW",
+        "Name": "ACT-0025",
         "AppName__c": "Checking all bookmarks",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Checking all bookmarks",
@@ -1006,7 +804,7 @@
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
         "Order__c": 51,
-        "Count_Events__c": 3
+        "Count_Events__c": 4
       }
     ]
   }
