@@ -15,7 +15,8 @@ const log = require("./colorLogs.js");
 const minimist = require("minimist");
 const args = minimist(process.argv.slice(2), {
 	alias: {
-		t: "test"
+		t: "test",
+		r: "run"
 	}
 });
 
@@ -88,8 +89,8 @@ function promptYesNo(instruction) {
 	});
 
 	if (executeManualChecks) {
-		var untilCorrectResponse = function() {
-			inputReadLine1.question(log.getPromptMsg("[Y/N] > "), function(answer) {
+		var untilCorrectResponse = function () {
+			inputReadLine1.question(log.getPromptMsg("[Y/N] > "), function (answer) {
 				if (answer[0].toUpperCase() === "Y") {
 					inputReadLine1.close();
 					nextInstruction();
@@ -125,7 +126,7 @@ function spawnCommand(instruction) {
 		log.debug(ex);
 		throw ex;
 	}
-	process.on("error", function(err) {
+	process.on("error", function (err) {
 		var msg = "child process exited with an error: " + err;
 		reportErrorMessage(msg);
 	});
@@ -135,7 +136,7 @@ function spawnCommand(instruction) {
 }
 function executeCommand(instruction) {
 	if (debug) log.debug("EXECUTING: " + instruction.Command__c);
-	var process = exec(instruction.Command__c, function(error, stdout, stderr) {
+	var process = exec(instruction.Command__c, function (error, stdout, stderr) {
 		var output = {
 			cmd: instruction.Command__c,
 			error
@@ -148,7 +149,7 @@ function executeCommand(instruction) {
 }
 function checkExact(instruction) {
 	if (verbose) log.info("CHECKING: [" + instruction.Command__c + "]");
-	instruction.callback = function(output) {
+	instruction.callback = function (output) {
 		if (output.stdout === instruction.Expected__c) {
 			if (verbose) log.success("VALID: [" + output.stdout + "]");
 			nextInstruction();
@@ -169,7 +170,7 @@ function checkContains(instruction) {
 			log.info("CHECKING: [" + instruction.Command__c + "]");
 		}
 	}
-	instruction.callback = function(output) {
+	instruction.callback = function (output) {
 		var valid = false;
 
 		if (isExecute) {
@@ -204,7 +205,7 @@ function checkPath(instruction) {
 	if (verbose) log.info("CHECK PATH: [" + instruction.Command__c + "]");
 	instruction.Command__c = 'DIR "' + instruction.Command__c + '" /B';
 	if (!instruction.callback) {
-		instruction.callback = function(output) {
+		instruction.callback = function (output) {
 			if (output.stdout.toLowerCase().indexOf(instruction.Expected__c.toLowerCase()) >= 0) {
 				if (verbose) log.success("VALID: [Found: '" + instruction.Expected__c + "']");
 				nextInstruction();
@@ -303,7 +304,7 @@ function findBookmarks_Firefox() {
 	cmd += "> " + bmTempFFLinePath;
 	if (verbose) log.debug("Execting command: " + cmd);
 
-	var process = exec(cmd, function(error, stdout, stderr) {
+	var process = exec(cmd, function (error, stdout, stderr) {
 		if (error) reportErrorMessage(error);
 
 		// Add one more line
@@ -314,7 +315,7 @@ function findBookmarks_Firefox() {
 			input: require("fs").createReadStream(bmTempFFLinePath)
 		});
 
-		lineReader.on("line", function(line) {
+		lineReader.on("line", function (line) {
 			if (line == "") {
 				if (record.bTitle == "toolbar") {
 					record.bTitle = "BAR";
@@ -347,7 +348,7 @@ function findBookmarks_Firefox() {
 			}
 		});
 
-		lineReader.on("close", function() {
+		lineReader.on("close", function () {
 			// if (verbose) log.debug("Firefox Bookmarks... (2): ");
 			// if (verbose) log.debug(JSON.stringify(tmp, null, 4));
 
@@ -408,7 +409,7 @@ function findBookmarks_Firefox() {
 			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 			// Write to files
-			fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function(err) {
+			fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function (err) {
 				if (err) {
 					reportErrorMessage("Searching for Firefox bookmars");
 					reportErrorMessage(err);
@@ -417,7 +418,7 @@ function findBookmarks_Firefox() {
 				if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
 			});
 
-			fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function(err) {
+			fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function (err) {
 				if (err) {
 					reportErrorMessage("Searching for Firefox bookmars");
 					reportErrorMessage(err);
@@ -437,7 +438,7 @@ function validateBookmarks_Process() {
 	var errorCount = 0;
 	var bmChecks = loadFileJson(bmCheckPath);
 
-	bmChecks.forEach(function(bmCheck) {
+	bmChecks.forEach(function (bmCheck) {
 		var hasErrors = false;
 		var urlFF = bm.FF[bmCheck.title];
 		var urlChrome = bm.Chrome[bmCheck.title];
@@ -494,7 +495,7 @@ function validateBookmarks_Process() {
 		}
 
 		if (!hasErrors) {
-			openUrl(expectedUrl, function(isSuccess, error) {
+			openUrl(expectedUrl, function (isSuccess, error) {
 				if (!isSuccess) {
 					errorCount++;
 					hasErrors = true;
@@ -585,7 +586,7 @@ function jsonFile_Edit(instruction) {
 	if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
 	if (debug) log.debug("Writing data: " + log.getPrettyJson(data));
 	data[JSON_Action.Key__c] = JSON_Action.Value__c;
-	fs.writeFile(instruction.Command__c, log.getPrettyJson(fileContents), function(err) {
+	fs.writeFile(instruction.Command__c, log.getPrettyJson(fileContents), function (err) {
 		instruction.returned = err;
 		instruction.Expected__c = "File is saved with new information";
 		if (err) {
@@ -625,7 +626,7 @@ function doesFileExist(path) {
 	var exists = false;
 	try {
 		exists = fs.statSync(path).size > 0;
-	} catch (ex) {}
+	} catch (ex) { }
 
 	return exists;
 }
@@ -658,13 +659,13 @@ function executeInstruction() {
 		default:
 			log.info(
 				">>> Instruction #" +
-					idxInstructions +
-					": " +
-					instruction.Name +
-					" | " +
-					instruction.AppName__c +
-					" | " +
-					instruction.Operation__c
+				idxInstructions +
+				": " +
+				instruction.Name +
+				" | " +
+				instruction.AppName__c +
+				" | " +
+				instruction.Operation__c
 			);
 			if (debug) log.debug(log.getPrettyJson(instruction));
 
@@ -728,7 +729,7 @@ function executeInstruction() {
 			break;
 		case "Open Application":
 			// if (executeManualChecks) {
-			instruction.callback = function(output) {
+			instruction.callback = function (output) {
 				if (output.stderr) {
 					instruction.hasErrors = true;
 					instruction.returned = output;
@@ -737,7 +738,7 @@ function executeInstruction() {
 				}
 			};
 			executeCommand(instruction);
-			setTimeout(function() {
+			setTimeout(function () {
 				if (!instruction.hasErrors) {
 					promptYesNo(instruction);
 				}
@@ -796,35 +797,48 @@ function menuChooseEvent(data) {
 	}
 	log.info(0 + ". Exit without testing");
 
-	const inputReadLine2 = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout
-	});
-
-	var forEver = function() {
-		inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function(
-			answer
-		) {
-			if (answer == 0) {
-				process.exit(0);
-			} else if (answer >= 1 && answer <= events.length) {
-				inputReadLine2.close();
-				var event = events[answer - 1];
-				instructions = data.actionsByEvent[event.Id];
-				instructions.push({
-					AppName__c: "Done",
-					Operation__c: "Done",
-					Name: "Done"
-				});
-				idxInstructions = 0;
-				executeInstruction();
-			} else {
-				forEver();
-			}
+	if (args.run) {
+		var event = events[args.run - 1];
+		instructions = data.actionsByEvent[event.Id];
+		instructions.push({
+			AppName__c: "Done",
+			Operation__c: "Done",
+			Name: "Done"
 		});
-	};
+		idxInstructions = 0;
+		executeInstruction();
+	} else {
+		const inputReadLine2 = readline.createInterface({
+			input: process.stdin,
+			output: process.stdout
+		});
 
-	forEver();
+		var forEver = function () {
+			inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function (
+				answer
+			) {
+				if (answer == 0) {
+					process.exit(0);
+				} else if (answer >= 1 && answer <= events.length) {
+					inputReadLine2.close();
+					var event = events[answer - 1];
+					instructions = data.actionsByEvent[event.Id];
+					instructions.push({
+						AppName__c: "Done",
+						Operation__c: "Done",
+						Name: "Done"
+					});
+					idxInstructions = 0;
+					executeInstruction();
+				} else {
+					forEver();
+				}
+			});
+		};
+
+		forEver();
+	}
+
 }
 function bookmarksChecks() {
 	if (doesFileExist(bmPretendPath)) {
