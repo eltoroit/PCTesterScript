@@ -1,57 +1,82 @@
 [
-    {
-        "id": "BM_1",
-        "title": "[BAR][Salesforce login]",
-        "urlChrome": "https://www.salesforce.com/in/",
-        "urlFirefox": "https://www.salesforce.com/in/",
-        "urlExpected": "https://www.salesforce.com/in/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_2",
-        "title": "[BAR][Trailhead HOW Login]",
-        "urlChrome": "https://sforce.co/36ycG8F",
-        "urlFirefox": "https://sforce.co/36ycG8F",
-        "urlExpected": "https://sforce.co/36ycG8F",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_3",
-        "title": "[BAR][TDX India Website]",
-        "urlChrome": "https://www.salesforce.com/in/trailheadx",
-        "urlFirefox": "https://www.salesforce.com/in/trailheadx",
-        "urlExpected": "https://www.salesforce.com/in/trailheadx",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_4",
-        "title": "[BAR][Thursday Trailmix]",
-        "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
-        "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
-        "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-1",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_5",
-        "title": "[BAR][Friday Trailmix]",
-        "urlChrome": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
-        "urlFirefox": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
-        "urlExpected": "https://trailhead.salesforce.com/users/tacademy/trailmixes/tdx-19-india-day-2",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    }
+  {
+    "id": "BM_1",
+    "title": "[BAR][Salesforce Login]",
+    "urlExpected": "https://login.salesforce.com/",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_2",
+    "title": "[BAR][Mulesoft Login]",
+    "urlExpected": "https://www.mulesoft.com/",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_3",
+    "title": "[BAR][TDX HOW Survey]",
+    "urlExpected": "https://www.research.net/r/TDX22HOW",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_4",
+    "title": "[BAR][TrailblazerDX 2022]",
+    "urlExpected": "https://www.salesforce.com/trailblazerdx",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_5",
+    "title": "[BAR][Room 2018 Wednesday Trailmix]",
+    "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-wednesday-projects-room-2018",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_6",
+    "title": "[BAR][Room 2020 Wednesday Trailmix]",
+    "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-wednesday-projects-room-2020",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_7",
+    "title": "[BAR][Room 2018 Thurs Trailmix]",
+    "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-thursday-projects-room-2018",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_8",
+    "title": "[BAR][Room 2020 Thurs Trailmix]",
+    "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-thursday-projects-room-2020",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_9",
+    "title": "[BAR][Getting Started]",
+    "hasFF": true,
+    "hasChrome": false,
+    "checkFF": true,
+    "checkChrome": true
+  }
 ]
