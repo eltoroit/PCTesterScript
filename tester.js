@@ -278,159 +278,164 @@ function findBookmarks_Firefox() {
 
 	// Find sqlite path
 	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${bmFirefoxPath[0]}`);
-	var folders = fs.readdirSync(bmFirefoxPath[0]);
-	if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
-	let validFolders = folders.filter(folder => {
-		let tmp = `${bmFirefoxPath[0]}\\${folder}\\${bmFirefoxPath[2]}`;
-		if (debug) console.log(`Checking path: ${tmp}`);
-		return fs.existsSync(tmp);
-	});
-	if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
-	if (validFolders.length == 1) {
-		sqlitepath = `${bmFirefoxPath[0]}\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
-		if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
-	} else {
-		var msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
-		reportErrorMessage(msg);
-		return;
-	}
-
-	// Execute sqlite3 to get data
-	var cmd = "";
-	cmd += "sqlite3 -header -line ";
-	cmd += '"' + sqlitepath + '" ';
-	cmd +=
-		'"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
-	cmd += "> " + bmTempFFLinePath;
-	if (verbose) log.debug("Execting command: " + cmd);
-
-	var process = exec(cmd, function (error, stdout, stderr) {
-		if (error) reportErrorMessage(error);
-
-		// Add one more line
-		fs.appendFileSync(bmTempFFLinePath, "\r\n");
-
-		// Process results
-		var lineReader = require("readline").createInterface({
-			input: require("fs").createReadStream(bmTempFFLinePath)
+	try {
+		var folders = fs.readdirSync(bmFirefoxPath[0]);
+		if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
+		let validFolders = folders.filter(folder => {
+			let tmp = `${bmFirefoxPath[0]}\\${folder}\\${bmFirefoxPath[2]}`;
+			if (debug) console.log(`Checking path: ${tmp}`);
+			return fs.existsSync(tmp);
 		});
+		if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
+		if (validFolders.length == 1) {
+			sqlitepath = `${bmFirefoxPath[0]}\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
+			if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
+		} else {
+			var msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
+			reportErrorMessage(msg);
+			return;
+		}
 
-		lineReader.on("line", function (line) {
-			if (line == "") {
-				if (record.bTitle == "toolbar") {
-					record.bTitle = "BAR";
-				}
-				if (tmp.TitlesByRow[record.id]) {
-					reportErrorMessage("Searching for Firefox bookmars: *" + record.id + "* was already defined");
+		// Execute sqlite3 to get data
+		var cmd = "";
+		cmd += "sqlite3 -header -line ";
+		cmd += '"' + sqlitepath + '" ';
+		cmd +=
+			'"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
+		cmd += "> " + bmTempFFLinePath;
+		if (verbose) log.debug("Execting command: " + cmd);
+
+		var process = exec(cmd, function (error, stdout, stderr) {
+			if (error) reportErrorMessage(error);
+
+			// Add one more line
+			fs.appendFileSync(bmTempFFLinePath, "\r\n");
+
+			// Process results
+			var lineReader = require("readline").createInterface({
+				input: require("fs").createReadStream(bmTempFFLinePath)
+			});
+
+			lineReader.on("line", function (line) {
+				if (line == "") {
+					if (record.bTitle == "toolbar") {
+						record.bTitle = "BAR";
+					}
+					if (tmp.TitlesByRow[record.id]) {
+						reportErrorMessage("Searching for Firefox bookmars: *" + record.id + "* was already defined");
+					} else {
+						tmp.TitlesByRow[record.id] = "";
+					}
+					if (record.url) {
+						tmp.URLs[record.id] = record.url;
+					}
+					if (record.bTitle) {
+						var title = "";
+						if (record.parent) {
+							title = tmp.TitlesByRow[record.parent];
+						}
+						title += "[" + record.bTitle + "]";
+						if (tmp.TitlesByName[title]) {
+							reportErrorMessage("Searching for Firefox bookmars: Duplicate record: [" + record.bTitle + "]");
+						}
+						tmp.TitlesByRow[record.id] = title;
+						tmp.TitlesByName[title] = record.id;
+					}
+
+					record = {};
 				} else {
-					tmp.TitlesByRow[record.id] = "";
+					var parts = line.split("=");
+					record[parts[0].trim()] = parts[1].trim();
 				}
-				if (record.url) {
-					tmp.URLs[record.id] = record.url;
-				}
-				if (record.bTitle) {
-					var title = "";
-					if (record.parent) {
-						title = tmp.TitlesByRow[record.parent];
-					}
-					title += "[" + record.bTitle + "]";
-					if (tmp.TitlesByName[title]) {
-						reportErrorMessage("Searching for Firefox bookmars: Duplicate record: [" + record.bTitle + "]");
-					}
-					tmp.TitlesByRow[record.id] = title;
-					tmp.TitlesByName[title] = record.id;
-				}
+			});
 
-				record = {};
-			} else {
-				var parts = line.split("=");
-				record[parts[0].trim()] = parts[1].trim();
-			}
-		});
+			lineReader.on("close", function () {
+				// if (verbose) log.debug("Firefox Bookmarks... (2): ");
+				// if (verbose) log.debug(JSON.stringify(tmp, null, 4));
 
-		lineReader.on("close", function () {
-			// if (verbose) log.debug("Firefox Bookmarks... (2): ");
-			// if (verbose) log.debug(JSON.stringify(tmp, null, 4));
+				// Merge the data
+				for (var path in tmp.TitlesByName) {
+					if (path.startsWith("[BAR]")) {
+						if (tmp.TitlesByName.hasOwnProperty(path)) {
+							var rowId = tmp.TitlesByName[path];
+							var url = tmp.URLs[rowId];
+							if (url) {
+								var barNode = bm.Bar[path];
+								if (!barNode) barNode = {};
+								barNode.FF = url;
+								bm.Bar[path] = barNode;
 
-			// Merge the data
-			for (var path in tmp.TitlesByName) {
-				if (path.startsWith("[BAR]")) {
-					if (tmp.TitlesByName.hasOwnProperty(path)) {
-						var rowId = tmp.TitlesByName[path];
-						var url = tmp.URLs[rowId];
-						if (url) {
-							var barNode = bm.Bar[path];
-							if (!barNode) barNode = {};
-							barNode.FF = url;
-							bm.Bar[path] = barNode;
-
-							bm.FF[path] = url;
+								bm.FF[path] = url;
+							}
 						}
 					}
 				}
-			}
 
-			// if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
-			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
+				// if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
+				// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
-			// Check bm.Bar
-			var bmBarNew = [];
-			var bmCounter = 0;
-			var bmBarTemp = bm.Bar;
+				// Check bm.Bar
+				var bmBarNew = [];
+				var bmCounter = 0;
+				var bmBarTemp = bm.Bar;
 
-			for (var path in bmBarTemp) {
-				if (bmBarTemp.hasOwnProperty(path)) {
-					var nodeNew = {};
-					var nodeTemp = bmBarTemp[path];
-					bmCounter++;
+				for (var path in bmBarTemp) {
+					if (bmBarTemp.hasOwnProperty(path)) {
+						var nodeNew = {};
+						var nodeTemp = bmBarTemp[path];
+						bmCounter++;
 
-					nodeNew.id = "BM_" + bmCounter;
-					nodeNew.title = path;
+						nodeNew.id = "BM_" + bmCounter;
+						nodeNew.title = path;
 
-					// Put existing URLs
-					nodeNew.urlChrome = nodeTemp.Chrome;
-					nodeNew.urlFirefox = nodeTemp.FF;
-					nodeNew.urlExpected = nodeNew.urlChrome === nodeNew.urlFirefox ? nodeNew.urlChrome : "NO_IDEA";
+						// Put existing URLs
+						nodeNew.urlChrome = nodeTemp.Chrome;
+						nodeNew.urlFirefox = nodeTemp.FF;
+						nodeNew.urlExpected = nodeNew.urlChrome === nodeNew.urlFirefox ? nodeNew.urlChrome : "NO_IDEA";
 
-					// Check if the url is defined in each browser
-					nodeNew.hasFF = nodeTemp.FF ? true : false;
-					nodeNew.hasChrome = nodeTemp.Chrome ? true : false;
+						// Check if the url is defined in each browser
+						nodeNew.hasFF = nodeTemp.FF ? true : false;
+						nodeNew.hasChrome = nodeTemp.Chrome ? true : false;
 
-					// Assume we are going to be checking all browsers
-					nodeNew.checkFF = true;
-					nodeNew.checkChrome = true;
+						// Assume we are going to be checking all browsers
+						nodeNew.checkFF = true;
+						nodeNew.checkChrome = true;
 
-					bmBarNew.push(nodeNew);
+						bmBarNew.push(nodeNew);
+					}
 				}
-			}
-			bm.Bar = bmBarNew;
+				bm.Bar = bmBarNew;
 
-			// if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
-			// if (verbose) log.debug(JSON.stringify(bm, null, 4));
+				// if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
+				// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
-			// Write to files
-			fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function (err) {
-				if (err) {
-					reportErrorMessage("Searching for Firefox bookmars");
-					reportErrorMessage(err);
-				}
+				// Write to files
+				fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function (err) {
+					if (err) {
+						reportErrorMessage("Searching for Firefox bookmars");
+						reportErrorMessage(err);
+					}
 
-				if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
+					if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
+				});
+
+				fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function (err) {
+					if (err) {
+						reportErrorMessage("Searching for Firefox bookmars");
+						reportErrorMessage(err);
+					}
+
+					if (debug) log.info("The file [" + bmPretendPath + "] was saved!");
+				});
+
+				// Validate them
+				validateBookmarks_Process();
 			});
-
-			fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function (err) {
-				if (err) {
-					reportErrorMessage("Searching for Firefox bookmars");
-					reportErrorMessage(err);
-				}
-
-				if (debug) log.info("The file [" + bmPretendPath + "] was saved!");
-			});
-
-			// Validate them
-			validateBookmarks_Process();
 		});
-	});
+	} catch (ex) {
+		reportErrorMessage("Failed chacking Firefox");
+	}
+
 }
 function validateBookmarks_Process() {
 	if (verbose) log.info("Validating Bookmarks");
