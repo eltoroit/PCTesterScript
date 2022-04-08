@@ -433,7 +433,7 @@ function findBookmarks_Firefox() {
 			});
 		});
 	} catch (ex) {
-		reportErrorMessage("Failed chacking Firefox");
+		reportErrorMessage("Failed checking Firefox");
 	}
 
 }
@@ -766,7 +766,7 @@ function executeInstruction() {
 			break;
 		case "Done":
 			log.setDebug(false);
-			var filePath = "Errors-" + new Date().getTime() + ".json";
+			var filePath = "../Errors-" + new Date().getTime() + ".json";
 			try {
 				fs.unlinkSync(filePath);
 			} catch (ex) {
