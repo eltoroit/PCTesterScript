@@ -766,7 +766,9 @@ function executeInstruction() {
 			break;
 		case "Done":
 			log.setDebug(false);
-			var filePath = "../Errors-" + new Date().toJSON() + ".json";
+			let filePath = new Date().toJSON();
+			filePath = filePath.replace(/:/g, "-");
+			filePath = `../Errors-${filePath}.json`;
 			try {
 				fs.unlinkSync(filePath);
 			} catch (ex) {
