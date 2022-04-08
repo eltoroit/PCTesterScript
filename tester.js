@@ -59,9 +59,9 @@ const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
-const bmChromePath = "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
+const bmChromePath = "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
 const bmFirefoxPath = [
-	"C:\\Users\\Dell-7480\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles",
+	"C:\\Users\\Admin\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles",
 	"*.default-release",
 	"places.sqlite"
 ];

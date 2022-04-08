@@ -1,26 +1,26 @@
 {
-  "now": "2022-04-08T13:45:54.921Z",
+  "now": "2022-04-08T15:42:01.573Z",
   "events": [
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a0221000005wFO6AAM"
+        "url": "/services/data/v42.0/sobjects/Event__c/a0221000005wLtsAAE"
       },
-      "Id": "a0221000005wFO6AAM",
+      "Id": "a0221000005wLtsAAE",
       "Name": "TrailblazerDX 22",
       "Order__c": 1,
       "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
-    "a0221000005wFO6AAM": [
+    "a0221000005wLtsAAE": [
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzIAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5JAAW"
         },
-        "Id": "a0021000009LPzIAAW",
-        "Name": "ACT-0076",
+        "Id": "a0021000009LQ5JAAW",
+        "Name": "ACT-0163",
         "AppName__c": "Clear Screen",
         "EnabledAction__c": true,
         "Operation__c": "Clear",
@@ -30,10 +30,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzMAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5NAAW"
         },
-        "Id": "a0021000009LPzMAAW",
-        "Name": "ACT-0080",
+        "Id": "a0021000009LQ5NAAW",
+        "Name": "ACT-0167",
         "AppName__c": "Say Hi",
         "Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
         "EnabledAction__c": true,
@@ -44,10 +44,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzNAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5OAAW"
         },
-        "Id": "a0021000009LPzNAAW",
-        "Name": "ACT-0081",
+        "Id": "a0021000009LQ5OAAW",
+        "Name": "ACT-0168",
         "AppName__c": "MANUAL CHECKS",
         "Command__c": "=== === === MANUAL CHECKS === === ===",
         "EnabledAction__c": true,
@@ -58,10 +58,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzLAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5MAAW"
         },
-        "Id": "a0021000009LPzLAAW",
-        "Name": "ACT-0079",
+        "Id": "a0021000009LQ5MAAW",
+        "Name": "ACT-0166",
         "AppName__c": "Desktop Image",
         "Command__c": "Computer background image?",
         "EnabledAction__c": true,
@@ -75,10 +75,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy8AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ49AAG"
         },
-        "Id": "a0021000009LPy8AAG",
-        "Name": "ACT-0004",
+        "Id": "a0021000009LQ49AAG",
+        "Name": "ACT-0091",
         "AppName__c": "Desktop: Notepad++",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Notepad++.lnk\"",
         "EnabledAction__c": true,
@@ -92,10 +92,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy9AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4AAAW"
         },
-        "Id": "a0021000009LPy9AAG",
-        "Name": "ACT-0005",
+        "Id": "a0021000009LQ4AAAW",
+        "Name": "ACT-0092",
         "AppName__c": "Firefox + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Firefox.lnk\"",
         "EnabledAction__c": true,
@@ -109,10 +109,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyBAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4CAAW"
         },
-        "Id": "a0021000009LPyBAAW",
-        "Name": "ACT-0007",
+        "Id": "a0021000009LQ4CAAW",
+        "Name": "ACT-0094",
         "AppName__c": "Chrome + Salesforce is homepage",
         "Command__c": "\"C:\\Users\\Public\\Desktop\\Google Chrome.lnk\"",
         "EnabledAction__c": true,
@@ -126,10 +126,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyCAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4DAAW"
         },
-        "Id": "a0021000009LPyCAAW",
-        "Name": "ACT-0008",
+        "Id": "a0021000009LQ4DAAW",
+        "Name": "ACT-0095",
         "AppName__c": "Chrome: Plugin",
         "Command__c": "Chrome Plugin to split screen",
         "EnabledAction__c": true,
@@ -143,10 +143,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzKAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5LAAW"
         },
-        "Id": "a0021000009LPzKAAW",
-        "Name": "ACT-0078",
+        "Id": "a0021000009LQ5LAAW",
+        "Name": "ACT-0165",
         "AppName__c": "VS Code",
         "Command__c": "code",
         "EnabledAction__c": true,
@@ -160,12 +160,12 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPykAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4fAAG"
         },
-        "Id": "a0021000009LPykAAG",
-        "Name": "ACT-0042",
+        "Id": "a0021000009LQ4fAAG",
+        "Name": "ACT-0123",
         "AppName__c": "Postman",
-        "Command__c": "\"C:\\Users\\Dell-7480\\Desktop\\Postman.lnk\"",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Postman.lnk\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Unable to open application: \"Postman\"",
         "Expected__c": "Application runs with no errors",
@@ -178,10 +178,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPy7AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ48AAG"
         },
-        "Id": "a0021000009LPy7AAG",
-        "Name": "ACT-0003",
+        "Id": "a0021000009LQ48AAG",
+        "Name": "ACT-0090",
         "AppName__c": "AUTOMATED TESTS",
         "Command__c": "=== === === AUTOMATED CHECKS === === ===",
         "EnabledAction__c": true,
@@ -192,10 +192,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyfAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4tAAG"
         },
-        "Id": "a0021000009LPyfAAG",
-        "Name": "ACT-0037",
+        "Id": "a0021000009LQ4tAAG",
+        "Name": "ACT-0137",
         "AppName__c": "Java 8",
         "Command__c": "C:\\Program Files\\Java\\zulu8.40.0.25-ca-jdk8.0.222-win_x64\\bin\\java.exe*",
         "EnabledAction__c": true,
@@ -210,10 +210,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPymAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4hAAG"
         },
-        "Id": "a0021000009LPymAAG",
-        "Name": "ACT-0044",
+        "Id": "a0021000009LQ4hAAG",
+        "Name": "ACT-0125",
         "AppName__c": "SFDX Update",
         "Command__c": "sfdx update",
         "EnabledAction__c": true,
@@ -228,10 +228,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPynAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4iAAG"
         },
-        "Id": "a0021000009LPynAAG",
-        "Name": "ACT-0045",
+        "Id": "a0021000009LQ4iAAG",
+        "Name": "ACT-0126",
         "AppName__c": "VS Code Version",
         "Command__c": "code --version",
         "EnabledAction__c": true,
@@ -245,17 +245,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPywAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4xAAG"
         },
-        "Id": "a0021000009LPywAAG",
-        "Name": "ACT-0054",
+        "Id": "a0021000009LQ4xAAG",
+        "Name": "ACT-0141",
         "AppName__c": "VS Code Plugin (1)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-47.*",
         "Operation__c": "Check Path",
         "Order__c": 33,
         "Count_Events__c": 1
@@ -263,17 +263,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyxAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4yAAG"
         },
-        "Id": "a0021000009LPyxAAG",
-        "Name": "ACT-0055",
+        "Id": "a0021000009LQ4yAAG",
+        "Name": "ACT-0142",
         "AppName__c": "VS Code Plugin (2)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-apex-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-47.*",
         "Operation__c": "Check Path",
         "Order__c": 34,
         "Count_Events__c": 1
@@ -281,17 +281,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyyAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4zAAG"
         },
-        "Id": "a0021000009LPyyAAG",
-        "Name": "ACT-0056",
+        "Id": "a0021000009LQ4zAAG",
+        "Name": "ACT-0143",
         "AppName__c": "VS Code Plugin (3)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-apex-debugger-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-47.*",
         "Operation__c": "Check Path",
         "Order__c": 35,
         "Count_Events__c": 1
@@ -299,17 +299,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyzAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ50AAG"
         },
-        "Id": "a0021000009LPyzAAG",
-        "Name": "ACT-0057",
+        "Id": "a0021000009LQ50AAG",
+        "Name": "ACT-0144",
         "AppName__c": "VS Code Plugin (4)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-core-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-47.*",
         "Operation__c": "Check Path",
         "Order__c": 36,
         "Count_Events__c": 1
@@ -317,17 +317,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz8AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ59AAG"
         },
-        "Id": "a0021000009LPz8AAG",
-        "Name": "ACT-0066",
+        "Id": "a0021000009LQ59AAG",
+        "Name": "ACT-0153",
         "AppName__c": "VS Code Plugin (5)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-lightning-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-47.*",
         "Operation__c": "Check Path",
         "Order__c": 37,
         "Count_Events__c": 1
@@ -335,17 +335,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyWAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4WAAW"
         },
-        "Id": "a0021000009LPyWAAW",
-        "Name": "ACT-0028",
+        "Id": "a0021000009LQ4WAAW",
+        "Name": "ACT-0114",
         "AppName__c": "VS Code Plugin (6)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-visualforce-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-47.*",
         "Operation__c": "Check Path",
         "Order__c": 38,
         "Count_Events__c": 1
@@ -353,17 +353,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz4AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ55AAG"
         },
-        "Id": "a0021000009LPz4AAG",
-        "Name": "ACT-0062",
+        "Id": "a0021000009LQ55AAG",
+        "Name": "ACT-0149",
         "AppName__c": "VS Code Plugin (7)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-apex-replay-debugger-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-47.*",
         "Operation__c": "Check Path",
         "Order__c": 39,
         "Count_Events__c": 1
@@ -371,17 +371,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz6AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ57AAG"
         },
-        "Id": "a0021000009LPz6AAG",
-        "Name": "ACT-0064",
+        "Id": "a0021000009LQ57AAG",
+        "Name": "ACT-0151",
         "AppName__c": "VS Code Plugin (8)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "salesforce.salesforcedx-vscode-lwc-47",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.*",
         "Operation__c": "Check Path",
         "Order__c": 40,
         "Count_Events__c": 1
@@ -389,17 +389,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPz7AAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ58AAG"
         },
-        "Id": "a0021000009LPz7AAG",
-        "Name": "ACT-0065",
+        "Id": "a0021000009LQ58AAG",
+        "Name": "ACT-0152",
         "AppName__c": "VS Code Plugin (9)",
-        "Command__c": "C:\\Users\\DELL-7480\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "dbaeumer.vscode-eslint-1.9.1",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\DELL-7480\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-1.9.1*",
         "Operation__c": "Check Path",
         "Order__c": 41,
         "Count_Events__c": 1
@@ -407,12 +407,12 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzAAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5BAAW"
         },
-        "Id": "a0021000009LPzAAAW",
-        "Name": "ACT-0068",
+        "Id": "a0021000009LQ5BAAW",
+        "Name": "ACT-0155",
         "AppName__c": "SFDX (Shell)",
-        "Command__c": "C:\\Users\\DELL-7480\\AppData\\Roaming\\Code\\User\\settings.json",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
@@ -426,14 +426,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlMaAAK"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlT3AAK"
               },
-              "Action__c": "a0021000009LPzAAAW",
-              "Id": "a0321000005TlMaAAK",
-              "Name": "JSON-0004",
+              "Action__c": "a0021000009LQ5BAAW",
+              "Id": "a0321000005TlT3AAK",
+              "Name": "JSON-0009",
               "Key__c": "terminal.integrated.shell.windows",
               "Path__c": ":",
-              "UniqueAction__c": "a0021000009LPzAAAW",
+              "UniqueAction__c": "a0021000009LQ5BAAW",
               "Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
             }
           ]
@@ -442,12 +442,12 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzBAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5CAAW"
         },
-        "Id": "a0021000009LPzBAAW",
-        "Name": "ACT-0069",
+        "Id": "a0021000009LQ5CAAW",
+        "Name": "ACT-0156",
         "AppName__c": "SFDX (Java)",
-        "Command__c": "C:\\Users\\DELL-7480\\AppData\\Roaming\\Code\\User\\settings.json",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
@@ -461,14 +461,14 @@
             {
               "attributes": {
                 "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlMXAA0"
+                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a0321000005TlT0AAK"
               },
-              "Action__c": "a0021000009LPzBAAW",
-              "Id": "a0321000005TlMXAA0",
-              "Name": "JSON-0001",
+              "Action__c": "a0021000009LQ5CAAW",
+              "Id": "a0321000005TlT0AAK",
+              "Name": "JSON-0006",
               "Key__c": "salesforcedx-vscode-apex.java.home",
               "Path__c": ":",
-              "UniqueAction__c": "a0021000009LPzBAAW",
+              "UniqueAction__c": "a0021000009LQ5CAAW",
               "Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
             }
           ]
@@ -477,10 +477,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyEAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4FAAW"
         },
-        "Id": "a0021000009LPyEAAW",
-        "Name": "ACT-0010",
+        "Id": "a0021000009LQ4FAAW",
+        "Name": "ACT-0097",
         "AppName__c": "VSCode - Prettier - XCopy",
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
         "EnabledAction__c": true,
@@ -494,10 +494,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyHAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4IAAW"
         },
-        "Id": "a0021000009LPyHAAW",
-        "Name": "ACT-0013",
+        "Id": "a0021000009LQ4IAAW",
+        "Name": "ACT-0100",
         "AppName__c": "VSCode - XML - XCopy",
         "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
         "EnabledAction__c": true,
@@ -511,17 +511,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPydAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4rAAG"
         },
-        "Id": "a0021000009LPydAAG",
-        "Name": "ACT-0035",
+        "Id": "a0021000009LQ4rAAG",
+        "Name": "ACT-0135",
         "AppName__c": "Chrome: Plugin Resize",
-        "Command__c": "C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Command__c": "C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "package.json",
         "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
-        "Message__c": "Checking path: C:\\Users\\Dell-7480\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
+        "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.3_0\\package.json",
         "Operation__c": "Check Path",
         "Order__c": 22,
         "Count_Events__c": 4
@@ -529,10 +529,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyeAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4sAAG"
         },
-        "Id": "a0021000009LPyeAAG",
-        "Name": "ACT-0036",
+        "Id": "a0021000009LQ4sAAG",
+        "Name": "ACT-0136",
         "AppName__c": "Check Java version",
         "Command__c": "java -version",
         "EnabledAction__c": true,
@@ -547,10 +547,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyhAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4vAAG"
         },
-        "Id": "a0021000009LPyhAAG",
-        "Name": "ACT-0039",
+        "Id": "a0021000009LQ4vAAG",
+        "Name": "ACT-0139",
         "AppName__c": "Notepad",
         "Command__c": "C:\\Windows\\Notepad.exe",
         "EnabledAction__c": true,
@@ -565,10 +565,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPzCAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5DAAW"
         },
-        "Id": "a0021000009LPzCAAW",
-        "Name": "ACT-0070",
+        "Id": "a0021000009LQ5DAAW",
+        "Name": "ACT-0157",
         "AppName__c": "Git 2.24",
         "Command__c": "git --version",
         "EnabledAction__c": true,
@@ -583,10 +583,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyNAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4NAAW"
         },
-        "Id": "a0021000009LPyNAAW",
-        "Name": "ACT-0019",
+        "Id": "a0021000009LQ4NAAW",
+        "Name": "ACT-0105",
         "AppName__c": "Git config email",
         "Command__c": "git config --global user.email \"you@example.com\"",
         "EnabledAction__c": true,
@@ -599,10 +599,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyOAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4OAAW"
         },
-        "Id": "a0021000009LPyOAAW",
-        "Name": "ACT-0020",
+        "Id": "a0021000009LQ4OAAW",
+        "Name": "ACT-0106",
         "AppName__c": "Git config name",
         "Command__c": "git config --global user.name \"Your Name\"",
         "EnabledAction__c": true,
@@ -615,10 +615,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyPAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4PAAW"
         },
-        "Id": "a0021000009LPyPAAW",
-        "Name": "ACT-0021",
+        "Id": "a0021000009LQ4PAAW",
+        "Name": "ACT-0107",
         "AppName__c": "7-Zip",
         "Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
         "EnabledAction__c": true,
@@ -632,10 +632,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyQAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4QAAW"
         },
-        "Id": "a0021000009LPyQAAW",
-        "Name": "ACT-0022",
+        "Id": "a0021000009LQ4QAAW",
+        "Name": "ACT-0108",
         "AppName__c": "Node",
         "Command__c": "node --version",
         "EnabledAction__c": true,
@@ -649,17 +649,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyRAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4RAAW"
         },
-        "Id": "a0021000009LPyRAAW",
-        "Name": "ACT-0023",
+        "Id": "a0021000009LQ4RAAW",
+        "Name": "ACT-0109",
         "AppName__c": "SalesforceSans Font (1)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-Bold.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 52,
         "Count_Events__c": 1
@@ -667,17 +667,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPySAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4SAAW"
         },
-        "Id": "a0021000009LPySAAW",
-        "Name": "ACT-0024",
+        "Id": "a0021000009LQ4SAAW",
+        "Name": "ACT-0110",
         "AppName__c": "SalesforceSans Font (2)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-BoldItalic.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 53,
         "Count_Events__c": 1
@@ -685,17 +685,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyUAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4UAAW"
         },
-        "Id": "a0021000009LPyUAAW",
-        "Name": "ACT-0026",
+        "Id": "a0021000009LQ4UAAW",
+        "Name": "ACT-0112",
         "AppName__c": "SalesforceSans Font (3)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-Italic.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 54,
         "Count_Events__c": 1
@@ -703,17 +703,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyVAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4VAAW"
         },
-        "Id": "a0021000009LPyVAAW",
-        "Name": "ACT-0027",
+        "Id": "a0021000009LQ4VAAW",
+        "Name": "ACT-0113",
         "AppName__c": "SalesforceSans Font (4)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-Light.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 55,
         "Count_Events__c": 1
@@ -721,17 +721,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyXAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4XAAW"
         },
-        "Id": "a0021000009LPyXAAW",
-        "Name": "ACT-0029",
+        "Id": "a0021000009LQ4XAAW",
+        "Name": "ACT-0115",
         "AppName__c": "SalesforceSans Font (5)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-LightItalic.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 56,
         "Count_Events__c": 1
@@ -739,17 +739,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyYAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4YAAW"
         },
-        "Id": "a0021000009LPyYAAW",
-        "Name": "ACT-0030",
+        "Id": "a0021000009LQ4YAAW",
+        "Name": "ACT-0116",
         "AppName__c": "SalesforceSans Font (6)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-Regular.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 57,
         "Count_Events__c": 1
@@ -757,17 +757,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyZAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4ZAAW"
         },
-        "Id": "a0021000009LPyZAAW",
-        "Name": "ACT-0031",
+        "Id": "a0021000009LQ4ZAAW",
+        "Name": "ACT-0117",
         "AppName__c": "SalesforceSans Font (7)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-Thin.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 58,
         "Count_Events__c": 1
@@ -775,17 +775,17 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyaAAG"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4aAAG"
         },
-        "Id": "a0021000009LPyaAAG",
-        "Name": "ACT-0032",
+        "Id": "a0021000009LQ4aAAG",
+        "Name": "ACT-0118",
         "AppName__c": "SalesforceSans Font (8)",
-        "Command__c": "\"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SalesforceSans-ThinItalic.ttf",
         "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Dell-7480\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
         "Order__c": 59,
         "Count_Events__c": 1
@@ -793,10 +793,10 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LPyTAAW"
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ4TAAW"
         },
-        "Id": "a0021000009LPyTAAW",
-        "Name": "ACT-0025",
+        "Id": "a0021000009LQ4TAAW",
+        "Name": "ACT-0111",
         "AppName__c": "Checking all bookmarks",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Checking all bookmarks",
