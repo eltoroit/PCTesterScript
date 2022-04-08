@@ -1,1 +1,1 @@
-node tester.js -test
+node tester.js -test -run=1
