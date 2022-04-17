@@ -1,5 +1,5 @@
 {
-  "now": "2022-04-08T20:53:11.796Z",
+  "now": "2022-04-17T12:19:31.624Z",
   "events": [
     {
       "attributes": {
@@ -389,6 +389,24 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a0021000009PrWdAAK"
+        },
+        "Id": "a0021000009PrWdAAK",
+        "Name": "ACT-0175",
+        "AppName__c": "VS Code Plugin (11)",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\mhutchie.git-graph-1.3*",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "mhutchie.git-graph-1.3",
+        "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\mhutchie.git-graph-1.3*",
+        "Operation__c": "Check Path",
+        "Order__c": 43,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0021000009LQ5BAAW"
         },
         "Id": "a0021000009LQ5BAAW",
@@ -399,7 +417,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 43,
+        "Order__c": 44,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -434,7 +452,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 44,
+        "Order__c": 45,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -470,7 +488,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 82,
+        "Order__c": 83,
         "Count_Events__c": 1
       },
       {
@@ -487,7 +505,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 83,
+        "Order__c": 84,
         "Count_Events__c": 1
       },
       {
@@ -559,7 +577,7 @@
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git 2.24 (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 45,
+        "Order__c": 46,
         "Count_Events__c": 4
       },
       {
@@ -575,7 +593,7 @@
         "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 46,
+        "Order__c": 47,
         "Count_Events__c": 4
       },
       {
@@ -591,7 +609,7 @@
         "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 47,
+        "Order__c": 48,
         "Count_Events__c": 4
       },
       {
@@ -608,7 +626,7 @@
         "Expected__c": "7-Zip 21",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 48,
+        "Order__c": 49,
         "Count_Events__c": 4
       },
       {
@@ -625,7 +643,7 @@
         "Expected__c": "v17.9.0",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 49,
+        "Order__c": 50,
         "Count_Events__c": 4
       },
       {
@@ -643,7 +661,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 52,
+        "Order__c": 53,
         "Count_Events__c": 1
       },
       {
@@ -661,7 +679,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 53,
+        "Order__c": 54,
         "Count_Events__c": 1
       },
       {
@@ -679,7 +697,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 54,
+        "Order__c": 55,
         "Count_Events__c": 1
       },
       {
@@ -697,7 +715,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 55,
+        "Order__c": 56,
         "Count_Events__c": 1
       },
       {
@@ -715,7 +733,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 56,
+        "Order__c": 57,
         "Count_Events__c": 1
       },
       {
@@ -733,7 +751,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 57,
+        "Order__c": 58,
         "Count_Events__c": 1
       },
       {
@@ -751,7 +769,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 58,
+        "Order__c": 59,
         "Count_Events__c": 1
       },
       {
@@ -769,7 +787,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 59,
+        "Order__c": 60,
         "Count_Events__c": 1
       },
       {
@@ -785,7 +803,7 @@
         "Expected__c": "Bookmarks are correct",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 51,
+        "Order__c": 52,
         "Count_Events__c": 4
       },
       {
@@ -803,7 +821,7 @@
         "Fix__c": "Please copy B2B files",
         "Message__c": "Checking path: \"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
         "Operation__c": "Check Path",
-        "Order__c": 88,
+        "Order__c": 89,
         "Count_Events__c": 1
       }
     ]
