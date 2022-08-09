@@ -1,5 +1,5 @@
 {
-  "now": "2022-08-09T18:13:46.014Z",
+  "now": "2022-08-09T18:16:34.605Z",
   "events": [
     {
       "attributes": {
@@ -1623,12 +1623,12 @@
         "Id": "a009A000002Obi4QAC",
         "Name": "ACT-0089",
         "AppName__c": "Certification secured browser",
-        "Command__c": "\"C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe\"",
+        "Command__c": "C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "LockDownBrowserOEM.exe",
         "Fix__c": "Please install the secure browser: Select: https://media.webassessor.com/respondus/windows/LockDownBrowserOEMSetup.exe",
-        "Message__c": "Checking path: \"C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe\"",
+        "Message__c": "Checking path: C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe",
         "Operation__c": "Check Path",
         "Order__c": 90,
         "Count_Events__c": 1
