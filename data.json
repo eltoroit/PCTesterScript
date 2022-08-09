@@ -1,5 +1,5 @@
 {
-  "now": "2022-08-09T14:29:15.343Z",
+  "now": "2022-08-09T14:39:11.502Z",
   "events": [
     {
       "attributes": {
@@ -1310,7 +1310,7 @@
         "Command__c": "java -version",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Could not validate: Check Java version (java -version)",
-        "Expected__c": "java 17.0.4 2022-07-19 LTS",
+        "Expected__c": "java version \"17.0.4\" 2022-07-19 LTS",
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
@@ -1343,12 +1343,12 @@
         "Id": "a009A000002ObXxQAK",
         "Name": "ACT-0081",
         "AppName__c": "SoapUI",
-        "Command__c": "C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
+        "Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
         "Expected__c": "SoapUI-5.5.0.exe",
         "Fix__c": "SoapUI is missing, install from here: https://www.soapui.org/downloads/soapui/",
-        "Message__c": "Checking path: C:\\Program Files (x86)\\SmartBear\\SoapUI-5.5.0\\bin\\SoapUI-5.5.0.exe",
+        "Message__c": "Checking path: C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
         "Operation__c": "Check Path",
         "Order__c": 29,
         "Count_Events__c": 5
