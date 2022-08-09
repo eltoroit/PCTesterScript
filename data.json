@@ -1,5 +1,5 @@
 {
-  "now": "2022-08-09T18:16:34.605Z",
+  "now": "2022-08-09T18:23:02.656Z",
   "events": [
     {
       "attributes": {
@@ -1596,24 +1596,6 @@
         "Operation__c": "Bookmark",
         "Order__c": 52,
         "Count_Events__c": 5
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a009A000002ObWfQAK"
-        },
-        "Id": "a009A000002ObWfQAK",
-        "Name": "ACT-0001",
-        "AppName__c": "B2B files for TDX",
-        "Command__c": "\"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "TDX-B2B-Exercise.zip",
-        "Fix__c": "Please copy B2B files",
-        "Message__c": "Checking path: \"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "Operation__c": "Check Path",
-        "Order__c": 89,
-        "Count_Events__c": 2
       },
       {
         "attributes": {
