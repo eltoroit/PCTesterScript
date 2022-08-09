@@ -1,5 +1,5 @@
 {
-  "now": "2022-08-09T14:49:41.134Z",
+  "now": "2022-08-09T17:01:41.603Z",
   "events": [
     {
       "attributes": {
@@ -1346,7 +1346,7 @@
         "Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SoapUI-5.5.0.exe",
+        "Expected__c": "SoapUI-5.7.0.exe",
         "Fix__c": "SoapUI is missing, install from here: https://www.soapui.org/downloads/soapui/",
         "Message__c": "Checking path: C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
         "Operation__c": "Check Path",
