@@ -1,5 +1,5 @@
 {
-    "DTTM": "2022-08-11T10:54:08.937Z",
+    "DTTM": "2022-08-11T11:17:22.055Z",
     "bm": [
         {
             "id": "BM_1",
@@ -26,9 +26,9 @@
         {
             "id": "BM_3",
             "title": "[BAR][Marketing Cloud Login]",
-            "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
-            "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
-            "urlExpected": "NO_IDEA",
+            "urlChrome": "https://mc.exacttarget.com/",
+            "urlFirefox": "https://mc.exacttarget.com/",
+            "urlExpected": "https://mc.exacttarget.com/",
             "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
@@ -38,8 +38,9 @@
             "id": "BM_4",
             "title": "[BAR][Tuesday Trailmix]",
             "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
-            "urlExpected": "NO_IDEA",
-            "hasFF": false,
+            "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
+            "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
+            "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true

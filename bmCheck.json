@@ -20,7 +20,7 @@
   {
     "id": "BM_3",
     "title": "[BAR][Marketing Cloud Login]",
-    "urlExpected": "NO_IDEA",
+    "urlExpected": "https://mc.exacttarget.com/",
     "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
@@ -29,8 +29,8 @@
   {
     "id": "BM_4",
     "title": "[BAR][Tuesday Trailmix]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
