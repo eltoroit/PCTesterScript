@@ -811,6 +811,12 @@ function executeInstruction() {
 }
 function menuChooseEvent(data) {
 	const runAutomated = (event) => {
+		debug = true;
+		verbose = true;
+		resultsTofile = true;
+		checkUrlExists = true;
+		executeManualChecks = false;
+
 		instructions = data.actionsByEvent[event.Id];
 		instructions.push({
 			AppName__c: "Done",
