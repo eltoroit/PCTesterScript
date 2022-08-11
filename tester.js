@@ -810,8 +810,7 @@ function executeInstruction() {
 	}
 }
 function menuChooseEvent(data) {
-	const runAutomated = () => {
-		var event = events[args.run - 1];
+	const runAutomated = (event) => {
 		instructions = data.actionsByEvent[event.Id];
 		instructions.push({
 			AppName__c: "Done",
@@ -835,7 +834,7 @@ function menuChooseEvent(data) {
 	log.info(99 + ". Run automated tests");
 
 	if (args.run) {
-		runAutomated();
+		runAutomated(events[args.run - 1]);
 	} else {
 		const inputReadLine2 = readline.createInterface({
 			input: process.stdin,
@@ -849,7 +848,7 @@ function menuChooseEvent(data) {
 				if (answer == 0) {
 					process.exit(0);
 				} else if (answer == 99) {
-					runAutomated();
+					runAutomated(events[0]);
 				} else if (answer >= 1 && answer <= events.length) {
 					inputReadLine2.close();
 					var event = events[answer - 1];
