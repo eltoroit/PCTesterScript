@@ -70,5 +70,23 @@
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
+  },
+  {
+    "id": "BM_9",
+    "title": "[BAR][MuleSoft Login]",
+    "urlExpected": "https://www.mulesoft.com/",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_10",
+    "title": "[BAR][Tableau Login]",
+    "urlExpected": "https://sso.online.tableau.com/public/idp/SSO",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
   }
 ]
