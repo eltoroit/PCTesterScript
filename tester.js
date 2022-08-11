@@ -752,11 +752,15 @@ function executeInstruction() {
 					}
 				}, timerDelay * 10);
 			} else {
+				let expected = instruction.Command__c;
+				expected = expected.substring(x.lastIndexOf('\\') + 1);
+				expected = expected.replace('"', "");
+
 				log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
 				let newInstruction = { ...instruction };
 				newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
 				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
-				newInstruction.Expected__c = "java.exe"; // <<< FIX THIS
+				newInstruction.Expected__c = expected;
 				newInstruction.Operation__c = "Open App >> Check Path";
 				checkPath(newInstruction);
 			}
