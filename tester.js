@@ -810,18 +810,7 @@ function executeInstruction() {
 	}
 }
 function menuChooseEvent(data) {
-	var events = data.events;
-
-	log.setDebug(debug);
-	log.info("Application Tester built by Andres Perez (ELTORO.IT) to help validate the computer's setup");
-	log.info("");
-	log.info("Please select the test you want to run");
-	for (var i = 1; i <= events.length; i++) {
-		log.info(i + ". " + events[i - 1].Name);
-	}
-	log.info(0 + ". Exit without testing");
-
-	if (args.run) {
+	const runAutomated = () => {
 		var event = events[args.run - 1];
 		instructions = data.actionsByEvent[event.Id];
 		instructions.push({
@@ -831,6 +820,22 @@ function menuChooseEvent(data) {
 		});
 		idxInstructions = 0;
 		executeInstruction();
+	}
+
+	var events = data.events;
+
+	log.setDebug(debug);
+	log.info("Application Tester built by Andres Perez (ELTORO.IT) to help validate the computer's setup");
+	log.info("");
+	log.info("Please select the test you want to run");
+	for (var i = 1; i <= events.length; i++) {
+		log.info(i + ". " + events[i - 1].Name);
+	}
+	log.info(99 + ". Run automated tests");
+	log.info(0 + ". Exit without testing");
+
+	if (args.run) {
+		runAutomated();
 	} else {
 		const inputReadLine2 = readline.createInterface({
 			input: process.stdin,
@@ -843,6 +848,8 @@ function menuChooseEvent(data) {
 			) {
 				if (answer == 0) {
 					process.exit(0);
+				} else if (answer == 99) {
+					runAutomated();
 				} else if (answer >= 1 && answer <= events.length) {
 					inputReadLine2.close();
 					var event = events[answer - 1];
