@@ -831,8 +831,8 @@ function menuChooseEvent(data) {
 	for (var i = 1; i <= events.length; i++) {
 		log.info(i + ". " + events[i - 1].Name);
 	}
-	log.info(99 + ". Run automated tests");
 	log.info(0 + ". Exit without testing");
+	log.info(99 + ". Run automated tests");
 
 	if (args.run) {
 		runAutomated();
