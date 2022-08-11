@@ -1,74 +1,83 @@
 [
-    {
-        "id": "BM_1",
-        "title": "[BAR][Salesforce Login]",
-        "urlExpected": "https://login.salesforce.com/",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_2",
-        "title": "[BAR][Mulesoft Login]",
-        "urlExpected": "https://www.mulesoft.com/",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_3",
-        "title": "[BAR][TDX HOW Survey]",
-        "urlExpected": "https://www.research.net/r/TDX22HOW",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_4",
-        "title": "[BAR][TrailblazerDX 2022]",
-        "urlExpected": "https://www.salesforce.com/trailblazerdx",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_5",
-        "title": "[BAR][Room 2018 Wednesday Trailmix]",
-        "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-wednesday-projects-room-2018",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_6",
-        "title": "[BAR][Room 2020 Wednesday Trailmix]",
-        "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-wednesday-projects-room-2020",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_7",
-        "title": "[BAR][Room 2018 Thurs Trailmix]",
-        "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-thursday-projects-room-2018",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_8",
-        "title": "[BAR][Room 2020 Thurs Trailmix]",
-        "urlExpected": "https://trailhead.salesforce.com/en/users/mariahbrush/trailmixes/trailblazer-dx-how-thursday-projects-room-2020",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    }
+  {
+    "id": "BM_1",
+    "title": "[BAR][Salesforce]",
+    "urlExpected": "https://www.salesforce.com/",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_2",
+    "title": "[BAR][Salesforce Login]",
+    "urlExpected": "https://login.salesforce.com/",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_3",
+    "title": "[BAR][Marketing Cloud Login]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_4",
+    "title": "[BAR][Tuesday Trailmix ]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_5",
+    "title": "[BAR][Thursday Trailmix]",
+    "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_6",
+    "title": "[BAR][Survey]",
+    "urlExpected": "https://www.surveymonkey.com/r/DF22HOW",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_7",
+    "title": "[BAR][Dreamforce]",
+    "urlExpected": "https://www.salesforce.com/dreamforce/",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_8",
+    "title": "[BAR][Salesforce Certification]",
+    "urlExpected": "https://www.webassessor.com/salesforce",
+    "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_9",
+    "title": "[BAR][Tuesday Trailmix]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": true,
+    "hasChrome": false,
+    "checkFF": true,
+    "checkChrome": true
+  }
 ]

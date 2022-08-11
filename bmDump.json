@@ -1,99 +1,102 @@
-[
-    {
-        "id": "BM_1",
-        "title": "[BAR][Salesforce]",
-        "urlChrome": "https://www.salesforce.com/",
-        "urlFirefox": "https://www.salesforce.com/",
-        "urlExpected": "https://www.salesforce.com/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_2",
-        "title": "[BAR][Salesforce Login]",
-        "urlChrome": "https://login.salesforce.com/",
-        "urlFirefox": "https://login.salesforce.com/",
-        "urlExpected": "https://login.salesforce.com/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_3",
-        "title": "[BAR][Marketing Cloud Login]",
-        "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
-        "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
-        "urlExpected": "NO_IDEA",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_4",
-        "title": "[BAR][Tuesday Trailmix ]",
-        "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
-        "urlExpected": "NO_IDEA",
-        "hasFF": false,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_5",
-        "title": "[BAR][Thursday Trailmix]",
-        "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
-        "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
-        "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_6",
-        "title": "[BAR][Survey]",
-        "urlChrome": "https://www.surveymonkey.com/r/DF22HOW",
-        "urlFirefox": "https://www.surveymonkey.com/r/DF22HOW",
-        "urlExpected": "https://www.surveymonkey.com/r/DF22HOW",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_7",
-        "title": "[BAR][Dreamforce]",
-        "urlChrome": "https://www.salesforce.com/dreamforce/",
-        "urlFirefox": "https://www.salesforce.com/dreamforce/",
-        "urlExpected": "https://www.salesforce.com/dreamforce/",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_8",
-        "title": "[BAR][Salesforce Certification]",
-        "urlChrome": "https://www.webassessor.com/salesforce",
-        "urlFirefox": "https://www.webassessor.com/salesforce",
-        "urlExpected": "https://www.webassessor.com/salesforce",
-        "hasFF": true,
-        "hasChrome": true,
-        "checkFF": true,
-        "checkChrome": true
-    },
-    {
-        "id": "BM_9",
-        "title": "[BAR][Tuesday Trailmix]",
-        "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
-        "urlExpected": "NO_IDEA",
-        "hasFF": true,
-        "hasChrome": false,
-        "checkFF": true,
-        "checkChrome": true
-    }
-]
+{
+    "DTTM": "2022-08-11T10:54:08.937Z",
+    "bm": [
+        {
+            "id": "BM_1",
+            "title": "[BAR][Salesforce]",
+            "urlChrome": "https://www.salesforce.com/",
+            "urlFirefox": "https://www.salesforce.com/",
+            "urlExpected": "https://www.salesforce.com/",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_2",
+            "title": "[BAR][Salesforce Login]",
+            "urlChrome": "https://login.salesforce.com/",
+            "urlFirefox": "https://login.salesforce.com/",
+            "urlExpected": "https://login.salesforce.com/",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_3",
+            "title": "[BAR][Marketing Cloud Login]",
+            "urlChrome": "https://mc.login.exacttarget.com/hub-cas/login?service=https%3a%2f%2fmc.exacttarget.com%2fcloud%2flogin.html%3fhash%3dOrEn1bG9nZ2VkLWluSXc9PQ2",
+            "urlFirefox": "https://mc.login.exacttarget.com/hub-cas/login?service",
+            "urlExpected": "NO_IDEA",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_4",
+            "title": "[BAR][Tuesday Trailmix ]",
+            "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
+            "urlExpected": "NO_IDEA",
+            "hasFF": false,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_5",
+            "title": "[BAR][Thursday Trailmix]",
+            "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
+            "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
+            "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_6",
+            "title": "[BAR][Survey]",
+            "urlChrome": "https://www.surveymonkey.com/r/DF22HOW",
+            "urlFirefox": "https://www.surveymonkey.com/r/DF22HOW",
+            "urlExpected": "https://www.surveymonkey.com/r/DF22HOW",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_7",
+            "title": "[BAR][Dreamforce]",
+            "urlChrome": "https://www.salesforce.com/dreamforce/",
+            "urlFirefox": "https://www.salesforce.com/dreamforce/",
+            "urlExpected": "https://www.salesforce.com/dreamforce/",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_8",
+            "title": "[BAR][Salesforce Certification]",
+            "urlChrome": "https://www.webassessor.com/salesforce",
+            "urlFirefox": "https://www.webassessor.com/salesforce",
+            "urlExpected": "https://www.webassessor.com/salesforce",
+            "hasFF": true,
+            "hasChrome": true,
+            "checkFF": true,
+            "checkChrome": true
+        },
+        {
+            "id": "BM_9",
+            "title": "[BAR][Tuesday Trailmix]",
+            "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
+            "urlExpected": "NO_IDEA",
+            "hasFF": true,
+            "hasChrome": false,
+            "checkFF": true,
+            "checkChrome": true
+        }
+    ]
+}
