@@ -36,7 +36,7 @@
         },
         {
             "id": "BM_4",
-            "title": "[BAR][Tuesday Trailmix ]",
+            "title": "[BAR][Tuesday Trailmix]",
             "urlChrome": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
             "urlExpected": "NO_IDEA",
             "hasFF": false,
