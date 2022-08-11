@@ -752,7 +752,7 @@ function executeInstruction() {
 					}
 				}, timerDelay * 10);
 			} else {
-				let command = instruction.Command__c.replace('"', "");
+				let command = instruction.Command__c.replace(/"/g, "");
 				let expected = command.substring(command.lastIndexOf('\\') + 1);
 
 				log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
