@@ -762,6 +762,11 @@ function executeInstruction() {
 				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
 				newInstruction.Expected__c = expected;
 				newInstruction.Operation__c = "Open App >> Check Path";
+
+				console.log('New instruction -- START');
+				log.debug(log.getPrettyJson(newInstruction));
+				console.log('New instruction -- END');
+
 				checkPath(newInstruction);
 			}
 			break;
