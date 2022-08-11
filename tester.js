@@ -410,7 +410,10 @@ function findBookmarks_Firefox() {
 				// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 				// Write to files
-				fs.writeFile(bmDumpPath, JSON.stringify(bm.Bar, null, 4), function (err) {
+				fs.writeFile(bmDumpPath, JSON.stringify({
+					DTTM: new Date().toJSON(),
+					bm: bm.Bar
+				}, null, 4), function (err) {
 					if (err) {
 						reportErrorMessage("Searching for Firefox bookmars");
 						reportErrorMessage(err);
@@ -733,25 +736,30 @@ function executeInstruction() {
 			promptYesNo(instruction);
 			break;
 		case "Open Application":
-			// if (executeManualChecks) {
-			instruction.callback = function (output) {
-				if (output.stderr) {
-					instruction.hasErrors = true;
-					instruction.returned = output;
-					reportError(instruction);
-					nextInstruction();
-				}
-			};
-			executeCommand(instruction);
-			setTimeout(function () {
-				if (!instruction.hasErrors) {
-					promptYesNo(instruction);
-				}
-			}, timerDelay * 10);
-			// } else {
-			// 	log.error("Manual checks are being skipped for testing! (Open application skipped)");
-			// 	nextInstruction();
-			// }
+			if (executeManualChecks) {
+				instruction.callback = function (output) {
+					if (output.stderr) {
+						instruction.hasErrors = true;
+						instruction.returned = output;
+						reportError(instruction);
+						nextInstruction();
+					}
+				};
+				executeCommand(instruction);
+				setTimeout(function () {
+					if (!instruction.hasErrors) {
+						promptYesNo(instruction);
+					}
+				}, timerDelay * 10);
+			} else {
+				log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
+				let newInstruction = { ...instruction };
+				newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
+				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
+				newInstruction.Expected__c = "java.exe"; // <<< FIX THIS
+				newInstruction.Operation__c = "Open App >> Check Path";
+				checkPath(newInstruction);
+			}
 			break;
 		case "Write":
 			// Force debug mode...
