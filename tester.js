@@ -752,16 +752,16 @@ function executeInstruction() {
 					}
 				}, timerDelay * 10);
 			} else {
-				let expected = instruction.Command__c;
-				expected = expected.substring(expected.lastIndexOf('\\') + 1);
-				expected = expected.replace('"', "");
+				let command = instruction.Command__c.replace('"', "");
+				let expected = command.substring(command.lastIndexOf('\\') + 1);
 
 				log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
 				let newInstruction = { ...instruction };
-				newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
-				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
+				newInstruction.Command__c = command;
 				newInstruction.Expected__c = expected;
 				newInstruction.Operation__c = "Open App >> Check Path";
+				newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
+				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
 
 				console.log('New instruction -- START');
 				log.debug(log.getPrettyJson(newInstruction));
