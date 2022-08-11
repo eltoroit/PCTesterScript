@@ -87,16 +87,6 @@
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true
-        },
-        {
-            "id": "BM_9",
-            "title": "[BAR][Tuesday Trailmix]",
-            "urlFirefox": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
-            "urlExpected": "NO_IDEA",
-            "hasFF": true,
-            "hasChrome": false,
-            "checkFF": true,
-            "checkChrome": true
         }
     ]
 }
