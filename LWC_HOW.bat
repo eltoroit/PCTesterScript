@@ -7,3 +7,6 @@ IF EXIST C:\LWC_HOW (
 	REM ECHO NOTHING
 )
 git clone https://github.com/eltoroit/LWC_HOW.git
+cd C:\LWC_HOW
+git checkout LWC_HOW
+npm install

@@ -82,9 +82,45 @@
   },
   {
     "id": "BM_10",
+    "title": "[BAR][MuleSoft Training - Training, Courses and Certifications]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_11",
     "title": "[BAR][Tableau Login]",
     "urlExpected": "https://sso.online.tableau.com/public/idp/SSO",
     "hasFF": true,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_12",
+    "title": "[BAR][Tableau Cert Account Creation]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_13",
+    "title": "[BAR][Tableau Testing Site]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": false,
+    "hasChrome": true,
+    "checkFF": true,
+    "checkChrome": true
+  },
+  {
+    "id": "BM_14",
+    "title": "[BAR][MuleSoft Exam Readiness Kit – MuleSoft Training]",
+    "urlExpected": "NO_IDEA",
+    "hasFF": false,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
