@@ -1,5 +1,5 @@
 {
-  "now": "2022-08-11T21:20:11.571Z",
+  "now": "2022-08-12T09:56:30.847Z",
   "events": [
     {
       "attributes": {
@@ -40,9 +40,37 @@
       "Name": "_Salesforce Development (SFDX, VS Code, etc)_",
       "Order__c": 22,
       "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a029A000001Ux2hQAC"
+      },
+      "Id": "a029A000001Ux2hQAC",
+      "Name": "_Install LWC_HOW",
+      "Order__c": 23,
+      "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
+    "a029A000001Ux2hQAC": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a009A000002OeyhQAC"
+        },
+        "Id": "a009A000002OeyhQAC",
+        "Name": "ACT-0090",
+        "AppName__c": "Clone C:\\LWC_HOW",
+        "Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 91,
+        "Count_Events__c": 1
+      }
+    ],
     "a029A000001UqjgQAC": [
       {
         "attributes": {
@@ -1613,6 +1641,22 @@
         "Message__c": "Checking path: C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe",
         "Operation__c": "Check Path",
         "Order__c": 90,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a009A000002OeyhQAC"
+        },
+        "Id": "a009A000002OeyhQAC",
+        "Name": "ACT-0090",
+        "AppName__c": "Clone C:\\LWC_HOW",
+        "Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 91,
         "Count_Events__c": 1
       }
     ]
