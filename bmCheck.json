@@ -83,8 +83,8 @@
   {
     "id": "BM_10",
     "title": "[BAR][MuleSoft Training - Training, Courses and Certifications]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://training.mulesoft.com/home",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
@@ -101,8 +101,8 @@
   {
     "id": "BM_12",
     "title": "[BAR][Tableau Cert Account Creation]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://identity.idp.tableau.com/login",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
@@ -110,8 +110,8 @@
   {
     "id": "BM_13",
     "title": "[BAR][Tableau Testing Site]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://home.pearsonvue.com/Test-takers.aspx",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
@@ -119,8 +119,8 @@
   {
     "id": "BM_14",
     "title": "[BAR][MuleSoft Exam Readiness Kit – MuleSoft Training]",
-    "urlExpected": "NO_IDEA",
-    "hasFF": false,
+    "urlExpected": "https://help.learn.mulesoft.com/hc/en-us/articles/360057127674-MuleSoft-Exam-Readiness-Kit",
+    "hasFF": true,
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true

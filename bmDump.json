@@ -1,5 +1,5 @@
 {
-    "DTTM": "2022-08-12T18:40:07.930Z",
+    "DTTM": "2022-08-12T19:41:28.327Z",
     "bm": [
         {
             "id": "BM_1",
@@ -104,8 +104,9 @@
             "id": "BM_10",
             "title": "[BAR][MuleSoft Training - Training, Courses and Certifications]",
             "urlChrome": "https://training.mulesoft.com/home",
-            "urlExpected": "NO_IDEA",
-            "hasFF": false,
+            "urlFirefox": "https://training.mulesoft.com/home",
+            "urlExpected": "https://training.mulesoft.com/home",
+            "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true
@@ -124,9 +125,10 @@
         {
             "id": "BM_12",
             "title": "[BAR][Tableau Cert Account Creation]",
-            "urlChrome": "https://identity.idp.tableau.com/login?state=hKFo2SB5dmkzd29MeDJ3elQ1YzRoME0wVWVSVGZFcFhZZjk3S6FupWxvZ2luo3RpZNkgcmpaQ3ItejlOSjFVNndvZG9TV3NzM0pZcWZkd3dOLXajY2lk2SBGa2ZwWFA4Rzg0dlc1MUNGUTlWREt2UHdFdG5oNDlQcA&client=FkfpXP8G84vW51CFQ9VDKvPwEtnh49Pp&protocol=oauth2&response_type=code&scope=openid%20profile%20email&redirect_uri=https%3A%2F%2Fcp.certmetrics.com%2Ftableau%2Fen%2Flogin%2Fsso%2Foidc&code_challenge=aklbX-4AMqIffKSk7nt1dO_X92BhjRGPbVayk3vvFrc&code_challenge_method=S256",
-            "urlExpected": "NO_IDEA",
-            "hasFF": false,
+            "urlChrome": "https://identity.idp.tableau.com/login",
+            "urlFirefox": "https://identity.idp.tableau.com/login",
+            "urlExpected": "https://identity.idp.tableau.com/login",
+            "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true
@@ -135,8 +137,9 @@
             "id": "BM_13",
             "title": "[BAR][Tableau Testing Site]",
             "urlChrome": "https://home.pearsonvue.com/Test-takers.aspx",
-            "urlExpected": "NO_IDEA",
-            "hasFF": false,
+            "urlFirefox": "https://home.pearsonvue.com/Test-takers.aspx",
+            "urlExpected": "https://home.pearsonvue.com/Test-takers.aspx",
+            "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true
@@ -145,8 +148,9 @@
             "id": "BM_14",
             "title": "[BAR][MuleSoft Exam Readiness Kit – MuleSoft Training]",
             "urlChrome": "https://help.learn.mulesoft.com/hc/en-us/articles/360057127674-MuleSoft-Exam-Readiness-Kit",
-            "urlExpected": "NO_IDEA",
-            "hasFF": false,
+            "urlFirefox": "https://help.learn.mulesoft.com/hc/en-us/articles/360057127674-MuleSoft-Exam-Readiness-Kit",
+            "urlExpected": "https://help.learn.mulesoft.com/hc/en-us/articles/360057127674-MuleSoft-Exam-Readiness-Kit",
+            "hasFF": true,
             "hasChrome": true,
             "checkFF": true,
             "checkChrome": true
