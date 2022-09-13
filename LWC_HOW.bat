@@ -1,12 +1,17 @@
 @ECHO OFF
 CLS
+echo *** Cloning LWC_HOW
 CD C:\
 IF EXIST C:\LWC_HOW (
-	RMDIR /S /Q C:\LWC_HOW
+    RMDIR /S /Q C:\LWC_HOW
 ) ELSE (
-	REM ECHO NOTHING
+    REM ECHO NOTHING
 )
-git clone https://github.com/eltoroit/LWC_HOW.git
+call git clone https://github.com/eltoroit/LWC_HOW.git
 cd C:\LWC_HOW
-git checkout LWC_HOW
-npm install
+call git checkout LWC_HOW
+echo *** Installing npm dependencies
+call npm install
+echo Opening VS Code
+call code C:\LWC_HOW 
+exit 0
