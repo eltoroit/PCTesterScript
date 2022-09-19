@@ -1,5 +1,5 @@
 {
-  "now": "2022-09-19T20:43:00.705Z",
+  "now": "2022-09-19T20:46:14.334Z",
   "events": [
     {
       "attributes": {
@@ -407,42 +407,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVGQAY"
-        },
-        "Id": "a008D000001hoVGQAY",
-        "Name": "ACT-0007",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVnQAI"
-        },
-        "Id": "a008D000001hoVnQAI",
-        "Name": "ACT-0040",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVCQAY"
         },
         "Id": "a008D000001hoVCQAY",
@@ -456,24 +420,6 @@
         "Message__c": "Opening Application: \"Postman\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVSQAY"
-        },
-        "Id": "a008D000001hoVSQAY",
-        "Name": "ACT-0019",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -1160,24 +1106,6 @@
         "Operation__c": "Bookmark",
         "Order__c": 52,
         "Count_Events__c": 5
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVMQAY"
-        },
-        "Id": "a008D000001hoVMQAY",
-        "Name": "ACT-0013",
-        "AppName__c": "B2B files for TDX",
-        "Command__c": "\"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "TDX-B2B-Exercise.zip",
-        "Fix__c": "Please copy B2B files",
-        "Message__c": "Checking path: \"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "Operation__c": "Check Path",
-        "Order__c": 89,
-        "Count_Events__c": 2
       }
     ],
     "a028D0000021CMsQAM": [
@@ -1361,42 +1289,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVGQAY"
-        },
-        "Id": "a008D000001hoVGQAY",
-        "Name": "ACT-0007",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVnQAI"
-        },
-        "Id": "a008D000001hoVnQAI",
-        "Name": "ACT-0040",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVCQAY"
         },
         "Id": "a008D000001hoVCQAY",
@@ -1410,24 +1302,6 @@
         "Message__c": "Opening Application: \"Postman\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVSQAY"
-        },
-        "Id": "a008D000001hoVSQAY",
-        "Name": "ACT-0019",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -3676,42 +3550,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVGQAY"
-        },
-        "Id": "a008D000001hoVGQAY",
-        "Name": "ACT-0007",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVnQAI"
-        },
-        "Id": "a008D000001hoVnQAI",
-        "Name": "ACT-0040",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVCQAY"
         },
         "Id": "a008D000001hoVCQAY",
@@ -3725,24 +3563,6 @@
         "Message__c": "Opening Application: \"Postman\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVSQAY"
-        },
-        "Id": "a008D000001hoVSQAY",
-        "Name": "ACT-0019",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       }
     ],
@@ -4073,42 +3893,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVGQAY"
-        },
-        "Id": "a008D000001hoVGQAY",
-        "Name": "ACT-0007",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVnQAI"
-        },
-        "Id": "a008D000001hoVnQAI",
-        "Name": "ACT-0040",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVCQAY"
         },
         "Id": "a008D000001hoVCQAY",
@@ -4122,24 +3906,6 @@
         "Message__c": "Opening Application: \"Postman\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVSQAY"
-        },
-        "Id": "a008D000001hoVSQAY",
-        "Name": "ACT-0019",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -4826,24 +4592,6 @@
         "Operation__c": "Bookmark",
         "Order__c": 52,
         "Count_Events__c": 5
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a008D000001hoVMQAY"
-        },
-        "Id": "a008D000001hoVMQAY",
-        "Name": "ACT-0013",
-        "AppName__c": "B2B files for TDX",
-        "Command__c": "\"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "TDX-B2B-Exercise.zip",
-        "Fix__c": "Please copy B2B files",
-        "Message__c": "Checking path: \"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "Operation__c": "Check Path",
-        "Order__c": 89,
-        "Count_Events__c": 2
       },
       {
         "attributes": {
