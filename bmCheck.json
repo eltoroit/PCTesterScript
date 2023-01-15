@@ -1,128 +1,81 @@
-[
-  {
-    "id": "BM_1",
-    "title": "[BAR][Salesforce]",
-    "urlExpected": "https://www.salesforce.com/",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_2",
-    "title": "[BAR][Salesforce Login]",
-    "urlExpected": "https://login.salesforce.com/",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_3",
-    "title": "[BAR][Marketing Cloud Login]",
-    "urlExpected": "https://mc.exacttarget.com/",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_4",
-    "title": "[BAR][Tuesday Trailmix]",
-    "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/tuesday-trailmix-dreamforce-hows",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_5",
-    "title": "[BAR][Thursday Trailmix]",
-    "urlExpected": "https://trailhead.salesforce.com/users/mariahbrush/trailmixes/thursday-trailmix-dreamforce-hows",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_6",
-    "title": "[BAR][Survey]",
-    "urlExpected": "https://www.surveymonkey.com/r/DF22HOW",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_7",
-    "title": "[BAR][Dreamforce]",
-    "urlExpected": "https://www.salesforce.com/dreamforce/",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_8",
-    "title": "[BAR][Salesforce Certification]",
-    "urlExpected": "https://www.webassessor.com/salesforce",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_9",
-    "title": "[BAR][MuleSoft Login]",
-    "urlExpected": "https://www.mulesoft.com/",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_10",
-    "title": "[BAR][MuleSoft Training - Training, Courses and Certifications]",
-    "urlExpected": "https://training.mulesoft.com/home",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_11",
-    "title": "[BAR][Tableau Login]",
-    "urlExpected": "https://sso.online.tableau.com/public/idp/SSO",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_12",
-    "title": "[BAR][Tableau Cert Account Creation]",
-    "urlExpected": "https://identity.idp.tableau.com/login",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_13",
-    "title": "[BAR][Tableau Testing Site]",
-    "urlExpected": "https://home.pearsonvue.com/Test-takers.aspx",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  },
-  {
-    "id": "BM_14",
-    "title": "[BAR][MuleSoft Exam Readiness Kit – MuleSoft Training]",
-    "urlExpected": "https://help.learn.mulesoft.com/hc/en-us/articles/360057127674-MuleSoft-Exam-Readiness-Kit",
-    "hasFF": true,
-    "hasChrome": true,
-    "checkFF": true,
-    "checkChrome": true
-  }
-]
+{
+  "DTTM": "2023-01-15T23:16:34.080Z",
+  "bm": [
+      {
+          "id": "BM_1",
+          "title": "[BAR][Salesforce]",
+          "urlChrome": "https://www.salesforce.com/",
+          "urlFirefox": "https://www.salesforce.com/",
+          "urlExpected": "https://www.salesforce.com/",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_2",
+          "title": "[BAR][Salesforce Login]",
+          "urlChrome": "https://login.salesforce.com/",
+          "urlFirefox": "https://login.salesforce.com/",
+          "urlExpected": "https://login.salesforce.com/",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_3",
+          "title": "[BAR][MuleSoft]",
+          "urlChrome": "https://www.mulesoft.com/",
+          "urlFirefox": "https://www.mulesoft.com/",
+          "urlExpected": "https://www.mulesoft.com/",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_4",
+          "title": "[BAR][Tableau]",
+          "urlChrome": "https://www.tableau.com/",
+          "urlFirefox": "https://www.tableau.com/",
+          "urlExpected": "https://www.tableau.com/",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_5",
+          "title": "[BAR][HOW Survey]",
+          "urlChrome": "https://www.surveymonkey.com/r/TDX23HOW",
+          "urlFirefox": "https://www.surveymonkey.com/r/TDX23HOW",
+          "urlExpected": "https://www.surveymonkey.com/r/TDX23HOW",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_6",
+          "title": "[BAR][TrailblazerDX 2023]",
+          "urlChrome": "https://www.salesforce.com/trailblazerdx",
+          "urlFirefox": "https://www.salesforce.com/trailblazerdx",
+          "urlExpected": "https://www.salesforce.com/trailblazerdx",
+          "hasFF": true,
+          "hasChrome": true,
+          "checkFF": true,
+          "checkChrome": true
+      },
+      {
+          "id": "BM_7",
+          "title": "[BAR][Getting Started]",
+          "urlFirefox": "https://www.mozilla.org/firefox/central/",
+          "urlExpected": "NO_IDEA",
+          "hasFF": true,
+          "hasChrome": false,
+          "checkFF": true,
+          "checkChrome": true
+      }
+  ]
+}
