@@ -64,15 +64,5 @@
     "hasChrome": true,
     "checkFF": true,
     "checkChrome": true
-  },
-  {
-    "id": "BM_7",
-    "title": "[BAR][Getting Started]",
-    "urlFirefox": "https://www.mozilla.org/firefox/central/",
-    "urlExpected": "NO_IDEA",
-    "hasFF": true,
-    "hasChrome": false,
-    "checkFF": true,
-    "checkChrome": true
   }
 ]
