@@ -1,5 +1,5 @@
 {
-  "now": "2023-01-15T23:00:53.650Z",
+  "now": "2023-01-15T23:05:42.732Z",
   "events": [
     {
       "attributes": {
@@ -3019,22 +3019,6 @@
         "Operation__c": "Bookmark",
         "Order__c": 52,
         "Count_Events__c": 6
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a006s000002WHL6AAO"
-        },
-        "Id": "a006s000002WHL6AAO",
-        "Name": "ACT-0046",
-        "AppName__c": "Clone C:\\LWC_HOW",
-        "Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 91,
-        "Count_Events__c": 1
       }
     ]
   }
