@@ -29,7 +29,7 @@ var debug = false;
 var verbose = false;
 var checkUrlExists = true;
 var resultsTofile = true;
-var executeManualChecks = false;
+var executeManualChecks = true;
 if (testType == "PROD") {
 	debug = false;
 	verbose = false;
