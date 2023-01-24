@@ -1,5 +1,5 @@
 {
-  "now": "2023-01-24T18:20:44.905Z",
+  "now": "2023-01-24T18:24:24.047Z",
   "events": [
     {
       "attributes": {
@@ -636,23 +636,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLhAAO"
-        },
-        "Id": "a0003000002WDLhAAO",
-        "Name": "ACT-0015",
-        "AppName__c": "Eclipse IDE",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse IDE for Java Developers - 2022-06.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Eclipse IDE\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"Eclipse IDE\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 16,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLiAAO"
         },
         "Id": "a0003000002WDLiAAO",
@@ -701,42 +684,6 @@
         "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLvAAO"
-        },
-        "Id": "a0003000002WDLvAAO",
-        "Name": "ACT-0029",
-        "AppName__c": "Postman",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Postman.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Postman\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
-        "Message__c": "Opening Application: \"Postman\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDMYAA4"
-        },
-        "Id": "a0003000002WDMYAA4",
-        "Name": "ACT-0068",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       }
     ],
@@ -1033,23 +980,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLhAAO"
-        },
-        "Id": "a0003000002WDLhAAO",
-        "Name": "ACT-0015",
-        "AppName__c": "Eclipse IDE",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Eclipse IDE for Java Developers - 2022-06.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Eclipse IDE\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"Eclipse IDE\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 16,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLiAAO"
         },
         "Id": "a0003000002WDLiAAO",
@@ -1098,42 +1028,6 @@
         "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDLvAAO"
-        },
-        "Id": "a0003000002WDLvAAO",
-        "Name": "ACT-0029",
-        "AppName__c": "Postman",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Postman.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Postman\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Postman is missing, install from here: https://www.getpostman.com/",
-        "Message__c": "Opening Application: \"Postman\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 30,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a0003000002WDMYAA4"
-        },
-        "Id": "a0003000002WDMYAA4",
-        "Name": "ACT-0068",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
