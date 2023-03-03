@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T17:56:28.372Z",
+  "now": "2023-03-03T18:01:44.945Z",
   "events": [
     {
       "attributes": {
@@ -268,7 +268,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -472,6 +472,23 @@
       }
     ],
     "a02DC00000GedNwYAJ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
+        },
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 2
+      },
       {
         "attributes": {
           "type": "Action__c",
@@ -792,40 +809,6 @@
             }
           ]
         }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjuYAA"
-        },
-        "Id": "a00DC000002qvjuYAA",
-        "Name": "ACT-0082",
-        "AppName__c": "VSCode - Prettier - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 83,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjvYAA"
-        },
-        "Id": "a00DC000002qvjvYAA",
-        "Name": "ACT-0083",
-        "AppName__c": "VSCode - XML - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 84,
-        "Count_Events__c": 1
       }
     ],
     "a02DC00000GedNxYAJ": [
@@ -1306,7 +1289,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -1375,6 +1358,23 @@
         "Operation__c": "Write",
         "Order__c": 20,
         "Count_Events__c": 6
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
+        },
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -1696,40 +1696,6 @@
             }
           ]
         }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjuYAA"
-        },
-        "Id": "a00DC000002qvjuYAA",
-        "Name": "ACT-0082",
-        "AppName__c": "VSCode - Prettier - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - Prettier - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 83,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjvYAA"
-        },
-        "Id": "a00DC000002qvjvYAA",
-        "Name": "ACT-0083",
-        "AppName__c": "VSCode - XML - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: VSCode - XML - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 84,
-        "Count_Events__c": 1
       },
       {
         "attributes": {
