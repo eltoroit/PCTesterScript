@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T18:11:04.985Z",
+  "now": "2023-03-03T18:55:58.164Z",
   "events": [
     {
       "attributes": {
@@ -79,7 +79,7 @@
         "Fix__c": "Please ensure Curl is installed. https://curl.haxx.se/download.html",
         "Message__c": "Validating: Check Curl version (curl --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 64,
+        "Order__c": 63,
         "Count_Events__c": 1
       },
       {
@@ -97,7 +97,7 @@
         "Fix__c": "Download from here: https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-1/rubyinstaller-2.4.3-1-x64.exe",
         "Message__c": "Checking exact: ruby --version",
         "Operation__c": "Check Exact",
-        "Order__c": 65,
+        "Order__c": 64,
         "Count_Events__c": 1
       },
       {
@@ -115,7 +115,7 @@
         "Fix__c": "gem install travis",
         "Message__c": "Checking exact: travis version",
         "Operation__c": "Check Exact",
-        "Order__c": 66,
+        "Order__c": 65,
         "Count_Events__c": 1
       },
       {
@@ -132,7 +132,7 @@
         "Expected__c": "Python 2.7.14",
         "Message__c": "Validating: Python (python --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 67,
+        "Order__c": 66,
         "Count_Events__c": 1
       }
     ],
@@ -268,7 +268,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -321,7 +321,7 @@
         "Fix__c": "Word (MS Office) is not installed",
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
-        "Order__c": 70,
+        "Order__c": 69,
         "Count_Events__c": 1
       }
     ],
@@ -341,7 +341,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 54,
+        "Order__c": 53,
         "Count_Events__c": 1
       },
       {
@@ -359,7 +359,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 55,
+        "Order__c": 54,
         "Count_Events__c": 1
       },
       {
@@ -377,7 +377,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 56,
+        "Order__c": 55,
         "Count_Events__c": 1
       },
       {
@@ -395,7 +395,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 57,
+        "Order__c": 56,
         "Count_Events__c": 1
       },
       {
@@ -413,7 +413,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 58,
+        "Order__c": 57,
         "Count_Events__c": 1
       },
       {
@@ -431,7 +431,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 59,
+        "Order__c": 58,
         "Count_Events__c": 1
       },
       {
@@ -449,7 +449,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 60,
+        "Order__c": 59,
         "Count_Events__c": 1
       },
       {
@@ -467,7 +467,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 61,
+        "Order__c": 60,
         "Count_Events__c": 1
       }
     ],
@@ -475,18 +475,19 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvlNYAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
         },
-        "Id": "a00DC000002qvlNYAQ",
-        "Name": "ACT-0093",
-        "AppName__c": "Open VS Code",
-        "Command__c": "code",
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not open VS Code",
-        "Message__c": "Opening VS Code",
-        "Operation__c": "Execute",
-        "Order__c": 21,
-        "Count_Events__c": 1
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -503,7 +504,7 @@
         "Fix__c": "Please ensure Java JDK is installed.",
         "Message__c": "Checking path: C:\\Program Files\\Java\\jdk-17.0.5\\bin\\java.exe*",
         "Operation__c": "Check Path",
-        "Order__c": 25,
+        "Order__c": 24,
         "Count_Events__c": 3
       },
       {
@@ -521,7 +522,7 @@
         "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
-        "Order__c": 32,
+        "Order__c": 31,
         "Count_Events__c": 1
       },
       {
@@ -538,7 +539,7 @@
         "Expected__c": "1.",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 33,
+        "Order__c": 32,
         "Count_Events__c": 1
       },
       {
@@ -556,7 +557,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 34,
+        "Order__c": 33,
         "Count_Events__c": 1
       },
       {
@@ -574,7 +575,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 35,
+        "Order__c": 34,
         "Count_Events__c": 1
       },
       {
@@ -592,7 +593,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 36,
+        "Order__c": 35,
         "Count_Events__c": 1
       },
       {
@@ -610,7 +611,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 37,
+        "Order__c": 36,
         "Count_Events__c": 1
       },
       {
@@ -628,7 +629,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 38,
+        "Order__c": 37,
         "Count_Events__c": 1
       },
       {
@@ -646,7 +647,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 39,
+        "Order__c": 38,
         "Count_Events__c": 1
       },
       {
@@ -664,7 +665,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 40,
+        "Order__c": 39,
         "Count_Events__c": 1
       },
       {
@@ -682,7 +683,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 41,
+        "Order__c": 40,
         "Count_Events__c": 1
       },
       {
@@ -700,7 +701,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "Operation__c": "Check Path",
-        "Order__c": 42,
+        "Order__c": 41,
         "Count_Events__c": 1
       },
       {
@@ -718,7 +719,7 @@
         "Fix__c": "Please ensure VS Plugins are installed: gitlens",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-13.*",
         "Operation__c": "Check Path",
-        "Order__c": 43,
+        "Order__c": 42,
         "Count_Events__c": 1
       },
       {
@@ -736,7 +737,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
         "Operation__c": "Check Path",
-        "Order__c": 44,
+        "Order__c": 43,
         "Count_Events__c": 1
       },
       {
@@ -752,7 +753,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 45,
+        "Order__c": 44,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -787,7 +788,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 46,
+        "Order__c": 45,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -824,7 +825,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 93,
+        "Order__c": 92,
         "Count_Events__c": 1
       }
     ],
@@ -870,7 +871,7 @@
         "Expected__c": "elMain.js",
         "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
         "Operation__c": "Check Path",
-        "Order__c": 72,
+        "Order__c": 71,
         "Count_Events__c": 1
       },
       {
@@ -886,7 +887,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 73,
+        "Order__c": 72,
         "Count_Events__c": 1
       },
       {
@@ -902,7 +903,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 74,
+        "Order__c": 73,
         "Count_Events__c": 1
       },
       {
@@ -918,7 +919,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 75,
+        "Order__c": 74,
         "Count_Events__c": 1
       },
       {
@@ -934,7 +935,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 76,
+        "Order__c": 75,
         "Count_Events__c": 1
       },
       {
@@ -951,7 +952,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Check Contains",
-        "Order__c": 77,
+        "Order__c": 76,
         "Count_Events__c": 1
       },
       {
@@ -968,7 +969,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: ETEPL - XCopy (Node Modules) (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\node_modules\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\node_modules\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 78,
+        "Order__c": 77,
         "Count_Events__c": 1
       },
       {
@@ -985,7 +986,7 @@
         "Expected__c": "1 file(s) copied.",
         "Message__c": "Validating: *** ETEPL - XCopy (Electron.json) (copy /y \"C:\\TH\\PCTesterScript\\copy\\electron.json\" \"c:\\th\\electron.json\")",
         "Operation__c": "Check Contains",
-        "Order__c": 79,
+        "Order__c": 78,
         "Count_Events__c": 1
       },
       {
@@ -1000,7 +1001,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 80,
+        "Order__c": 79,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1034,7 +1035,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 81,
+        "Order__c": 80,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1068,7 +1069,7 @@
         "EnabledAction__c": true,
         "Expected__c": "JSON CHECK",
         "Operation__c": "JSON File - Check",
-        "Order__c": 82,
+        "Order__c": 81,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1103,7 +1104,7 @@
         "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
         "Operation__c": "Execute",
-        "Order__c": 71,
+        "Order__c": 70,
         "Count_Events__c": 4
       },
       {
@@ -1120,7 +1121,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 87,
+        "Order__c": 86,
         "Count_Events__c": 1
       },
       {
@@ -1137,7 +1138,7 @@
         "Expected__c": "File(s) copied",
         "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
         "Operation__c": "Check Contains",
-        "Order__c": 88,
+        "Order__c": 87,
         "Count_Events__c": 1
       },
       {
@@ -1154,7 +1155,7 @@
         "Expected__c": "Application runs with no errors",
         "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
         "Operation__c": "Open Application",
-        "Order__c": 89,
+        "Order__c": 88,
         "Count_Events__c": 1
       },
       {
@@ -1288,7 +1289,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 1
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -1341,7 +1342,7 @@
         "Fix__c": "Word (MS Office) is not installed",
         "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
         "Operation__c": "Check Path",
-        "Order__c": 70,
+        "Order__c": 69,
         "Count_Events__c": 1
       },
       {
@@ -1361,18 +1362,19 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvlNYAQ"
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
         },
-        "Id": "a00DC000002qvlNYAQ",
-        "Name": "ACT-0093",
-        "AppName__c": "Open VS Code",
-        "Command__c": "code",
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
         "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not open VS Code",
-        "Message__c": "Opening VS Code",
-        "Operation__c": "Execute",
-        "Order__c": 21,
-        "Count_Events__c": 1
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 2
       },
       {
         "attributes": {
@@ -1389,7 +1391,7 @@
         "Fix__c": "Please ensure Java JDK is installed.",
         "Message__c": "Checking path: C:\\Program Files\\Java\\jdk-17.0.5\\bin\\java.exe*",
         "Operation__c": "Check Path",
-        "Order__c": 25,
+        "Order__c": 24,
         "Count_Events__c": 3
       },
       {
@@ -1407,7 +1409,7 @@
         "Fix__c": "Please install SFDX from here: https://sfdc.co/sfdx_cli_win64",
         "Message__c": "Validating: SFDX Update (sfdx update)",
         "Operation__c": "Check Contains",
-        "Order__c": 32,
+        "Order__c": 31,
         "Count_Events__c": 1
       },
       {
@@ -1424,7 +1426,7 @@
         "Expected__c": "1.",
         "Message__c": "Validating: VS Code Version (code --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 33,
+        "Order__c": 32,
         "Count_Events__c": 1
       },
       {
@@ -1442,7 +1444,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 34,
+        "Order__c": 33,
         "Count_Events__c": 1
       },
       {
@@ -1460,7 +1462,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 35,
+        "Order__c": 34,
         "Count_Events__c": 1
       },
       {
@@ -1478,7 +1480,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 36,
+        "Order__c": 35,
         "Count_Events__c": 1
       },
       {
@@ -1496,7 +1498,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 37,
+        "Order__c": 36,
         "Count_Events__c": 1
       },
       {
@@ -1514,7 +1516,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 38,
+        "Order__c": 37,
         "Count_Events__c": 1
       },
       {
@@ -1532,7 +1534,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 39,
+        "Order__c": 38,
         "Count_Events__c": 1
       },
       {
@@ -1550,7 +1552,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 40,
+        "Order__c": 39,
         "Count_Events__c": 1
       },
       {
@@ -1568,7 +1570,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.3.*",
         "Operation__c": "Check Path",
-        "Order__c": 41,
+        "Order__c": 40,
         "Count_Events__c": 1
       },
       {
@@ -1586,7 +1588,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "Operation__c": "Check Path",
-        "Order__c": 42,
+        "Order__c": 41,
         "Count_Events__c": 1
       },
       {
@@ -1604,7 +1606,7 @@
         "Fix__c": "Please ensure VS Plugins are installed: gitlens",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\eamodio.gitlens-13.*",
         "Operation__c": "Check Path",
-        "Order__c": 43,
+        "Order__c": 42,
         "Count_Events__c": 1
       },
       {
@@ -1622,7 +1624,7 @@
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph",
         "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
         "Operation__c": "Check Path",
-        "Order__c": 44,
+        "Order__c": 43,
         "Count_Events__c": 1
       },
       {
@@ -1638,7 +1640,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 45,
+        "Order__c": 44,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1673,7 +1675,7 @@
         "ErrorMessage__c": "Invalid response received",
         "Message__c": "Checking path: C:\\Users\\Client\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-42*",
         "Operation__c": "JSON File - Edit",
-        "Order__c": 46,
+        "Order__c": 45,
         "Count_Events__c": 1,
         "JSON_Actions__r": {
           "totalSize": 1,
@@ -1710,7 +1712,7 @@
         "Fix__c": "Please install plugin from here: https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc",
         "Message__c": "Checking path: C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.5_0\\package.json",
         "Operation__c": "Check Path",
-        "Order__c": 23,
+        "Order__c": 22,
         "Count_Events__c": 6
       },
       {
@@ -1728,7 +1730,7 @@
         "Fix__c": "Please ensure Java is installed",
         "Message__c": "Validating: Check Java version (java -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 24,
+        "Order__c": 23,
         "Count_Events__c": 6
       },
       {
@@ -1746,7 +1748,7 @@
         "Fix__c": "Notepad is missing!",
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
-        "Order__c": 27,
+        "Order__c": 26,
         "Count_Events__c": 6
       },
       {
@@ -1764,7 +1766,7 @@
         "Fix__c": "Download from here: https://git-scm.com/download/win",
         "Message__c": "Validating: Git (Version) (git --version)",
         "Operation__c": "Check Contains",
-        "Order__c": 47,
+        "Order__c": 46,
         "Count_Events__c": 6
       },
       {
@@ -1780,7 +1782,7 @@
         "ErrorMessage__c": "Could not validate: Git config email (git config --global user.email \"you@example.com\")",
         "Message__c": "Validating: Git config email (git config --global user.email \"you@example.com\")",
         "Operation__c": "Check Contains",
-        "Order__c": 48,
+        "Order__c": 47,
         "Count_Events__c": 6
       },
       {
@@ -1796,7 +1798,7 @@
         "ErrorMessage__c": "Could not validate: Git config name (git config --global user.name \"Your Name\")",
         "Message__c": "Validating: Git config name (git config --global user.name \"Your Name\")",
         "Operation__c": "Check Contains",
-        "Order__c": 49,
+        "Order__c": 48,
         "Count_Events__c": 6
       },
       {
@@ -1813,7 +1815,7 @@
         "Expected__c": "7-Zip 22",
         "Message__c": "Validating: 7-Zip (\"C:\\Program Files\\7-Zip\\7z.exe\" -version)",
         "Operation__c": "Check Contains",
-        "Order__c": 50,
+        "Order__c": 49,
         "Count_Events__c": 6
       },
       {
@@ -1830,7 +1832,7 @@
         "Expected__c": "v18.13.0",
         "Message__c": "Checking exact: node --version",
         "Operation__c": "Check Exact",
-        "Order__c": 51,
+        "Order__c": 50,
         "Count_Events__c": 6
       },
       {
@@ -1848,7 +1850,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 54,
+        "Order__c": 53,
         "Count_Events__c": 1
       },
       {
@@ -1866,7 +1868,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 55,
+        "Order__c": 54,
         "Count_Events__c": 1
       },
       {
@@ -1884,7 +1886,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 56,
+        "Order__c": 55,
         "Count_Events__c": 1
       },
       {
@@ -1902,7 +1904,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 57,
+        "Order__c": 56,
         "Count_Events__c": 1
       },
       {
@@ -1920,7 +1922,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 58,
+        "Order__c": 57,
         "Count_Events__c": 1
       },
       {
@@ -1938,7 +1940,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 59,
+        "Order__c": 58,
         "Count_Events__c": 1
       },
       {
@@ -1956,7 +1958,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 60,
+        "Order__c": 59,
         "Count_Events__c": 1
       },
       {
@@ -1974,7 +1976,7 @@
         "Fix__c": "Please install Salesforce Fonts",
         "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
         "Operation__c": "Check Path",
-        "Order__c": 61,
+        "Order__c": 60,
         "Count_Events__c": 1
       },
       {
@@ -1990,7 +1992,7 @@
         "Expected__c": "Bookmarks are correct",
         "Message__c": "Validating: Checking all bookmarks",
         "Operation__c": "Bookmark",
-        "Order__c": 53,
+        "Order__c": 52,
         "Count_Events__c": 6
       },
       {
@@ -2008,7 +2010,7 @@
         "Fix__c": "Please install the Mulesoft spreadsheet",
         "Message__c": "Checking path: C:\\Users\\Admin\\Desktop\\Global Superstore.xlsx",
         "Operation__c": "Check Path",
-        "Order__c": 92,
+        "Order__c": 91,
         "Trailhead_Event__c": "a02DC00000GedNtYAJ",
         "Trailhead_Event_Name__c": "2023.03 - TrailblazerDX 23",
         "Count_Events__c": 1
