@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T17:35:40.113Z",
+  "now": "2023-03-03T17:42:15.493Z",
   "events": [
     {
       "attributes": {
@@ -420,12 +420,12 @@
         "Id": "a00DC000002qvjEYAQ",
         "Name": "ACT-0040",
         "AppName__c": "VS Code Plugin (9)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.2.6*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "dbaeumer.vscode-eslint-2.2.6",
+        "Expected__c": "dbaeumer.vscode-eslint-2.4.0",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.2.6*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "Operation__c": "Check Path",
         "Order__c": 41,
         "Count_Events__c": 1
@@ -1641,12 +1641,12 @@
         "Id": "a00DC000002qvjEYAQ",
         "Name": "ACT-0040",
         "AppName__c": "VS Code Plugin (9)",
-        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.2.6*",
+        "Command__c": "C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "EnabledAction__c": true,
         "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "dbaeumer.vscode-eslint-2.2.6",
+        "Expected__c": "dbaeumer.vscode-eslint-2.4.0",
         "Fix__c": "Please ensure VS Plugins are installed. https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode",
-        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.2.6*",
+        "Message__c": "Checking path: C:\\Users\\Admin\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
         "Operation__c": "Check Path",
         "Order__c": 41,
         "Count_Events__c": 1
@@ -1843,24 +1843,6 @@
         "Message__c": "Checking path: C:\\Windows\\Notepad.exe",
         "Operation__c": "Check Path",
         "Order__c": 26,
-        "Count_Events__c": 6
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvj2YAA"
-        },
-        "Id": "a00DC000002qvj2YAA",
-        "Name": "ACT-0028",
-        "AppName__c": "SoapUI",
-        "Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SoapUI-5.7.0.exe",
-        "Fix__c": "SoapUI is missing, install from here: https://www.soapui.org/downloads/soapui/",
-        "Message__c": "Checking path: C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
-        "Operation__c": "Check Path",
-        "Order__c": 29,
         "Count_Events__c": 6
       },
       {
@@ -2106,42 +2088,6 @@
         "Operation__c": "Bookmark",
         "Order__c": 52,
         "Count_Events__c": 6
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvk0YAA"
-        },
-        "Id": "a00DC000002qvk0YAA",
-        "Name": "ACT-0088",
-        "AppName__c": "B2B files for TDX",
-        "Command__c": "\"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "TDX-B2B-Exercise.zip",
-        "Fix__c": "Please copy B2B files",
-        "Message__c": "Checking path: \"C:\\TDX22\\TDX-B2B-Exercise.zip\"",
-        "Operation__c": "Check Path",
-        "Order__c": 89,
-        "Count_Events__c": 3
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvk1YAA"
-        },
-        "Id": "a00DC000002qvk1YAA",
-        "Name": "ACT-0089",
-        "AppName__c": "Certification secured browser",
-        "Command__c": "C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "LockDownBrowserOEM.exe",
-        "Fix__c": "Please install the secure browser: Select: https://media.webassessor.com/respondus/windows/LockDownBrowserOEMSetup.exe",
-        "Message__c": "Checking path: C:\\Program Files (x86)\\Respondus\\LockDown Browser OEM\\LockDownBrowserOEM.exe",
-        "Operation__c": "Check Path",
-        "Order__c": 90,
-        "Count_Events__c": 2
       },
       {
         "attributes": {
