@@ -1,5 +1,6 @@
-@ECHO OFF
+@REM @ECHO OFF
 CLS
-echo *** Opening VS Code to update extensions. Please close VS Code once it's done updating
+echo *** Opening VS Code to update extensions.
 call code
+pause
 exit 0
