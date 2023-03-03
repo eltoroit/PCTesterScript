@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T17:54:34.985Z",
+  "now": "2023-03-03T17:56:28.372Z",
   "events": [
     {
       "attributes": {
@@ -24,11 +24,11 @@
     {
       "attributes": {
         "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedO1YAJ"
+        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedNwYAJ"
       },
-      "Id": "a02DC00000GedO1YAJ",
-      "Name": "Logout from student Apps",
-      "Order__c": 3,
+      "Id": "a02DC00000GedNwYAJ",
+      "Name": "Salesforce Development (SFDX, VS Code, etc)",
+      "Order__c": 4,
       "ActiveEvent__c": true
     },
     {
@@ -49,16 +49,6 @@
       "Id": "a02DC00000GedNvYAJ",
       "Name": "_Manual Checks_",
       "Order__c": 21,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedNwYAJ"
-      },
-      "Id": "a02DC00000GedNwYAJ",
-      "Name": "_Salesforce Development (SFDX, VS Code, etc)_",
-      "Order__c": 22,
       "ActiveEvent__c": true
     },
     {
@@ -143,6 +133,341 @@
         "Message__c": "Validating: Python (python --version)",
         "Operation__c": "Check Contains",
         "Order__c": 66,
+        "Count_Events__c": 1
+      }
+    ],
+    "a02DC00000GedNvYAJ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvigYAA"
+        },
+        "Id": "a00DC000002qvigYAA",
+        "Name": "ACT-0006",
+        "AppName__c": "MANUAL CHECKS",
+        "Command__c": "=== === === MANUAL CHECKS === === ===",
+        "EnabledAction__c": true,
+        "Operation__c": "Write",
+        "Order__c": 7,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvihYAA"
+        },
+        "Id": "a00DC000002qvihYAA",
+        "Name": "ACT-0007",
+        "AppName__c": "Sticker",
+        "Command__c": "Sticker with computer number?",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "User could not validate: Sticker with computer number?",
+        "Expected__c": "User validated: Sticker with computer number?",
+        "Message__c": "User validated: Sticker with computer number?",
+        "Operation__c": "Manual",
+        "Order__c": 8,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviiYAA"
+        },
+        "Id": "a00DC000002qviiYAA",
+        "Name": "ACT-0008",
+        "AppName__c": "Desktop Image",
+        "Command__c": "Computer background image?",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "User could not validate: Computer background image?",
+        "Expected__c": "User validated: Computer background image?",
+        "Message__c": "User validated: Computer background image?",
+        "Operation__c": "Manual",
+        "Order__c": 9,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvikYAA"
+        },
+        "Id": "a00DC000002qvikYAA",
+        "Name": "ACT-0010",
+        "AppName__c": "Desktop: Notepad++",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Notepad++.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Desktop: Notepad++\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 11,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvilYAA"
+        },
+        "Id": "a00DC000002qvilYAA",
+        "Name": "ACT-0011",
+        "AppName__c": "Firefox + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Firefox.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 12,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvimYAA"
+        },
+        "Id": "a00DC000002qvimYAA",
+        "Name": "ACT-0012",
+        "AppName__c": "Chrome + Salesforce is homepage",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Google Chrome.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 13,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvinYAA"
+        },
+        "Id": "a00DC000002qvinYAA",
+        "Name": "ACT-0013",
+        "AppName__c": "Chrome: Plugin",
+        "Command__c": "Chrome Plugin to split screen",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
+        "Expected__c": "User validated: Chrome Plugin to split screen",
+        "Message__c": "User validated: Chrome Plugin to split screen",
+        "Operation__c": "Manual",
+        "Order__c": 14,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
+        },
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvirYAA"
+        },
+        "Id": "a00DC000002qvirYAA",
+        "Name": "ACT-0017",
+        "AppName__c": "Powerpoint (MS Office)",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
+        "Expected__c": "Application runs with no errors",
+        "Fix__c": "Powerpoint (MS Office) is not installed",
+        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 18,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvisYAA"
+        },
+        "Id": "a00DC000002qvisYAA",
+        "Name": "ACT-0018",
+        "AppName__c": "Excel (MS Office)",
+        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
+        "Expected__c": "Application runs with no errors",
+        "Fix__c": "Excel (MS Office) is not installed",
+        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 19,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjgYAA"
+        },
+        "Id": "a00DC000002qvjgYAA",
+        "Name": "ACT-0068",
+        "AppName__c": "Word (MS Office)",
+        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "Word 2016.lnk",
+        "Fix__c": "Word (MS Office) is not installed",
+        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
+        "Operation__c": "Check Path",
+        "Order__c": 69,
+        "Count_Events__c": 1
+      }
+    ],
+    "a02DC00000GedNuYAJ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjQYAQ"
+        },
+        "Id": "a00DC000002qvjQYAQ",
+        "Name": "ACT-0052",
+        "AppName__c": "SalesforceSans Font (1)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Bold.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 53,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjRYAQ"
+        },
+        "Id": "a00DC000002qvjRYAQ",
+        "Name": "ACT-0053",
+        "AppName__c": "SalesforceSans Font (2)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-BoldItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 54,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjSYAQ"
+        },
+        "Id": "a00DC000002qvjSYAQ",
+        "Name": "ACT-0054",
+        "AppName__c": "SalesforceSans Font (3)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Italic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 55,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjTYAQ"
+        },
+        "Id": "a00DC000002qvjTYAQ",
+        "Name": "ACT-0055",
+        "AppName__c": "SalesforceSans Font (4)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Light.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 56,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjUYAQ"
+        },
+        "Id": "a00DC000002qvjUYAQ",
+        "Name": "ACT-0056",
+        "AppName__c": "SalesforceSans Font (5)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-LightItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 57,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjVYAQ"
+        },
+        "Id": "a00DC000002qvjVYAQ",
+        "Name": "ACT-0057",
+        "AppName__c": "SalesforceSans Font (6)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Regular.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 58,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjWYAQ"
+        },
+        "Id": "a00DC000002qvjWYAQ",
+        "Name": "ACT-0058",
+        "AppName__c": "SalesforceSans Font (7)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-Thin.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 59,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjXYAQ"
+        },
+        "Id": "a00DC000002qvjXYAQ",
+        "Name": "ACT-0059",
+        "AppName__c": "SalesforceSans Font (8)",
+        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "SalesforceSans-ThinItalic.ttf",
+        "Fix__c": "Please install Salesforce Fonts",
+        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
+        "Operation__c": "Check Path",
+        "Order__c": 60,
         "Count_Events__c": 1
       }
     ],
@@ -501,391 +826,6 @@
         "Operation__c": "Check Contains",
         "Order__c": 84,
         "Count_Events__c": 1
-      }
-    ],
-    "a02DC00000GedNvYAJ": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvigYAA"
-        },
-        "Id": "a00DC000002qvigYAA",
-        "Name": "ACT-0006",
-        "AppName__c": "MANUAL CHECKS",
-        "Command__c": "=== === === MANUAL CHECKS === === ===",
-        "EnabledAction__c": true,
-        "Operation__c": "Write",
-        "Order__c": 7,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvihYAA"
-        },
-        "Id": "a00DC000002qvihYAA",
-        "Name": "ACT-0007",
-        "AppName__c": "Sticker",
-        "Command__c": "Sticker with computer number?",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "User could not validate: Sticker with computer number?",
-        "Expected__c": "User validated: Sticker with computer number?",
-        "Message__c": "User validated: Sticker with computer number?",
-        "Operation__c": "Manual",
-        "Order__c": 8,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviiYAA"
-        },
-        "Id": "a00DC000002qviiYAA",
-        "Name": "ACT-0008",
-        "AppName__c": "Desktop Image",
-        "Command__c": "Computer background image?",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "User could not validate: Computer background image?",
-        "Expected__c": "User validated: Computer background image?",
-        "Message__c": "User validated: Computer background image?",
-        "Operation__c": "Manual",
-        "Order__c": 9,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvikYAA"
-        },
-        "Id": "a00DC000002qvikYAA",
-        "Name": "ACT-0010",
-        "AppName__c": "Desktop: Notepad++",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Notepad++.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Desktop: Notepad++\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"Desktop: Notepad++\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 11,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvilYAA"
-        },
-        "Id": "a00DC000002qvilYAA",
-        "Name": "ACT-0011",
-        "AppName__c": "Firefox + Salesforce is homepage",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Firefox.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Firefox + Salesforce is homepage\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"Firefox + Salesforce is homepage\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 12,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvimYAA"
-        },
-        "Id": "a00DC000002qvimYAA",
-        "Name": "ACT-0012",
-        "AppName__c": "Chrome + Salesforce is homepage",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Google Chrome.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Chrome + Salesforce is homepage\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"Chrome + Salesforce is homepage\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 13,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvinYAA"
-        },
-        "Id": "a00DC000002qvinYAA",
-        "Name": "ACT-0013",
-        "AppName__c": "Chrome: Plugin",
-        "Command__c": "Chrome Plugin to split screen",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "User could not validate: Chrome Plugin to split screen",
-        "Expected__c": "User validated: Chrome Plugin to split screen",
-        "Message__c": "User validated: Chrome Plugin to split screen",
-        "Operation__c": "Manual",
-        "Order__c": 14,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
-        },
-        "Id": "a00DC000002qviqYAA",
-        "Name": "ACT-0016",
-        "AppName__c": "VS Code",
-        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 17,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvirYAA"
-        },
-        "Id": "a00DC000002qvirYAA",
-        "Name": "ACT-0017",
-        "AppName__c": "Powerpoint (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Powerpoint (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Powerpoint (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Powerpoint (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 18,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvisYAA"
-        },
-        "Id": "a00DC000002qvisYAA",
-        "Name": "ACT-0018",
-        "AppName__c": "Excel (MS Office)",
-        "Command__c": "\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"Excel (MS Office)\"",
-        "Expected__c": "Application runs with no errors",
-        "Fix__c": "Excel (MS Office) is not installed",
-        "Message__c": "Opening Application: \"Excel (MS Office)\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 19,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjgYAA"
-        },
-        "Id": "a00DC000002qvjgYAA",
-        "Name": "ACT-0068",
-        "AppName__c": "Word (MS Office)",
-        "Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "Word 2016.lnk",
-        "Fix__c": "Word (MS Office) is not installed",
-        "Message__c": "Checking path: C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
-        "Operation__c": "Check Path",
-        "Order__c": 69,
-        "Count_Events__c": 1
-      }
-    ],
-    "a02DC00000GedNuYAJ": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjQYAQ"
-        },
-        "Id": "a00DC000002qvjQYAQ",
-        "Name": "ACT-0052",
-        "AppName__c": "SalesforceSans Font (1)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-Bold.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 53,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjRYAQ"
-        },
-        "Id": "a00DC000002qvjRYAQ",
-        "Name": "ACT-0053",
-        "AppName__c": "SalesforceSans Font (2)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-BoldItalic.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 54,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjSYAQ"
-        },
-        "Id": "a00DC000002qvjSYAQ",
-        "Name": "ACT-0054",
-        "AppName__c": "SalesforceSans Font (3)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-Italic.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 55,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjTYAQ"
-        },
-        "Id": "a00DC000002qvjTYAQ",
-        "Name": "ACT-0055",
-        "AppName__c": "SalesforceSans Font (4)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-Light.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 56,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjUYAQ"
-        },
-        "Id": "a00DC000002qvjUYAQ",
-        "Name": "ACT-0056",
-        "AppName__c": "SalesforceSans Font (5)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-LightItalic.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 57,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjVYAQ"
-        },
-        "Id": "a00DC000002qvjVYAQ",
-        "Name": "ACT-0057",
-        "AppName__c": "SalesforceSans Font (6)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-Regular.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 58,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjWYAQ"
-        },
-        "Id": "a00DC000002qvjWYAQ",
-        "Name": "ACT-0058",
-        "AppName__c": "SalesforceSans Font (7)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-Thin.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 59,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjXYAQ"
-        },
-        "Id": "a00DC000002qvjXYAQ",
-        "Name": "ACT-0059",
-        "AppName__c": "SalesforceSans Font (8)",
-        "Command__c": "\"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "SalesforceSans-ThinItalic.ttf",
-        "Fix__c": "Please install Salesforce Fonts",
-        "Message__c": "Checking path: \"C:\\Users\\Admin\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf\"",
-        "Operation__c": "Check Path",
-        "Order__c": 60,
-        "Count_Events__c": 1
-      }
-    ],
-    "a02DC00000GedO1YAJ": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjYYAQ"
-        },
-        "Id": "a00DC000002qvjYYAQ",
-        "Name": "ACT-0060",
-        "AppName__c": "Logout SFDX",
-        "Command__c": "sfdx force:auth:logout --all --noprompt",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Operation__c": "Check Contains",
-        "Order__c": 61,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjZYAQ"
-        },
-        "Id": "a00DC000002qvjZYAQ",
-        "Name": "ACT-0061",
-        "AppName__c": "Logout Heroku",
-        "Command__c": "heroku logout",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
-        "Message__c": "Validating: Logout Heroku (heroku logout)",
-        "Operation__c": "Check Contains",
-        "Order__c": 62,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjhYAA"
-        },
-        "Id": "a00DC000002qvjhYAA",
-        "Name": "ACT-0069",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 70,
-        "Count_Events__c": 4
       }
     ],
     "a02DC00000GedNxYAJ": [
