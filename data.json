@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T17:24:00.896Z",
+  "now": "2023-03-03T17:24:53.515Z",
   "events": [
     {
       "attributes": {
@@ -60,9 +60,92 @@
       "Name": "Logout from student Apps",
       "Order__c": 54,
       "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedO8YAJ"
+      },
+      "Id": "a02DC00000GedO8YAJ",
+      "Name": "__OLD ACTIONS",
+      "Order__c": 899,
+      "ActiveEvent__c": true
     }
   ],
   "actionsByEvent": {
+    "a02DC00000GedO8YAJ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjaYAA"
+        },
+        "Id": "a00DC000002qvjaYAA",
+        "Name": "ACT-0062",
+        "AppName__c": "Check Curl version",
+        "Command__c": "curl --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Check Curl version (curl --version)",
+        "Expected__c": "curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL",
+        "Fix__c": "Please ensure Curl is installed. https://curl.haxx.se/download.html",
+        "Message__c": "Validating: Check Curl version (curl --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 63,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjbYAA"
+        },
+        "Id": "a00DC000002qvjbYAA",
+        "Name": "ACT-0063",
+        "AppName__c": "Ruby",
+        "Command__c": "ruby --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "ruby 2.4.3p205 (2017-12-14 revision 61247) [x64-mingw32]",
+        "Fix__c": "Download from here: https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-1/rubyinstaller-2.4.3-1-x64.exe",
+        "Message__c": "Checking exact: ruby --version",
+        "Operation__c": "Check Exact",
+        "Order__c": 64,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjcYAA"
+        },
+        "Id": "a00DC000002qvjcYAA",
+        "Name": "ACT-0064",
+        "AppName__c": "Travis",
+        "Command__c": "travis version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Invalid response received",
+        "Expected__c": "1.8.8",
+        "Fix__c": "gem install travis",
+        "Message__c": "Checking exact: travis version",
+        "Operation__c": "Check Exact",
+        "Order__c": 65,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjdYAA"
+        },
+        "Id": "a00DC000002qvjdYAA",
+        "Name": "ACT-0065",
+        "AppName__c": "Python",
+        "Command__c": "python --version",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Python (python --version)",
+        "Expected__c": "Python 2.7.14",
+        "Message__c": "Validating: Python (python --version)",
+        "Operation__c": "Check Contains",
+        "Order__c": 66,
+        "Count_Events__c": 1
+      }
+    ],
     "a02DC00000GedO1YAJ": [
       {
         "attributes": {
