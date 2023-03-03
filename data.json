@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T18:55:58.164Z",
+  "now": "2023-03-03T19:00:01.206Z",
   "events": [
     {
       "attributes": {
@@ -268,7 +268,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -487,7 +487,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -860,307 +860,6 @@
       {
         "attributes": {
           "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjiYAA"
-        },
-        "Id": "a00DC000002qvjiYAA",
-        "Name": "ACT-0070",
-        "AppName__c": "ETEPL - Check source path",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Invalid response received",
-        "Expected__c": "elMain.js",
-        "Message__c": "Checking path: C:\\TH\\ETTrailheadTester\\resources\\app\\src\\elMain.js",
-        "Operation__c": "Check Path",
-        "Order__c": 71,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjjYAA"
-        },
-        "Id": "a00DC000002qvjjYAA",
-        "Name": "ACT-0071",
-        "AppName__c": "ETEPL - Delete folder",
-        "Command__c": "DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Delete folder (DEL /F /S /Q \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 72,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjkYAA"
-        },
-        "Id": "a00DC000002qvjkYAA",
-        "Name": "ACT-0072",
-        "AppName__c": "ETEPL - Remove Directory",
-        "Command__c": "RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Remove Directory (RD /Q /S \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 73,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjlYAA"
-        },
-        "Id": "a00DC000002qvjlYAA",
-        "Name": "ACT-0073",
-        "AppName__c": "ETEPL - Remove Directory (2)",
-        "Command__c": "IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Remove Directory (2) (IF EXIST \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 74,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjmYAA"
-        },
-        "Id": "a00DC000002qvjmYAA",
-        "Name": "ACT-0074",
-        "AppName__c": "ETEPL - Make Directory",
-        "Command__c": "MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - Make Directory (MKDIR \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 75,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjnYAA"
-        },
-        "Id": "a00DC000002qvjnYAA",
-        "Name": "ACT-0075",
-        "AppName__c": "ETEPL - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 76,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjoYAA"
-        },
-        "Id": "a00DC000002qvjoYAA",
-        "Name": "ACT-0076",
-        "AppName__c": "ETEPL - XCopy (Node Modules)",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\node_modules\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\node_modules\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (Node Modules) (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\node_modules\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\node_modules\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: ETEPL - XCopy (Node Modules) (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\node_modules\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\node_modules\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 77,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjpYAA"
-        },
-        "Id": "a00DC000002qvjpYAA",
-        "Name": "ACT-0077",
-        "AppName__c": "*** ETEPL - XCopy (Electron.json)",
-        "Command__c": "copy /y \"C:\\TH\\PCTesterScript\\copy\\electron.json\" \"c:\\th\\electron.json\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: *** ETEPL - XCopy (Electron.json) (copy /y \"C:\\TH\\PCTesterScript\\copy\\electron.json\" \"c:\\th\\electron.json\")",
-        "Expected__c": "1 file(s) copied.",
-        "Message__c": "Validating: *** ETEPL - XCopy (Electron.json) (copy /y \"C:\\TH\\PCTesterScript\\copy\\electron.json\" \"c:\\th\\electron.json\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 78,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjqYAA"
-        },
-        "Id": "a00DC000002qvjqYAA",
-        "Name": "ACT-0078",
-        "AppName__c": "ETEPL - Check Server 1",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 79,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03DC000002l2QUYAY"
-              },
-              "Action__c": "a00DC000002qvjqYAA",
-              "Id": "a03DC000002l2QUYAY",
-              "Name": "JSON-0001",
-              "Key__c": "production",
-              "Path__c": "pages:servers",
-              "UniqueAction__c": "a00DC000002qvjqYAA",
-              "Value__c": "https://et-epl.herokuapp.com"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjrYAA"
-        },
-        "Id": "a00DC000002qvjrYAA",
-        "Name": "ACT-0079",
-        "AppName__c": "ETEPL - Check server 2",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 80,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03DC000002l2QTYAY"
-              },
-              "Action__c": "a00DC000002qvjrYAA",
-              "Id": "a03DC000002l2QTYAY",
-              "Name": "JSON-0000",
-              "Key__c": "pingServer",
-              "Path__c": "pages",
-              "UniqueAction__c": "a00DC000002qvjrYAA",
-              "Value__c": "https://et-epl-stage.herokuapp.com"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjsYAA"
-        },
-        "Id": "a00DC000002qvjsYAA",
-        "Name": "ACT-0080",
-        "AppName__c": "ETEPL - Check version",
-        "Command__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-        "EnabledAction__c": true,
-        "Expected__c": "JSON CHECK",
-        "Operation__c": "JSON File - Check",
-        "Order__c": 81,
-        "Count_Events__c": 1,
-        "JSON_Actions__r": {
-          "totalSize": 1,
-          "done": true,
-          "records": [
-            {
-              "attributes": {
-                "type": "JSON_Action__c",
-                "url": "/services/data/v42.0/sobjects/JSON_Action__c/a03DC000002l2QXYAY"
-              },
-              "Action__c": "a00DC000002qvjsYAA",
-              "Id": "a03DC000002l2QXYAY",
-              "Name": "JSON-0004",
-              "Key__c": "version",
-              "Path__c": ":",
-              "UniqueAction__c": "a00DC000002qvjsYAA",
-              "Value__c": "2019-12-11V01"
-            }
-          ]
-        }
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjhYAA"
-        },
-        "Id": "a00DC000002qvjhYAA",
-        "Name": "ACT-0069",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 70,
-        "Count_Events__c": 4
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjxYAA"
-        },
-        "Id": "a00DC000002qvjxYAA",
-        "Name": "ACT-0085",
-        "AppName__c": "StartOnReboot - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: StartOnReboot - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\start\" \"C:\\TH\\ETTrailheadTester\\restart2\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 86,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjyYAA"
-        },
-        "Id": "a00DC000002qvjyYAA",
-        "Name": "ACT-0086",
-        "AppName__c": "StartOnReboot Shortcut - XCopy",
-        "Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
-        "Expected__c": "File(s) copied",
-        "Message__c": "Validating: StartOnReboot Shortcut - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe - Shortcut.lnk\" \"C:\\Users\\student\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\\")",
-        "Operation__c": "Check Contains",
-        "Order__c": 87,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjzYAA"
-        },
-        "Id": "a00DC000002qvjzYAA",
-        "Name": "ACT-0087",
-        "AppName__c": "ETEPL (+Reboot) - Ensure ETEPL starts on reboot",
-        "Command__c": "\"C:\\TH\\ETTrailheadTester\\restart2\\RestartOnCrash.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Unable to open application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\"",
-        "Expected__c": "Application runs with no errors",
-        "Message__c": "Opening Application: \"ETEPL (+Reboot) - Ensure ETEPL starts on reboot\". Was this succesful?",
-        "Operation__c": "Open Application",
-        "Order__c": 88,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvigYAA"
         },
         "Id": "a00DC000002qvigYAA",
@@ -1289,7 +988,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
@@ -1348,6 +1047,23 @@
       {
         "attributes": {
           "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qviqYAA"
+        },
+        "Id": "a00DC000002qviqYAA",
+        "Name": "ACT-0016",
+        "AppName__c": "VS Code",
+        "Command__c": "\"C:\\Users\\Admin\\Desktop\\Visual Studio Code.lnk\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Unable to open application: \"VS Code\"",
+        "Expected__c": "Application runs with no errors",
+        "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
+        "Operation__c": "Open Application",
+        "Order__c": 17,
+        "Count_Events__c": 3
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
           "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvitYAA"
         },
         "Id": "a00DC000002qvitYAA",
@@ -1374,7 +1090,7 @@
         "Message__c": "Opening Application: \"VS Code\". Was this succesful?",
         "Operation__c": "Open Application",
         "Order__c": 17,
-        "Count_Events__c": 2
+        "Count_Events__c": 3
       },
       {
         "attributes": {
