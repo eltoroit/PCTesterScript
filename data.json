@@ -1,5 +1,5 @@
 {
-  "now": "2023-03-03T17:47:54.077Z",
+  "now": "2023-03-03T17:54:34.985Z",
   "events": [
     {
       "attributes": {
@@ -19,6 +19,16 @@
       "Id": "a02DC00000GedNxYAJ",
       "Name": "Install LWC_HOW",
       "Order__c": 2,
+      "ActiveEvent__c": true
+    },
+    {
+      "attributes": {
+        "type": "Event__c",
+        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedO1YAJ"
+      },
+      "Id": "a02DC00000GedO1YAJ",
+      "Name": "Logout from student Apps",
+      "Order__c": 3,
       "ActiveEvent__c": true
     },
     {
@@ -49,16 +59,6 @@
       "Id": "a02DC00000GedNwYAJ",
       "Name": "_Salesforce Development (SFDX, VS Code, etc)_",
       "Order__c": 22,
-      "ActiveEvent__c": true
-    },
-    {
-      "attributes": {
-        "type": "Event__c",
-        "url": "/services/data/v42.0/sobjects/Event__c/a02DC00000GedO1YAJ"
-      },
-      "Id": "a02DC00000GedO1YAJ",
-      "Name": "Logout from student Apps",
-      "Order__c": 54,
       "ActiveEvent__c": true
     },
     {
@@ -144,56 +144,6 @@
         "Operation__c": "Check Contains",
         "Order__c": 66,
         "Count_Events__c": 1
-      }
-    ],
-    "a02DC00000GedO1YAJ": [
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjYYAQ"
-        },
-        "Id": "a00DC000002qvjYYAQ",
-        "Name": "ACT-0060",
-        "AppName__c": "Logout SFDX",
-        "Command__c": "sfdx force:auth:logout --all --noprompt",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
-        "Operation__c": "Check Contains",
-        "Order__c": 61,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjZYAQ"
-        },
-        "Id": "a00DC000002qvjZYAQ",
-        "Name": "ACT-0061",
-        "AppName__c": "Logout Heroku",
-        "Command__c": "heroku logout",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
-        "Message__c": "Validating: Logout Heroku (heroku logout)",
-        "Operation__c": "Check Contains",
-        "Order__c": 62,
-        "Count_Events__c": 1
-      },
-      {
-        "attributes": {
-          "type": "Action__c",
-          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjhYAA"
-        },
-        "Id": "a00DC000002qvjhYAA",
-        "Name": "ACT-0069",
-        "AppName__c": "ETEPL - Kill App",
-        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
-        "EnabledAction__c": true,
-        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
-        "Operation__c": "Execute",
-        "Order__c": 70,
-        "Count_Events__c": 4
       }
     ],
     "a02DC00000GedNwYAJ": [
@@ -886,6 +836,56 @@
         "Operation__c": "Check Path",
         "Order__c": 60,
         "Count_Events__c": 1
+      }
+    ],
+    "a02DC00000GedO1YAJ": [
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjYYAQ"
+        },
+        "Id": "a00DC000002qvjYYAQ",
+        "Name": "ACT-0060",
+        "AppName__c": "Logout SFDX",
+        "Command__c": "sfdx force:auth:logout --all --noprompt",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Message__c": "Validating: Logout SFDX (sfdx force:auth:logout --all --noprompt)",
+        "Operation__c": "Check Contains",
+        "Order__c": 61,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjZYAQ"
+        },
+        "Id": "a00DC000002qvjZYAQ",
+        "Name": "ACT-0061",
+        "AppName__c": "Logout Heroku",
+        "Command__c": "heroku logout",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: Logout Heroku (heroku logout)",
+        "Message__c": "Validating: Logout Heroku (heroku logout)",
+        "Operation__c": "Check Contains",
+        "Order__c": 62,
+        "Count_Events__c": 1
+      },
+      {
+        "attributes": {
+          "type": "Action__c",
+          "url": "/services/data/v42.0/sobjects/Action__c/a00DC000002qvjhYAA"
+        },
+        "Id": "a00DC000002qvjhYAA",
+        "Name": "ACT-0069",
+        "AppName__c": "ETEPL - Kill App",
+        "Command__c": "TASKKILL  /F /IM \"ETTrailheadTester.exe\"",
+        "EnabledAction__c": true,
+        "ErrorMessage__c": "Could not validate: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Message__c": "Validating: ETEPL - XCopy (XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\src\" \"C:\\TH\\ETTrailheadTester\\resources\\app\\src\")",
+        "Operation__c": "Execute",
+        "Order__c": 70,
+        "Count_Events__c": 4
       }
     ],
     "a02DC00000GedNxYAJ": [
