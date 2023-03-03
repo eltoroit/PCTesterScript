@@ -690,15 +690,15 @@ function executeInstruction() {
 
 			// Check unique record AppName__c
 			instruction.AppName__c = instruction.AppName__c.toUpperCase();
-			if (errorCodes[instruction.AppName__c]) {
-				var msg =
-					"Instruction #" +
-					idxInstructions +
-					". You can not reuse AppName__c. " +
-					log.getPrettyJson(instruction);
-				reportErrorMessage(msg);
-				throw new Error(msg);
-			}
+			// if (errorCodes[instruction.AppName__c]) {
+			// 	var msg =
+			// 		"Instruction #" +
+			// 		idxInstructions +
+			// 		". You can not reuse AppName__c. " +
+			// 		log.getPrettyJson(instruction);
+			// 	reportErrorMessage(msg);
+			// 	throw new Error(msg);
+			// }
 			errorCodes[instruction.AppName__c] = instruction;
 	}
 
