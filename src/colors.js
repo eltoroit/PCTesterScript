@@ -33,7 +33,7 @@ let colorBgMagenta = "\x1b[45m";
 let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
-export default class ColorLog {
+export default class Colors {
 	static setDebug(isDebug) {
 		showTimestamp = isDebug;
 		showLineNumbers = isDebug;

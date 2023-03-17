@@ -1,2 +1,2 @@
-del bmPretend.json
+@REM del bmPretend.json
 node src/tester.js -test
