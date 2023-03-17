@@ -1,35 +1,47 @@
+import * as readline from "node:readline/promises";
+import Colors from "./colors.js";
+
 export default class Logs {
-	reportError(instruction) {
-		if (debug) log.debug("ERROR FOR: " + log.getPrettyJson(instruction));
-		errors.push(instruction);
-		log.error("*** *** ERROR", 1);
-		log.error(log.getPrettyJson(instruction), 1);
+	errors = [];
+	debug = false;
+	executeManualChecks = false;
+
+	constructor({ debug, errors, executeManualChecks }) {
+		this.debug = debug;
+		this.errors = errors;
+		this.executeManualChecks = executeManualChecks;
 	}
-	reportErrorMessage(msg) {
-		errors.push(msg);
-		log.error(log.getPrettyJson(msg), 1);
+	reportError({ instruction }) {
+		if (this.debug) Colors.debug("ERROR FOR: " + Colors.getPrettyJson(instruction));
+		this.errors.push(instruction);
+		Colors.error("*** *** ERROR", 1);
+		Colors.error(Colors.getPrettyJson(instruction), 1);
 	}
-	promptYesNo(instruction) {
-		log.promptMsg(instruction.Message__c);
+	reportErrorMessage({ msg }) {
+		this.errors.push(msg);
+		Colors.error(Colors.getPrettyJson(msg), 1);
+	}
+	promptYesNo({ instruction }) {
+		Colors.promptMsg(instruction.Message__c);
 
 		var sendKeysCmd = 'call sendkeys.bat "C:\\Windows\\System32\\cmd.exe" ""';
-		// log.debug("Sending keys: " + sendKeysCmd);
+		// Colors.debug("Sending keys: " + sendKeysCmd);
 		exec(sendKeysCmd);
 		const inputReadLine1 = readline.createInterface({
 			input: process.stdin,
 			output: process.stdout
 		});
 
-		if (executeManualChecks) {
+		if (this.executeManualChecks) {
 			var untilCorrectResponse = () => {
-				inputReadLine1.question(log.getPromptMsg("[Y/N] > "), (answer) => {
+				inputReadLine1.question(Colors.getPromptMsg("[Y/N] > "), (answer) => {
 					if (answer[0].toUpperCase() === "Y") {
 						inputReadLine1.close();
 						nextInstruction();
 					} else if (answer[0].toUpperCase() === "N") {
 						inputReadLine1.close();
 						instruction.returned = "User responsed 'N'";
-						reportError(instruction, true);
+						this.reportError(instruction, true);
 						nextInstruction();
 					} else {
 						untilCorrectResponse();
@@ -39,7 +51,7 @@ export default class Logs {
 
 			untilCorrectResponse();
 		} else {
-			log.error("Manual checks are being skipped for testing! (No prompt)");
+			Colors.error("Manual checks are being skipped for testing! (No prompt)");
 			nextInstruction();
 		}
 	}

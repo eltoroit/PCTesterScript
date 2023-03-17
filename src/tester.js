@@ -1,25 +1,28 @@
-import * as readline from "node:readline/promises";
+/* eslint-disable no-unused-vars */
+
 import url from "url";
 import http from "http";
 import https from "https";
 import path from "path";
 import minimist from "minimist";
-// import Colors from "./colors.js";
+import Colors from "./colors.js";
 
 // Configure execution...
 const timerDelay = 250;
 
 class Tester {
+	config = {
+		debug: false,
+		verbose: false,
+		resultsTofile: true,
+		checkUrlExists: true,
+		executeManualChecks: true
+	};
 	args = null;
 	errors = [];
-	debug = false;
 	errorCodes = {};
-	verbose = false;
 	instructions = [];
 	idxInstructions = 0;
-	resultsTofile = true;
-	checkUrlExists = true;
-	executeManualChecks = true;
 
 	constructor() {
 		// initialize app
@@ -31,22 +34,22 @@ class Tester {
 		});
 		const testType = this.args.test ? "TEST" : "PROD"; // TEST | PROD
 		if (testType == "PROD") {
-			this.debug = false;
-			this.verbose = false;
-			this.resultsTofile = true;
-			this.checkUrlExists = true;
-			this.executeManualChecks = true;
+			this.config.debug = false;
+			this.config.verbose = false;
+			this.config.resultsTofile = true;
+			this.config.checkUrlExists = true;
+			this.config.executeManualChecks = true;
 		} else if (testType == "TEST") {
-			this.debug = true;
-			this.verbose = true;
-			this.resultsTofile = true;
-			this.checkUrlExists = true;
-			this.executeManualChecks = false;
+			this.config.debug = true;
+			this.config.verbose = true;
+			this.config.resultsTofile = true;
+			this.config.checkUrlExists = true;
+			this.config.executeManualChecks = false;
 		}
 	}
 
 	start() {
-		colorLogs.error("Hello World");
+		Colors.error("Hello World");
 	}
 }
 

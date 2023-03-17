@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Define variables
 var showTimestamp = false;
 var showLineNumbers = false;
@@ -34,7 +35,7 @@ let colorBgCyan = "\x1b[46m";
 let colorBgWhite = "\x1b[47m";
 
 export default class Colors {
-	static setDebug(isDebug) {
+	static setDebug({ isDebug }) {
 		showTimestamp = isDebug;
 		showLineNumbers = isDebug;
 	}
@@ -51,7 +52,7 @@ export default class Colors {
 		return strTime;
 	}
 
-	static getTrace(offset) {
+	static getTrace({ offset }) {
 		var prefix;
 
 		if (!offset) offset = 0;
@@ -79,24 +80,24 @@ export default class Colors {
 		return prefix + (prefix.length > 1 ? ": " : "");
 	}
 
-	static error(msg, offset) {
+	static error({ msg, offset }) {
 		if (!offset) offset = 0;
 		console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
 	}
 
-	static debug(msg) {
+	static debug({ msg }) {
 		console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
 	}
 
-	static info(msg) {
+	static info({ msg }) {
 		console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);
 	}
 
-	static success(msg) {
+	static success({ msg }) {
 		console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
 	}
 
-	static promptMsg(msg) {
+	static promptMsg({ msg }) {
 		console.log(this.getPromptMsg(msg));
 	}
 
@@ -104,11 +105,11 @@ export default class Colors {
 		console.log(clearScreenCode);
 	}
 
-	static getPromptMsg(msg) {
+	static getPromptMsg({ msg }) {
 		return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
 	}
 
-	static getPrettyJson(obj) {
+	static getPrettyJson({ obj }) {
 		return JSON.stringify(obj, null, 4);
 	}
 }
