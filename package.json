@@ -1,10 +1,11 @@
 {
 	"name": "pctesterscript",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Tests computer images",
 	"main": "tester.js",
 	"scripts": {
-		"testMachine": "node --inspect-brk tester.js -test -run=1"
+		"start": "node src/tester.js"
 	},
 	"repository": {
 		"type": "git",
