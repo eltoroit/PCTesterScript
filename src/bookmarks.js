@@ -1,4 +1,7 @@
-// Bookmarks
+/* eslint-disable no-unused-vars */
+import { exec, execSync, spawn, spawnSync } from "child_process";
+import Colors from "./colors.js";
+
 const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
@@ -8,17 +11,19 @@ const bmFirefoxPath = ["C:\\Users\\Administrator\\AppData\\Roaming\\Mozilla\\Fir
 
 export default class Bookmarks {
 	bm = {};
-	constructor() {
+	config = null;
+	constructor({ config }) {
 		this.bm.FF = {};
 		this.bm.Bar = {};
 		this.bm.Chrome = {};
+		this.config = config;
 	}
 
-	openUrl(urlToCheck, callback) {
-		if (checkUrlExists) {
+	openUrl({ urlToCheck, callback }) {
+		if (this.config.checkUrlExists) {
 			var process = spawnSync("curl", [urlToCheck]);
-			if (verbose) log.debug(process.stderr);
-			if (debug) log.debug(JSON.stringify(process.stdout.toString("utf8")).substring(0, 250));
+			if (this.config.verbose) Colors.debug(process.stderr);
+			if (this.config.debug) Colors.debug(JSON.stringify(process.stdout.toString("utf8")).substring(0, 250));
 
 			if (process.status == 0) {
 				callback(true);
@@ -26,11 +31,11 @@ export default class Bookmarks {
 				callback(false, "Invalid url: " + urlToCheck);
 			}
 		} else {
-			if (debug) log.debug("URL [" + urlToCheck + "] was not validated");
+			if (this.config.debug) Colors.debug("URL [" + urlToCheck + "] was not validated");
 			callback(true);
 		}
 	}
-	findBookmarks_Chrome_Children(node, path) {
+	findBookmarks_Chrome_Children({ node, path }) {
 		var thisPath;
 
 		if (node.name == "Bookmarks bar") {
@@ -39,28 +44,26 @@ export default class Bookmarks {
 			thisPath = path + "[" + node.name + "]";
 		}
 		if (node.url) {
-			var barNode = bm.Bar[thisPath];
+			var barNode = this.bm.Bar[thisPath];
 			if (!barNode) barNode = {};
 			barNode.Chrome = node.url;
-			bm.Bar[thisPath] = barNode;
-			bm.Chrome[thisPath] = node.url;
+			this.bm.Bar[thisPath] = barNode;
+			this.bm.Chrome[thisPath] = node.url;
 		}
 		if (node.children) {
 			for (var i = 0; i < node.children.length; i++) {
-				findBookmarks_Chrome_Children(node.children[i], thisPath);
+				this.findBookmarks_Chrome_Children(node.children[i], thisPath);
 			}
 		}
 	}
 	findBookmarks_Chrome() {
-		if (verbose) log.info("Finding Chrome bookmarks");
+		if (this.config.verbose) Colors.info("Finding Chrome bookmarks");
 
 		var data = loadFileJson(bmChromePath);
 		findBookmarks_Chrome_Children(data["roots"]["bookmark_bar"], "");
-		// if (verbose) log.debug("Chrome Bookmarks (1): ");
-		// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 	}
 	findBookmarks_Firefox() {
-		if (verbose) log.info("Finding Firefox bookmarks");
+		if (this.config.verbose) Colors.info("Finding Firefox bookmarks");
 
 		var tmp = {};
 		var record = {};
@@ -71,10 +74,10 @@ export default class Bookmarks {
 		tmp.URLs = {};
 
 		// Find sqlite path
-		if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${bmFirefoxPath[0]}`);
+		if (debug) Colors.debug(`[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${bmFirefoxPath[0]}`);
 		try {
 			var folders = fs.readdirSync(bmFirefoxPath[0]);
-			if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
+			if (debug) Colors.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
 			let validFolders = folders.filter((folder) => {
 				let tmp = `${bmFirefoxPath[0]}\\${folder}\\${bmFirefoxPath[2]}`;
 				if (debug) console.log(`Checking path: ${tmp}`);
@@ -83,7 +86,7 @@ export default class Bookmarks {
 			if (debug) console.log(`Checking paths (output): ${JSON.stringify(validFolders)}`);
 			if (validFolders.length == 1) {
 				sqlitepath = `${bmFirefoxPath[0]}\\${validFolders[0]}\\${bmFirefoxPath[2]}`;
-				if (debug) log.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
+				if (debug) Colors.debug(`[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}`);
 			} else {
 				var msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
 				reportErrorMessage(msg);
@@ -96,7 +99,7 @@ export default class Bookmarks {
 			cmd += '"' + sqlitepath + '" ';
 			cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
 			cmd += "> " + bmTempFFLinePath;
-			if (verbose) log.debug("Execting command: " + cmd);
+			if (this.config.verbose) Colors.debug("Execting command: " + cmd);
 
 			var process = exec(cmd, (error, stdout, stderr) => {
 				if (error) reportErrorMessage(error);
@@ -143,9 +146,6 @@ export default class Bookmarks {
 				});
 
 				lineReader.on("close", () => {
-					// if (verbose) log.debug("Firefox Bookmarks... (2): ");
-					// if (verbose) log.debug(JSON.stringify(tmp, null, 4));
-
 					// Merge the data
 					for (var path in tmp.TitlesByName) {
 						if (path.startsWith("[BAR]")) {
@@ -153,24 +153,21 @@ export default class Bookmarks {
 								var rowId = tmp.TitlesByName[path];
 								var url = tmp.URLs[rowId];
 								if (url) {
-									var barNode = bm.Bar[path];
+									var barNode = this.bm.Bar[path];
 									if (!barNode) barNode = {};
 									barNode.FF = url;
-									bm.Bar[path] = barNode;
+									this.bm.Bar[path] = barNode;
 
-									bm.FF[path] = url;
+									this.bm.FF[path] = url;
 								}
 							}
 						}
 					}
 
-					// if (verbose) log.debug("Merged Bookmarks (A)... (3): ");
-					// if (verbose) log.debug(JSON.stringify(bm, null, 4));
-
-					// Check bm.Bar
+					// Check this.bm.Bar
 					var bmBarNew = [];
 					var bmCounter = 0;
-					var bmBarTemp = bm.Bar;
+					var bmBarTemp = this.bm.Bar;
 
 					for (var path in bmBarTemp) {
 						if (bmBarTemp.hasOwnProperty(path)) {
@@ -197,10 +194,7 @@ export default class Bookmarks {
 							bmBarNew.push(nodeNew);
 						}
 					}
-					bm.Bar = bmBarNew;
-
-					// if (verbose) log.debug("Merged Bookmarks (B)... (4): ");
-					// if (verbose) log.debug(JSON.stringify(bm, null, 4));
+					this.bm.Bar = bmBarNew;
 
 					// Write to files
 					fs.writeFile(
@@ -208,7 +202,7 @@ export default class Bookmarks {
 						JSON.stringify(
 							{
 								DTTM: new Date().toJSON(),
-								bm: bm.Bar
+								bm: this.bm.Bar
 							},
 							null,
 							4
@@ -219,7 +213,7 @@ export default class Bookmarks {
 								reportErrorMessage(err);
 							}
 
-							if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
+							if (debug) Colors.info("The file [" + bmDumpPath + "] was saved!");
 						}
 					);
 
@@ -229,7 +223,7 @@ export default class Bookmarks {
 							reportErrorMessage(err);
 						}
 
-						if (debug) log.info("The file [" + bmPretendPath + "] was saved!");
+						if (debug) Colors.info("The file [" + bmPretendPath + "] was saved!");
 					});
 
 					// Validate them
@@ -241,18 +235,18 @@ export default class Bookmarks {
 		}
 	}
 	validateBookmarks_Process() {
-		if (verbose) log.info("Validating Bookmarks");
+		if (this.config.verbose) Colors.info("Validating Bookmarks");
 
 		var errorCount = 0;
 		var bmChecks = loadFileJson(bmCheckPath);
 
 		bmChecks.forEach((bmCheck) => {
 			var hasErrors = false;
-			var urlFF = bm.FF[bmCheck.title];
-			var urlChrome = bm.Chrome[bmCheck.title];
+			var urlFF = this.bm.FF[bmCheck.title];
+			var urlChrome = this.bm.Chrome[bmCheck.title];
 			var expectedUrl = bmCheck.urlExpected;
 
-			log.info("Bookmark: " + bmCheck.title);
+			Colors.info("Bookmark: " + bmCheck.title);
 
 			if (bmCheck.checkFF && bmCheck.checkChrome) {
 				if (urlFF != urlChrome && urlFF && urlChrome) {
@@ -316,7 +310,7 @@ export default class Bookmarks {
 						};
 						reportErrorMessage(msg);
 					} else {
-						if (verbose) log.success("VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]");
+						if (this.config.verbose) Colors.success("VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]");
 					}
 				});
 			}
@@ -324,11 +318,11 @@ export default class Bookmarks {
 
 		nextInstruction();
 	}
-	validateBookmarks(instruction) {
-		if (verbose) log.info("Validating all bookmarks for all browsers");
+	validateBookmarks() {
+		if (this.config.verbose) Colors.info("Validating all bookmarks for all browsers");
 
 		if (doesFileExist(bmPretendPath)) {
-			log.error("Bookmarks information read from file [" + bmPretendPath + "]");
+			Colors.error("Bookmarks information read from file [" + bmPretendPath + "]");
 			bm = loadFileJson(bmPretendPath);
 			validateBookmarks_Process();
 		} else {

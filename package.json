@@ -6,7 +6,7 @@
 	"main": "tester.js",
 	"scripts": {
 		"start": "node src/tester.js",
-		"compile": "node --check src/tester.js"
+		"compile": "eslint . > eslintErrors.txt"
 	},
 	"repository": {
 		"type": "git",

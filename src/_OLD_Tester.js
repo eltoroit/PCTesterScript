@@ -1,6 +1,6 @@
+#! /usr/bin/env node
 /* eslint-disable  */
 
-#! /usr/bin/env node
 "use strict";
 
 // This script was created by Andres Perez to test the image machines.
@@ -63,11 +63,7 @@ const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 const bmChromePath = "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
-const bmFirefoxPath = [
-	"C:\\Users\\Administrator\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles",
-	"*.default-release",
-	"places.sqlite"
-];
+const bmFirefoxPath = ["C:\\Users\\Administrator\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles", "*.default-release", "places.sqlite"];
 
 function reportError(instruction) {
 	if (debug) log.debug("ERROR FOR: " + log.getPrettyJson(instruction));
@@ -283,7 +279,7 @@ function findBookmarks_Firefox() {
 	try {
 		var folders = fs.readdirSync(bmFirefoxPath[0]);
 		if (debug) log.debug(`[Firefox Bookmarks][LOLG]: Foders found: ${JSON.stringify(folders)}: `);
-		let validFolders = folders.filter(folder => {
+		let validFolders = folders.filter((folder) => {
 			let tmp = `${bmFirefoxPath[0]}\\${folder}\\${bmFirefoxPath[2]}`;
 			if (debug) console.log(`Checking path: ${tmp}`);
 			return fs.existsSync(tmp);
@@ -302,8 +298,7 @@ function findBookmarks_Firefox() {
 		var cmd = "";
 		cmd += "sqlite3 -header -line ";
 		cmd += '"' + sqlitepath + '" ';
-		cmd +=
-			'"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
+		cmd += '"SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id"';
 		cmd += "> " + bmTempFFLinePath;
 		if (verbose) log.debug("Execting command: " + cmd);
 
@@ -412,17 +407,25 @@ function findBookmarks_Firefox() {
 				// if (verbose) log.debug(JSON.stringify(bm, null, 4));
 
 				// Write to files
-				fs.writeFile(bmDumpPath, JSON.stringify({
-					DTTM: new Date().toJSON(),
-					bm: bm.Bar
-				}, null, 4), function (err) {
-					if (err) {
-						reportErrorMessage("Searching for Firefox bookmars");
-						reportErrorMessage(err);
-					}
+				fs.writeFile(
+					bmDumpPath,
+					JSON.stringify(
+						{
+							DTTM: new Date().toJSON(),
+							bm: bm.Bar
+						},
+						null,
+						4
+					),
+					function (err) {
+						if (err) {
+							reportErrorMessage("Searching for Firefox bookmars");
+							reportErrorMessage(err);
+						}
 
-					if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
-				});
+						if (debug) log.info("The file [" + bmDumpPath + "] was saved!");
+					}
+				);
 
 				fs.writeFile(bmPretendPath, JSON.stringify(bm, null, 4), function (err) {
 					if (err) {
@@ -440,7 +443,6 @@ function findBookmarks_Firefox() {
 	} catch (ex) {
 		reportErrorMessage("Failed checking Firefox");
 	}
-
 }
 function validateBookmarks_Process() {
 	if (verbose) log.info("Validating Bookmarks");
@@ -636,7 +638,7 @@ function doesFileExist(path) {
 	var exists = false;
 	try {
 		exists = fs.statSync(path).size > 0;
-	} catch (ex) { }
+	} catch (ex) {}
 
 	return exists;
 }
@@ -667,25 +669,12 @@ function executeInstruction() {
 		case "Write":
 			break;
 		default:
-			log.info(
-				">>> Instruction #" +
-				idxInstructions +
-				": " +
-				instruction.Name +
-				" | " +
-				instruction.AppName__c +
-				" | " +
-				instruction.Operation__c
-			);
+			log.info(">>> Instruction #" + idxInstructions + ": " + instruction.Name + " | " + instruction.AppName__c + " | " + instruction.Operation__c);
 			if (debug) log.debug(log.getPrettyJson(instruction));
 
 			// Check every record has an AppName__c
 			if (!instruction.AppName__c) {
-				var msg =
-					"Instruction #" +
-					idxInstructions +
-					". Does not have a valid AppName__c. " +
-					log.getPrettyJson(instruction);
+				var msg = "Instruction #" + idxInstructions + ". Does not have a valid AppName__c. " + log.getPrettyJson(instruction);
 				reportErrorMessage(msg);
 				throw msg;
 			}
@@ -755,7 +744,7 @@ function executeInstruction() {
 				}, timerDelay * 10);
 			} else {
 				let command = instruction.Command__c.replace(/"/g, "");
-				let expected = command.substring(command.lastIndexOf('\\') + 1);
+				let expected = command.substring(command.lastIndexOf("\\") + 1);
 
 				log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
 				let newInstruction = { ...instruction };
@@ -765,9 +754,9 @@ function executeInstruction() {
 				newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
 				newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
 
-				console.log('New instruction -- START');
+				console.log("New instruction -- START");
 				log.debug(log.getPrettyJson(newInstruction));
-				console.log('New instruction -- END');
+				console.log("New instruction -- END");
 
 				checkPath(newInstruction);
 			}
@@ -827,7 +816,7 @@ function menuChooseEvent(data) {
 		});
 		idxInstructions = 0;
 		executeInstruction();
-	}
+	};
 
 	var events = data.events;
 
@@ -850,9 +839,7 @@ function menuChooseEvent(data) {
 		});
 
 		var forEver = function () {
-			inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function (
-				answer
-			) {
+			inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function (answer) {
 				if (answer == 0) {
 					process.exit(0);
 				} else if (answer == 99) {
@@ -876,7 +863,6 @@ function menuChooseEvent(data) {
 
 		forEver();
 	}
-
 }
 function bookmarksChecks() {
 	if (doesFileExist(bmPretendPath)) {

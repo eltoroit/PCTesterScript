@@ -1,4 +1,9 @@
 export default class JsonFile {
+	config = null;
+	constructor({ config }) {
+		this.config = config;
+	}
+
 	jsonFile_FindPath(instruction) {
 		if (debug) log.debug("Reading JSON_Action__c");
 		var JSON_Action = instruction.JSON_Actions__r;
@@ -44,6 +49,7 @@ export default class JsonFile {
 		}
 		return data;
 	}
+
 	jsonFile_Edit(instruction) {
 		if (verbose) log.info("Editing JSON File: " + instruction.AppName__c);
 		const data = jsonFile_FindPath(instruction);
@@ -65,6 +71,7 @@ export default class JsonFile {
 			}
 		});
 	}
+
 	jsonFile_Check(instruction) {
 		if (verbose) log.info("Reading JSON File: " + instruction.AppName__c);
 		const data = jsonFile_FindPath(instruction);
@@ -86,9 +93,11 @@ export default class JsonFile {
 			nextInstruction();
 		}
 	}
+
 	loadFileJson(path) {
 		return JSON.parse(loadFile(path));
 	}
+
 	doesFileExist(path) {
 		var exists = false;
 		try {
@@ -97,6 +106,7 @@ export default class JsonFile {
 
 		return exists;
 	}
+
 	loadFile(path) {
 		if (verbose) log.debug("Reading file: " + path);
 
