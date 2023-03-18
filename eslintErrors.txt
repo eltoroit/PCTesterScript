@@ -1,213 +1,13 @@
-	config = {
-		debug: false,
-		verbose: false,
-		resultsTofile: true,
-		checkUrlExists: true,
-		executeManualChecks: true
-	};
-
-
-C:\TH\PCTesterScript\src\_OLD_Tester.js
-  3:2  error  Parsing error: Unexpected character '!'
 
 C:\TH\PCTesterScript\src\bookmarks.js
-   18:7   error  'checkUrlExists' is not defined                                            no-undef
-   19:18  error  'spawnSync' is not defined                                                 no-undef
-   20:8   error  'verbose' is not defined                                                   no-undef
-   20:17  error  'log' is not defined                                                       no-undef
-   21:8   error  'debug' is not defined                                                     no-undef
-   21:15  error  'log' is not defined                                                       no-undef
-   29:8   error  'debug' is not defined                                                     no-undef
-   29:15  error  'log' is not defined                                                       no-undef
-   42:18  error  'bm' is not defined                                                        no-undef
-   45:4   error  'bm' is not defined                                                        no-undef
-   46:4   error  'bm' is not defined                                                        no-undef
-   50:5   error  'findBookmarks_Chrome_Children' is not defined                             no-undef
-   55:7   error  'verbose' is not defined                                                   no-undef
-   55:16  error  'log' is not defined                                                       no-undef
-   57:14  error  'loadFileJson' is not defined                                              no-undef
-   58:3   error  'findBookmarks_Chrome_Children' is not defined                             no-undef
-   63:7   error  'verbose' is not defined                                                   no-undef
-   63:16  error  'log' is not defined                                                       no-undef
-   74:7   error  'debug' is not defined                                                     no-undef
-   74:14  error  'log' is not defined                                                       no-undef
-   76:18  error  'fs' is not defined                                                        no-undef
-   77:8   error  'debug' is not defined                                                     no-undef
-   77:15  error  'log' is not defined                                                       no-undef
-   80:9   error  'debug' is not defined                                                     no-undef
-   81:12  error  'fs' is not defined                                                        no-undef
-   83:8   error  'debug' is not defined                                                     no-undef
-   86:9   error  'debug' is not defined                                                     no-undef
-   86:16  error  'log' is not defined                                                       no-undef
-   89:5   error  'reportErrorMessage' is not defined                                        no-undef
-   99:8   error  'verbose' is not defined                                                   no-undef
-   99:17  error  'log' is not defined                                                       no-undef
-  101:8   error  'process' is assigned a value but never used                               no-unused-vars
-  101:18  error  'exec' is not defined                                                      no-undef
-  101:36  error  'stdout' is defined but never used                                         no-unused-vars
-  101:44  error  'stderr' is defined but never used                                         no-unused-vars
-  102:16  error  'reportErrorMessage' is not defined                                        no-undef
-  105:5   error  'fs' is not defined                                                        no-undef
-  118:8   error  'reportErrorMessage' is not defined                                        no-undef
-  132:9   error  'reportErrorMessage' is not defined                                        no-undef
-  152:29  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-  156:24  error  'bm' is not defined                                                        no-undef
-  159:10  error  'bm' is not defined                                                        no-undef
-  161:10  error  'bm' is not defined                                                        no-undef
-  173:22  error  'bm' is not defined                                                        no-undef
-  175:15  error  'path' is already defined                                                  no-redeclare
-  176:21  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
-  200:6   error  'bm' is not defined                                                        no-undef
-  206:6   error  'fs' is not defined                                                        no-undef
-  211:13  error  'bm' is not defined                                                        no-undef
-  218:9   error  'reportErrorMessage' is not defined                                        no-undef
-  219:9   error  'reportErrorMessage' is not defined                                        no-undef
-  222:12  error  'debug' is not defined                                                     no-undef
-  222:19  error  'log' is not defined                                                       no-undef
-  226:6   error  'fs' is not defined                                                        no-undef
-  226:49  error  'bm' is not defined                                                        no-undef
-  228:8   error  'reportErrorMessage' is not defined                                        no-undef
-  229:8   error  'reportErrorMessage' is not defined                                        no-undef
-  232:11  error  'debug' is not defined                                                     no-undef
-  232:18  error  'log' is not defined                                                       no-undef
-  236:6   error  'validateBookmarks_Process' is not defined                                 no-undef
-  240:4   error  'reportErrorMessage' is not defined                                        no-undef
-  244:7   error  'verbose' is not defined                                                   no-undef
-  244:16  error  'log' is not defined                                                       no-undef
-  246:7   error  'errorCount' is assigned a value but never used                            no-unused-vars
-  247:18  error  'loadFileJson' is not defined                                              no-undef
-  251:16  error  'bm' is not defined                                                        no-undef
-  252:20  error  'bm' is not defined                                                        no-undef
-  255:4   error  'log' is not defined                                                       no-undef
-  269:6   error  'reportErrorMessage' is not defined                                        no-undef
-  277:10  error  'msg' is already defined                                                   no-redeclare
-  285:6   error  'reportErrorMessage' is not defined                                        no-undef
-  293:10  error  'msg' is already defined                                                   no-redeclare
-  301:6   error  'reportErrorMessage' is not defined                                        no-undef
-  306:5   error  'openUrl' is not defined                                                   no-undef
-  306:38  error  'error' is defined but never used                                          no-unused-vars
-  317:7   error  'reportErrorMessage' is not defined                                        no-undef
-  319:11  error  'verbose' is not defined                                                   no-undef
-  319:20  error  'log' is not defined                                                       no-undef
-  325:3   error  'nextInstruction' is not defined                                           no-undef
-  327:20  error  'instruction' is defined but never used                                    no-unused-vars
-  328:7   error  'verbose' is not defined                                                   no-undef
-  328:16  error  'log' is not defined                                                       no-undef
-  330:7   error  'doesFileExist' is not defined                                             no-undef
-  331:4   error  'log' is not defined                                                       no-undef
-  332:4   error  'bm' is not defined                                                        no-undef
-  332:9   error  'loadFileJson' is not defined                                              no-undef
-  333:4   error  'validateBookmarks_Process' is not defined                                 no-undef
-  337:4   error  'findBookmarks_Chrome' is not defined                                      no-undef
-  338:4   error  'findBookmarks_Firefox' is not defined                                     no-undef
-
-C:\TH\PCTesterScript\src\jsonFile.js
-    3:7   error  'debug' is not defined               no-undef
-    3:14  error  'log' is not defined                 no-undef
-    8:7   error  'debug' is not defined               no-undef
-    8:14  error  'log' is not defined                 no-undef
-    9:14  error  'loadFileJson' is not defined        no-undef
-   12:7   error  'debug' is not defined               no-undef
-   12:14  error  'log' is not defined                 no-undef
-   31:7   error  'reportErrorMessage' is not defined  no-undef
-   32:7   error  'reportError' is not defined         no-undef
-   39:7   error  'reportErrorMessage' is not defined  no-undef
-   40:7   error  'reportError' is not defined         no-undef
-   48:7   error  'verbose' is not defined             no-undef
-   48:16  error  'log' is not defined                 no-undef
-   49:16  error  'jsonFile_FindPath' is not defined   no-undef
-   51:24  error  'loadFileJson' is not defined        no-undef
-   53:7   error  'debug' is not defined               no-undef
-   53:14  error  'log' is not defined                 no-undef
-   53:42  error  'log' is not defined                 no-undef
-   54:7   error  'debug' is not defined               no-undef
-   54:14  error  'log' is not defined                 no-undef
-   54:43  error  'log' is not defined                 no-undef
-   56:3   error  'fs' is not defined                  no-undef
-   56:40  error  'log' is not defined                 no-undef
-   60:5   error  'reportError' is not defined         no-undef
-   61:5   error  'nextInstruction' is not defined     no-undef
-   63:9   error  'verbose' is not defined             no-undef
-   63:18  error  'log' is not defined                 no-undef
-   64:5   error  'nextInstruction' is not defined     no-undef
-   69:7   error  'verbose' is not defined             no-undef
-   69:16  error  'log' is not defined                 no-undef
-   70:16  error  'jsonFile_FindPath' is not defined   no-undef
-   73:7   error  'debug' is not defined               no-undef
-   73:14  error  'log' is not defined                 no-undef
-   73:42  error  'log' is not defined                 no-undef
-   74:7   error  'debug' is not defined               no-undef
-   74:14  error  'log' is not defined                 no-undef
-   74:43  error  'log' is not defined                 no-undef
-   77:8   error  'verbose' is not defined             no-undef
-   77:17  error  'log' is not defined                 no-undef
-   78:4   error  'nextInstruction' is not defined     no-undef
-   81:4   error  'reportError' is not defined         no-undef
-   82:4   error  'reportError' is not defined         no-undef
-   86:4   error  'nextInstruction' is not defined     no-undef
-   90:21  error  'loadFile' is not defined            no-undef
-   95:13  error  'fs' is not defined                  no-undef
-   96:16  error  Empty block statement                no-empty
-  101:7   error  'verbose' is not defined             no-undef
-  101:16  error  'log' is not defined                 no-undef
-  103:8   error  'doesFileExist' is not defined       no-undef
-  104:4   error  'reportErrorMessage' is not defined  no-undef
-  106:5   error  'fs' is not defined                  no-undef
-  108:5   error  'reportErrorMessage' is not defined  no-undef
-  112:10  error  'fs' is not defined                  no-undef
-
-C:\TH\PCTesterScript\src\logs.js
-  29:3  error  'exec' is not defined             no-undef
-  40:7  error  'nextInstruction' is not defined  no-undef
-  45:7  error  'nextInstruction' is not defined  no-undef
-  55:4  error  'nextInstruction' is not defined  no-undef
-
-C:\TH\PCTesterScript\src\lowLevelOs.js
-    1:13  error  'fs' is defined but never used                no-unused-vars
-    2:16  error  'execSync' is defined but never used          no-unused-vars
-    2:33  error  'spawnSync' is defined but never used         no-unused-vars
-    7:7   error  'debug' is not defined                        no-undef
-    7:14  error  'log' is not defined                          no-undef
-    7:39  error  'log' is not defined                          no-undef
-   17:4   error  'log' is not defined                          no-undef
-   22:4   error  'reportErrorMessage' is not defined           no-undef
-   26:7   error  'debug' is not defined                        no-undef
-   26:14  error  'log' is not defined                          no-undef
-   27:7   error  'process' is assigned a value but never used  no-unused-vars
-   34:8   error  'debug' is not defined                        no-undef
-   34:15  error  'log' is not defined                          no-undef
-   34:38  error  'log' is not defined                          no-undef
-   39:7   error  'verbose' is not defined                      no-undef
-   39:16  error  'log' is not defined                          no-undef
-   42:9   error  'verbose' is not defined                      no-undef
-   42:18  error  'log' is not defined                          no-undef
-   43:5   error  'nextInstruction' is not defined              no-undef
-   46:5   error  'reportError' is not defined                  no-undef
-   47:5   error  'nextInstruction' is not defined              no-undef
-   50:3   error  'executeCommand' is not defined               no-undef
-   54:7   error  'verbose' is not defined                      no-undef
-   56:5   error  'log' is not defined                          no-undef
-   58:5   error  'log' is not defined                          no-undef
-   73:9   error  'verbose' is not defined                      no-undef
-   75:7   error  'log' is not defined                          no-undef
-   77:7   error  'log' is not defined                          no-undef
-   82:5   error  'reportError' is not defined                  no-undef
-   84:4   error  'nextInstruction' is not defined              no-undef
-   87:4   error  'spawnCommand' is not defined                 no-undef
-   89:4   error  'executeCommand' is not defined               no-undef
-   93:7   error  'verbose' is not defined                      no-undef
-   93:16  error  'log' is not defined                          no-undef
-   98:10  error  'verbose' is not defined                      no-undef
-   98:19  error  'log' is not defined                          no-undef
-   99:6   error  'nextInstruction' is not defined              no-undef
-  102:6   error  'reportError' is not defined                  no-undef
-  103:6   error  'nextInstruction' is not defined              no-undef
-  107:3   error  'executeCommand' is not defined               no-undef
+  190:27  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  211:19  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
 
 C:\TH\PCTesterScript\src\testerOLD.js
     2:33  error  'timerDelay' is not defined                   no-undef
     5:6   error  'idxInstructions' is not defined              no-undef
     5:25  error  'instructions' is not defined                 no-undef
+    6:2   error  Unexpected var, use let or const instead      no-var
     6:20  error  'instructions' is not defined                 no-undef
     6:33  error  'idxInstructions' is not defined              no-undef
    14:4   error  'log' is not defined                          no-undef
@@ -215,6 +15,7 @@ C:\TH\PCTesterScript\src\testerOLD.js
    15:8   error  'debug' is not defined                        no-undef
    15:15  error  'log' is not defined                          no-undef
    15:25  error  'log' is not defined                          no-undef
+   19:5   error  Unexpected var, use let or const instead      no-var
    19:33  error  'idxInstructions' is not defined              no-undef
    19:92  error  'log' is not defined                          no-undef
    20:5   error  'reportErrorMessage' is not defined           no-undef
@@ -272,18 +73,22 @@ C:\TH\PCTesterScript\src\testerOLD.js
   153:3   error  'instructions' is not defined                 no-undef
   154:3   error  'instructions' is not defined                 no-undef
   159:3   error  'idxInstructions' is not defined              no-undef
+  163:2   error  Unexpected var, use let or const instead      no-var
   165:2   error  'log' is not defined                          no-undef
   165:15  error  'debug' is not defined                        no-undef
   166:2   error  'log' is not defined                          no-undef
   167:2   error  'log' is not defined                          no-undef
   168:2   error  'log' is not defined                          no-undef
+  169:7   error  Unexpected var, use let or const instead      no-var
   170:3   error  'log' is not defined                          no-undef
   172:2   error  'log' is not defined                          no-undef
   173:2   error  'log' is not defined                          no-undef
   175:6   error  'args' is not defined                         no-undef
   176:23  error  'args' is not defined                         no-undef
   178:26  error  'readline' is not defined                     no-undef
+  183:3   error  Unexpected var, use let or const instead      no-var
   184:28  error  'log' is not defined                          no-undef
+  191:6   error  Unexpected var, use let or const instead      no-var
   192:6   error  'instructions' is not defined                 no-undef
   193:6   error  'instructions' is not defined                 no-undef
   198:6   error  'idxInstructions' is not defined              no-undef
@@ -295,17 +100,21 @@ C:\TH\PCTesterScript\src\testerOLD.js
   213:3   error  'log' is not defined                          no-undef
   215:6   error  'doesFileExist' is not defined                no-undef
   215:20  error  'bmCheckPath' is not defined                  no-undef
+  216:3   error  Unexpected var, use let or const instead      no-var
   216:18  error  'loadFileJson' is not defined                 no-undef
   216:31  error  'bmCheckPath' is not defined                  no-undef
   218:4   error  'log' is not defined                          no-undef
+  219:4   error  Unexpected var, use let or const instead      no-var
   219:65  error  'bmCheckPath' is not defined                  no-undef
   220:4   error  'log' is not defined                          no-undef
   224:3   error  'log' is not defined                          no-undef
+  225:3   error  Unexpected var, use let or const instead      no-var
   225:7   error  'msg' is already defined                      no-redeclare
   225:56  error  'bmCheckPath' is not defined                  no-undef
   226:3   error  'log' is not defined                          no-undef
   231:14  error  'loadFileJson' is not defined                 no-undef
   264:1   error  'log' is not defined                          no-undef
 
-✖ 288 problems (288 errors, 0 warnings)
+✖ 112 problems (112 errors, 0 warnings)
+  7 errors and 0 warnings potentially fixable with the `--fix` option.
 

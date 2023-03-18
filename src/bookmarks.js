@@ -187,7 +187,7 @@ export default class Bookmarks {
 			// Merge the data
 			for (let path in tmp.TitlesByName) {
 				if (path.startsWith("[BAR]")) {
-					if (tmp.TitlesByName.hasOwnProperty(path)) {
+					if (Object.prototype.hasOwnProperty.call(tmp.TitlesByName, path)) {
 						let rowId = tmp.TitlesByName[path];
 						let url = tmp.URLs[rowId];
 						if (url) {
@@ -208,7 +208,7 @@ export default class Bookmarks {
 			let bmBarTemp = this.bm.Bar;
 
 			for (let path in bmBarTemp) {
-				if (bmBarTemp.hasOwnProperty(path)) {
+				if (Object.prototype.hasOwnProperty.call(bmBarTemp, path)) {
 					let nodeNew = {};
 					let nodeTemp = bmBarTemp[path];
 					bmCounter++;
