@@ -1,29 +1,46 @@
-/* eslint-disable no-unused-vars */
+import ETAsserts from "./etAsserts";
 
 export default class Colors {
-	static setDebug({ isDebug }) {
-		showTimestamp = isDebug;
-		showLineNumbers = isDebug;
+	static clearScreen() {
+		console.log(clearScreenCode);
+	}
+
+	static debug({ msg }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
+
+		console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
+	}
+
+	static error({ msg, offset = 0 }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
+
+		console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
+	}
+
+	static getPrettyJson({ obj }) {
+		ETAsserts.hasData({ value: obj, message: "obj" });
+
+		return JSON.stringify(obj, null, 4);
+	}
+
+	static getPromptMsg({ msg }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
+
+		return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
 	}
 
 	static getTime() {
-		var date = new Date();
-		var hour = date.getHours();
-		var minutes = date.getMinutes();
-		var seconds = date.getSeconds();
-		var milliseconds = date.getMilliseconds();
-		var strTime =
-			"[" + (hour < 10 ? "0" + hour : hour) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds) + "." + ("00" + milliseconds).slice(-3) + "]";
+		let date = new Date();
+		let hour = `${date.getHours()}`.padStart(2, "0");
+		let minutes = `${date.getMinutes()}`.padStart(2, "0");
+		let seconds = `${date.getSeconds()}`.padStart(2, "0");
+		let milliseconds = `${date.getMilliseconds()}`.padStart(3, "0");
 
-		return strTime;
+		return `[${hour}:${minutes}:${seconds}.${milliseconds}]`;
 	}
 
-	static getTrace({ offset }) {
-		var prefix;
-
-		if (!offset) offset = 0;
-
-		prefix = "";
+	static getTrace({ offset = 0 }) {
+		let prefix = "";
 		if (showTimestamp) {
 			prefix += this.getTime();
 		}
@@ -32,10 +49,10 @@ export default class Colors {
 				throw new Error();
 			} catch (e) {
 				if (typeof e.stack === "string") {
-					var linePart = 1;
+					let linePart = 1;
 
-					var lines = e.stack.split("\n");
-					var line = lines[3 + offset];
+					let lines = e.stack.split("\n");
+					let line = lines[3 + offset];
 
 					// console.log(colorBgBlack + colorBright + colorFgMagenta  + line + colorReset);
 					if (line.toLowerCase().indexOf("c:\\th\\") > 0) linePart++;
@@ -46,43 +63,35 @@ export default class Colors {
 		return prefix + (prefix.length > 1 ? ": " : "");
 	}
 
-	static error({ msg, offset }) {
-		if (!offset) offset = 0;
-		console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
-	}
-
-	static debug({ msg }) {
-		console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
-	}
-
 	static info({ msg }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
+
 		console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);
 	}
 
-	static success({ msg }) {
-		console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
-	}
-
 	static promptMsg({ msg }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
+
 		console.log(this.getPromptMsg(msg));
 	}
 
-	static clearScreen() {
-		console.log(clearScreenCode);
+	static setDebug({ isDebug }) {
+		ETAsserts.hasData({ value: isDebug, message: "isDebug" });
+
+		showTimestamp = isDebug;
+		showLineNumbers = isDebug;
 	}
 
-	static getPromptMsg({ msg }) {
-		return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
-	}
+	static success({ msg }) {
+		ETAsserts.hasData({ value: msg, message: "msg" });
 
-	static getPrettyJson({ obj }) {
-		return JSON.stringify(obj, null, 4);
+		console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
 	}
 }
 
 // Define variables
-var showTimestamp = false;
-var showLineNumbers = false;
+let showTimestamp = false;
+let showLineNumbers = false;
 let clearScreenCode = "\x1B[2J";
 
 // Color Modes
