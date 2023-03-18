@@ -5,36 +5,28 @@ import { stdin as input, stdout as output } from "node:process";
 import { exec } from "child_process"; // execSync, spawn, spawnSync
 
 export default class Logs {
-	config = null;
-
-	constructor({ config }) {
-		ETAsserts.hasData({ value: config, message: "config" });
-		ETAsserts.hasData({ value: config.logs, message: "config.logs" });
-		ETAsserts.hasData({ value: config.errors, message: "config.errors" });
-
-		this.config = config;
-		Colors2.setDebug({ isDebug: this.config.debug });
-	}
-
 	// OLD_CODE: reportError(instruction) {
-	reportError({ obj }) {
+	static reportError({ config, obj }) {
+		ETAsserts.hasData({ value: config, message: "config" });
 		ETAsserts.hasData({ value: obj, message: "obj" });
 
-		if (this.config.debug) Colors2.debug({ msg: "ERROR FOR: " + Colors2.getPrettyJson({ obj }) });
-		this.config.errors.push(obj);
+		if (config.debug) Colors2.debug({ msg: "ERROR FOR: " + Colors2.getPrettyJson({ obj }) });
+		config.errors.push(obj);
 		Colors2.error({ msg: "*** *** ERROR", offset: 1 });
 		Colors2.error({ msg: Colors2.getPrettyJson({ obj }), offset: 1 });
 	}
 
-	reportErrorMessage({ msg }) {
+	static reportErrorMessage({ config, msg }) {
+		ETAsserts.hasData({ value: config, message: "config" });
 		ETAsserts.hasData({ value: msg, message: "msg" });
 
-		this.config.errors.push(msg);
+		config.errors.push(msg);
 		Colors2.error({ msg: Colors2.getPrettyJson({ obj: msg }), offset: 1 });
 	}
 
 	// OLD_CODE: promptYesNo(instruction) *** question = instruction.Message__c
-	promptYesNo({ question, obj }) {
+	static promptYesNo({ config, question, obj }) {
+		ETAsserts.hasData({ value: config, message: "config" });
 		ETAsserts.hasData({ value: question, message: "question" });
 		ETAsserts.hasData({ value: obj, message: "obj" });
 
@@ -59,7 +51,7 @@ export default class Logs {
 			debugger; // Check path for sendkeys.bat
 			exec('call sendkeys.bat "C:\\Windows\\System32\\cmd.exe" ""');
 
-			if (this.config.executeManualChecks) {
+			if (config.executeManualChecks) {
 				loop();
 			} else {
 				Colors2.error({ msg: "Manual checks are being skipped for testing! (No prompt)" });

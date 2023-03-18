@@ -1,5 +1,7 @@
-import { exec, execSync, spawn, spawnSync } from "child_process";
 import Colors2 from "./colors.js";
+import ETAsserts from "./etAsserts";
+import JSON_FILE from "./jsonFile.js";
+import { exec, execSync, spawn, spawnSync } from "child_process";
 
 const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
@@ -13,6 +15,9 @@ export default class Bookmarks {
 	bmFirefoxPath = null;
 
 	constructor({ config }) {
+		ETAsserts.hasData({ value: config, message: "config" });
+		ETAsserts.hasData({ value: config.errors, message: "config.errors" });
+
 		this.bm.FF = {};
 		this.bm.Bar = {};
 		this.bm.Chrome = {};

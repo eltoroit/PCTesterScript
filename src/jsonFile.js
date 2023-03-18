@@ -1,12 +1,11 @@
 import Logs2 from "./logs.js";
+import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
 import ETAsserts from "./etAsserts";
-import * as fs from "node:fs/promises";
 export default class JsonFile {
 	config = null;
 	constructor({ config }) {
 		ETAsserts.hasData({ value: config, message: "config" });
-		ETAsserts.hasData({ value: config.logs, message: "config.logs" });
 		ETAsserts.hasData({ value: config.errors, message: "config.errors" });
 
 		this.config = config;
@@ -42,74 +41,55 @@ export default class JsonFile {
 		return new Promise((resolve, reject) => {
 			if (this.config.verbose) Colors2.info({ msg: "Editing JSON File: " + appName });
 			const data = this.#findData({ path, sections });
-			const fileContents = this.#loadFileJson({ path });
+			const fileContents = this.loadFileJson({ path });
 			if (this.config.debug) Colors2.debug({ msg: "JSON_Action: " + Colors2.getPrettyJson({ obj: { appName, path, sections } }) });
-			if (this.config.debug) Colors2.debug({ msg: "Writing data: " + Colors2.getPrettyJson({ obj: data }) });
+			if (this.config.debug) Colors2.debug({ msg: "Data before: " + Colors2.getPrettyJson({ obj: fileContents }) });
 
 			data[key] = value;
-			fs.writeFile(path, Colors2.getPrettyJson({ obj: fileContents }))
+			if (this.config.debug) Colors2.debug({ msg: "Data after: " + Colors2.getPrettyJson({ obj: data }) });
+
+			OS2.writeFile(path, Colors2.getPrettyJson({ obj: fileContents }))
 				.then(() => {
-					debugger; // Has it really been updated?
+					debugger; // Has it really been updated? I think I am writing the old data (fileContents)
 					if (this.config.verbose) Colors2.success({ msg: "VALID: file has been updated: " + path });
 					resolve("File is saved with new information");
 				})
 				.catch((err) => {
-					Logs2.reportError({ obj: { appName, path, sections, key, value, err } });
+					Logs2.reportError({ config: this.config, obj: { appName, path, sections, key, value, err } });
 					reject(err);
 				});
 		});
 	}
 
-	jsonFile_Check(instruction) {
-		if (verbose) log.info("Reading JSON File: " + instruction.AppName__c);
-		const data = jsonFile_FindPath(instruction);
-		const JSON_Action = instruction.JSON_Actions__r.records[0];
+	check({ appName, path, sections, key, value }) {
+		ETAsserts.hasData({ value: appName, message: "appName" });
+		ETAsserts.hasData({ value: path, message: "path" });
+		ETAsserts.hasData({ value: sections, message: "sections" });
+		ETAsserts.hasData({ value: key, message: "key" });
+		ETAsserts.hasData({ value: value, message: "value" });
 
-		if (debug) log.debug("JSON_Action: " + log.getPrettyJson(JSON_Action));
-		if (debug) log.debug("Looking here: " + log.getPrettyJson(data));
+		return new Promise((resolve, reject) => {
+			if (this.config.verbose) Colors2.info({ msg: "Reading JSON File: " + appName });
+			const data = this.#findData({ path, sections });
 
-		if (data[JSON_Action.Key__c] === JSON_Action.Value__c) {
-			if (verbose) log.success(`VALID: [${instruction.AppName__c}]`);
-			nextInstruction();
-		} else {
-			instruction.returned = data[JSON_Action.Key__c];
-			reportError(instruction);
-			reportError({
-				Actual: data[JSON_Action.Key__c],
-				expected: JSON_Action.Value__c
-			});
-			nextInstruction();
-		}
-	}
+			if (this.config.debug) Colors2.debug({ msg: "JSON_Action: " + Colors2.getPrettyJson({ obj: { appName, path, sections } }) });
+			if (this.config.debug) Colors2.debug({ msg: "Looking here: " + Colors2.getPrettyJson({ obj: data }) });
 
-	doesFileExist({ path }) {
-		var exists = false;
-		try {
-			exists = fs.statSync(path).size > 0;
-		} catch (ex) {}
-
-		return exists;
-	}
-
-	loadFile({ path }) {
-		if (verbose) log.debug("Reading file: " + path);
-
-		if (!doesFileExist(path)) {
-			reportErrorMessage("Files does not exist: " + path);
-			try {
-				fs.writeFileSync(path, "{}");
-			} catch (ex) {
-				reportErrorMessage("Error creating file: " + path);
+			if (data[key] === value) {
+				if (this.config.verbose) Colors2.success({ msg: `VALID: [${appName}]` });
+				resolve();
+			} else {
+				const err = { appName, path, sections, key, Actual: data[key], expected: value };
+				Logs2.reportError({ config: this.config, obj: err });
+				reject(err);
 			}
-		}
-
-		return fs.readFileSync(path, "utf8");
+		});
 	}
 
-	#loadFileJson({ path }) {
+	loadFileJson({ path }) {
 		ETAsserts.hasData({ value: path, message: "path" });
 
-		return JSON.parse(this.loadFile({ path }));
+		return JSON.parse(OS2.loadFile({ config: this.config, path }));
 	}
 
 	// OLD_CODE: jsonFile_FindPath(instruction) {
@@ -118,7 +98,7 @@ export default class JsonFile {
 		ETAsserts.hasData({ value: sections, message: "sections" });
 
 		if (this.config.debug) Colors2.debug({ msg: "Reading JSON file" });
-		let data = this.#loadFileJson({ path });
+		let data = this.loadFileJson({ path });
 
 		if (this.config.debug) Colors2.debug({ msg: "Processing JSON path: " + path });
 		for (let i = 0; i < sections.length; i++) {
@@ -147,16 +127,16 @@ export default class JsonFile {
 							}
 						}
 					} else {
-						this.config.logs.reportErrorMessage({ msg: "DATA IS NOT CORRECT (3)" });
-						this.config.logs.reportError({ obj: { path, sections, data } });
+						Logs2.reportErrorMessage({ config: this.config, msg: "DATA IS NOT CORRECT (3)" });
+						Logs2.reportError({ config: this.config, obj: { path, sections, data } });
 					}
 				} else {
 					let s1 = JSON.stringify(data).length;
 					data = data[section];
 					let s2 = JSON.stringify(data).length;
 					if (s1 <= s2) {
-						this.config.logs.reportErrorMessage({ msg: "DATA IS NOT CORRECT(4)" });
-						this.config.logs.reportError({ obj: { path, sections, data } });
+						Logs2.reportErrorMessage({ config: this.config, msg: "DATA IS NOT CORRECT(4)" });
+						Logs2.reportError({ config: this.config, obj: { path, sections, data } });
 					}
 				}
 			}
