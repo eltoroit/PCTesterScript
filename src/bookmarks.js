@@ -1,42 +1,47 @@
-/* eslint-disable no-unused-vars */
 import { exec, execSync, spawn, spawnSync } from "child_process";
-import Colors from "./colors.js";
+import Colors2 from "./colors.js";
 
 const bmPretendPath = "./bmPretend.json";
 const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
-const bmChromePath = "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks";
-const bmFirefoxPath = ["C:\\Users\\Administrator\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles", "*.default-release", "places.sqlite"];
 
 export default class Bookmarks {
 	bm = {};
 	config = null;
+	bmChromePath = null;
+	bmFirefoxPath = null;
+
 	constructor({ config }) {
 		this.bm.FF = {};
 		this.bm.Bar = {};
 		this.bm.Chrome = {};
 		this.config = config;
+
+		this.bmChromePath = `C:\\Users\\${this.config.adminUser}\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Bookmarks`;
+		this.bmFirefoxPath = [`C:\\Users\\${this.config.adminUser}\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles`, "*.default-release", "places.sqlite"];
 	}
 
-	openUrl({ urlToCheck, callback }) {
-		if (this.config.checkUrlExists) {
-			var process = spawnSync("curl", [urlToCheck]);
-			if (this.config.verbose) Colors.debug(process.stderr);
-			if (this.config.debug) Colors.debug(JSON.stringify(process.stdout.toString("utf8")).substring(0, 250));
+	openUrl({ urlToCheck }) {
+		return new Promise((resolve, reject) => {
+			if (this.config.checkUrlExists) {
+				let process = spawnSync("curl", [urlToCheck]);
+				if (this.config.verbose) Colors2.debug({ msg: process.stderr });
+				if (this.config.debug) Colors2.debug({ msg: JSON.stringify(process.stdout.toString("utf8")).substring(0, 250) });
 
-			if (process.status == 0) {
-				callback(true);
+				if (process.status == 0) {
+					resolve();
+				} else {
+					reject("Invalid url: " + urlToCheck);
+				}
 			} else {
-				callback(false, "Invalid url: " + urlToCheck);
+				if (this.config.debug) Colors2.debug({ msg: "URL [" + urlToCheck + "] was not validated" });
+				resolve();
 			}
-		} else {
-			if (this.config.debug) Colors.debug("URL [" + urlToCheck + "] was not validated");
-			callback(true);
-		}
+		});
 	}
 	findBookmarks_Chrome_Children({ node, path }) {
-		var thisPath;
+		let thisPath;
 
 		if (node.name == "Bookmarks bar") {
 			thisPath = "[BAR]";
@@ -44,22 +49,22 @@ export default class Bookmarks {
 			thisPath = path + "[" + node.name + "]";
 		}
 		if (node.url) {
-			var barNode = this.bm.Bar[thisPath];
+			let barNode = this.bm.Bar[thisPath];
 			if (!barNode) barNode = {};
 			barNode.Chrome = node.url;
 			this.bm.Bar[thisPath] = barNode;
 			this.bm.Chrome[thisPath] = node.url;
 		}
 		if (node.children) {
-			for (var i = 0; i < node.children.length; i++) {
+			for (let i = 0; i < node.children.length; i++) {
 				this.findBookmarks_Chrome_Children(node.children[i], thisPath);
 			}
 		}
 	}
 	findBookmarks_Chrome() {
-		if (this.config.verbose) Colors.info("Finding Chrome bookmarks");
+		if (this.config.verbose) Colors2.info({ msg: "Finding Chrome bookmarks" });
 
-		var data = loadFileJson(bmChromePath);
+		const data = loadFileJson(bmChromePath);
 		findBookmarks_Chrome_Children(data["roots"]["bookmark_bar"], "");
 	}
 	findBookmarks_Firefox() {
