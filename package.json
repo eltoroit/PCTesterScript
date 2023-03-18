@@ -6,7 +6,7 @@
 	"main": "tester.js",
 	"scripts": {
 		"start": "node src/tester.js",
-		"TESTER": "node _TESTS/Exec.js",
+		"TESTER": "node _TESTS/AsyncPromises.js",
 		"compile": "eslint . > eslintErrors.txt"
 	},
 	"repository": {

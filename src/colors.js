@@ -1,4 +1,4 @@
-import ETAsserts from "./etAsserts";
+import ET_Asserts from "./ET_Asserts";
 
 export default class Colors {
 	static clearScreen() {
@@ -6,25 +6,25 @@ export default class Colors {
 	}
 
 	static debug({ msg }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
 	}
 
 	static error({ msg, offset = 0 }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
 	}
 
 	static getPrettyJson({ obj }) {
-		ETAsserts.hasData({ value: obj, message: "obj" });
+		ET_Asserts.hasData({ value: obj, message: "obj" });
 
 		return JSON.stringify(obj, null, 4);
 	}
 
 	static getPromptMsg({ msg }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		return colorBgBlack + colorBright + colorFgYellow + msg + colorReset;
 	}
@@ -64,26 +64,26 @@ export default class Colors {
 	}
 
 	static info({ msg }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);
 	}
 
 	static promptMsg({ msg }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		console.log(this.getPromptMsg(msg));
 	}
 
 	static setDebug({ isDebug }) {
-		ETAsserts.hasData({ value: isDebug, message: "isDebug" });
+		ET_Asserts.hasData({ value: isDebug, message: "isDebug" });
 
 		showTimestamp = isDebug;
 		showLineNumbers = isDebug;
 	}
 
 	static success({ msg }) {
-		ETAsserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
 	}

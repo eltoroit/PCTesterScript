@@ -1,4 +1,4 @@
-export default class ETAsserts {
+export default class ET_Asserts {
 	equals({ expected, actual, message }) {
 		message = `Assertion failed | Expecting EQUALS | Expected: [${expected}] | Actual: [${actual}] | ${message}`;
 		this.assert({ trueValue: expected === actual, message });
