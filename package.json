@@ -6,6 +6,7 @@
 	"main": "tester.js",
 	"scripts": {
 		"start": "node src/tester.js",
+		"TESTER": "node TESTS/Loop.js",
 		"compile": "eslint . > eslintErrors.txt"
 	},
 	"repository": {
