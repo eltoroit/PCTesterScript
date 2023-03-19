@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // This script was created by Andres Perez to test the image machines.
 
+import Data from "./data.js";
 import minimist from "minimist";
 import Colors2 from "./colors.js";
 
@@ -8,6 +9,7 @@ import Colors2 from "./colors.js";
 const timerDelay = 250;
 
 class Tester {
+	data = null;
 	errors = [];
 	config = null;
 	// errorCodes = {};
@@ -49,8 +51,11 @@ class Tester {
 		this.config.adminUser = "Administrator";
 	}
 
-	start() {
+	async start() {
 		Colors2.error({ msg: "Hello World" });
+		let dataReader = new Data({ config: this.config });
+		this.data = await dataReader.getData();
+		debugger;
 	}
 }
 

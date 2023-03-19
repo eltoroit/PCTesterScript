@@ -19,7 +19,7 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: path, message: "path" });
 
 		if (config.verbose) Colors2.debug({ msg: "Reading file: " + path });
-		const fileExists = await LowLevelOS.doesFileExist({ path });
+		const fileExists = await LowLevelOS.doesFileExist({ config, path });
 		if (fileExists) {
 			const fileContents = await fs.readFile(path, "utf8");
 			return fileContents;

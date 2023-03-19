@@ -4,10 +4,10 @@
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF55YAE"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acCAAQ"
 			},
 			"Code__c": "01",
-			"Id": "a05DC000001lF55YAE",
+			"Id": "a05010000043acCAAQ",
 			"IsActive__c": true,
 			"Key__c": "01",
 			"Level__c": 1,
@@ -18,114 +18,114 @@
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF56YAE"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acEAAQ"
 			},
 			"Code__c": "02",
-			"Id": "a05DC000001lF56YAE",
+			"Id": "a05010000043acEAAQ",
 			"IsActive__c": true,
 			"Key__c": "02",
 			"Level__c": 1,
-			"Name": "Validate [Electron Application Tester] Installed",
+			"Name": "Manual Tests",
 			"Order__c": 2,
 			"Parent__c": null
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF57YAE"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acFAAQ"
 			},
 			"Code__c": "03",
-			"Id": "a05DC000001lF57YAE",
+			"Id": "a05010000043acFAAQ",
 			"IsActive__c": true,
 			"Key__c": "03",
 			"Level__c": 1,
-			"Name": "Manual Tests",
+			"Name": "Automated Tests",
 			"Order__c": 3,
 			"Parent__c": null
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF58YAE"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acGAAQ"
 			},
-			"Code__c": "04",
-			"Id": "a05DC000001lF58YAE",
+			"Code__c": "03-01",
+			"Id": "a05010000043acGAAQ",
 			"IsActive__c": true,
-			"Key__c": "04",
-			"Level__c": 1,
-			"Name": "Automated Tests",
-			"Order__c": 4,
-			"Parent__c": null
-		},
-		{
-			"attributes": {
-				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF59YAE"
-			},
-			"Code__c": "04-01",
-			"Id": "a05DC000001lF59YAE",
-			"IsActive__c": true,
-			"Key__c": "a05DC000001lF58YAE-01",
+			"Key__c": "a05010000043acFAAQ-01",
 			"Level__c": 2,
 			"Name": "SFDX Developer",
 			"Order__c": 1,
-			"Parent__c": "a05DC000001lF58YAE"
+			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF5AYAU"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acHAAQ"
 			},
-			"Code__c": "04-02",
-			"Id": "a05DC000001lF5AYAU",
+			"Code__c": "03-02",
+			"Id": "a05010000043acHAAQ",
 			"IsActive__c": true,
-			"Key__c": "a05DC000001lF58YAE-02",
+			"Key__c": "a05010000043acFAAQ-02",
 			"Level__c": 2,
 			"Name": "Other Developments",
 			"Order__c": 2,
-			"Parent__c": "a05DC000001lF58YAE"
+			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF5BYAU"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acIAAQ"
 			},
-			"Code__c": "04-03",
-			"Id": "a05DC000001lF5BYAU",
+			"Code__c": "03-03",
+			"Id": "a05010000043acIAAQ",
 			"IsActive__c": true,
-			"Key__c": "a05DC000001lF58YAE-03",
+			"Key__c": "a05010000043acFAAQ-03",
 			"Level__c": 2,
 			"Name": "Data files",
 			"Order__c": 3,
-			"Parent__c": "a05DC000001lF58YAE"
+			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF5CYAU"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acJAAQ"
 			},
-			"Code__c": "04-04",
-			"Id": "a05DC000001lF5CYAU",
+			"Code__c": "03-04",
+			"Id": "a05010000043acJAAQ",
 			"IsActive__c": true,
-			"Key__c": "a05DC000001lF58YAE-04",
+			"Key__c": "a05010000043acFAAQ-04",
 			"Level__c": 2,
 			"Name": "Logout",
 			"Order__c": 4,
-			"Parent__c": "a05DC000001lF58YAE"
+			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
 			"attributes": {
 				"type": "etcTask__c",
-				"url": "/services/data/v57.0/sobjects/etcTask__c/a05DC000001lF5DYAU"
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acKAAQ"
 			},
-			"Code__c": "04-05",
-			"Id": "a05DC000001lF5DYAU",
+			"Code__c": "03-05",
+			"Id": "a05010000043acKAAQ",
 			"IsActive__c": true,
-			"Key__c": "a05DC000001lF58YAE-05",
+			"Key__c": "a05010000043acFAAQ-05",
 			"Level__c": 2,
 			"Name": "Saleforce Fonts",
 			"Order__c": 5,
-			"Parent__c": "a05DC000001lF58YAE"
+			"Parent__c": "a05010000043acFAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043acDAAQ"
+			},
+			"Code__c": "04",
+			"Id": "a05010000043acDAAQ",
+			"IsActive__c": true,
+			"Key__c": "04",
+			"Level__c": 1,
+			"Name": "Validate [Electron Application Tester] Installed",
+			"Order__c": 4,
+			"Parent__c": null
 		}
 	],
 	"total": 9

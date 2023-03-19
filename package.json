@@ -7,7 +7,7 @@
 	"scripts": {
 		"start": "node src/tester.js",
 		"TESTER": "node _TESTS/AsyncPromises.js",
-		"compile": "eslint . > eslintErrors.txt"
+		"linter": "eslint . > eslintErrors.txt"
 	},
 	"repository": {
 		"type": "git",
