@@ -1,0 +1,1078 @@
+{
+	"fetched": 67,
+	"records": [
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZVYAY"
+			},
+			"AppName__c": "Clear Screen",
+			"Code__c": "01-01",
+			"Command__c": null,
+			"Expected__c": null,
+			"Id": "a06DC0000020rZVYAY",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF55YAE-01",
+			"Operation__c": "Clear",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF55YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZWYAY"
+			},
+			"AppName__c": "Say Hi",
+			"Code__c": "01-02",
+			"Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZWYAY",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF55YAE-02",
+			"Operation__c": "Write",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF55YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZoYAI"
+			},
+			"AppName__c": "VS Code (Wait for the extensions update)",
+			"Code__c": "02-01",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Visual Studio Code.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZoYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-01",
+			"Operation__c": "Manual Application",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZpYAI"
+			},
+			"AppName__c": "Java (Oracle)",
+			"Code__c": "02-02",
+			"Command__c": "C:\\Program Files\\Java\\jdk-17.0.5\\bin\\java.exe*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZpYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-02",
+			"Operation__c": "Check Path",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZqYAI"
+			},
+			"AppName__c": "SFDX Update",
+			"Code__c": "02-03",
+			"Command__c": "sfdx update",
+			"Expected__c": "sfdx-cli: Updat",
+			"Id": "a06DC0000020rZqYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-03",
+			"Operation__c": "Execute",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZrYAI"
+			},
+			"AppName__c": "VS Code Version",
+			"Code__c": "02-04",
+			"Command__c": "code --version",
+			"Expected__c": "1.",
+			"Id": "a06DC0000020rZrYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-04",
+			"Operation__c": "Execute",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZsYAI"
+			},
+			"AppName__c": "VS Code Plugin (1)",
+			"Code__c": "02-05",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZsYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-05",
+			"Operation__c": "Check Path",
+			"Order__c": 5,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZtYAI"
+			},
+			"AppName__c": "VS Code Plugin (2)",
+			"Code__c": "02-06",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZtYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-06",
+			"Operation__c": "Check Path",
+			"Order__c": 6,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZuYAI"
+			},
+			"AppName__c": "VS Code Plugin (3)",
+			"Code__c": "02-07",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZuYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-07",
+			"Operation__c": "Check Path",
+			"Order__c": 7,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZvYAI"
+			},
+			"AppName__c": "VS Code Plugin (4)",
+			"Code__c": "02-08",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZvYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-08",
+			"Operation__c": "Check Path",
+			"Order__c": 8,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZwYAI"
+			},
+			"AppName__c": "VS Code Plugin (5)",
+			"Code__c": "02-09",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZwYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-09",
+			"Operation__c": "Check Path",
+			"Order__c": 9,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZxYAI"
+			},
+			"AppName__c": "VS Code Plugin (6)",
+			"Code__c": "02-10",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZxYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-10",
+			"Operation__c": "Check Path",
+			"Order__c": 10,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZyYAI"
+			},
+			"AppName__c": "VS Code Plugin (7)",
+			"Code__c": "02-11",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZyYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-11",
+			"Operation__c": "Check Path",
+			"Order__c": 11,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZzYAI"
+			},
+			"AppName__c": "VS Code Plugin (8)",
+			"Code__c": "02-12",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.3.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZzYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-12",
+			"Operation__c": "Check Path",
+			"Order__c": 12,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra0YAA"
+			},
+			"AppName__c": "VS Code Plugin (9)",
+			"Code__c": "02-13",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
+			"Expected__c": null,
+			"Id": "a06DC0000020ra0YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-13",
+			"Operation__c": "Check Path",
+			"Order__c": 13,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra1YAA"
+			},
+			"AppName__c": "VS Code Plugin (10)",
+			"Code__c": "02-14",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-13.*",
+			"Expected__c": null,
+			"Id": "a06DC0000020ra1YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-14",
+			"Operation__c": "Check Path",
+			"Order__c": 14,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra2YAA"
+			},
+			"AppName__c": "VS Code Plugin (11)",
+			"Code__c": "02-15",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
+			"Expected__c": null,
+			"Id": "a06DC0000020ra2YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-15",
+			"Operation__c": "Check Path",
+			"Order__c": 15,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra3YAA"
+			},
+			"AppName__c": "SFDX (Shell)",
+			"Code__c": "02-16",
+			"Command__c": null,
+			"Expected__c": null,
+			"Id": "a06DC0000020ra3YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-16",
+			"Operation__c": "JSON",
+			"Order__c": 16,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra4YAA"
+			},
+			"AppName__c": "VSCode - Prettier - XCopy",
+			"Code__c": "02-17",
+			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
+			"Expected__c": "File(s) copied",
+			"Id": "a06DC0000020ra4YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-17",
+			"Operation__c": "Execute",
+			"Order__c": 17,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra5YAA"
+			},
+			"AppName__c": "VSCode - XML - XCopy",
+			"Code__c": "02-18",
+			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
+			"Expected__c": "File(s) copied",
+			"Id": "a06DC0000020ra5YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-18",
+			"Operation__c": "Execute",
+			"Order__c": 18,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra6YAA"
+			},
+			"AppName__c": "Git (Version)",
+			"Code__c": "02-19",
+			"Command__c": "git --version",
+			"Expected__c": "git version 2.39",
+			"Id": "a06DC0000020ra6YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF59YAE-19",
+			"Operation__c": "Execute",
+			"Order__c": 19,
+			"Parent__c": "a05DC000001lF59YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZXYAY"
+			},
+			"AppName__c": "Header",
+			"Code__c": "03-01",
+			"Command__c": "=== === === INSTALL ET-EPL === === ===",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZXYAY",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF56YAE-01",
+			"Operation__c": "Write",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF56YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZYYAY"
+			},
+			"AppName__c": "Configure Electron",
+			"Code__c": "03-02",
+			"Command__c": null,
+			"Expected__c": null,
+			"Id": "a06DC0000020rZYYAY",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF56YAE-02",
+			"Operation__c": "JSON",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF56YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra8YAA"
+			},
+			"AppName__c": "Check Curl version",
+			"Code__c": "04-01",
+			"Command__c": "curl --version",
+			"Expected__c": "curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL",
+			"Id": "a06DC0000020ra8YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5AYAU-01",
+			"Operation__c": "Execute",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF5AYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra9YAA"
+			},
+			"AppName__c": "Ruby",
+			"Code__c": "04-02",
+			"Command__c": "ruby --version",
+			"Expected__c": "ruby 2.4.3p205 (2017-12-14 revision 61247) [x64-mingw32]",
+			"Id": "a06DC0000020ra9YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5AYAU-02",
+			"Operation__c": "Execute",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF5AYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raAYAQ"
+			},
+			"AppName__c": "Travis",
+			"Code__c": "04-03",
+			"Command__c": "travis version",
+			"Expected__c": "1.8.8",
+			"Id": "a06DC0000020raAYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5AYAU-03",
+			"Operation__c": "Execute",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF5AYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raBYAQ"
+			},
+			"AppName__c": "Python",
+			"Code__c": "04-04",
+			"Command__c": "python --version",
+			"Expected__c": "Python 2.7.14",
+			"Id": "a06DC0000020raBYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5AYAU-04",
+			"Operation__c": "Execute",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF5AYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZZYAY"
+			},
+			"AppName__c": "Header",
+			"Code__c": "05-01",
+			"Command__c": "=== === === MANUAL CHECKS === === ===",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZZYAY",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-01",
+			"Operation__c": "Write",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZaYAI"
+			},
+			"AppName__c": "Sticker",
+			"Code__c": "05-02",
+			"Command__c": "Sticker with computer number?",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZaYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-02",
+			"Operation__c": "Manual",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZbYAI"
+			},
+			"AppName__c": "Desktop Image",
+			"Code__c": "05-03",
+			"Command__c": "Computer background image?",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZbYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-03",
+			"Operation__c": "Manual",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZcYAI"
+			},
+			"AppName__c": "Desktop: Notepad++",
+			"Code__c": "05-04",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Notepad++.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZcYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-04",
+			"Operation__c": "Manual Application",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZdYAI"
+			},
+			"AppName__c": "Chrome + Salesforce is homepage",
+			"Code__c": "05-05",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Google Chrome.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZdYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-05",
+			"Operation__c": "Manual Application",
+			"Order__c": 5,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZeYAI"
+			},
+			"AppName__c": "Firefox + Salesforce is homepage",
+			"Code__c": "05-06",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Firefox.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZeYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-06",
+			"Operation__c": "Manual Application",
+			"Order__c": 6,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZfYAI"
+			},
+			"AppName__c": "Chrome: Plugin",
+			"Code__c": "05-07",
+			"Command__c": "Chrome Plugin to split screen",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZfYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-07",
+			"Operation__c": "Manual",
+			"Order__c": 7,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZgYAI"
+			},
+			"AppName__c": "Eclipse IDE",
+			"Code__c": "05-08",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Eclipse IDE for Java Developers - 2022-06.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZgYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-08",
+			"Operation__c": "Manual Application",
+			"Order__c": 8,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZhYAI"
+			},
+			"AppName__c": "VS Code (Wait for the extensions update)",
+			"Code__c": "05-09",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Visual Studio Code.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZhYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-09",
+			"Operation__c": "Manual Application",
+			"Order__c": 9,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZiYAI"
+			},
+			"AppName__c": "Powerpoint (MS Office)",
+			"Code__c": "05-10",
+			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZiYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-10",
+			"Operation__c": "Manual Application",
+			"Order__c": 10,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZjYAI"
+			},
+			"AppName__c": "Excel (MS Office)",
+			"Code__c": "05-11",
+			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZjYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-11",
+			"Operation__c": "Manual Application",
+			"Order__c": 11,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZkYAI"
+			},
+			"AppName__c": "Word (MS Office)",
+			"Code__c": "05-12",
+			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZkYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-12",
+			"Operation__c": "Check Path",
+			"Order__c": 12,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZlYAI"
+			},
+			"AppName__c": "Postman",
+			"Code__c": "05-13",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZlYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-13",
+			"Operation__c": "Manual Application",
+			"Order__c": 13,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZmYAI"
+			},
+			"AppName__c": "Desktop: Data Loader",
+			"Code__c": "05-14",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader 45.0.0.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZmYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF57YAE-14",
+			"Operation__c": "Manual Application",
+			"Order__c": 14,
+			"Parent__c": "a05DC000001lF57YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raDYAQ"
+			},
+			"AppName__c": "B2C Commerce Cloud (ntoforall)",
+			"Code__c": "06-01",
+			"Command__c": "C:\\Users\\Administrator\\Documents\\ntoforall*",
+			"Expected__c": null,
+			"Id": "a06DC0000020raDYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5BYAU-01",
+			"Operation__c": "Check Path",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF5BYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raEYAQ"
+			},
+			"AppName__c": "B2C Commerce Cloud (version.ini)",
+			"Code__c": "06-02",
+			"Command__c": "C:\\Users\\Administrator\\tdxworkspace\\.metadata\\version.ini",
+			"Expected__c": null,
+			"Id": "a06DC0000020raEYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5BYAU-02",
+			"Operation__c": "Check Path",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF5BYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raFYAQ"
+			},
+			"AppName__c": "B2C Commerce Cloud (DigitalServerConnect)",
+			"Code__c": "06-03",
+			"Command__c": "C:\\Users\\Administrator\\DigitalServerConnect*",
+			"Expected__c": null,
+			"Id": "a06DC0000020raFYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5BYAU-03",
+			"Operation__c": "Check Path",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF5BYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raGYAQ"
+			},
+			"AppName__c": "B2B files for TDX",
+			"Code__c": "06-04",
+			"Command__c": "C:\\TDX22\\TDX-B2B-Exercise.zip",
+			"Expected__c": null,
+			"Id": "a06DC0000020raGYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5BYAU-04",
+			"Operation__c": "Check Path",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF5BYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raHYAQ"
+			},
+			"AppName__c": "Mulesoft spreadsheet",
+			"Code__c": "06-05",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Global Superstore.xlsx",
+			"Expected__c": null,
+			"Id": "a06DC0000020raHYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5BYAU-05",
+			"Operation__c": "Check Path",
+			"Order__c": 5,
+			"Parent__c": "a05DC000001lF5BYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020rZnYAI"
+			},
+			"AppName__c": "Chrome: Plugin Resize",
+			"Code__c": "07-01",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.5_0\\package.json",
+			"Expected__c": null,
+			"Id": "a06DC0000020rZnYAI",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-01",
+			"Operation__c": "Check Path",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020ra7YAA"
+			},
+			"AppName__c": "Check Java version",
+			"Code__c": "07-02",
+			"Command__c": "java -version",
+			"Expected__c": "java version \"17.0.5\" 2022-10-18 LTS",
+			"Id": "a06DC0000020ra7YAA",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-02",
+			"Operation__c": "Execute",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raCYAQ"
+			},
+			"AppName__c": "Notepad",
+			"Code__c": "07-03",
+			"Command__c": "C:\\Windows\\Notepad.exe",
+			"Expected__c": null,
+			"Id": "a06DC0000020raCYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-03",
+			"Operation__c": "Check Path",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raIYAQ"
+			},
+			"AppName__c": "SoapUI",
+			"Code__c": "07-04",
+			"Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
+			"Expected__c": null,
+			"Id": "a06DC0000020raIYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-04",
+			"Operation__c": "Check Path",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raLYAQ"
+			},
+			"AppName__c": "Postman",
+			"Code__c": "07-05",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
+			"Expected__c": null,
+			"Id": "a06DC0000020raLYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-05",
+			"Operation__c": "Manual Application",
+			"Order__c": 5,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raUYAQ"
+			},
+			"AppName__c": "Git config email",
+			"Code__c": "07-06",
+			"Command__c": "git config --global user.email \"you@example.com\"",
+			"Expected__c": null,
+			"Id": "a06DC0000020raUYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-06",
+			"Operation__c": "Execute",
+			"Order__c": 6,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raVYAQ"
+			},
+			"AppName__c": "Git config name",
+			"Code__c": "07-07",
+			"Command__c": "git config --global user.name \"Your Name\"",
+			"Expected__c": null,
+			"Id": "a06DC0000020raVYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-07",
+			"Operation__c": "Execute",
+			"Order__c": 7,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raWYAQ"
+			},
+			"AppName__c": "7-Zip",
+			"Code__c": "07-08",
+			"Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
+			"Expected__c": "7-Zip 22",
+			"Id": "a06DC0000020raWYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-08",
+			"Operation__c": "Execute",
+			"Order__c": 8,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raXYAQ"
+			},
+			"AppName__c": "Node",
+			"Code__c": "07-09",
+			"Command__c": "node --version",
+			"Expected__c": "v18.13.0",
+			"Id": "a06DC0000020raXYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-09",
+			"Operation__c": "Execute",
+			"Order__c": 9,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raYYAQ"
+			},
+			"AppName__c": "Checking all bookmarks",
+			"Code__c": "07-10",
+			"Command__c": null,
+			"Expected__c": null,
+			"Id": "a06DC0000020raYYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-10",
+			"Operation__c": "Bookmark",
+			"Order__c": 10,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raZYAQ"
+			},
+			"AppName__c": "Clone and execute C:\\LWC_HOW",
+			"Code__c": "07-11",
+			"Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
+			"Expected__c": null,
+			"Id": "a06DC0000020raZYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF58YAE-11",
+			"Operation__c": "Execute",
+			"Order__c": 11,
+			"Parent__c": "a05DC000001lF58YAE"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raJYAQ"
+			},
+			"AppName__c": "Logout SFDX",
+			"Code__c": "08-01",
+			"Command__c": "sfdx force:auth:logout --all --noprompt",
+			"Expected__c": null,
+			"Id": "a06DC0000020raJYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5CYAU-01",
+			"Operation__c": "Execute",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF5CYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raKYAQ"
+			},
+			"AppName__c": "Logout Heroku",
+			"Code__c": "08-02",
+			"Command__c": "heroku logout",
+			"Expected__c": null,
+			"Id": "a06DC0000020raKYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5CYAU-02",
+			"Operation__c": "Execute",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF5CYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raMYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (1)",
+			"Code__c": "09-01",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raMYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-01",
+			"Operation__c": "Check Path",
+			"Order__c": 1,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raNYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (2)",
+			"Code__c": "09-02",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raNYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-02",
+			"Operation__c": "Check Path",
+			"Order__c": 2,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raOYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (3)",
+			"Code__c": "09-03",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raOYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-03",
+			"Operation__c": "Check Path",
+			"Order__c": 3,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raPYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (4)",
+			"Code__c": "09-04",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raPYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-04",
+			"Operation__c": "Check Path",
+			"Order__c": 4,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raQYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (5)",
+			"Code__c": "09-05",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raQYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-05",
+			"Operation__c": "Check Path",
+			"Order__c": 5,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raRYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (6)",
+			"Code__c": "09-06",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raRYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-06",
+			"Operation__c": "Check Path",
+			"Order__c": 6,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raSYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (7)",
+			"Code__c": "09-07",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raSYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-07",
+			"Operation__c": "Check Path",
+			"Order__c": 7,
+			"Parent__c": "a05DC000001lF5DYAU"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a06DC0000020raTYAQ"
+			},
+			"AppName__c": "SalesforceSans Font (8)",
+			"Code__c": "09-08",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf",
+			"Expected__c": null,
+			"Id": "a06DC0000020raTYAQ",
+			"IsActive__c": true,
+			"Key__c": "a05DC000001lF5DYAU-08",
+			"Operation__c": "Check Path",
+			"Order__c": 8,
+			"Parent__c": "a05DC000001lF5DYAU"
+		}
+	],
+	"total": 67
+}
