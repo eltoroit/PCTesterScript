@@ -1,6 +1,6 @@
 import Logs2 from "./logs.js";
 import Colors2 from "./colors.js";
-import ET_Asserts from "./ET_Asserts";
+import ET_Asserts from "./etAsserts.js";
 import { exec } from "child_process";
 import * as fs from "node:fs/promises";
 import * as readline from "node:readline/promises";

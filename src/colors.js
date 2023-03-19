@@ -1,4 +1,4 @@
-import ET_Asserts from "./ET_Asserts";
+import ET_Asserts from "./etAsserts.js";
 
 export default class Colors {
 	static clearScreen() {
@@ -8,13 +8,14 @@ export default class Colors {
 	static debug({ msg }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
-		console.log(colorBgBlack + colorBright + colorFgGray + this.getTrace() + msg + colorReset);
+		console.log(colorBgBlack + colorBright + colorFgGray + Colors.getTrace({}) + msg + colorReset);
 	}
 
-	static error({ msg, offset = 0 }) {
+	static error({ msg, offset }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
+		if (!offset) offset = 0;
 
-		console.log(colorBgBlack + colorBright + colorFgRed + this.getTrace() + msg + colorReset);
+		console.log(colorBgBlack + colorBright + colorFgRed + Colors.getTrace({}) + msg + colorReset);
 	}
 
 	static getPrettyJson({ obj }) {
@@ -39,10 +40,12 @@ export default class Colors {
 		return `[${hour}:${minutes}:${seconds}.${milliseconds}]`;
 	}
 
-	static getTrace({ offset = 0 }) {
+	static getTrace({ offset }) {
+		if (!offset) offset = 0;
+
 		let prefix = "";
 		if (showTimestamp) {
-			prefix += this.getTime();
+			prefix += Colors.getTime();
 		}
 		if (showLineNumbers) {
 			try {
@@ -66,13 +69,13 @@ export default class Colors {
 	static info({ msg }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
-		console.log(colorBgBlack + colorBright + colorFgWhite + this.getTrace() + msg + colorReset);
+		console.log(colorBgBlack + colorBright + colorFgWhite + Colors.getTrace({}) + msg + colorReset);
 	}
 
 	static promptMsg({ msg }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
-		console.log(this.getPromptMsg(msg));
+		console.log(Colors.getPromptMsg({ msg }));
 	}
 
 	static setDebug({ isDebug }) {
@@ -85,7 +88,7 @@ export default class Colors {
 	static success({ msg }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
-		console.log(colorBgBlack + colorBright + colorFgGreen + this.getTrace() + msg + colorReset);
+		console.log(colorBgBlack + colorBright + colorFgGreen + Colors.getTrace({}) + msg + colorReset);
 	}
 }
 

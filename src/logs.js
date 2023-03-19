@@ -1,5 +1,5 @@
 import Colors2 from "./colors.js";
-import ET_Asserts from "./ET_Asserts";
+import ET_Asserts from "./etAsserts.js";
 import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 import { exec } from "child_process"; // execSync, spawn, spawnSync

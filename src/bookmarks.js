@@ -1,7 +1,7 @@
 import Logs2 from "./logs.js";
 import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
-import ET_Asserts from "./ET_Asserts";
+import ET_Asserts from "./etAsserts.js";
 import ET_JSON from "./etJson.js";
 
 const bmPretendPath = "./bmPretend.json";

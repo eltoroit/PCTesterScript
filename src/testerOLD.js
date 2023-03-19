@@ -1,9 +1,10 @@
+
 function nextInstruction() {
 	setTimeout(executeInstruction, timerDelay);
 }
 function executeInstruction() {
 	if (idxInstructions >= instructions.length) return;
-	var instruction = instructions[idxInstructions++];
+	let instruction = instructions[idxInstructions++];
 
 	// Check AppName__c
 	switch (instruction.Operation__c) {
@@ -16,7 +17,7 @@ function executeInstruction() {
 
 			// Check every record has an AppName__c
 			if (!instruction.AppName__c) {
-				var msg = "Instruction #" + idxInstructions + ". Does not have a valid AppName__c. " + log.getPrettyJson(instruction);
+				let msg = "Instruction #" + idxInstructions + ". Does not have a valid AppName__c. " + log.getPrettyJson(instruction);
 				reportErrorMessage(msg);
 				throw msg;
 			}
@@ -24,7 +25,7 @@ function executeInstruction() {
 			// Check unique record AppName__c
 			instruction.AppName__c = instruction.AppName__c.toUpperCase();
 			// if (errorCodes[instruction.AppName__c]) {
-			// 	var msg =
+			// 	let msg =
 			// 		"Instruction #" +
 			// 		idxInstructions +
 			// 		". You can not reuse AppName__c. " +
@@ -160,13 +161,13 @@ function menuChooseEvent(data) {
 		executeInstruction();
 	};
 
-	var events = data.events;
+	let events = data.events;
 
 	log.setDebug(debug);
 	log.info("Application Tester built by Andres Perez (ELTORO.IT) to help validate the computer's setup");
 	log.info("");
 	log.info("Please select the test you want to run");
-	for (var i = 1; i <= events.length; i++) {
+	for (let i = 1; i <= events.length; i++) {
 		log.info(i + ". " + events[i - 1].Name);
 	}
 	log.info(0 + ". Exit without testing");
@@ -180,7 +181,7 @@ function menuChooseEvent(data) {
 			output: process.stdout
 		});
 
-		var forEver = function () {
+		let forEver = function () {
 			inputReadLine2.question(log.getPromptMsg("Please select a number [0 - " + events.length + "] > "), function (answer) {
 				if (answer == 0) {
 					process.exit(0);
@@ -188,7 +189,7 @@ function menuChooseEvent(data) {
 					runAutomated(events[0]);
 				} else if (answer >= 1 && answer <= events.length) {
 					inputReadLine2.close();
-					var event = events[answer - 1];
+					let event = events[answer - 1];
 					instructions = data.actionsByEvent[event.Id];
 					instructions.push({
 						AppName__c: "Done",
@@ -213,58 +214,22 @@ function bookmarksChecks() {
 		log.error("Delete the file is this is a real test!");
 	}
 	if (doesFileExist(bmCheckPath)) {
-		var bmChecks = loadFileJson(bmCheckPath);
+		let bmChecks = loadFileJson(bmCheckPath);
 		if (!(bmChecks.length > 0)) {
 			log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-			var msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
+			let msg = "Invalid bookmarks checker configuration file [" + bmCheckPath + "]!";
 			log.error(msg);
 			throw new Error(msg);
 		}
 	} else {
 		log.error("BOOKMARKS CAN NOT PROCESSED!!!");
-		var msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
+		let msg = "Bookmarks checker configuration file [" + bmCheckPath + "] does not exist!";
 		log.error(msg);
 		throw new Error(msg);
 	}
 }
 
 const data = loadFileJson("./data.json");
-// function doEach(arCmds) {
-// 	console.log(`ARRAY: ${JSON.stringify(arCmds)}`);
-// 	return new Promise((resolve, reject) => {
-// 		console.log(`length: ${arCmds.length}`);
-// 		if (arCmds.length === 0) {
-// 			console.log(`EXIT`);
-// 			resolve();
-// 		} else {
-// 			const cmd = arCmds.shift();
-// 			console.log(`CMD: ${JSON.stringify(cmd)}`);
-// 			cmdETEPL(cmd).then(() => {
-// 				doEach(arCmds).then(() => {
-// 					resolve();
-// 				});
-// 			});
-// 		}
-// 	});
-// }
-// function doAll() {
-// const sourcePath = path.join("C:/TH/PCTesterScript/copy/src");
-// const destPath = path.join("C:/TH/ETTrailheadTester/resources/app/src");
-// const cmds = [];
-
-// // Copy ETEPL files
-// cmds.push(`DEL /Q /S "${destPath}" > NUL`);
-// cmds.push(`RMDIR /Q /S "${destPath}" > NUL`);
-// cmds.push(`mkdir ${destPath}`);
-// cmds.push(`xcopy /v /q /s /e /y "${sourcePath}" "${destPath}"`);
-// doEach(cmds).then(() => {
-// 	console.log("DONE COPY");
-
-// log.clearScreen();
 log.promptMsg(`Version: ${data.now}`);
 bookmarksChecks();
 menuChooseEvent(data);
-// });
-// }
-
-// doAll();

@@ -1,7 +1,7 @@
 import Logs2 from "./logs.js";
 import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
-import ET_Asserts from "./ET_Asserts";
+import ET_Asserts from "./etAsserts.js";
 export default class JsonFile {
 	config = null;
 	constructor({ config }) {
