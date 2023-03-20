@@ -59,7 +59,8 @@ export default class JsonFile {
 			if (this.config.verbose) Colors2.success({ msg: "VALID: file has been updated: " + path });
 			return "File is saved with new information";
 		} catch (ex) {
-			Logs2.reportError({ config: this.config, obj: { appName, path, sections, key, value, ex } });
+			let msg = { appName, path, sections, key, value, msg: "Error editing JSON" };
+			Logs2.reportException({ config: this.config, msg, ex });
 			throw ex;
 		}
 	}

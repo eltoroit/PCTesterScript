@@ -58,23 +58,25 @@ class Main {
 
 		let tester = new Tester({ config: this.config });
 		await tester.test({ data: this.data });
-		debugger;
-
 		return this.config.errors;
 	}
 }
 
 async function main() {
 	let m = new Main();
-	let errors = await m.start();
-	if (errors.length === 0) {
-		Colors2.clearScreen();
-		Colors2.success({ msg: "Test complete and no errors found. Thanks for your help ;-)" });
-		Colors2.success({ msg: "Please close this and all other windows that were opened during the test" });
-	} else {
-		Colors2.clearScreen();
-		console.log(JSON.stringify(errors, null, 4));
-		Colors2.error({ msg: "Number Of Errors Found: " + errors.length });
+	try {
+		let errors = await m.start();
+		if (errors.length === 0) {
+			Colors2.clearScreen();
+			Colors2.success({ msg: "Test complete and no errors found. Thanks for your help ;-)" });
+			Colors2.success({ msg: "Please close this and all other windows that were opened during the test" });
+		} else {
+			Colors2.clearScreen();
+			Colors2.error({ msg: JSON.stringify(errors, null, 4) });
+			Colors2.error({ msg: "Number Of Errors Found: " + errors.length });
+		}
+	} catch (ex) {
+		debugger;
 	}
 }
 

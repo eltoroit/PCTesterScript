@@ -4,9 +4,6 @@ import Colors2 from "./colors.js";
 import ET_Asserts from "./etAsserts.js";
 import ET_JSON from "./etJson.js";
 
-const bmDumpPath = "./bmDump.json";
-const bmTempFFLinePath = "./bmTempFF_LINE.txt";
-
 export default class Bookmarks {
 	bm = {};
 	config = null;
@@ -47,13 +44,17 @@ export default class Bookmarks {
 
 		if (this.config.checkUrlExists) {
 			try {
-				let outputCurl = await OS2.execute({ config: this.config, command: `curl ${urlToCheck}` });
-				if (this.config.verbose) Colors2.debug({ msg: outputCurl });
-				if (this.config.debug) Colors2.debug({ msg: JSON.stringify(outputCurl.stdout.toString("utf8")).substring(0, 250) });
+				let outputFetch = await OS2.fetch({ config: this.config, url: urlToCheck });
+				if (outputFetch.response.status >= 200 && outputFetch.response.status < 300) {
+					if (this.config.debug) Colors2.debug({ msg: `HTTP Status: ${outputFetch.response.status}` });
+					if (this.config.verbose) Colors2.debug({ msg: outputFetch.body.substring(0, 250) });
+				} else {
+					throw new Error("Not able to fetch");
+				}
 			} catch (ex) {
-				let err = "URL [" + urlToCheck + "] was not validated";
-				if (this.config.debug) Colors2.debug({ msg: err });
-				throw new Error(err);
+				let msg = "URL [" + urlToCheck + "] was not validated";
+				Logs2.reportException({ config: this.config, msg, ex });
+				throw ex;
 			}
 		}
 	}
@@ -117,17 +118,19 @@ export default class Bookmarks {
 
 			try {
 				// Execute sqlite3 to get data
-				let path = await OS2.getFullPath({ config: this.config, relativePath: "scripts/sqlite3XXX" });
+				let bmTempFFLinePath = await OS2.getFullPath({ config: this.config, relativePath: "data/bmTempFF_LINE.txt", skipCheck: true });
+				let path = await OS2.getFullPath({ config: this.config, relativePath: "scripts/sqlite3.exe" });
 				let sql = `SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id`;
 				let cmd = `${path} -header -line "${sqlitepath}" "${sql}" > ${bmTempFFLinePath}`;
 				if (this.config.verbose) Colors2.debug({ msg: "Executing command: " + cmd });
 				await OS2.execute({ config: this.config, command: cmd });
 				// Add one more line
-				await OS2.fsAppendFile(bmTempFFLinePath, "\r\n");
-				let lines = await OS2.readLines({ config: this.config, bmTempFFLinePath });
+				await OS2.fsAppendFile({ config: this.config, path: bmTempFFLinePath, data: "\r\n" });
+				let lines = await OS2.readLines({ config: this.config, path: bmTempFFLinePath });
 				return lines;
 			} catch (ex) {
-				Logs2.reportError({ config: this.config, obj: ex });
+				let msg = "Error quering Firefox bookmarks";
+				Logs2.reportException({ config: this.config, msg, ex });
 				throw ex;
 			}
 		};
@@ -136,35 +139,35 @@ export default class Bookmarks {
 			ET_Asserts.hasData({ value: lines, message: "lines" });
 
 			let record = {};
-			let tmp = {};
-			tmp.URLs = {};
-			tmp.TitlesByRow = {};
-			tmp.TitlesByName = {};
+			let data = {};
+			data.URLs = {};
+			data.TitlesByRow = {};
+			data.TitlesByName = {};
 
 			lines.forEach((line) => {
 				if (line == "") {
 					if (record.bTitle == "toolbar") {
 						record.bTitle = "BAR";
 					}
-					if (tmp.TitlesByRow[record.id]) {
+					if (data.TitlesByRow[record.id]) {
 						Logs2.reportErrorMessage({ config: this.config, msg: "Searching for Firefox bookmars: *" + record.id + "* was already defined" });
 					} else {
-						tmp.TitlesByRow[record.id] = "";
+						data.TitlesByRow[record.id] = "";
 					}
 					if (record.url) {
-						tmp.URLs[record.id] = record.url;
+						data.URLs[record.id] = record.url;
 					}
 					if (record.bTitle) {
 						let title = "";
 						if (record.parent) {
-							title = tmp.TitlesByRow[record.parent];
+							title = data.TitlesByRow[record.parent];
 						}
 						title += "[" + record.bTitle + "]";
-						if (tmp.TitlesByName[title]) {
+						if (data.TitlesByName[title]) {
 							Logs2.reportErrorMessage({ config: this.config, msg: "Searching for Firefox bookmars: Duplicate record: [" + record.bTitle + "]" });
 						}
-						tmp.TitlesByRow[record.id] = title;
-						tmp.TitlesByName[title] = record.id;
+						data.TitlesByRow[record.id] = title;
+						data.TitlesByName[title] = record.id;
 					}
 
 					record = {};
@@ -173,18 +176,18 @@ export default class Bookmarks {
 					record[parts[0].trim()] = parts[1].trim();
 				}
 			});
-			return tmp;
+			return data;
 		};
 
-		const linesPostProcess = async ({ tmp }) => {
-			ET_Asserts.hasData({ value: tmp, message: "tmp" });
+		const linesPostProcess = async ({ data }) => {
+			ET_Asserts.hasData({ value: data, message: "data" });
 
 			// Merge the data
-			for (let path in tmp.TitlesByName) {
+			for (let path in data.TitlesByName) {
 				if (path.startsWith("[BAR]")) {
-					if (Object.prototype.hasOwnProperty.call(tmp.TitlesByName, path)) {
-						let rowId = tmp.TitlesByName[path];
-						let url = tmp.URLs[rowId];
+					if (Object.prototype.hasOwnProperty.call(data.TitlesByName, path)) {
+						let rowId = data.TitlesByName[path];
+						let url = data.URLs[rowId];
 						if (url) {
 							let barNode = this.bm.Bar[path];
 							if (!barNode) barNode = {};
@@ -236,23 +239,28 @@ export default class Bookmarks {
 		try {
 			let sqlitepath = await findSqlLiteFilePath();
 			let lines = await getSqlLiteContent({ sqlitepath });
-			let tmp = await processLines({ lines });
-			await linesPostProcess({ tmp });
+			let data = await processLines({ lines });
+			await linesPostProcess({ data });
 		} catch (ex) {
-			Logs2.reportErrorMessage({ config: this.config, msg: "Failed checking Firefox" });
+			let msg = "Error quering Firefox bookmarks";
+			Logs2.reportException({ config: this.config, msg, ex });
+			throw ex;
 		}
 	}
 
 	async #writeToFiles() {
+		let bmDumpPath = await OS2.getFullPath({ config: this.config, relativePath: "data/bmDump.json", skipCheck: true });
 		try {
 			await OS2.writeFile({
 				config: this.config,
 				path: bmDumpPath,
-				data: JSON.stringify({ DTTM: new Date().toJSON(), bm: this.bm.Bar }, null, 4)
+				data: JSON.stringify(this.bm.Bar, null, 4)
 			});
 			if (this.config.debug) Colors2.info({ msg: "The file [" + bmDumpPath + "] was saved!" });
 		} catch (ex) {
-			Logs2.reportErrorMessage({ config: this.config, msg: `Failed to save: ${bmDumpPath}` });
+			let msg = `Failed to save: ${bmDumpPath}`;
+			Logs2.reportException({ config: this.config, msg, ex });
+			throw ex;
 		}
 	}
 
@@ -261,8 +269,10 @@ export default class Bookmarks {
 
 		if (this.config.verbose) Colors2.info({ msg: "Validating Bookmarks" });
 
-		let errorCount = 0;
-		bmChecks.forEach(async (bmCheck) => {
+		const validateBookmark = async ({ bmCheck }) => {
+			ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
+
+			let errorCount = 0;
 			let hasErrors = false;
 			let urlFF = this.bm.FF[bmCheck.title];
 			let urlChrome = this.bm.Chrome[bmCheck.title];
@@ -325,6 +335,7 @@ export default class Bookmarks {
 				} catch (ex) {
 					errorCount++;
 					hasErrors = true;
+
 					let msg = {
 						errorCode: 4,
 						bmCheckId: bmCheck.id,
@@ -332,9 +343,22 @@ export default class Bookmarks {
 						urlTitle: bmCheck.title,
 						urlExpected: expectedUrl
 					};
-					Logs2.reportErrorMessage({ config: this.config, msg });
+					Logs2.reportException({ config: this.config, msg, ex });
+					throw new Error(msg);
 				}
 			}
-		});
+		};
+
+		// Series
+		for (let bmCheck of bmChecks) {
+			await validateBookmark({ bmCheck });
+		}
+
+		// // Parallel
+		// await Promise.allSettled(
+		// 	bmChecks.map((bmCheck) => {
+		// 		return validateBookmark({ bmCheck });
+		// 	})
+		// );
 	}
 }

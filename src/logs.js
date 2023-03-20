@@ -16,6 +16,18 @@ export default class Logs {
 		Colors2.error({ msg: Colors2.getPrettyJson({ obj }), offset: 1 });
 	}
 
+	static reportException({ config, msg, ex }) {
+		ET_Asserts.hasData({ value: config, message: "config" });
+		ET_Asserts.hasData({ value: msg, message: "msg" });
+		ET_Asserts.hasData({ value: ex, message: "ex" });
+
+		let error = { test: config.currentTest, msg, error: { message: ex.message, stack: ex.stack } };
+		if (config.debug) Colors2.debug({ msg: "ERROR FOR: " + Colors2.getPrettyJson({ obj: error }) });
+		config.errors.push(error);
+		Colors2.error({ msg: "*** *** ERROR", offset: 1 });
+		Colors2.error({ msg: Colors2.getPrettyJson({ obj: error }), offset: 1 });
+	}
+
 	static reportErrorMessage({ config, msg }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: msg, message: "msg" });
