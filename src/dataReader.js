@@ -66,6 +66,7 @@ export default class Data {
 		sortedTests.forEach((test) => {
 			let parentTask = data.tasks.mapById[test.Parent__c];
 			test.testName = `${parentTask.testName} | ${test.AppName__c}`;
+			test.testCode = `${test.AppName__c} ${test.Code__c}`;
 			parentTask.tests.push(test);
 		});
 	}
