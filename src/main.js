@@ -3,7 +3,6 @@
 
 import Data from "./data.js";
 import minimist from "minimist";
-import Colors2 from "./colors.js";
 
 // Configure execution...
 const timerDelay = 250;
@@ -52,7 +51,7 @@ class Tester {
 	}
 
 	async start() {
-		Colors2.error({ msg: "Hello World" });
+		console.log({ msg: "Hello World" });
 		let dataReader = new Data({ config: this.config });
 		this.data = await dataReader.getData();
 		debugger;
