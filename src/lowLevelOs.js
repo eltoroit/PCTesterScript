@@ -168,19 +168,25 @@ export default class LowLevelOS {
 
 		if (config.verbose) Colors2.info({ msg: "CHECK PATH: [" + path + "]" });
 		let command = `DIR "${path}" /B`;
-		let expected = command.split("\\").pop();
+		let expected = path.split("\\").pop();
 		if (expected.endsWith("*")) {
 			// Remove last character, if it's a wildcard asterisk.
 			expected = expected.replace(/.$/, "");
 		}
-		let output = await LowLevelOS.commandExecute({ config, command });
-		if (output.stdout.toLowerCase().indexOf(expected.toLowerCase()) >= 0) {
-			if (config.verbose) Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
-			return;
-		} else {
-			let err = output;
+		let output = await LowLevelOS.execute({ config, command });
+		if (output.stderr) {
+			let err = output.stderr;
 			Logs2.reportErrorMessage({ config, msg: err });
 			throw new Error(err);
+		} else {
+			if (output.stdout.toLowerCase().indexOf(expected.toLowerCase()) >= 0) {
+				if (config.verbose) Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
+				return;
+			} else {
+				let err = output;
+				Logs2.reportErrorMessage({ config, msg: err });
+				throw new Error(err);
+			}
 		}
 	}
 }

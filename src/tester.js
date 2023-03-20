@@ -4,6 +4,7 @@ import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
 
+export let skipCompletedTests = true;
 export default class Tester {
 	config = null;
 
@@ -29,31 +30,60 @@ export default class Tester {
 			try {
 				await this.#testItem({ test });
 			} catch (ex) {
-				debugger;
+				// debugger;
 			}
 		}
+
+		this.#consolidateErrors();
+	}
+
+	#consolidateErrors() {
+		let consolidator = {
+			list: [],
+			map: {}
+		};
+
+		this.config.errors.forEach((eachError) => {
+			if (consolidator.map[eachError.test.Id]) {
+				let previousError = consolidator.map[eachError.test.Id];
+				previousError.errors.push(eachError.error);
+			} else {
+				consolidator.list.push(eachError.test.Id);
+				eachError.errors = [eachError.error];
+				consolidator.map[eachError.test.Id] = eachError;
+				delete eachError.error;
+			}
+		});
+
+		this.config.errors = consolidator.list.map((errorId) => consolidator.map[errorId]);
 	}
 
 	async #testItem({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
 		this.config.currentTest = test;
-		Colors2.info({ msg: `${test.testName} (${test.Operation__c})` });
+		Colors2.writeInstruction({ msg: `${test.testName} (${test.Operation__c})` });
 		switch (test.Operation__c) {
 			case "Bookmark": {
-				await this.#testBookmark({ test });
+				if (!skipCompletedTests) {
+					await this.#testBookmark({ test });
+				}
 				break;
 			}
 			case "Execute": {
-				await this.#testExecute({ test });
+				if (!skipCompletedTests) {
+					await this.#testExecute({ test });
+				}
 				break;
 			}
 			case "Check Path": {
-				// await this.#testCheckPath({ test });
+				if (!skipCompletedTests) {
+					await this.#testCheckPath({ test });
+				}
 				break;
 			}
 			case "Clear": {
-				// debugger;
+				Colors2.clearScreen();
 				break;
 			}
 			case "JSON": {
@@ -69,7 +99,7 @@ export default class Tester {
 				break;
 			}
 			case "Write": {
-				// debugger;
+				Colors2.writeMessage({ msg: test.Command__c });
 				break;
 			}
 			default: {
@@ -134,31 +164,18 @@ export default class Tester {
 
 		try {
 			let valid = false;
-			Colors2.info({ msg: `Check Path: [${test.Command__c}]` });
-			const response = await OS2.execute({ config: this.config, command: test.Command__c });
-			if (test.Expected__c) {
-				if (response.stdout != "" && response.stdout.indexOf(test.Expected__c) >= 0) valid = true;
-				if (response.stderr != "" && response.stderr.indexOf(test.Expected__c) >= 0) valid = true;
-			} else {
-				valid = true;
-			}
-			if (valid) {
-				Colors2.success({ msg: `Response was expected: ${test.Expected__c}` });
-			} else {
-				Logs2.reportError({
-					config: this.config,
-					obj: {
-						msg: "Response was not expected",
-						expected: test.Expected__c,
-						response
-					}
-				});
-			}
+			let path = test.Command__c;
+			Colors2.info({ msg: `Check Path: [${path}]` });
+			await OS2.checkPath({ config: this.config, path });
 		} catch (ex) {
 			let msg = "Error executing command";
 			Logs2.reportException({ config: this.config, msg, ex });
 			throw ex;
 		}
+	}
+
+	async #testClearr({ test }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
 	}
 }
 

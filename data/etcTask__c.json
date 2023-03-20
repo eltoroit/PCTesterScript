@@ -1,5 +1,5 @@
 {
-	"fetched": 13,
+	"fetched": 14,
 	"records": [
 		{
 			"attributes": {
@@ -84,6 +84,20 @@
 			"Name": "Manual Tests",
 			"Order__c": 3,
 			"Parent__c": null
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a05010000043cDwAAI"
+			},
+			"Code__c": "03-01",
+			"Id": "a05010000043cDwAAI",
+			"IsActive__c": false,
+			"Key__c": "a05010000043acEAAQ-01",
+			"Level__c": 2,
+			"Name": "MS Office",
+			"Order__c": 1,
+			"Parent__c": "a05010000043acEAAQ"
 		},
 		{
 			"attributes": {
@@ -184,5 +198,5 @@
 			"Parent__c": null
 		}
 	],
-	"total": 13
+	"total": 14
 }

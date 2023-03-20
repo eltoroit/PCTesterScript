@@ -1,5 +1,5 @@
 {
-	"fetched": 68,
+	"fetched": 70,
 	"records": [
 		{
 			"attributes": {
@@ -196,13 +196,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6xAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae70AAA"
 			},
-			"AppName__c": "Powerpoint (MS Office)",
+			"AppName__c": "Postman",
 			"Code__c": "03-#10",
-			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
 			"Expected__c": null,
-			"Id": "a0601000002ae6xAAA",
+			"Id": "a0601000002ae70AAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acEAAQ-10",
 			"Operation__c": "Manual Application",
@@ -212,13 +212,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6yAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae71AAA"
 			},
-			"AppName__c": "Excel (MS Office)",
+			"AppName__c": "Desktop: Data Loader",
 			"Code__c": "03-#11",
-			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader 45.0.0.lnk",
 			"Expected__c": null,
-			"Id": "a0601000002ae6yAAA",
+			"Id": "a0601000002ae71AAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acEAAQ-11",
 			"Operation__c": "Manual Application",
@@ -228,50 +228,50 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6xAAA"
+			},
+			"AppName__c": "Powerpoint (MS Office)",
+			"Code__c": "03-01-#01",
+			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk",
+			"Expected__c": null,
+			"Id": "a0601000002ae6xAAA",
+			"IsActive__c": true,
+			"Key__c": "a05010000043cDwAAI-01",
+			"Operation__c": "Manual Application",
+			"Order__c": 1,
+			"Parent__c": "a05010000043cDwAAI"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6yAAA"
+			},
+			"AppName__c": "Excel (MS Office)",
+			"Code__c": "03-01-#02",
+			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk",
+			"Expected__c": null,
+			"Id": "a0601000002ae6yAAA",
+			"IsActive__c": true,
+			"Key__c": "a05010000043cDwAAI-02",
+			"Operation__c": "Manual Application",
+			"Order__c": 2,
+			"Parent__c": "a05010000043cDwAAI"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6zAAA"
 			},
 			"AppName__c": "Word (MS Office)",
-			"Code__c": "03-#12",
+			"Code__c": "03-01-#03",
 			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6zAAA",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acEAAQ-12",
+			"IsActive__c": false,
+			"Key__c": "a05010000043cDwAAI-03",
 			"Operation__c": "Check Path",
-			"Order__c": 12,
-			"Parent__c": "a05010000043acEAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae70AAA"
-			},
-			"AppName__c": "Postman",
-			"Code__c": "03-#13",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
-			"Expected__c": null,
-			"Id": "a0601000002ae70AAA",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acEAAQ-13",
-			"Operation__c": "Manual Application",
-			"Order__c": 13,
-			"Parent__c": "a05010000043acEAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae71AAA"
-			},
-			"AppName__c": "Desktop: Data Loader",
-			"Code__c": "03-#14",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader 45.0.0.lnk",
-			"Expected__c": null,
-			"Id": "a0601000002ae71AAA",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acEAAQ-14",
-			"Operation__c": "Manual Application",
-			"Order__c": 14,
-			"Parent__c": "a05010000043acEAAQ"
+			"Order__c": 3,
+			"Parent__c": "a05010000043cDwAAI"
 		},
 		{
 			"attributes": {
@@ -331,7 +331,7 @@
 			"Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
 			"Expected__c": null,
 			"Id": "a0601000002ae7AAAQ",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acFAAQ-04",
 			"Operation__c": "Check Path",
 			"Order__c": 4,
@@ -472,7 +472,7 @@
 			},
 			"AppName__c": "Java (Oracle)",
 			"Code__c": "04-01-#02",
-			"Command__c": "C:\\Program Files\\Java\\jdk-17.0.5\\bin\\java.exe*",
+			"Command__c": "C:\\Program Files\\Java\\jdk-17\\bin\\java.exe*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6QAAQ",
 			"IsActive__c": true,
@@ -520,7 +520,7 @@
 			},
 			"AppName__c": "VS Code Plugin (1)",
 			"Code__c": "04-01-#05",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6TAAQ",
 			"IsActive__c": true,
@@ -536,7 +536,7 @@
 			},
 			"AppName__c": "VS Code Plugin (2)",
 			"Code__c": "04-01-#06",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6UAAQ",
 			"IsActive__c": true,
@@ -552,7 +552,7 @@
 			},
 			"AppName__c": "VS Code Plugin (3)",
 			"Code__c": "04-01-#07",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6VAAQ",
 			"IsActive__c": true,
@@ -568,7 +568,7 @@
 			},
 			"AppName__c": "VS Code Plugin (4)",
 			"Code__c": "04-01-#08",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6WAAQ",
 			"IsActive__c": true,
@@ -584,7 +584,7 @@
 			},
 			"AppName__c": "VS Code Plugin (5)",
 			"Code__c": "04-01-#09",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6XAAQ",
 			"IsActive__c": true,
@@ -600,7 +600,7 @@
 			},
 			"AppName__c": "VS Code Plugin (6)",
 			"Code__c": "04-01-#10",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6YAAQ",
 			"IsActive__c": true,
@@ -616,7 +616,7 @@
 			},
 			"AppName__c": "VS Code Plugin (7)",
 			"Code__c": "04-01-#11",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6ZAAQ",
 			"IsActive__c": true,
@@ -632,7 +632,7 @@
 			},
 			"AppName__c": "VS Code Plugin (8)",
 			"Code__c": "04-01-#12",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.3.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.6.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6aAAA",
 			"IsActive__c": true,
@@ -664,7 +664,7 @@
 			},
 			"AppName__c": "VS Code Plugin (10)",
 			"Code__c": "04-01-#14",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-13.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-12.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6cAAA",
 			"IsActive__c": true,
@@ -827,7 +827,7 @@
 			"Command__c": "C:\\Users\\Administrator\\Documents\\ntoforall*",
 			"Expected__c": null,
 			"Id": "a0601000002ae72AAA",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acIAAQ-01",
 			"Operation__c": "Check Path",
 			"Order__c": 1,
@@ -843,7 +843,7 @@
 			"Command__c": "C:\\Users\\Administrator\\tdxworkspace\\.metadata\\version.ini",
 			"Expected__c": null,
 			"Id": "a0601000002ae73AAA",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acIAAQ-02",
 			"Operation__c": "Check Path",
 			"Order__c": 2,
@@ -859,7 +859,7 @@
 			"Command__c": "C:\\Users\\Administrator\\DigitalServerConnect*",
 			"Expected__c": null,
 			"Id": "a0601000002ae74AAA",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acIAAQ-03",
 			"Operation__c": "Check Path",
 			"Order__c": 3,
@@ -875,7 +875,7 @@
 			"Command__c": "C:\\TDX22\\TDX-B2B-Exercise.zip",
 			"Expected__c": null,
 			"Id": "a0601000002ae75AAA",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acIAAQ-04",
 			"Operation__c": "Check Path",
 			"Order__c": 4,
@@ -964,13 +964,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7MAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002afC1AAI"
 			},
-			"AppName__c": "SalesforceSans Font (3)",
+			"AppName__c": "SalesforceSans Font (2)",
 			"Code__c": "04-05-#03",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Book.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7MAAQ",
+			"Id": "a0601000002afC1AAI",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-03",
 			"Operation__c": "Check Path",
@@ -980,13 +980,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7NAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7MAAQ"
 			},
-			"AppName__c": "SalesforceSans Font (4)",
+			"AppName__c": "SalesforceSans Font (3)",
 			"Code__c": "04-05-#04",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7NAAQ",
+			"Id": "a0601000002ae7MAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-04",
 			"Operation__c": "Check Path",
@@ -996,13 +996,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7OAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7NAAQ"
 			},
-			"AppName__c": "SalesforceSans Font (5)",
+			"AppName__c": "SalesforceSans Font (4)",
 			"Code__c": "04-05-#05",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7OAAQ",
+			"Id": "a0601000002ae7NAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-05",
 			"Operation__c": "Check Path",
@@ -1012,13 +1012,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7PAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7OAAQ"
 			},
-			"AppName__c": "SalesforceSans Font (6)",
+			"AppName__c": "SalesforceSans Font (5)",
 			"Code__c": "04-05-#06",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7PAAQ",
+			"Id": "a0601000002ae7OAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-06",
 			"Operation__c": "Check Path",
@@ -1028,13 +1028,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7QAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7PAAQ"
 			},
-			"AppName__c": "SalesforceSans Font (7)",
+			"AppName__c": "SalesforceSans Font (6)",
 			"Code__c": "04-05-#07",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7QAAQ",
+			"Id": "a0601000002ae7PAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-07",
 			"Operation__c": "Check Path",
@@ -1044,17 +1044,49 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7RAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002afC6AAI"
 			},
-			"AppName__c": "SalesforceSans Font (8)",
+			"AppName__c": "SalesforceSans Font (5)",
 			"Code__c": "04-05-#08",
-			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Semibold.ttf",
 			"Expected__c": null,
-			"Id": "a0601000002ae7RAAQ",
+			"Id": "a0601000002afC6AAI",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acKAAQ-08",
 			"Operation__c": "Check Path",
 			"Order__c": 8,
+			"Parent__c": "a05010000043acKAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7QAAQ"
+			},
+			"AppName__c": "SalesforceSans Font (7)",
+			"Code__c": "04-05-#09",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf",
+			"Expected__c": null,
+			"Id": "a0601000002ae7QAAQ",
+			"IsActive__c": true,
+			"Key__c": "a05010000043acKAAQ-09",
+			"Operation__c": "Check Path",
+			"Order__c": 9,
+			"Parent__c": "a05010000043acKAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7RAAQ"
+			},
+			"AppName__c": "SalesforceSans Font (8)",
+			"Code__c": "04-05-#10",
+			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf",
+			"Expected__c": null,
+			"Id": "a0601000002ae7RAAQ",
+			"IsActive__c": true,
+			"Key__c": "a05010000043acKAAQ-10",
+			"Operation__c": "Check Path",
+			"Order__c": 10,
 			"Parent__c": "a05010000043acKAAQ"
 		},
 		{
@@ -1090,5 +1122,5 @@
 			"Parent__c": "a05010000043acDAAQ"
 		}
 	],
-	"total": 68
+	"total": 70
 }

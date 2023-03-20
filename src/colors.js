@@ -5,6 +5,16 @@ export default class Colors {
 		console.log(clearScreenCode);
 	}
 
+	static writeInstruction({ msg }) {
+		ET_Asserts.hasData({ value: msg, message: "msg" });
+		console.log(colorBgBlack + colorBright + colorFgMagenta + msg + colorReset);
+	}
+
+	static writeMessage({ msg }) {
+		ET_Asserts.hasData({ value: msg, message: "msg" });
+		console.log(colorBgBlack + colorBright + colorFgCyan + msg + colorReset);
+	}
+
 	static debug({ msg }) {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
