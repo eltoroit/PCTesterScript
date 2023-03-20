@@ -32,7 +32,7 @@ class Main {
 				debug: false,
 				verbose: false,
 				checkUrlExists: true,
-				executeManualChecks: true
+				executeManualChecks: false // true
 			};
 		} else if (testType == "TEST") {
 			this.config = {
@@ -65,6 +65,8 @@ class Main {
 async function main() {
 	let m = new Main();
 	try {
+		debugger;
+
 		let errors = await m.start();
 		if (errors.length === 0) {
 			Colors2.clearScreen();

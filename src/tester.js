@@ -18,8 +18,6 @@ export default class Tester {
 	async test({ data }) {
 		ET_Asserts.hasData({ value: data, message: "data" });
 
-		debugger;
-
 		// // Parallel
 		// data.tests.forEach(async (test) => {
 		// 	await this.#testItem({ test });
@@ -91,11 +89,19 @@ export default class Tester {
 				break;
 			}
 			case "Manual": {
-				// debugger;
+				if (!skipCompletedTests) {
+					if (this.config.executeManualChecks) {
+						await Logs2.promptYesNo({ config: this.config, question: `${test.Command__c} [Y|N]` });
+					} else {
+						Colors2.error({ msg: "Manual tests are being skipped" });
+						Colors2.error({ msg: "Manual tests are being skipped" });
+						Colors2.error({ msg: "Manual tests are being skipped" });
+					}
+				}
 				break;
 			}
 			case "Manual Application": {
-				// debugger;
+				await this.#testManualApplication({ test });
 				break;
 			}
 			case "Write": {
@@ -163,7 +169,6 @@ export default class Tester {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
 		try {
-			let valid = false;
 			let path = test.Command__c;
 			Colors2.info({ msg: `Check Path: [${path}]` });
 			await OS2.checkPath({ config: this.config, path });
@@ -174,8 +179,15 @@ export default class Tester {
 		}
 	}
 
-	async #testClearr({ test }) {
+	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
+
+		if (this.config.executeManualChecks) {
+			await Logs2.promptYesNo({ config: this.config, question: `${test.Command__c} [Y|N]` });
+		} else {
+			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
+			await this.#testCheckPath({ test });
+		}
 	}
 }
 

@@ -1,8 +1,9 @@
+import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
 import ET_Asserts from "./etAsserts.js";
 import * as readline from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
-import { exec } from "child_process"; // execSync, spawn, spawnSync
+import Colors from "./colors.js";
 
 export default class Logs {
 	// OLD_CODE: reportError(instruction) {
@@ -34,16 +35,17 @@ export default class Logs {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
 		config.errors.push({ test: config.currentTest, error: msg });
-		Colors2.error({ msg: Colors2.getPrettyJson({ obj: msg }), offset: 1 });
+		Colors2.error({ msg, offset: 1 });
 	}
 
 	// OLD_CODE: promptYesNo(instruction) *** question = instruction.Message__c
-	static promptYesNo({ config, question, obj }) {
+	static async promptYesNo({ config, question }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: question, message: "question" });
-		ET_Asserts.hasData({ value: obj, message: "obj" });
 
 		const rl = readline.createInterface({ input, output });
+		const sendKeysPath = await OS2.getFullPath({ config, relativePath: "scripts/sendkeys.bat" });
+		const sendKeysCommand = `call ${sendKeysPath} "C:\\Windows\\System32\\cmd.exe" ""`;
 
 		// Can't use async/await because I need a loop
 		return new Promise((resolve, reject) => {
@@ -51,19 +53,18 @@ export default class Logs {
 				const answer = await rl.question(Colors2.getPromptMsg({ msg: "[Y/N] > " }));
 				if (answer[0].toUpperCase() === "Y") {
 					rl.close();
-					resolve("Y");
+					Colors.success({ msg: "User approved step" });
+					resolve("YES");
 				} else if (answer[0].toUpperCase() === "N") {
 					rl.close();
-					this.reportError({ obj });
-					resolve("N");
+					Logs.reportErrorMessage({ config, msg: "User did not approve step" });
+					resolve("NO");
 				} else {
 					loop();
 				}
 			}
+			OS2.execute({ config, command: sendKeysCommand });
 			Colors2.promptMsg({ msg: question });
-
-			debugger; // Check path for sendkeys.bat
-			exec('call sendkeys.bat "C:\\Windows\\System32\\cmd.exe" ""');
 
 			if (config.executeManualChecks) {
 				loop();
