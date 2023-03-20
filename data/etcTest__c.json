@@ -1,13 +1,29 @@
 {
-	"fetched": 67,
+	"fetched": 68,
 	"records": [
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002aeMsAAI"
+			},
+			"AppName__c": "TEST",
+			"Code__c": "01-01-01-01-#01",
+			"Command__c": null,
+			"Expected__c": null,
+			"Id": "a0601000002aeMsAAI",
+			"IsActive__c": true,
+			"Key__c": "a05010000043bTMAAY-01",
+			"Operation__c": "Clear",
+			"Order__c": 1,
+			"Parent__c": "a05010000043bTMAAY"
+		},
 		{
 			"attributes": {
 				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6NAAQ"
 			},
 			"AppName__c": "Clear Screen",
-			"Code__c": "01-#01",
+			"Code__c": "02-#01",
 			"Command__c": null,
 			"Expected__c": null,
 			"Id": "a0601000002ae6NAAQ",
@@ -23,7 +39,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6OAAQ"
 			},
 			"AppName__c": "Say Hi",
-			"Code__c": "01-#02",
+			"Code__c": "02-#02",
 			"Command__c": "Application Tester built by Andres Perez (ELTORO.IT)",
 			"Expected__c": null,
 			"Id": "a0601000002ae6OAAQ",
@@ -39,7 +55,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6oAAA"
 			},
 			"AppName__c": "Header",
-			"Code__c": "02-#01",
+			"Code__c": "03-#01",
 			"Command__c": "=== === === MANUAL CHECKS === === ===",
 			"Expected__c": null,
 			"Id": "a0601000002ae6oAAA",
@@ -55,7 +71,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6pAAA"
 			},
 			"AppName__c": "Sticker",
-			"Code__c": "02-#02",
+			"Code__c": "03-#02",
 			"Command__c": "Sticker with computer number?",
 			"Expected__c": null,
 			"Id": "a0601000002ae6pAAA",
@@ -71,7 +87,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6qAAA"
 			},
 			"AppName__c": "Desktop Image",
-			"Code__c": "02-#03",
+			"Code__c": "03-#03",
 			"Command__c": "Computer background image?",
 			"Expected__c": null,
 			"Id": "a0601000002ae6qAAA",
@@ -87,7 +103,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6rAAA"
 			},
 			"AppName__c": "Desktop: Notepad++",
-			"Code__c": "02-#04",
+			"Code__c": "03-#04",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Notepad++.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6rAAA",
@@ -103,7 +119,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6sAAA"
 			},
 			"AppName__c": "Chrome + Salesforce is homepage",
-			"Code__c": "02-#05",
+			"Code__c": "03-#05",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Google Chrome.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6sAAA",
@@ -119,7 +135,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6tAAA"
 			},
 			"AppName__c": "Firefox + Salesforce is homepage",
-			"Code__c": "02-#06",
+			"Code__c": "03-#06",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Firefox.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6tAAA",
@@ -135,7 +151,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6uAAA"
 			},
 			"AppName__c": "Chrome: Plugin",
-			"Code__c": "02-#07",
+			"Code__c": "03-#07",
 			"Command__c": "Chrome Plugin to split screen",
 			"Expected__c": null,
 			"Id": "a0601000002ae6uAAA",
@@ -151,7 +167,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6vAAA"
 			},
 			"AppName__c": "Eclipse IDE",
-			"Code__c": "02-#08",
+			"Code__c": "03-#08",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Eclipse IDE for Java Developers - 2022-06.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6vAAA",
@@ -167,7 +183,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6wAAA"
 			},
 			"AppName__c": "VS Code (Wait for the extensions update)",
-			"Code__c": "02-#09",
+			"Code__c": "03-#09",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Visual Studio Code.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6wAAA",
@@ -183,7 +199,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6xAAA"
 			},
 			"AppName__c": "Powerpoint (MS Office)",
-			"Code__c": "02-#10",
+			"Code__c": "03-#10",
 			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint 2016.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6xAAA",
@@ -199,7 +215,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6yAAA"
 			},
 			"AppName__c": "Excel (MS Office)",
-			"Code__c": "02-#11",
+			"Code__c": "03-#11",
 			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel 2016.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6yAAA",
@@ -215,7 +231,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6zAAA"
 			},
 			"AppName__c": "Word (MS Office)",
-			"Code__c": "02-#12",
+			"Code__c": "03-#12",
 			"Command__c": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word 2016.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6zAAA",
@@ -231,7 +247,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae70AAA"
 			},
 			"AppName__c": "Postman",
-			"Code__c": "02-#13",
+			"Code__c": "03-#13",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae70AAA",
@@ -247,7 +263,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae71AAA"
 			},
 			"AppName__c": "Desktop: Data Loader",
-			"Code__c": "02-#14",
+			"Code__c": "03-#14",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader 45.0.0.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae71AAA",
@@ -263,7 +279,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae77AAA"
 			},
 			"AppName__c": "Chrome: Plugin Resize",
-			"Code__c": "03-#01",
+			"Code__c": "04-#01",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.5_0\\package.json",
 			"Expected__c": null,
 			"Id": "a0601000002ae77AAA",
@@ -279,7 +295,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae78AAA"
 			},
 			"AppName__c": "Check Java version",
-			"Code__c": "03-#02",
+			"Code__c": "04-#02",
 			"Command__c": "java -version",
 			"Expected__c": "java version \"17.0.5\" 2022-10-18 LTS",
 			"Id": "a0601000002ae78AAA",
@@ -295,7 +311,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae79AAA"
 			},
 			"AppName__c": "Notepad",
-			"Code__c": "03-#03",
+			"Code__c": "04-#03",
 			"Command__c": "C:\\Windows\\Notepad.exe",
 			"Expected__c": null,
 			"Id": "a0601000002ae79AAA",
@@ -311,7 +327,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7AAAQ"
 			},
 			"AppName__c": "SoapUI",
-			"Code__c": "03-#04",
+			"Code__c": "04-#04",
 			"Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
 			"Expected__c": null,
 			"Id": "a0601000002ae7AAAQ",
@@ -327,7 +343,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7BAAQ"
 			},
 			"AppName__c": "Postman",
-			"Code__c": "03-#05",
+			"Code__c": "04-#05",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae7BAAQ",
@@ -343,7 +359,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7CAAQ"
 			},
 			"AppName__c": "Git config email",
-			"Code__c": "03-#06",
+			"Code__c": "04-#06",
 			"Command__c": "git config --global user.email \"you@example.com\"",
 			"Expected__c": null,
 			"Id": "a0601000002ae7CAAQ",
@@ -359,7 +375,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7DAAQ"
 			},
 			"AppName__c": "Git config name",
-			"Code__c": "03-#07",
+			"Code__c": "04-#07",
 			"Command__c": "git config --global user.name \"Your Name\"",
 			"Expected__c": null,
 			"Id": "a0601000002ae7DAAQ",
@@ -375,7 +391,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7EAAQ"
 			},
 			"AppName__c": "7-Zip",
-			"Code__c": "03-#08",
+			"Code__c": "04-#08",
 			"Command__c": "\"C:\\Program Files\\7-Zip\\7z.exe\" -version",
 			"Expected__c": "7-Zip 22",
 			"Id": "a0601000002ae7EAAQ",
@@ -391,7 +407,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7FAAQ"
 			},
 			"AppName__c": "Node",
-			"Code__c": "03-#09",
+			"Code__c": "04-#09",
 			"Command__c": "node --version",
 			"Expected__c": "v18.13.0",
 			"Id": "a0601000002ae7FAAQ",
@@ -407,8 +423,8 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7GAAQ"
 			},
 			"AppName__c": "Checking all bookmarks",
-			"Code__c": "03-#10",
-			"Command__c": null,
+			"Code__c": "04-#10",
+			"Command__c": "[\r\n  {\r\n    \"id\": \"BM_1\",\r\n    \"title\": \"[BAR][Salesforce]\",\r\n    \"urlChrome\": \"https://www.salesforce.com/\",\r\n    \"urlFirefox\": \"https://www.salesforce.com/\",\r\n    \"urlExpected\": \"https://www.salesforce.com/\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  },\r\n  {\r\n    \"id\": \"BM_2\",\r\n    \"title\": \"[BAR][Salesforce Login]\",\r\n    \"urlChrome\": \"https://login.salesforce.com/\",\r\n    \"urlFirefox\": \"https://login.salesforce.com/\",\r\n    \"urlExpected\": \"https://login.salesforce.com/\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  },\r\n  {\r\n    \"id\": \"BM_3\",\r\n    \"title\": \"[BAR][MuleSoft]\",\r\n    \"urlChrome\": \"https://www.mulesoft.com/\",\r\n    \"urlFirefox\": \"https://www.mulesoft.com/\",\r\n    \"urlExpected\": \"https://www.mulesoft.com/\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  },\r\n  {\r\n    \"id\": \"BM_4\",\r\n    \"title\": \"[BAR][Tableau]\",\r\n    \"urlChrome\": \"https://www.tableau.com/\",\r\n    \"urlFirefox\": \"https://www.tableau.com/\",\r\n    \"urlExpected\": \"https://www.tableau.com/\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  },\r\n  {\r\n    \"id\": \"BM_5\",\r\n    \"title\": \"[BAR][HOW Survey]\",\r\n    \"urlChrome\": \"https://www.surveymonkey.com/r/TDX23HOW\",\r\n    \"urlFirefox\": \"https://www.surveymonkey.com/r/TDX23HOW\",\r\n    \"urlExpected\": \"https://www.surveymonkey.com/r/TDX23HOW\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  },\r\n  {\r\n    \"id\": \"BM_6\",\r\n    \"title\": \"[BAR][TrailblazerDX 2023]\",\r\n    \"urlChrome\": \"https://www.salesforce.com/trailblazerdx\",\r\n    \"urlFirefox\": \"https://www.salesforce.com/trailblazerdx\",\r\n    \"urlExpected\": \"https://www.salesforce.com/trailblazerdx\",\r\n    \"hasFF\": true,\r\n    \"hasChrome\": true,\r\n    \"checkFF\": true,\r\n    \"checkChrome\": true\r\n  }\r\n]",
 			"Expected__c": null,
 			"Id": "a0601000002ae7GAAQ",
 			"IsActive__c": true,
@@ -423,7 +439,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7HAAQ"
 			},
 			"AppName__c": "Clone and execute C:\\LWC_HOW",
-			"Code__c": "03-#11",
+			"Code__c": "04-#11",
 			"Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
 			"Expected__c": null,
 			"Id": "a0601000002ae7HAAQ",
@@ -439,7 +455,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6PAAQ"
 			},
 			"AppName__c": "VS Code (Wait for the extensions update)",
-			"Code__c": "03-01-#01",
+			"Code__c": "04-01-#01",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Visual Studio Code.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6PAAQ",
@@ -455,7 +471,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6QAAQ"
 			},
 			"AppName__c": "Java (Oracle)",
-			"Code__c": "03-01-#02",
+			"Code__c": "04-01-#02",
 			"Command__c": "C:\\Program Files\\Java\\jdk-17.0.5\\bin\\java.exe*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6QAAQ",
@@ -471,7 +487,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6RAAQ"
 			},
 			"AppName__c": "SFDX Update",
-			"Code__c": "03-01-#03",
+			"Code__c": "04-01-#03",
 			"Command__c": "sfdx update",
 			"Expected__c": "sfdx-cli: Updat",
 			"Id": "a0601000002ae6RAAQ",
@@ -487,7 +503,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6SAAQ"
 			},
 			"AppName__c": "VS Code Version",
-			"Code__c": "03-01-#04",
+			"Code__c": "04-01-#04",
 			"Command__c": "code --version",
 			"Expected__c": "1.",
 			"Id": "a0601000002ae6SAAQ",
@@ -503,7 +519,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6TAAQ"
 			},
 			"AppName__c": "VS Code Plugin (1)",
-			"Code__c": "03-01-#05",
+			"Code__c": "04-01-#05",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6TAAQ",
@@ -519,7 +535,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6UAAQ"
 			},
 			"AppName__c": "VS Code Plugin (2)",
-			"Code__c": "03-01-#06",
+			"Code__c": "04-01-#06",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6UAAQ",
@@ -535,7 +551,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6VAAQ"
 			},
 			"AppName__c": "VS Code Plugin (3)",
-			"Code__c": "03-01-#07",
+			"Code__c": "04-01-#07",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6VAAQ",
@@ -551,7 +567,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6WAAQ"
 			},
 			"AppName__c": "VS Code Plugin (4)",
-			"Code__c": "03-01-#08",
+			"Code__c": "04-01-#08",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6WAAQ",
@@ -567,7 +583,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6XAAQ"
 			},
 			"AppName__c": "VS Code Plugin (5)",
-			"Code__c": "03-01-#09",
+			"Code__c": "04-01-#09",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6XAAQ",
@@ -583,7 +599,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6YAAQ"
 			},
 			"AppName__c": "VS Code Plugin (6)",
-			"Code__c": "03-01-#10",
+			"Code__c": "04-01-#10",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6YAAQ",
@@ -599,7 +615,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6ZAAQ"
 			},
 			"AppName__c": "VS Code Plugin (7)",
-			"Code__c": "03-01-#11",
+			"Code__c": "04-01-#11",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6ZAAQ",
@@ -615,7 +631,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6aAAA"
 			},
 			"AppName__c": "VS Code Plugin (8)",
-			"Code__c": "03-01-#12",
+			"Code__c": "04-01-#12",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.3.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6aAAA",
@@ -631,7 +647,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6bAAA"
 			},
 			"AppName__c": "VS Code Plugin (9)",
-			"Code__c": "03-01-#13",
+			"Code__c": "04-01-#13",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6bAAA",
@@ -647,7 +663,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6cAAA"
 			},
 			"AppName__c": "VS Code Plugin (10)",
-			"Code__c": "03-01-#14",
+			"Code__c": "04-01-#14",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-13.*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6cAAA",
@@ -663,7 +679,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6dAAA"
 			},
 			"AppName__c": "VS Code Plugin (11)",
-			"Code__c": "03-01-#15",
+			"Code__c": "04-01-#15",
 			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6dAAA",
@@ -679,7 +695,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6eAAA"
 			},
 			"AppName__c": "SFDX (Shell)",
-			"Code__c": "03-01-#16",
+			"Code__c": "04-01-#16",
 			"Command__c": null,
 			"Expected__c": null,
 			"Id": "a0601000002ae6eAAA",
@@ -695,7 +711,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6fAAA"
 			},
 			"AppName__c": "VSCode - Prettier - XCopy",
-			"Code__c": "03-01-#17",
+			"Code__c": "04-01-#17",
 			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
 			"Expected__c": "File(s) copied",
 			"Id": "a0601000002ae6fAAA",
@@ -711,7 +727,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6gAAA"
 			},
 			"AppName__c": "VSCode - XML - XCopy",
-			"Code__c": "03-01-#18",
+			"Code__c": "04-01-#18",
 			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
 			"Expected__c": "File(s) copied",
 			"Id": "a0601000002ae6gAAA",
@@ -727,7 +743,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6hAAA"
 			},
 			"AppName__c": "Git (Version)",
-			"Code__c": "03-01-#19",
+			"Code__c": "04-01-#19",
 			"Command__c": "git --version",
 			"Expected__c": "git version 2.39",
 			"Id": "a0601000002ae6hAAA",
@@ -743,7 +759,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6kAAA"
 			},
 			"AppName__c": "Check Curl version",
-			"Code__c": "03-02-#01",
+			"Code__c": "04-02-#01",
 			"Command__c": "curl --version",
 			"Expected__c": "curl 7.55.1 (Windows) libcurl/7.55.1 WinSSL",
 			"Id": "a0601000002ae6kAAA",
@@ -759,7 +775,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6lAAA"
 			},
 			"AppName__c": "Ruby",
-			"Code__c": "03-02-#02",
+			"Code__c": "04-02-#02",
 			"Command__c": "ruby --version",
 			"Expected__c": "ruby 2.4.3p205 (2017-12-14 revision 61247) [x64-mingw32]",
 			"Id": "a0601000002ae6lAAA",
@@ -775,7 +791,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6mAAA"
 			},
 			"AppName__c": "Travis",
-			"Code__c": "03-02-#03",
+			"Code__c": "04-02-#03",
 			"Command__c": "travis version",
 			"Expected__c": "1.8.8",
 			"Id": "a0601000002ae6mAAA",
@@ -791,7 +807,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6nAAA"
 			},
 			"AppName__c": "Python",
-			"Code__c": "03-02-#04",
+			"Code__c": "04-02-#04",
 			"Command__c": "python --version",
 			"Expected__c": "Python 2.7.14",
 			"Id": "a0601000002ae6nAAA",
@@ -807,7 +823,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae72AAA"
 			},
 			"AppName__c": "B2C Commerce Cloud (ntoforall)",
-			"Code__c": "03-03-#01",
+			"Code__c": "04-03-#01",
 			"Command__c": "C:\\Users\\Administrator\\Documents\\ntoforall*",
 			"Expected__c": null,
 			"Id": "a0601000002ae72AAA",
@@ -823,7 +839,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae73AAA"
 			},
 			"AppName__c": "B2C Commerce Cloud (version.ini)",
-			"Code__c": "03-03-#02",
+			"Code__c": "04-03-#02",
 			"Command__c": "C:\\Users\\Administrator\\tdxworkspace\\.metadata\\version.ini",
 			"Expected__c": null,
 			"Id": "a0601000002ae73AAA",
@@ -839,7 +855,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae74AAA"
 			},
 			"AppName__c": "B2C Commerce Cloud (DigitalServerConnect)",
-			"Code__c": "03-03-#03",
+			"Code__c": "04-03-#03",
 			"Command__c": "C:\\Users\\Administrator\\DigitalServerConnect*",
 			"Expected__c": null,
 			"Id": "a0601000002ae74AAA",
@@ -855,7 +871,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae75AAA"
 			},
 			"AppName__c": "B2B files for TDX",
-			"Code__c": "03-03-#04",
+			"Code__c": "04-03-#04",
 			"Command__c": "C:\\TDX22\\TDX-B2B-Exercise.zip",
 			"Expected__c": null,
 			"Id": "a0601000002ae75AAA",
@@ -871,7 +887,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae76AAA"
 			},
 			"AppName__c": "Mulesoft spreadsheet",
-			"Code__c": "03-03-#05",
+			"Code__c": "04-03-#05",
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Global Superstore.xlsx",
 			"Expected__c": null,
 			"Id": "a0601000002ae76AAA",
@@ -887,7 +903,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7IAAQ"
 			},
 			"AppName__c": "Logout SFDX",
-			"Code__c": "03-04-#01",
+			"Code__c": "04-04-#01",
 			"Command__c": "sfdx force:auth:logout --all --noprompt",
 			"Expected__c": null,
 			"Id": "a0601000002ae7IAAQ",
@@ -903,7 +919,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7JAAQ"
 			},
 			"AppName__c": "Logout Heroku",
-			"Code__c": "03-04-#02",
+			"Code__c": "04-04-#02",
 			"Command__c": "heroku logout",
 			"Expected__c": null,
 			"Id": "a0601000002ae7JAAQ",
@@ -919,7 +935,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7KAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (1)",
-			"Code__c": "03-05-#01",
+			"Code__c": "04-05-#01",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Bold.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7KAAQ",
@@ -935,7 +951,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7LAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (2)",
-			"Code__c": "03-05-#02",
+			"Code__c": "04-05-#02",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-BoldItalic.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7LAAQ",
@@ -951,7 +967,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7MAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (3)",
-			"Code__c": "03-05-#03",
+			"Code__c": "04-05-#03",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Italic.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7MAAQ",
@@ -967,7 +983,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7NAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (4)",
-			"Code__c": "03-05-#04",
+			"Code__c": "04-05-#04",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Light.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7NAAQ",
@@ -983,7 +999,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7OAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (5)",
-			"Code__c": "03-05-#05",
+			"Code__c": "04-05-#05",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-LightItalic.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7OAAQ",
@@ -999,7 +1015,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7PAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (6)",
-			"Code__c": "03-05-#06",
+			"Code__c": "04-05-#06",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Regular.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7PAAQ",
@@ -1015,7 +1031,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7QAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (7)",
-			"Code__c": "03-05-#07",
+			"Code__c": "04-05-#07",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-Thin.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7QAAQ",
@@ -1031,7 +1047,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7RAAQ"
 			},
 			"AppName__c": "SalesforceSans Font (8)",
-			"Code__c": "03-05-#08",
+			"Code__c": "04-05-#08",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Fonts\\SalesforceSans-ThinItalic.ttf",
 			"Expected__c": null,
 			"Id": "a0601000002ae7RAAQ",
@@ -1047,7 +1063,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6iAAA"
 			},
 			"AppName__c": "Header",
-			"Code__c": "04-#01",
+			"Code__c": "05-#01",
 			"Command__c": "=== === === INSTALL ET-EPL === === ===",
 			"Expected__c": null,
 			"Id": "a0601000002ae6iAAA",
@@ -1063,7 +1079,7 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6jAAA"
 			},
 			"AppName__c": "Configure Electron",
-			"Code__c": "04-#02",
+			"Code__c": "05-#02",
 			"Command__c": null,
 			"Expected__c": null,
 			"Id": "a0601000002ae6jAAA",
@@ -1074,5 +1090,5 @@
 			"Parent__c": "a05010000043acDAAQ"
 		}
 	],
-	"total": 67
+	"total": 68
 }
