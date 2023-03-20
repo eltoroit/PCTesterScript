@@ -4,8 +4,6 @@ import Colors2 from "./colors.js";
 import ET_Asserts from "./etAsserts.js";
 import ET_JSON from "./etJson.js";
 
-const bmPretendPath = "./bmPretend.json";
-const bmCheckPath = "./bmCheck.json";
 const bmDumpPath = "./bmDump.json";
 const bmTempFFLinePath = "./bmTempFF_LINE.txt";
 
@@ -30,22 +28,18 @@ export default class Bookmarks {
 		this.bmFirefoxPath = [`C:\\Users\\${this.config.adminUser}\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles`, "*.default-release", "places.sqlite"];
 	}
 
-	async validateBookmarks() {
+	async validateBookmarks({ bmChecks }) {
+		ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
+
 		if (this.config.verbose) Colors2.info({ msg: "Validating all bookmarks for all browsers" });
 
-		if (await OS2.doesFileExist({ config: this.config, path: bmPretendPath })) {
-			Colors2.error({ msg: "Bookmarks information read from file [" + bmPretendPath + "]" });
-			this.bm = await OS2.loadFileJson({ path: bmPretendPath });
-			await this.#validateBookmarks_Process();
-		} else {
-			// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invoked from findBookmarks_Firefox.
-			// Do not reverse the order here. First Chrome, then Firefox.
-			await this.#findBookmarks_Chrome();
-			await this.#findBookmarks_Firefox(); // Firefox must be last!
+		// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invoked from findBookmarks_Firefox.
+		// Do not reverse the order here. First Chrome, then Firefox.
+		await this.#findBookmarks_Chrome();
+		await this.#findBookmarks_Firefox(); // Firefox must be last!
 
-			await this.#writeToFiles();
-			await this.#validateBookmarks_Process();
-		}
+		await this.#writeToFiles();
+		await this.#validateBookmarks_Process({ bmChecks });
 	}
 
 	async #openUrl({ urlToCheck }) {
@@ -67,7 +61,7 @@ export default class Bookmarks {
 	async #findBookmarks_Chrome() {
 		const findBookmarks_Chrome_Children = ({ node, path }) => {
 			ET_Asserts.hasData({ value: node, message: "node" });
-			ET_Asserts.hasData({ value: path, message: "path" });
+			if (path !== "") ET_Asserts.hasData({ value: path, message: "path" });
 
 			let thisPath;
 
@@ -85,7 +79,7 @@ export default class Bookmarks {
 			}
 			if (node.children) {
 				for (let i = 0; i < node.children.length; i++) {
-					findBookmarks_Chrome_Children(node.children[i], thisPath);
+					findBookmarks_Chrome_Children({ node: node.children[i], path: thisPath });
 				}
 			}
 		};
@@ -93,24 +87,24 @@ export default class Bookmarks {
 		if (this.config.verbose) Colors2.info({ msg: "Finding Chrome bookmarks" });
 
 		const data = await this.etJSON.loadFileJson({ path: this.bmChromePath });
-		findBookmarks_Chrome_Children(data["roots"]["bookmark_bar"], "");
+		findBookmarks_Chrome_Children({ node: data["roots"]["bookmark_bar"], path: "" });
 	}
 
 	async #findBookmarks_Firefox() {
 		const findSqlLiteFilePath = async () => {
 			let sqlitepath = "";
-			let folders = OS2.fsReadDir({ config: this.config, path: this.bmFirefoxPath[0] });
+			let folders = await OS2.fsReadDir({ config: this.config, path: this.bmFirefoxPath[0] });
 			if (this.config.debug) Colors2.debug({ msg: `[Firefox Bookmarks][LOLG]: Foders found: ${Colors2.getPrettyJson({ obj: folders })}` });
-			let validFolders = folders.filter((folder) => {
+			let validFolders = folders.filter(async (folder) => {
 				let tmp = `${this.bmFirefoxPath[0]}\\${folder}\\${this.bmFirefoxPath[2]}`;
 				if (this.config.debug) console.log(`Checking path: ${tmp}`);
-				return OS2.fsExists({ config: this.config, path: tmp });
+				return await OS2.fsExists({ config: this.config, path: tmp });
 			});
 			if (this.config.debug) Colors2.debug({ msg: `Checking paths (output): ${Colors2.getPrettyJson({ obj: validFolders })}` });
 			if (validFolders.length == 1) {
 				sqlitepath = `${this.bmFirefoxPath[0]}\\${validFolders[0]}\\${this.bmFirefoxPath[2]}`;
 				if (this.config.debug) Colors2.debug({ msg: `[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}` });
-				return;
+				return sqlitepath;
 			} else {
 				let msg = "[Firefox Bookmarks][ERROR]: Multiple profiles for Firefox found";
 				Logs2.reportErrorMessage({ config: this.config, msg });
@@ -121,14 +115,15 @@ export default class Bookmarks {
 		const getSqlLiteContent = async ({ sqlitepath }) => {
 			ET_Asserts.hasData({ value: sqlitepath, message: "sqlitepath" });
 
-			// Execute sqlite3 to get data
-			let sql = `SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id`;
-			let cmd = `sqlite3 -header -line "${sqlitepath}" "${sql}" > ${bmTempFFLinePath}`;
-			if (this.config.verbose) Colors2.debug({ msg: "Execting command: " + cmd });
-			// Add one more line
-			await OS2.appendFileSync(bmTempFFLinePath, "\r\n");
 			try {
+				// Execute sqlite3 to get data
+				let path = await OS2.getFullPath({ config: this.config, relativePath: "scripts/sqlite3XXX" });
+				let sql = `SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id`;
+				let cmd = `${path} -header -line "${sqlitepath}" "${sql}" > ${bmTempFFLinePath}`;
+				if (this.config.verbose) Colors2.debug({ msg: "Executing command: " + cmd });
 				await OS2.execute({ config: this.config, command: cmd });
+				// Add one more line
+				await OS2.fsAppendFile(bmTempFFLinePath, "\r\n");
 				let lines = await OS2.readLines({ config: this.config, bmTempFFLinePath });
 				return lines;
 			} catch (ex) {
@@ -259,25 +254,14 @@ export default class Bookmarks {
 		} catch (ex) {
 			Logs2.reportErrorMessage({ config: this.config, msg: `Failed to save: ${bmDumpPath}` });
 		}
-
-		try {
-			await OS2.writeFile({
-				config: this.config,
-				path: bmPretendPath,
-				data: JSON.stringify(JSON.stringify(this.bm, null, 4))
-			});
-			if (this.config.debug) Colors2.info({ msg: "The file [" + bmPretendPath + "] was saved!" });
-		} catch (ex) {
-			Logs2.reportErrorMessage({ config: this.config, msg: `Failed to save: ${bmPretendPath}` });
-		}
 	}
 
-	async #validateBookmarks_Process() {
+	async #validateBookmarks_Process({ bmChecks }) {
+		ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
+
 		if (this.config.verbose) Colors2.info({ msg: "Validating Bookmarks" });
 
 		let errorCount = 0;
-		let bmChecks = await this.etJSON.loadFileJson({ path: bmCheckPath });
-
 		bmChecks.forEach(async (bmCheck) => {
 			let hasErrors = false;
 			let urlFF = this.bm.FF[bmCheck.title];

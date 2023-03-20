@@ -11,7 +11,7 @@ export default class Logs {
 		ET_Asserts.hasData({ value: obj, message: "obj" });
 
 		if (config.debug) Colors2.debug({ msg: "ERROR FOR: " + Colors2.getPrettyJson({ obj }) });
-		config.errors.push(obj);
+		config.errors.push({ test: config.currentTest, error: obj });
 		Colors2.error({ msg: "*** *** ERROR", offset: 1 });
 		Colors2.error({ msg: Colors2.getPrettyJson({ obj }), offset: 1 });
 	}
@@ -20,7 +20,7 @@ export default class Logs {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 
-		config.errors.push(msg);
+		config.errors.push({ test: config.currentTest, error: msg });
 		Colors2.error({ msg: Colors2.getPrettyJson({ obj: msg }), offset: 1 });
 	}
 

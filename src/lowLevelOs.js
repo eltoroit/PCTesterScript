@@ -5,7 +5,27 @@ import { exec } from "child_process";
 import * as fs from "node:fs/promises";
 import * as readline from "node:readline/promises";
 
+// import { fileURLToPath } from "url";
+// import { dirname } from "path";
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+import { resolve } from "path";
+
 export default class LowLevelOS {
+	static async getFullPath({ config, relativePath }) {
+		ET_Asserts.hasData({ value: config, message: "config" });
+		ET_Asserts.hasData({ value: relativePath, message: "relativePath" });
+
+		let path = resolve(relativePath);
+		if (await LowLevelOS.fsExists({ config, path })) {
+			return path;
+		} else {
+			let msg = `${path} could not be found`;
+			Logs2.reportErrorMessage({ config, msg });
+			throw new Error(msg);
+		}
+	}
+
 	static async doesFileExist({ config, path }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: path, message: "path" });
@@ -65,7 +85,7 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: path, message: "path" });
 
 		if (config.debug) Colors2.debug({ msg: "Finding files in: " + path });
-		return fs.readdirSync(path);
+		return await fs.readdir(path);
 	}
 
 	static async fsExists({ config, path }) {
@@ -73,7 +93,12 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: path, message: "path" });
 
 		if (config.debug) Colors2.debug({ msg: "Validating full path: " + path });
-		return fs.existsSync(path);
+		try {
+			await fs.stat(path);
+			return true;
+		} catch (ex) {
+			return false;
+		}
 	}
 
 	static async fsAppendFile({ config, path, data }) {
@@ -82,7 +107,7 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: data, message: "data" });
 
 		if (config.debug) Colors2.debug({ msg: `Appending [${data}] to [${path}]` });
-		return fs.appendFileSync(path, data);
+		return await fs.appendFile(path, data);
 	}
 
 	// OLD_CODE: static async spawnCommand(instruction) {

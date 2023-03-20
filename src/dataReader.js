@@ -1,13 +1,6 @@
-import Logs2 from "./logs.js";
 import OS2 from "./lowLevelOs.js";
-import Colors2 from "./colors.js";
-import ET_Asserts from "./etAsserts.js";
 import ET_JSON from "./etJson.js";
-
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import ET_Asserts from "./etAsserts.js";
 
 export default class Data {
 	config = null;
@@ -83,7 +76,11 @@ export default class Data {
 
 		const processTask = (task) => {
 			if (task.IsActive__c) {
-				task.tests.forEach((test) => tests.push(test));
+				task.tests.forEach((test) => {
+					if (test.IsActive__c) {
+						tests.push(test);
+					}
+				});
 				task.tasks.forEach((task) => processTask(task));
 			}
 		};
@@ -98,7 +95,7 @@ export default class Data {
 	async #readRecords({ sObjectName }) {
 		ET_Asserts.hasData({ value: sObjectName, message: "sObjectName" });
 
-		let path = `${__dirname}\\..\\data\\${sObjectName}.json`;
+		let path = await OS2.getFullPath({ config: this.config, relativePath: `data\\${sObjectName}.json` });
 		let file = await this.etJson.loadFileJson({ path });
 
 		ET_Asserts.equals({
