@@ -48,14 +48,18 @@ export default class Data {
 		let tasks = data.raw.tasks;
 		let sortedTasks = tasks.sort((a, b) => (a.Code__c < b.Code__c ? -1 : 1));
 		sortedTasks.forEach((task) => {
+			let parentName = "";
+
 			task.tests = [];
 			task.tasks = [];
 			mapById[task.Id] = task;
 			if (task.Parent__c) {
+				parentName = `${mapById[task.Parent__c].testName} | `;
 				mapById[task.Parent__c].tasks.push(task);
 			} else {
 				level1.push(task.Id);
 			}
+			task.testName = `${parentName}${task.Name}`;
 		});
 		level1 = level1.map((taskId) => mapById[taskId]);
 		data.tasks = { mapById, level1 };
@@ -67,7 +71,9 @@ export default class Data {
 		let tests = data.raw.tests;
 		let sortedTests = tests.sort((a, b) => (a.Code__c < b.Code__c ? -1 : 1));
 		sortedTests.forEach((test) => {
-			data.tasks.mapById[test.Parent__c].tests.push(test);
+			let parentTask = data.tasks.mapById[test.Parent__c];
+			test.testName = `${parentTask.testName} | ${test.AppName__c}`;
+			parentTask.tests.push(test);
 		});
 	}
 
