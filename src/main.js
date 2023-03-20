@@ -2,18 +2,15 @@
 // This script was created by Andres Perez to test the image machines.
 
 import Data from "./data.js";
+import Tester from "./tester.js";
 import minimist from "minimist";
 
 // Configure execution...
 const timerDelay = 250;
 
-class Tester {
+class Main {
 	data = null;
-	errors = [];
 	config = null;
-	// errorCodes = {};
-	// instructions = [];
-	// idxInstructions = 0;
 
 	constructor() {
 		this.initializeConfig();
@@ -51,12 +48,15 @@ class Tester {
 	}
 
 	async start() {
-		console.log({ msg: "Hello World" });
+		console.log("Hello World");
 		let dataReader = new Data({ config: this.config });
 		this.data = await dataReader.getData();
+
+		let tester = new Tester({ config: this.config });
+		tester.test({ data: this.data });
 		debugger;
 	}
 }
 
-let t = new Tester();
-t.start();
+let m = new Main();
+m.start();
