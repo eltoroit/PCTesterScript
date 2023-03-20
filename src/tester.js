@@ -1,4 +1,5 @@
 import Logs2 from "./logs.js";
+import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
@@ -40,11 +41,11 @@ export default class Tester {
 		Colors2.info({ msg: `${test.testName} (${test.Operation__c})` });
 		switch (test.Operation__c) {
 			case "Bookmark": {
-				await this.#testBookmarks({ test });
+				await this.#testBookmark({ test });
 				break;
 			}
 			case "Execute": {
-				// debugger;
+				await this.#testExecute({ test });
 				break;
 			}
 			case "Check Path": {
@@ -74,7 +75,7 @@ export default class Tester {
 			default: {
 				debugger;
 				let msg = "Invalid operation: " + Logs2.getPrettyJson({ obj: test });
-				Logs2.error({ msg });
+				Logs2.reportErrorMessage({ config: this.config, msg });
 				throw new Error(msg);
 			}
 		}
@@ -87,13 +88,45 @@ export default class Tester {
         */
 	}
 
-	async #testBookmarks({ test }) {
+	async #testBookmark({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
 		let bookmarks = new Bookmarks({ config: this.config });
 		let bmChecks = JSON.parse(test.Command__c);
 		test.Command__c = "Bookmarks";
 		await bookmarks.validateBookmarks({ bmChecks });
+	}
+
+	async #testExecute({ test }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
+
+		try {
+			let valid = false;
+			Colors2.info({ msg: `EXECUTING: [${test.Command__c}]` });
+			const response = await OS2.execute({ config: this.config, command: test.Command__c });
+			if (test.Expected__c) {
+				if (response.stdout != "" && response.stdout.indexOf(test.Expected__c) >= 0) valid = true;
+				if (response.stderr != "" && response.stderr.indexOf(test.Expected__c) >= 0) valid = true;
+			} else {
+				valid = true;
+			}
+			if (valid) {
+				Colors2.success({ msg: `Response was expected: ${test.Expected__c}` });
+			} else {
+				Logs2.reportError({
+					config: this.config,
+					obj: {
+						msg: "Response was not expected",
+						expected: test.Expected__c,
+						response
+					}
+				});
+			}
+		} catch (ex) {
+			let msg = "Error executing command";
+			Logs2.reportException({ config: this.config, msg, ex });
+			throw ex;
+		}
 	}
 }
 

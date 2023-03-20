@@ -21,7 +21,8 @@ export default class Logs {
 		ET_Asserts.hasData({ value: msg, message: "msg" });
 		ET_Asserts.hasData({ value: ex, message: "ex" });
 
-		let error = { test: config.currentTest, msg, error: { message: ex.message, stack: ex.stack } };
+		let error = { message: ex.message, stack: ex.stack, ...ex };
+		error = { test: config.currentTest, msg, error };
 		if (config.debug) Colors2.debug({ msg: "ERROR FOR: " + Colors2.getPrettyJson({ obj: error }) });
 		config.errors.push(error);
 		Colors2.error({ msg: "*** *** ERROR", offset: 1 });

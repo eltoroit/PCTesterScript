@@ -129,13 +129,9 @@ export default class LowLevelOS {
 			exec(command, (error, stdout, stderr) => {
 				output.stdout = stdout ? stdout.trim() : "";
 				output.stderr = stderr ? stderr.trim() : "";
-				output.error = error ? error.message.trim() : "";
+				output.error = error ? Colors2.getPrettyJson({ obj: error }) : "";
 				if (config.debug) Colors2.debug({ msg: "OUTPUT: " + Colors2.getPrettyJson({ obj: output }) });
-				if (error) {
-					reject(output);
-				} else {
-					resolve(output);
-				}
+				resolve(output);
 			});
 		});
 	}
