@@ -24,15 +24,18 @@ export default class Data {
 	async getData() {
 		let data = {
 			raw: {
+				events: await this.#readRecords({ sObjectName: "etcEvent__c" }),
+				rooms: await this.#readRecords({ sObjectName: "etcRoom__c" }),
+				computers: await this.#readRecords({ sObjectName: "etcComputer__c" }),
 				tasks: await this.#readRecords({ sObjectName: "etcTask__c" }),
 				tests: await this.#readRecords({ sObjectName: "etcTest__c" }),
 				json: await this.#readRecords({ sObjectName: "etcJSON__c" })
 			}
 		};
-		debugger;
-		data.tasks = this.#parseTasks({ data });
+
+		this.#parseTasks({ data });
 		this.#parseTests({ data });
-		debugger;
+		this.#findActiveTests({ data });
 
 		return data;
 	}
@@ -55,7 +58,7 @@ export default class Data {
 			}
 		});
 		level1 = level1.map((taskId) => mapById[taskId]);
-		return { mapById, level1 };
+		data.tasks = { mapById, level1 };
 	}
 
 	#parseTests({ data }) {
@@ -66,6 +69,24 @@ export default class Data {
 		sortedTests.forEach((test) => {
 			data.tasks.mapById[test.Parent__c].tests.push(test);
 		});
+	}
+
+	#findActiveTests({ data }) {
+		ET_Asserts.hasData({ value: data, message: "data" });
+		let tests = [];
+
+		const processTask = (task) => {
+			if (task.IsActive__c) {
+				task.tests.forEach((test) => tests.push(test));
+				task.tasks.forEach((task) => processTask(task));
+			}
+		};
+
+		data.tasks.level1.forEach((task) => {
+			processTask(task);
+		});
+		let sortedTests = tests.sort((a, b) => (a.Code__c < b.Code__c ? -1 : 1));
+		data.tests = sortedTests;
 	}
 
 	async #readRecords({ sObjectName }) {
