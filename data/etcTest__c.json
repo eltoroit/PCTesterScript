@@ -445,7 +445,7 @@
 			"Id": "a0601000002ae7HAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acFAAQ-11",
-			"Operation__c": "Execute",
+			"Operation__c": "Manual Application",
 			"Order__c": 11,
 			"Parent__c": "a05010000043acFAAQ"
 		},
