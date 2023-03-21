@@ -14,4 +14,5 @@ echo *** Installing npm dependencies
 call npm install
 echo Opening VS Code
 call code C:\LWC_HOW 
+echo "VS Code Opened LWC project"
 exit 0

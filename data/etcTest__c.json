@@ -1,5 +1,5 @@
 {
-	"fetched": 70,
+	"fetched": 69,
 	"records": [
 		{
 			"attributes": {
@@ -116,13 +116,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6sAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6tAAA"
 			},
-			"AppName__c": "Chrome + Salesforce is homepage",
+			"AppName__c": "Firefox + Salesforce is homepage",
 			"Code__c": "03-#05",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Google Chrome.lnk",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Firefox.lnk",
 			"Expected__c": null,
-			"Id": "a0601000002ae6sAAA",
+			"Id": "a0601000002ae6tAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acEAAQ-05",
 			"Operation__c": "Manual Application",
@@ -132,13 +132,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6tAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6sAAA"
 			},
-			"AppName__c": "Firefox + Salesforce is homepage",
+			"AppName__c": "Chrome + Salesforce is homepage",
 			"Code__c": "03-#06",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Firefox.lnk",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Google Chrome.lnk",
 			"Expected__c": null,
-			"Id": "a0601000002ae6tAAA",
+			"Id": "a0601000002ae6sAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acEAAQ-06",
 			"Operation__c": "Manual Application",
@@ -171,7 +171,7 @@
 			"Command__c": "C:\\Users\\Administrator\\Desktop\\Eclipse IDE for Java Developers - 2022-06.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae6vAAA",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acEAAQ-08",
 			"Operation__c": "Manual Application",
 			"Order__c": 8,
@@ -216,7 +216,7 @@
 			},
 			"AppName__c": "Desktop: Data Loader",
 			"Code__c": "03-#11",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader 45.0.0.lnk",
+			"Command__c": "C:\\Users\\Administrator\\Desktop\\Dataloader.lnk",
 			"Expected__c": null,
 			"Id": "a0601000002ae71AAA",
 			"IsActive__c": true,
@@ -276,17 +276,33 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002afCBAAY"
+			},
+			"AppName__c": "Header",
+			"Code__c": "04-#01",
+			"Command__c": "=== === === AUTOMATED CHECKS === === ===",
+			"Expected__c": null,
+			"Id": "a0601000002afCBAAY",
+			"IsActive__c": true,
+			"Key__c": "a05010000043acFAAQ-01",
+			"Operation__c": "Write",
+			"Order__c": 1,
+			"Parent__c": "a05010000043acFAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae77AAA"
 			},
 			"AppName__c": "Chrome: Plugin Resize",
-			"Code__c": "04-#01",
+			"Code__c": "04-#02",
 			"Command__c": "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\bkpenclhmiealbebdopglffmfdiilejc\\2.3.5_0\\package.json",
 			"Expected__c": null,
 			"Id": "a0601000002ae77AAA",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acFAAQ-01",
+			"Key__c": "a05010000043acFAAQ-02",
 			"Operation__c": "Check Path",
-			"Order__c": 1,
+			"Order__c": 2,
 			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
@@ -295,14 +311,14 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae78AAA"
 			},
 			"AppName__c": "Check Java version",
-			"Code__c": "04-#02",
+			"Code__c": "04-#03",
 			"Command__c": "java -version",
 			"Expected__c": "java version \"17.0.6\" 2023-01-17 LTS",
 			"Id": "a0601000002ae78AAA",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acFAAQ-02",
+			"Key__c": "a05010000043acFAAQ-03",
 			"Operation__c": "Execute",
-			"Order__c": 2,
+			"Order__c": 3,
 			"Parent__c": "a05010000043acFAAQ"
 		},
 		{
@@ -311,27 +327,11 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae79AAA"
 			},
 			"AppName__c": "Notepad",
-			"Code__c": "04-#03",
+			"Code__c": "04-#04",
 			"Command__c": "C:\\Windows\\Notepad.exe",
 			"Expected__c": null,
 			"Id": "a0601000002ae79AAA",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acFAAQ-03",
-			"Operation__c": "Check Path",
-			"Order__c": 3,
-			"Parent__c": "a05010000043acFAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7AAAQ"
-			},
-			"AppName__c": "SoapUI",
-			"Code__c": "04-#04",
-			"Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
-			"Expected__c": null,
-			"Id": "a0601000002ae7AAAQ",
-			"IsActive__c": false,
 			"Key__c": "a05010000043acFAAQ-04",
 			"Operation__c": "Check Path",
 			"Order__c": 4,
@@ -340,16 +340,16 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7BAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae7AAAQ"
 			},
-			"AppName__c": "Postman",
+			"AppName__c": "SoapUI",
 			"Code__c": "04-#05",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Postman.lnk",
+			"Command__c": "C:\\Program Files\\SmartBear\\SoapUI-5.7.0\\bin\\SoapUI-5.7.0.exe",
 			"Expected__c": null,
-			"Id": "a0601000002ae7BAAQ",
-			"IsActive__c": true,
+			"Id": "a0601000002ae7AAAQ",
+			"IsActive__c": false,
 			"Key__c": "a05010000043acFAAQ-05",
-			"Operation__c": "Manual Application",
+			"Operation__c": "Check Path",
 			"Order__c": 5,
 			"Parent__c": "a05010000043acFAAQ"
 		},
@@ -440,8 +440,8 @@
 			},
 			"AppName__c": "Clone and execute C:\\LWC_HOW",
 			"Code__c": "04-#11",
-			"Command__c": "C:\\TH\\PCTesterScript\\LWC_HOW.bat",
-			"Expected__c": null,
+			"Command__c": "C:\\TH\\PCTesterScript\\scripts\\LWC_HOW.bat",
+			"Expected__c": "VS Code Opened LWC project",
 			"Id": "a0601000002ae7HAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acFAAQ-11",
@@ -452,33 +452,17 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6PAAQ"
-			},
-			"AppName__c": "VS Code (Wait for the extensions update)",
-			"Code__c": "04-01-#01",
-			"Command__c": "C:\\Users\\Administrator\\Desktop\\Visual Studio Code.lnk",
-			"Expected__c": null,
-			"Id": "a0601000002ae6PAAQ",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-01",
-			"Operation__c": "Manual Application",
-			"Order__c": 1,
-			"Parent__c": "a05010000043acGAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6QAAQ"
 			},
 			"AppName__c": "Java (Oracle)",
-			"Code__c": "04-01-#02",
+			"Code__c": "04-01-#01",
 			"Command__c": "C:\\Program Files\\Java\\jdk-17\\bin\\java.exe*",
 			"Expected__c": null,
 			"Id": "a0601000002ae6QAAQ",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-02",
+			"Key__c": "a05010000043acGAAQ-01",
 			"Operation__c": "Check Path",
-			"Order__c": 2,
+			"Order__c": 1,
 			"Parent__c": "a05010000043acGAAQ"
 		},
 		{
@@ -487,10 +471,26 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6RAAQ"
 			},
 			"AppName__c": "SFDX Update",
-			"Code__c": "04-01-#03",
+			"Code__c": "04-01-#02",
 			"Command__c": "sfdx update",
 			"Expected__c": "sfdx-cli: Updat",
 			"Id": "a0601000002ae6RAAQ",
+			"IsActive__c": true,
+			"Key__c": "a05010000043acGAAQ-02",
+			"Operation__c": "Execute",
+			"Order__c": 2,
+			"Parent__c": "a05010000043acGAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6SAAQ"
+			},
+			"AppName__c": "VS Code Version",
+			"Code__c": "04-01-#03",
+			"Command__c": "code --version",
+			"Expected__c": "1.",
+			"Id": "a0601000002ae6SAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-03",
 			"Operation__c": "Execute",
@@ -500,29 +500,29 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6SAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6TAAQ"
 			},
-			"AppName__c": "VS Code Version",
+			"AppName__c": "VS Code Plugin (1)",
 			"Code__c": "04-01-#04",
-			"Command__c": "code --version",
-			"Expected__c": "1.",
-			"Id": "a0601000002ae6SAAQ",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.6.*",
+			"Expected__c": null,
+			"Id": "a0601000002ae6TAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-04",
-			"Operation__c": "Execute",
+			"Operation__c": "Check Path",
 			"Order__c": 4,
 			"Parent__c": "a05010000043acGAAQ"
 		},
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6TAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6UAAQ"
 			},
-			"AppName__c": "VS Code Plugin (1)",
+			"AppName__c": "VS Code Plugin (2)",
 			"Code__c": "04-01-#05",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6TAAQ",
+			"Id": "a0601000002ae6UAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-05",
 			"Operation__c": "Check Path",
@@ -532,13 +532,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6UAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6VAAQ"
 			},
-			"AppName__c": "VS Code Plugin (2)",
+			"AppName__c": "VS Code Plugin (3)",
 			"Code__c": "04-01-#06",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6UAAQ",
+			"Id": "a0601000002ae6VAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-06",
 			"Operation__c": "Check Path",
@@ -548,13 +548,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6VAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6WAAQ"
 			},
-			"AppName__c": "VS Code Plugin (3)",
+			"AppName__c": "VS Code Plugin (4)",
 			"Code__c": "04-01-#07",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-debugger-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6VAAQ",
+			"Id": "a0601000002ae6WAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-07",
 			"Operation__c": "Check Path",
@@ -564,13 +564,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6WAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6XAAQ"
 			},
-			"AppName__c": "VS Code Plugin (4)",
+			"AppName__c": "VS Code Plugin (5)",
 			"Code__c": "04-01-#08",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-core-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6WAAQ",
+			"Id": "a0601000002ae6XAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-08",
 			"Operation__c": "Check Path",
@@ -580,13 +580,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6XAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6YAAQ"
 			},
-			"AppName__c": "VS Code Plugin (5)",
+			"AppName__c": "VS Code Plugin (6)",
 			"Code__c": "04-01-#09",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lightning-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6XAAQ",
+			"Id": "a0601000002ae6YAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-09",
 			"Operation__c": "Check Path",
@@ -596,13 +596,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6YAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6ZAAQ"
 			},
-			"AppName__c": "VS Code Plugin (6)",
+			"AppName__c": "VS Code Plugin (7)",
 			"Code__c": "04-01-#10",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-visualforce-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6YAAQ",
+			"Id": "a0601000002ae6ZAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-10",
 			"Operation__c": "Check Path",
@@ -612,13 +612,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6ZAAQ"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6aAAA"
 			},
-			"AppName__c": "VS Code Plugin (7)",
+			"AppName__c": "VS Code Plugin (8)",
 			"Code__c": "04-01-#11",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-apex-replay-debugger-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.6.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6ZAAQ",
+			"Id": "a0601000002ae6aAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-11",
 			"Operation__c": "Check Path",
@@ -628,13 +628,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6aAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6bAAA"
 			},
-			"AppName__c": "VS Code Plugin (8)",
+			"AppName__c": "VS Code Plugin (9)",
 			"Code__c": "04-01-#12",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-57.6.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6aAAA",
+			"Id": "a0601000002ae6bAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-12",
 			"Operation__c": "Check Path",
@@ -644,13 +644,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6bAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6cAAA"
 			},
-			"AppName__c": "VS Code Plugin (9)",
+			"AppName__c": "VS Code Plugin (10)",
 			"Code__c": "04-01-#13",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\dbaeumer.vscode-eslint-2.4.0*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-12.*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6bAAA",
+			"Id": "a0601000002ae6cAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-13",
 			"Operation__c": "Check Path",
@@ -660,13 +660,13 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6cAAA"
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6dAAA"
 			},
-			"AppName__c": "VS Code Plugin (10)",
+			"AppName__c": "VS Code Plugin (11)",
 			"Code__c": "04-01-#14",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\eamodio.gitlens-12.*",
+			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
 			"Expected__c": null,
-			"Id": "a0601000002ae6cAAA",
+			"Id": "a0601000002ae6dAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-14",
 			"Operation__c": "Check Path",
@@ -676,33 +676,17 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6dAAA"
-			},
-			"AppName__c": "VS Code Plugin (11)",
-			"Code__c": "04-01-#15",
-			"Command__c": "C:\\Users\\Administrator\\.vscode\\extensions\\mhutchie.git-graph-1.30*",
-			"Expected__c": null,
-			"Id": "a0601000002ae6dAAA",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-15",
-			"Operation__c": "Check Path",
-			"Order__c": 15,
-			"Parent__c": "a05010000043acGAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6eAAA"
 			},
 			"AppName__c": "SFDX (Shell)",
-			"Code__c": "04-01-#16",
+			"Code__c": "04-01-#15",
 			"Command__c": null,
 			"Expected__c": null,
 			"Id": "a0601000002ae6eAAA",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-16",
+			"Key__c": "a05010000043acGAAQ-15",
 			"Operation__c": "JSON",
-			"Order__c": 16,
+			"Order__c": 15,
 			"Parent__c": "a05010000043acGAAQ"
 		},
 		{
@@ -711,10 +695,26 @@
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6fAAA"
 			},
 			"AppName__c": "VSCode - Prettier - XCopy",
-			"Code__c": "04-01-#17",
+			"Code__c": "04-01-#16",
 			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\esbenp.prettier-vscode-3.6.0\" \"C:\\users\\student\\.vscode\\extensions\\esbenp.prettier-vscode-3.6.0\\\"",
 			"Expected__c": "File(s) copied",
 			"Id": "a0601000002ae6fAAA",
+			"IsActive__c": true,
+			"Key__c": "a05010000043acGAAQ-16",
+			"Operation__c": "Execute",
+			"Order__c": 16,
+			"Parent__c": "a05010000043acGAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTest__c",
+				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6gAAA"
+			},
+			"AppName__c": "VSCode - XML - XCopy",
+			"Code__c": "04-01-#17",
+			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
+			"Expected__c": "File(s) copied",
+			"Id": "a0601000002ae6gAAA",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acGAAQ-17",
 			"Operation__c": "Execute",
@@ -724,33 +724,17 @@
 		{
 			"attributes": {
 				"type": "etcTest__c",
-				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6gAAA"
-			},
-			"AppName__c": "VSCode - XML - XCopy",
-			"Code__c": "04-01-#18",
-			"Command__c": "XCOPY /v /q /s /e /y \"C:\\TH\\PCTesterScript\\copy\\ext\\dotjoshjohnson.xml-2.5.0\" \"C:\\users\\student\\.vscode\\extensions\\dotjoshjohnson.xml-2.5.0\\\"",
-			"Expected__c": "File(s) copied",
-			"Id": "a0601000002ae6gAAA",
-			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-18",
-			"Operation__c": "Execute",
-			"Order__c": 18,
-			"Parent__c": "a05010000043acGAAQ"
-		},
-		{
-			"attributes": {
-				"type": "etcTest__c",
 				"url": "/services/data/v57.0/sobjects/etcTest__c/a0601000002ae6hAAA"
 			},
 			"AppName__c": "Git (Version)",
-			"Code__c": "04-01-#19",
+			"Code__c": "04-01-#18",
 			"Command__c": "git --version",
 			"Expected__c": "git version 2.40",
 			"Id": "a0601000002ae6hAAA",
 			"IsActive__c": true,
-			"Key__c": "a05010000043acGAAQ-19",
+			"Key__c": "a05010000043acGAAQ-18",
 			"Operation__c": "Execute",
-			"Order__c": 19,
+			"Order__c": 18,
 			"Parent__c": "a05010000043acGAAQ"
 		},
 		{
@@ -905,7 +889,7 @@
 			"AppName__c": "Logout SFDX",
 			"Code__c": "04-04-#01",
 			"Command__c": "sfdx force:auth:logout --all --noprompt",
-			"Expected__c": null,
+			"Expected__c": "Org",
 			"Id": "a0601000002ae7IAAQ",
 			"IsActive__c": true,
 			"Key__c": "a05010000043acJAAQ-01",
@@ -921,9 +905,9 @@
 			"AppName__c": "Logout Heroku",
 			"Code__c": "04-04-#02",
 			"Command__c": "heroku logout",
-			"Expected__c": null,
+			"Expected__c": "Heroku Logout done",
 			"Id": "a0601000002ae7JAAQ",
-			"IsActive__c": true,
+			"IsActive__c": false,
 			"Key__c": "a05010000043acJAAQ-02",
 			"Operation__c": "Execute",
 			"Order__c": 2,
@@ -1122,5 +1106,5 @@
 			"Parent__c": "a05010000043acDAAQ"
 		}
 	],
-	"total": 70
+	"total": 69
 }
