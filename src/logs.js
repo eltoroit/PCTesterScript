@@ -43,11 +43,8 @@ export default class Logs {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: question, message: "question" });
 
-		const rl = readline.createInterface({ input, output });
-		const sendKeysPath = await OS2.getFullPath({ config, relativePath: "scripts/sendkeys.bat" });
-		const sendKeysCommand = `call ${sendKeysPath} "C:\\Windows\\System32\\cmd.exe" ""`;
-		await OS2.execute({ config, command: sendKeysCommand });
 		Colors2.promptMsg({ msg: question });
+		const rl = readline.createInterface({ input, output });
 
 		// Can't use async/await because I need a loop
 		return new Promise((resolve, reject) => {

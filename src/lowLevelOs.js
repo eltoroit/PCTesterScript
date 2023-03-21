@@ -133,7 +133,7 @@ export default class LowLevelOS {
 		});
 	}
 
-	static async executeAsync({ config, command }) {
+	static async executeAsync({ config, command, args, cwd }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: command, message: "command" });
 
@@ -141,12 +141,24 @@ export default class LowLevelOS {
 		return new Promise((resolve, reject) => {
 			if (config.debug) Colors2.debug({ msg: "EXECUTING (Async): " + command });
 
-			let commandParts = command.split("\\");
-			let appName = commandParts.pop();
-			let path = commandParts.join("\\");
-			const process = spawn(`"${appName}"`, [], { shell: true, cwd: path });
-			process.on("spawn", () => resolve());
-			process.on("error", () => reject());
+			const process = spawn(command, args, { shell: true, cwd });
+			process.on("spawn", (...data) => {
+				setTimeout(() => {
+					resolve();
+				}, 5e3);
+			});
+
+			process.on("error", (...data) => {
+				reject();
+			});
+
+			process.stdout.on("data", (data) => {
+				resolve();
+			});
+
+			process.stderr.on("data", (data) => {
+				reject();
+			});
 		});
 	}
 

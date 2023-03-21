@@ -2,7 +2,7 @@
 // This script was created by Andres Perez to test the image machines.
 
 import Data from "./dataReader.js";
-import Tester, { skipCompletedTests } from "./tester.js";
+import Tester, { skipTestsWhileBuildingApp } from "./tester.js";
 import minimist from "minimist";
 import Colors2 from "./colors.js";
 
@@ -78,7 +78,7 @@ async function main() {
 			Colors2.error({ msg: "Number Of Errors Found: " + errors.length });
 		}
 
-		if (skipCompletedTests) {
+		if (skipTestsWhileBuildingApp) {
 			console.log("");
 			console.log("");
 			Colors2.error({ msg: "I AM DISABLING SOME TESTS WHILE BUILDING THE APP, NOT ALL TESTS WERE EXECUTED !!!" });

@@ -4,11 +4,11 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a03010000038D1qAAE"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a038N000001BKrFQAW"
 			},
-			"ETC_Test__c": "a0601000002ae6eAAA",
+			"ETC_Test__c": "a068N000000acD5QAI",
 			"File__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
-			"Id": "a03010000038D1qAAE",
+			"Id": "a038N000001BKrFQAW",
 			"Key__c": "terminal.integrated.shell.windows",
 			"Path__c": ":",
 			"Value__c": "C:\\Program Files\\Git\\bin\\bash.exe"
@@ -16,11 +16,11 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a03010000038D1rAAE"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a038N000001BKrGQAW"
 			},
-			"ETC_Test__c": "a0601000002ae6jAAA",
+			"ETC_Test__c": "a068N000000acDVQAY",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-			"Id": "a03010000038D1rAAE",
+			"Id": "a038N000001BKrGQAW",
 			"Key__c": "version",
 			"Path__c": ":",
 			"Value__c": "2019-12-11V01"
@@ -28,11 +28,11 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a03010000038D1sAAE"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a038N000001BKrHQAW"
 			},
-			"ETC_Test__c": "a0601000002ae6eAAA",
+			"ETC_Test__c": "a068N000000acD5QAI",
 			"File__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
-			"Id": "a03010000038D1sAAE",
+			"Id": "a038N000001BKrHQAW",
 			"Key__c": "salesforcedx-vscode-apex.java.home",
 			"Path__c": ":",
 			"Value__c": "C:\\Program Files\\java\\jdk1.8.0_162"
@@ -40,11 +40,11 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a03010000038D1tAAE"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a038N000001BKrIQAW"
 			},
-			"ETC_Test__c": "a0601000002ae6jAAA",
+			"ETC_Test__c": "a068N000000acDVQAY",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-			"Id": "a03010000038D1tAAE",
+			"Id": "a038N000001BKrIQAW",
 			"Key__c": "pingServer",
 			"Path__c": "pages",
 			"Value__c": "https://et-epl-stage.herokuapp.com"
@@ -52,11 +52,11 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a03010000038D1uAAE"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a038N000001BKrJQAW"
 			},
-			"ETC_Test__c": "a0601000002ae6jAAA",
+			"ETC_Test__c": "a068N000000acDVQAY",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
-			"Id": "a03010000038D1uAAE",
+			"Id": "a038N000001BKrJQAW",
 			"Key__c": "production",
 			"Path__c": "pages:servers",
 			"Value__c": "https://et-epl.herokuapp.com"

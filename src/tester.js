@@ -4,7 +4,7 @@ import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
 
-export let skipCompletedTests = false;
+export let skipTestsWhileBuildingApp = true;
 export default class Tester {
 	config = null;
 
@@ -65,19 +65,19 @@ export default class Tester {
 		}
 		switch (test.Operation__c) {
 			case "Bookmark": {
-				if (!skipCompletedTests) {
+				if (!skipTestsWhileBuildingApp) {
 					await this.#testBookmark({ test });
 				}
 				break;
 			}
 			case "Execute": {
-				if (!skipCompletedTests) {
+				if (!skipTestsWhileBuildingApp) {
 					await this.#testExecute({ test });
 				}
 				break;
 			}
 			case "Check Path": {
-				if (!skipCompletedTests) {
+				if (!skipTestsWhileBuildingApp) {
 					await this.#testCheckPath({ test });
 				}
 				break;
@@ -87,11 +87,13 @@ export default class Tester {
 				break;
 			}
 			case "JSON": {
+				// if (!skipTestsWhileBuildingApp) {
 				debugger;
+				// }
 				break;
 			}
 			case "Manual": {
-				if (!skipCompletedTests) {
+				if (!skipTestsWhileBuildingApp) {
 					if (this.config.executeManualChecks) {
 						await Logs2.promptYesNo({ config: this.config, question: test.Command__c });
 					} else {
@@ -103,7 +105,7 @@ export default class Tester {
 				break;
 			}
 			case "Manual Application": {
-				if (!skipCompletedTests) {
+				if (!skipTestsWhileBuildingApp) {
 					await this.#testManualApplication({ test });
 				}
 				break;
@@ -114,7 +116,7 @@ export default class Tester {
 			}
 			default: {
 				debugger;
-				let msg = "Invalid operation: " + Logs2.getPrettyJson({ obj: test });
+				let msg = "Invalid operation: " + Colors2.getPrettyJson({ obj: test });
 				Logs2.reportErrorMessage({ config: this.config, msg });
 				throw new Error(msg);
 			}
@@ -177,7 +179,7 @@ export default class Tester {
 			Colors2.info({ msg: `Check Path: [${path}]` });
 			await OS2.checkPath({ config: this.config, path });
 		} catch (ex) {
-			let msg = "Error executing command";
+			let msg = "Error checking path";
 			Logs2.reportException({ config: this.config, msg, ex });
 			throw ex;
 		}
@@ -186,21 +188,33 @@ export default class Tester {
 	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
+		let command = JSON.parse(test.Command__c);
+
 		try {
-			await this.#testCheckPath({ test });
-			if (this.config.executeManualChecks) {
-				try {
-					await OS2.executeAsync({ config: this.config, command: test.Command__c });
-					await Logs2.promptYesNo({ config: this.config, question: `Did [${test.AppName__c}] open succesfully?` });
-				} catch (ex) {
-					Logs2.apply.reportErrorMessage({ config: this.config, msg: "Unable to open application" });
-					debugger;
-				}
-			} else {
-				Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
-			}
+			await OS2.checkPath({ config: this.config, path: command.path });
 		} catch (ex) {
-			//
+			let msg = "Error checking path";
+			Logs2.reportException({ config: this.config, msg, ex });
+			throw ex;
+		}
+
+		try {
+			await OS2.executeAsync({ config: this.config, ...command });
+		} catch (ex) {
+			let msg = "Error executing app";
+			Logs2.reportException({ config: this.config, msg, ex });
+			throw ex;
+		}
+
+		if (this.config.executeManualChecks) {
+			try {
+				await Logs2.promptYesNo({ config: this.config, question: `Did [${test.AppName__c}] open succesfully?` });
+			} catch (ex) {
+				Logs2.apply.reportErrorMessage({ config: this.config, msg: "Unable to open application" });
+				debugger;
+			}
+		} else {
+			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
 		}
 	}
 }
