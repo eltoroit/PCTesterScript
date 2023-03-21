@@ -4,7 +4,7 @@ import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
 
-export let skipCompletedTests = true;
+export let skipCompletedTests = false;
 export default class Tester {
 	config = null;
 
@@ -60,7 +60,9 @@ export default class Tester {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
 		this.config.currentTest = test;
-		Colors2.writeInstruction({ msg: `${test.testName} (${test.Operation__c})` });
+		if (!["Clear", "Write"].includes(test.Operation__c)) {
+			Colors2.writeInstruction({ msg: `${test.testName} (${test.Operation__c})` });
+		}
 		switch (test.Operation__c) {
 			case "Bookmark": {
 				if (!skipCompletedTests) {
@@ -85,13 +87,13 @@ export default class Tester {
 				break;
 			}
 			case "JSON": {
-				// debugger;
+				debugger;
 				break;
 			}
 			case "Manual": {
 				if (!skipCompletedTests) {
 					if (this.config.executeManualChecks) {
-						await Logs2.promptYesNo({ config: this.config, question: `${test.Command__c} [Y|N]` });
+						await Logs2.promptYesNo({ config: this.config, question: test.Command__c });
 					} else {
 						Colors2.error({ msg: "Manual tests are being skipped" });
 						Colors2.error({ msg: "Manual tests are being skipped" });
@@ -101,7 +103,9 @@ export default class Tester {
 				break;
 			}
 			case "Manual Application": {
-				await this.#testManualApplication({ test });
+				if (!skipCompletedTests) {
+					await this.#testManualApplication({ test });
+				}
 				break;
 			}
 			case "Write": {
@@ -182,11 +186,21 @@ export default class Tester {
 	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
-		if (this.config.executeManualChecks) {
-			await Logs2.promptYesNo({ config: this.config, question: `${test.Command__c} [Y|N]` });
-		} else {
-			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
+		try {
 			await this.#testCheckPath({ test });
+			if (this.config.executeManualChecks) {
+				try {
+					await OS2.executeAsync({ config: this.config, command: test.Command__c });
+					await Logs2.promptYesNo({ config: this.config, question: `Did [${test.AppName__c}] open succesfully?` });
+				} catch (ex) {
+					Logs2.apply.reportErrorMessage({ config: this.config, msg: "Unable to open application" });
+					debugger;
+				}
+			} else {
+				Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
+			}
+		} catch (ex) {
+			//
 		}
 	}
 }

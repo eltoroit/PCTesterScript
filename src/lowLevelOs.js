@@ -2,7 +2,7 @@ import Logs2 from "./logs.js";
 import { resolve } from "path";
 import fetch from "node-fetch";
 import Colors2 from "./colors.js";
-import { exec } from "child_process";
+import { exec, spawn } from "node:child_process";
 import * as fs from "node:fs/promises";
 import ET_Asserts from "./etAsserts.js";
 
@@ -109,9 +109,6 @@ export default class LowLevelOS {
 		return await fs.appendFile(path, data);
 	}
 
-	// OLD_CODE: static async spawnCommand(instruction) {
-	// REMOVED... Use execute
-	//  OLD_CODE: executeCommand(instruction) {
 	static async execute({ config, command }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: command, message: "command" });
@@ -133,6 +130,23 @@ export default class LowLevelOS {
 				if (config.debug) Colors2.debug({ msg: "OUTPUT: " + Colors2.getPrettyJson({ obj: output }) });
 				resolve(output);
 			});
+		});
+	}
+
+	static async executeAsync({ config, command }) {
+		ET_Asserts.hasData({ value: config, message: "config" });
+		ET_Asserts.hasData({ value: command, message: "command" });
+
+		// Can't do async/await because it has events
+		return new Promise((resolve, reject) => {
+			if (config.debug) Colors2.debug({ msg: "EXECUTING (Async): " + command });
+
+			let commandParts = command.split("\\");
+			let appName = commandParts.pop();
+			let path = commandParts.join("\\");
+			const process = spawn(`"${appName}"`, [], { shell: true, cwd: path });
+			process.on("spawn", () => resolve());
+			process.on("error", () => reject());
 		});
 	}
 
@@ -180,7 +194,7 @@ export default class LowLevelOS {
 			throw new Error(err);
 		} else {
 			if (output.stdout.toLowerCase().indexOf(expected.toLowerCase()) >= 0) {
-				if (config.verbose) Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
+				Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
 				return;
 			} else {
 				let err = output;

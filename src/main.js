@@ -32,7 +32,7 @@ class Main {
 				debug: false,
 				verbose: false,
 				checkUrlExists: true,
-				executeManualChecks: false // true
+				executeManualChecks: true
 			};
 		} else if (testType == "TEST") {
 			this.config = {

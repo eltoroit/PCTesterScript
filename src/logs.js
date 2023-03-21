@@ -46,6 +46,8 @@ export default class Logs {
 		const rl = readline.createInterface({ input, output });
 		const sendKeysPath = await OS2.getFullPath({ config, relativePath: "scripts/sendkeys.bat" });
 		const sendKeysCommand = `call ${sendKeysPath} "C:\\Windows\\System32\\cmd.exe" ""`;
+		await OS2.execute({ config, command: sendKeysCommand });
+		Colors2.promptMsg({ msg: question });
 
 		// Can't use async/await because I need a loop
 		return new Promise((resolve, reject) => {
@@ -63,8 +65,6 @@ export default class Logs {
 					loop();
 				}
 			}
-			OS2.execute({ config, command: sendKeysCommand });
-			Colors2.promptMsg({ msg: question });
 
 			if (config.executeManualChecks) {
 				loop();
