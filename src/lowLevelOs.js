@@ -5,6 +5,7 @@ import Colors2 from "./colors.js";
 import { exec, spawn } from "node:child_process";
 import * as fs from "node:fs/promises";
 import ET_Asserts from "./etAsserts.js";
+import Colors from "./colors.js";
 
 export default class LowLevelOS {
 	static async getFullPath({ config, relativePath, skipCheck = false }) {
@@ -133,31 +134,67 @@ export default class LowLevelOS {
 		});
 	}
 
-	static async executeAsync({ config, command, args, cwd }) {
+	static async executeAsync({ config, callback, app, args, cwd }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
-		ET_Asserts.hasData({ value: command, message: "command" });
+		ET_Asserts.hasData({ value: callback, message: "callback" });
+		ET_Asserts.hasData({ value: app, message: "app" });
 
 		// Can't do async/await because it has events
 		return new Promise((resolve, reject) => {
-			if (config.debug) Colors2.debug({ msg: "EXECUTING (Async): " + command });
+			let currentTest = { ...config.currentTest };
+			if (config.debug) Colors2.debug({ msg: "EXECUTING (Async): " + Colors2.getPrettyJson({ obj: { app, args, cwd } }) });
 
-			const process = spawn(command, args, { shell: true, cwd });
+			let response = [];
+			let hasErrors = false;
+			const report = ({ event, data }) => {
+				ET_Asserts.hasData({ value: event, message: "event" });
+				ET_Asserts.hasData({ value: data, message: "data" });
+
+				// More elements
+				if (data.length > 1) {
+					debugger;
+					for (let item of data) {
+						let msg = `${event}: ${item.toString()}`;
+						response.push(msg);
+						let output = { hasErrors, currentTest, app, args, cwd, msg, response };
+						callback(output);
+					}
+				} else {
+					// First element
+					let item = data.toString();
+					let msg = `${event}: ${item}`;
+					response.push(msg);
+					let output = { hasErrors, currentTest, app, args, cwd, msg, response };
+					callback(output);
+				}
+			};
+
+			const process = spawn(app, args, { shell: true, cwd });
 			process.on("spawn", (...data) => {
-				setTimeout(() => {
-					resolve();
-				}, 5e3);
+				report({ event: "SPAWN", data });
 			});
 
 			process.on("error", (...data) => {
-				reject();
+				hasErrors = true;
+				report({ event: "ERROR", data });
 			});
 
-			process.stdout.on("data", (data) => {
-				resolve();
+			process.stdout.on("data", (...data) => {
+				report({ event: "STDOUT", data });
 			});
 
-			process.stderr.on("data", (data) => {
-				reject();
+			process.stderr.on("data", (...data) => {
+				hasErrors = true;
+				report({ event: "STDERR", data });
+			});
+
+			process.on("close", (code, signal) => {
+				report({ event: "CLOSE", data: { code, signal } });
+				if (hasErrors) {
+					reject(response);
+				} else {
+					resolve(response);
+				}
 			});
 		});
 	}

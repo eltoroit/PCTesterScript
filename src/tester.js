@@ -3,10 +3,18 @@ import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
+import Colors from "./colors.js";
 
-export let skipTestsWhileBuildingApp = true;
 export default class Tester {
 	config = null;
+
+	get skipTestsWhileBuildingApp() {
+		let output = true;
+		if (output) {
+			Colors2.error({ msg: "Tests are being skipped while the applicationis being built" });
+		}
+		return true;
+	}
 
 	constructor({ config }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
@@ -24,15 +32,23 @@ export default class Tester {
 		// });
 
 		// Series
+		let promises = [];
 		for (let test of data.tests) {
 			try {
-				await this.#testItem({ test });
+				await this.#testItem({
+					test,
+					callback: (promise) => {
+						promises.push(promise);
+					}
+				});
 			} catch (ex) {
 				// debugger;
 			}
 		}
+		await Promise.allSettled(promises);
 
 		this.#consolidateErrors();
+		this.#reportResults({ errors: this.config.errors });
 	}
 
 	#consolidateErrors() {
@@ -56,8 +72,37 @@ export default class Tester {
 		this.config.errors = consolidator.list.map((errorId) => consolidator.map[errorId]);
 	}
 
-	async #testItem({ test }) {
+	#reportResults({ errors }) {
+		ET_Asserts.hasData({ value: errors, message: "errors" });
+
+		if (errors.length === 0) {
+			Colors2.clearScreen();
+			Colors2.success({ msg: "Test complete and no errors found. Thanks for your help ;-)" });
+			Colors2.success({ msg: "Please close this and all other windows that were opened during the test" });
+		} else {
+			Colors2.clearScreen();
+			Colors2.error({ msg: JSON.stringify(errors, null, 4) });
+			Colors2.error({ msg: "Number Of Errors Found: " + errors.length });
+		}
+
+		if (this.skipTestsWhileBuildingApp) {
+			let msg = "I AM DISABLING SOME TESTS WHILE BUILDING THE APP, NOT ALL TESTS WERE EXECUTED !!!";
+			for (let i = 0; i < 5; i++) {
+				console.log("");
+			}
+			for (let i = 0; i < 5; i++) {
+				Colors2.error({ msg });
+			}
+			for (let i = 0; i < 5; i++) {
+				console.log("");
+			}
+			// throw new Error(msg);
+		}
+	}
+
+	async #testItem({ test, callback }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
+		ET_Asserts.hasData({ value: callback, message: "callback" });
 
 		this.config.currentTest = test;
 		if (!["Clear", "Write"].includes(test.Operation__c)) {
@@ -65,53 +110,55 @@ export default class Tester {
 		}
 		switch (test.Operation__c) {
 			case "Bookmark": {
-				if (!skipTestsWhileBuildingApp) {
+				if (!this.skipTestsWhileBuildingApp) {
 					await this.#testBookmark({ test });
 				}
 				break;
 			}
 			case "Execute": {
-				if (!skipTestsWhileBuildingApp) {
+				if (!this.skipTestsWhileBuildingApp) {
 					await this.#testExecute({ test });
 				}
 				break;
 			}
+			case "Execute Async": {
+				// if (!this.skipTestsWhileBuildingApp) {
+				callback(this.#testExecuteAsync({ test }));
+				// }
+				break;
+			}
 			case "Check Path": {
-				if (!skipTestsWhileBuildingApp) {
+				if (!this.skipTestsWhileBuildingApp) {
 					await this.#testCheckPath({ test });
 				}
 				break;
 			}
 			case "Clear": {
 				Colors2.clearScreen();
+				await Promise.resolve();
 				break;
 			}
 			case "JSON": {
-				// if (!skipTestsWhileBuildingApp) {
-				debugger;
+				// if (!this.skipTestsWhileBuildingApp) {
+				await this.#testJSON({ test });
 				// }
 				break;
 			}
 			case "Manual": {
-				if (!skipTestsWhileBuildingApp) {
-					if (this.config.executeManualChecks) {
-						await Logs2.promptYesNo({ config: this.config, question: test.Command__c });
-					} else {
-						Colors2.error({ msg: "Manual tests are being skipped" });
-						Colors2.error({ msg: "Manual tests are being skipped" });
-						Colors2.error({ msg: "Manual tests are being skipped" });
-					}
+				if (!this.skipTestsWhileBuildingApp) {
+					await this.#testManual({ test });
 				}
 				break;
 			}
 			case "Manual Application": {
-				if (!skipTestsWhileBuildingApp) {
-					await this.#testManualApplication({ test });
-				}
+				// if (!this.skipTestsWhileBuildingApp) {
+				await this.#testManualApplication({ test });
+				// }
 				break;
 			}
 			case "Write": {
 				Colors2.writeMessage({ msg: test.Command__c });
+				await Promise.resolve();
 				break;
 			}
 			default: {
@@ -121,13 +168,6 @@ export default class Tester {
 				throw new Error(msg);
 			}
 		}
-		/*
-        Code__c:        '01-01-01-01-#01'
-        Command__c:     null
-        Expected__c:    null
-        Operation__c:   'Clear'
-        testName:       'TASK-Level1 | TASK-Level2 | TASK-Level3 | TASK-Level4 | TEST'
-        */
 	}
 
 	async #testBookmark({ test }) {
@@ -185,13 +225,87 @@ export default class Tester {
 		}
 	}
 
+	async #testManual({ test }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
+
+		if (this.config.executeManualChecks) {
+			await Logs2.promptYesNo({ config: this.config, question: test.Command__c });
+		} else {
+			Colors2.error({ msg: "Manual tests are being skipped" });
+			Colors2.error({ msg: "Manual tests are being skipped" });
+			Colors2.error({ msg: "Manual tests are being skipped" });
+		}
+	}
+
+	async #testJSON({ test }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
+
+		// for (let json of test.jsons) {
+		// 	debugger;
+		// }
+		// Logs2.reportErrorMessage({ config: this.config, msg: "JSON data is not being processed for now" });
+		Colors2.error({ msg: "JSON data is not being processed for now" });
+	}
+
+	async #testExecuteAsync({ test }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
+
+		await this.#executeAsyncHelper({
+			test,
+			ignoreExecutionErrors: true,
+			callback: (response) => {
+				debugger;
+				Colors2.error({ msg: Colors2.getPrettyJson({ obj: response.msg }) });
+			}
+		});
+	}
+
 	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
-		let command = JSON.parse(test.Command__c);
+		await this.#executeAsyncHelper({
+			test,
+			callback: (response) => {
+				Colors2.error({ msg: Colors2.getPrettyJson({ obj: response.msg }) });
+				debugger;
+			}
+		});
+		if (this.config.executeManualChecks) {
+			try {
+				await Logs2.promptYesNo({ config: this.config, question: `Did [${test.AppName__c}] open succesfully?` });
+			} catch (ex) {
+				let msg = "Unable to ask for verification";
+				Logs2.reportException({ config: this.config, msg, ex });
+				throw ex;
+			}
+		} else {
+			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am opening them anyways!" });
+		}
+	}
+
+	async #executeAsyncHelper({ test, callback, ignoreExecutionErrors = false }) {
+		ET_Asserts.hasData({ value: test, message: "test" });
+		ET_Asserts.hasData({ value: callback, message: "callback" });
+
+		let command = {};
+		try {
+			command = JSON.parse(test.Command__c);
+		} catch (ex) {
+			let parts = test.Command__c.split("\\");
+			let app = parts.pop();
+			let cwd = parts.join("\\");
+			command = {
+				path: test.Command__c,
+				app: `"${app}"`,
+				args: [],
+				cwd
+			};
+		}
 
 		try {
-			await OS2.checkPath({ config: this.config, path: command.path });
+			if (command.path) {
+				await OS2.checkPath({ config: this.config, path: command.path });
+			}
 		} catch (ex) {
 			let msg = "Error checking path";
 			Logs2.reportException({ config: this.config, msg, ex });
@@ -199,187 +313,13 @@ export default class Tester {
 		}
 
 		try {
-			await OS2.executeAsync({ config: this.config, ...command });
+			await OS2.executeAsync({ config: this.config, callback, ...command });
 		} catch (ex) {
-			let msg = "Error executing app";
-			Logs2.reportException({ config: this.config, msg, ex });
-			throw ex;
-		}
-
-		if (this.config.executeManualChecks) {
-			try {
-				await Logs2.promptYesNo({ config: this.config, question: `Did [${test.AppName__c}] open succesfully?` });
-			} catch (ex) {
-				Logs2.apply.reportErrorMessage({ config: this.config, msg: "Unable to open application" });
-				debugger;
+			if (!ignoreExecutionErrors) {
+				let msg = "Error executing app";
+				Logs2.reportException({ config: this.config, msg, ex });
+				throw ex;
 			}
-		} else {
-			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am checking the path!" });
 		}
 	}
 }
-
-/*
-		switch (test.Operation__c) {
-
-
-			case "Check Contains":
-				checkContains(instruction);
-				break;
-			case "Execute":
-				checkContains(instruction);
-				break;
-			case "Execute Async":
-				checkContains(instruction);
-				break;
-			case "Check Exact":
-				checkExact(instruction);
-				break;
-			case "Check Path":
-				checkPath(instruction);
-				break;
-			
-			case "Clear":
-				// Clear screen
-				log.clearScreen();
-				nextInstruction();
-				break;
-			case "JSON File - Check":
-				jsonFile_Check(instruction);
-				break;
-			case "JSON File - Edit":
-				jsonFile_Edit(instruction);
-				break;
-			case "Manual":
-				promptYesNo(instruction);
-				break;
-			case "Open Application":
-				if (executeManualChecks) {
-					instruction.callback = function (output) {
-						if (output.stderr) {
-							instruction.hasErrors = true;
-							instruction.returned = output;
-							reportError(instruction);
-							nextInstruction();
-						}
-					};
-					executeCommand(instruction);
-					setTimeout(function () {
-						if (!instruction.hasErrors) {
-							promptYesNo(instruction);
-						}
-					}, timerDelay * 10);
-				} else {
-					let command = instruction.Command__c.replace(/"/g, "");
-					let expected = command.substring(command.lastIndexOf("\\") + 1);
-
-					log.error("Manual checks are being skipped for testing! (Open application skipped, but path checked)");
-					let newInstruction = { ...instruction };
-					newInstruction.Command__c = command;
-					newInstruction.Expected__c = expected;
-					newInstruction.Operation__c = "Open App >> Check Path";
-					newInstruction.AppName__c = `Open/Check Path: ${instruction.AppName__c}`;
-					newInstruction.ErrorMessage__c = `${instruction.ErrorMessage__c} (Checking path)`;
-
-					console.log("New instruction -- START");
-					log.debug(log.getPrettyJson(newInstruction));
-					console.log("New instruction -- END");
-
-					checkPath(newInstruction);
-				}
-				break;
-			case "Write":
-				// Force debug mode...
-				if (instruction.Command__c == "=== === === AUTOMATED CHECKS === === ===") {
-					log.debug("Switching debug mode ON");
-					debug = true;
-					verbose = true;
-					log.setDebug(true);
-				}
-				log.info(instruction.Command__c);
-				nextInstruction();
-				break;
-			case "Done":
-				log.setDebug(false);
-				let filePath = new Date().toJSON();
-				filePath = filePath.replace(/:/g, "-");
-				filePath = `../Errors-${filePath}.json`;
-				try {
-					fs.unlinkSync(filePath);
-				} catch (ex) {
-					if (debug) log.debug("Could not delete file " + filePath + ": " + log.getPrettyJson(ex));
-				}
-				if (errors.length > 0) {
-					log.clearScreen();
-					log.error("Number Of Errors Found: " + errors.length);
-					fs.appendFileSync(filePath, log.getPrettyJson(errors));
-					log.error("Errors written to: ./" + filePath);
-					log.error("Please put a sticker on this computer");
-				} else {
-					log.clearScreen();
-					log.success("Test complete and no errors found. Thanks for your help ;-)");
-					log.success("Please close this and all other windows that were opened during the test");
-				}
-				process.exit(0);
-				break;
-			
-		}
-*/
-
-// OLD_CODE: checkExact(instruction) {
-// static checkExact({ config, command }) {
-// 	ET_Asserts.hasData({ value: config, message: "config" });
-
-// 	if (config.verbose) Colors2.info({ msg: "CHECKING: [" + command + "]" });
-// 	instruction.callback = (output) => {
-// 		if (output.stdout === instruction.Expected__c) {
-// 			if (verbose) log.success("VALID: [" + output.stdout + "]");
-// 			nextInstruction();
-// 		} else {
-// 			instruction.returned = output;
-// 			reportError(instruction);
-// 			nextInstruction();
-// 		}
-// 	};
-// 	executeCommand(instruction);
-// }
-// checkContains(instruction) {
-// 	let isExecute = instruction.Operation__c !== "Check Contains";
-// 	if (verbose) {
-// 		if (isExecute) {
-// 			log.info("EXECUTING: [" + instruction.Command__c + "]");
-// 		} else {
-// 			log.info("CHECKING: [" + instruction.Command__c + "]");
-// 		}
-// 	}
-// 	instruction.callback = (output) => {
-// 		var valid = false;
-
-// 		if (isExecute) {
-// 			valid = true;
-// 		} else {
-// 			if (!instruction.Expected__c) valid = true;
-// 			if (output.stdout != "" && output.stdout.indexOf(instruction.Expected__c) >= 0) valid = true;
-// 			if (output.stderr != "" && output.stderr.indexOf(instruction.Expected__c) >= 0) valid = true;
-// 		}
-
-// 		if (valid) {
-// 			if (verbose) {
-// 				if (instruction.Expected__c) {
-// 					log.success("VALID: [" + instruction.Expected__c + "]");
-// 				} else {
-// 					log.success(`VALID: [${instruction.Command__c}]`);
-// 				}
-// 			}
-// 		} else {
-// 			instruction.returned = output;
-// 			reportError(instruction);
-// 		}
-// 		nextInstruction();
-// 	};
-// 	if (instruction.Operation__c === "Execute Async") {
-// 		spawnCommand(instruction);
-// 	} else {
-// 		executeCommand(instruction);
-// 	}
-// }

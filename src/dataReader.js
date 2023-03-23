@@ -28,6 +28,7 @@ export default class Data {
 
 		this.#parseTasks({ data });
 		this.#parseTests({ data });
+		this.#parseJsons({ data });
 		this.#findActiveTests({ data });
 
 		return data;
@@ -68,6 +69,24 @@ export default class Data {
 			test.testName = `${parentTask.testName} | ${test.AppName__c}`;
 			test.testCode = `${test.AppName__c} ${test.Code__c}`;
 			parentTask.tests.push(test);
+		});
+	}
+
+	#parseJsons({ data }) {
+		ET_Asserts.hasData({ value: data, message: "data" });
+
+		let testsWithJson = {};
+		data.raw.tests
+			.filter((test) => test.Operation__c === "JSON")
+			.forEach((test) => {
+				test.jsons = [];
+				testsWithJson[test.Id] = test;
+			});
+
+		data.raw.json.forEach((json) => {
+			if (json.IsActive__c) {
+				testsWithJson[json.ETC_Test__c].jsons.push(json);
+			}
 		});
 	}
 
