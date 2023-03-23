@@ -1,0 +1,202 @@
+{
+	"fetched": 14,
+	"records": [
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsPAAQ"
+			},
+			"Code__c": "01",
+			"Id": "a057e000007mnsPAAQ",
+			"IsActive__c": true,
+			"Key__c": "01",
+			"Level__c": 1,
+			"Name": "TASK-Level1",
+			"Order__c": 1,
+			"Parent__c": null
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsQAAQ"
+			},
+			"Code__c": "01-01",
+			"Id": "a057e000007mnsQAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsPAAQ-01",
+			"Level__c": 2,
+			"Name": "TASK-Level2",
+			"Order__c": 1,
+			"Parent__c": "a057e000007mnsPAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsRAAQ"
+			},
+			"Code__c": "01-01-01",
+			"Id": "a057e000007mnsRAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsQAAQ-01",
+			"Level__c": 3,
+			"Name": "TASK-Level3",
+			"Order__c": 1,
+			"Parent__c": "a057e000007mnsQAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsSAAQ"
+			},
+			"Code__c": "01-01-01-01",
+			"Id": "a057e000007mnsSAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsRAAQ-01",
+			"Level__c": 4,
+			"Name": "TASK-Level4",
+			"Order__c": 1,
+			"Parent__c": "a057e000007mnsRAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsTAAQ"
+			},
+			"Code__c": "02",
+			"Id": "a057e000007mnsTAAQ",
+			"IsActive__c": true,
+			"Key__c": "02",
+			"Level__c": 1,
+			"Name": "Clear Screen",
+			"Order__c": 2,
+			"Parent__c": null
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsUAAQ"
+			},
+			"Code__c": "03",
+			"Id": "a057e000007mnsUAAQ",
+			"IsActive__c": true,
+			"Key__c": "03",
+			"Level__c": 1,
+			"Name": "Manual Tests",
+			"Order__c": 3,
+			"Parent__c": null
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsVAAQ"
+			},
+			"Code__c": "03-01",
+			"Id": "a057e000007mnsVAAQ",
+			"IsActive__c": false,
+			"Key__c": "a057e000007mnsUAAQ-01",
+			"Level__c": 2,
+			"Name": "MS Office",
+			"Order__c": 1,
+			"Parent__c": "a057e000007mnsUAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsWAAQ"
+			},
+			"Code__c": "04",
+			"Id": "a057e000007mnsWAAQ",
+			"IsActive__c": true,
+			"Key__c": "04",
+			"Level__c": 1,
+			"Name": "Automated Tests",
+			"Order__c": 4,
+			"Parent__c": null
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsXAAQ"
+			},
+			"Code__c": "04-01",
+			"Id": "a057e000007mnsXAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsWAAQ-01",
+			"Level__c": 2,
+			"Name": "SFDX Developer",
+			"Order__c": 1,
+			"Parent__c": "a057e000007mnsWAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsYAAQ"
+			},
+			"Code__c": "04-02",
+			"Id": "a057e000007mnsYAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsWAAQ-02",
+			"Level__c": 2,
+			"Name": "Other Developments",
+			"Order__c": 2,
+			"Parent__c": "a057e000007mnsWAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsZAAQ"
+			},
+			"Code__c": "04-03",
+			"Id": "a057e000007mnsZAAQ",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsWAAQ-03",
+			"Level__c": 2,
+			"Name": "Data files",
+			"Order__c": 3,
+			"Parent__c": "a057e000007mnsWAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsaAAA"
+			},
+			"Code__c": "04-04",
+			"Id": "a057e000007mnsaAAA",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsWAAQ-04",
+			"Level__c": 2,
+			"Name": "Logout",
+			"Order__c": 4,
+			"Parent__c": "a057e000007mnsWAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnsbAAA"
+			},
+			"Code__c": "04-05",
+			"Id": "a057e000007mnsbAAA",
+			"IsActive__c": true,
+			"Key__c": "a057e000007mnsWAAQ-05",
+			"Level__c": 2,
+			"Name": "Saleforce Fonts",
+			"Order__c": 5,
+			"Parent__c": "a057e000007mnsWAAQ"
+		},
+		{
+			"attributes": {
+				"type": "etcTask__c",
+				"url": "/services/data/v57.0/sobjects/etcTask__c/a057e000007mnscAAA"
+			},
+			"Code__c": "05",
+			"Id": "a057e000007mnscAAA",
+			"IsActive__c": true,
+			"Key__c": "05",
+			"Level__c": 1,
+			"Name": "Validate [Electron Application Tester] Installed",
+			"Order__c": 5,
+			"Parent__c": null
+		}
+	],
+	"total": 14
+}

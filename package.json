@@ -1,10 +1,13 @@
 {
 	"name": "pctesterscript",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Tests computer images",
 	"main": "tester.js",
 	"scripts": {
-		"testMachine": "node --inspect-brk tester.js -test -run=1"
+		"start": "node src/main.js",
+		"TESTER": "node _TESTS/AsyncPromises.js",
+		"linter": "eslint . > eslintErrors.txt"
 	},
 	"repository": {
 		"type": "git",
@@ -17,6 +20,11 @@
 	},
 	"homepage": "https://github.com/eltoroit/PCTesterScript#readme",
 	"dependencies": {
-		"minimist": "1.2.6"
+		"minimist": "1.2.6",
+		"node-fetch": "^3.3.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.36.0",
+		"eslint-plugin-custom-rules": "^0.0.0"
 	}
 }
