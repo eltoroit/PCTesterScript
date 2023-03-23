@@ -3,17 +3,16 @@ import OS2 from "./lowLevelOs.js";
 import Colors2 from "./colors.js";
 import Bookmarks from "./bookmarks.js";
 import ET_Asserts from "./etAsserts.js";
-import Colors from "./colors.js";
 
 export default class Tester {
 	config = null;
 
 	get skipTestsWhileBuildingApp() {
-		let output = true;
+		let output = false;
 		if (output) {
 			Colors2.error({ msg: "Tests are being skipped while the applicationis being built" });
 		}
-		return true;
+		return output;
 	}
 
 	constructor({ config }) {
@@ -30,11 +29,6 @@ export default class Tester {
 			let pending = promises.filter((promise) => !promise.done);
 			Colors2.debug({ msg: `There are still ${pending.length} tests that have not completed...` });
 		};
-
-		// // Parallel
-		// data.tests.forEach(async (test) => {
-		// 	await this.#testItem({ test });
-		// });
 
 		// Series
 		let promises = [];
@@ -113,7 +107,6 @@ export default class Tester {
 			for (let i = 0; i < 5; i++) {
 				console.log("");
 			}
-			// throw new Error(msg);
 		}
 	}
 
@@ -127,27 +120,24 @@ export default class Tester {
 		}
 		switch (test.Operation__c) {
 			case "Bookmark": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testBookmark({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testBookmark({ test });
 				break;
 			}
 			case "Execute": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testExecute({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testExecute({ test });
+
 				break;
 			}
 			case "Execute Async": {
-				// if (!this.skipTestsWhileBuildingApp) {
+				if (this.skipTestsWhileBuildingApp) break;
 				callback(this.#testExecuteAsync({ test }));
-				// }
 				break;
 			}
 			case "Check Path": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testCheckPath({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testCheckPath({ test });
 				break;
 			}
 			case "Clear": {
@@ -156,21 +146,18 @@ export default class Tester {
 				break;
 			}
 			case "JSON": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testJSON({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testJSON({ test });
 				break;
 			}
 			case "Manual": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testManual({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testManual({ test });
 				break;
 			}
 			case "Manual Application": {
-				if (!this.skipTestsWhileBuildingApp) {
-					await this.#testManualApplication({ test });
-				}
+				if (this.skipTestsWhileBuildingApp) break;
+				await this.#testManualApplication({ test });
 				break;
 			}
 			case "Write": {
@@ -201,7 +188,7 @@ export default class Tester {
 
 		try {
 			let valid = false;
-			Colors2.info({ msg: `EXECUTING: [${test.Command__c}]` });
+			if (this.config.debug) Colors2.info({ msg: `EXECUTING: [${test.Command__c}]` });
 			const response = await OS2.execute({ config: this.config, command: test.Command__c });
 			if (test.Expected__c) {
 				if (response.stdout != "" && response.stdout.indexOf(test.Expected__c) >= 0) valid = true;
@@ -210,7 +197,7 @@ export default class Tester {
 				valid = true;
 			}
 			if (valid) {
-				Colors2.success({ msg: `Response was expected: ${test.Expected__c}` });
+				if (this.config.debug) Colors2.success({ msg: `Response was expected: ${test.Expected__c}` });
 			} else {
 				Logs2.reportError({
 					config: this.config,
@@ -256,11 +243,6 @@ export default class Tester {
 
 	async #testJSON({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
-
-		// for (let json of test.jsons) {
-		// 	debugger;
-		// }
-		// Logs2.reportErrorMessage({ config: this.config, msg: "JSON data is not being processed for now" });
 		Colors2.error({ msg: "JSON data is not being processed for now" });
 	}
 

@@ -33,7 +33,8 @@ export default class Bookmarks {
 		// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invoked from findBookmarks_Firefox.
 		// Do not reverse the order here. First Chrome, then Firefox.
 		await this.#findBookmarks_Chrome();
-		await this.#findBookmarks_Firefox(); // Firefox must be last!
+		// Firefox must be last!
+		await this.#findBookmarks_Firefox();
 
 		await this.#writeToFiles();
 		await this.#validateBookmarks_Process({ bmChecks });
@@ -349,16 +350,9 @@ export default class Bookmarks {
 			}
 		};
 
-		// Series
+		// Must be done in series
 		for (let bmCheck of bmChecks) {
 			await validateBookmark({ bmCheck });
 		}
-
-		// // Parallel
-		// await Promise.allSettled(
-		// 	bmChecks.map((bmCheck) => {
-		// 		return validateBookmark({ bmCheck });
-		// 	})
-		// );
 	}
 }

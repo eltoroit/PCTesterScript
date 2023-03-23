@@ -6,7 +6,6 @@ import { stdin as input, stdout as output } from "node:process";
 import Colors from "./colors.js";
 
 export default class Logs {
-	// OLD_CODE: reportError(instruction) {
 	static reportError({ config, obj }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: obj, message: "obj" });
@@ -38,7 +37,6 @@ export default class Logs {
 		Colors2.error({ msg, offset: 1 });
 	}
 
-	// OLD_CODE: promptYesNo(instruction) *** question = instruction.Message__c
 	static async promptYesNo({ config, question }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: question, message: "question" });

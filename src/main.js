@@ -45,10 +45,6 @@ class Main {
 		this.config.errors = [];
 		this.config.resultsTofile = true;
 		this.config.adminUser = "Administrator";
-
-		// While building :-)
-		// this.config.debug = true;
-		// this.config.verbose = true;
 	}
 
 	async start() {
@@ -67,26 +63,3 @@ async function main() {
 }
 
 main();
-
-// OLD: Writes to a file, and displays final result
-// log.setDebug(false);
-// let filePath = new Date().toJSON();
-// filePath = filePath.replace(/:/g, "-");
-// filePath = `../Errors-${filePath}.json`;
-// try {
-// 	fs.unlinkSync(filePath);
-// } catch (ex) {
-// 	if (debug) log.debug("Could not delete file " + filePath + ": " + log.getPrettyJson(ex));
-// }
-// if (errors.length > 0) {
-// 	log.clearScreen();
-// 	log.error("Number Of Errors Found: " + errors.length);
-// 	fs.appendFileSync(filePath, log.getPrettyJson(errors));
-// 	log.error("Errors written to: ./" + filePath);
-// 	log.error("Please put a sticker on this computer");
-// } else {
-// 	log.clearScreen();
-// 	log.success("Test complete and no errors found. Thanks for your help ;-)");
-// 	log.success("Please close this and all other windows that were opened during the test");
-// }
-// process.exit(0);

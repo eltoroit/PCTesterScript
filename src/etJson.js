@@ -36,7 +36,6 @@ export default class JsonFile {
 		return JSON.parse(await OS2.readFile({ config: this.config, path }));
 	}
 
-	// OLD_CODE: jsonFile_Edit(instruction) {
 	async edit({ appName, path, sections, key, value }) {
 		ET_Asserts.hasData({ value: appName, message: "appName" });
 		ET_Asserts.hasData({ value: path, message: "path" });
@@ -55,7 +54,8 @@ export default class JsonFile {
 
 		try {
 			await OS2.writeFile(path, Colors2.getPrettyJson({ obj: fileContents }));
-			debugger; // Has it really been updated? I think I am writing the old data (fileContents)
+			// Has it really been updated? I think I am writing the old data (fileContents)
+			debugger;
 			if (this.config.verbose) Colors2.success({ msg: "VALID: file has been updated: " + path });
 			return "File is saved with new information";
 		} catch (ex) {
@@ -88,7 +88,6 @@ export default class JsonFile {
 		}
 	}
 
-	// OLD_CODE: jsonFile_FindPath(instruction) {
 	async #findData({ path, sections }) {
 		ET_Asserts.hasData({ value: path, message: "path" });
 		ET_Asserts.hasData({ value: sections, message: "sections" });
@@ -101,7 +100,8 @@ export default class JsonFile {
 			let section = sections[i];
 			if (section != "") {
 				if (section[0] == "[") {
-					debugger; // Is this code used?
+					// Is this code used?
+					debugger;
 					/*
 					[
 						{a: 1},

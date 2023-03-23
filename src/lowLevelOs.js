@@ -252,7 +252,7 @@ export default class LowLevelOS {
 			throw new Error(err);
 		} else {
 			if (output.stdout.toLowerCase().indexOf(expected.toLowerCase()) >= 0) {
-				Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
+				if (config.debug) Colors2.success({ msg: "VALID: [Found: '" + expected + "']" });
 				return;
 			} else {
 				let err = output;
