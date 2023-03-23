@@ -27,7 +27,17 @@ export default class Tester {
 
 		const reportPending = () => {
 			let pending = promises.filter((promise) => !promise.done);
-			Colors2.debug({ msg: `There are still ${pending.length} tests that have not completed...` });
+			if (pending.length > 0) {
+				let msg;
+
+				msg = `${new Date().toJSON()} There are still ${pending.length} tests that have not completed: `;
+				Colors2.debug({ msg });
+
+				pending.forEach((promise) => {
+					msg = `    ${promise.currentTest.testName}`;
+					Colors2.debug({ msg });
+				});
+			}
 		};
 
 		// Series
@@ -37,10 +47,6 @@ export default class Tester {
 				await this.#testItem({
 					test,
 					callback: (promise) => {
-						promise.done = false;
-						promise.then(() => {
-							promise.done = true;
-						});
 						promises.push(promise);
 					}
 				});
@@ -132,7 +138,13 @@ export default class Tester {
 			}
 			case "Execute Async": {
 				if (this.skipTestsWhileBuildingApp) break;
-				callback(this.#testExecuteAsync({ test }));
+				let promise = this.#testExecuteAsync({ test });
+				promise.done = false;
+				promise.currentTest = { ...test };
+				promise.then(() => {
+					promise.done = true;
+				});
+				callback(promise);
 				break;
 			}
 			case "Check Path": {
