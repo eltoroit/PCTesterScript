@@ -62,10 +62,13 @@ export default class Tester {
 		reportPending();
 		let timer = setInterval(() => {
 			reportPending();
-		}, 15e3);
+		}, 30e3);
 
 		await Promise.allSettled(promises);
 		clearTimeout(timer);
+		if (this.config.errors.length === 0) {
+			Colors2.success({ msg: "Please close this and all other windows that were opened during the test" });
+		}
 	}
 
 	#consolidateErrors() {
@@ -95,7 +98,6 @@ export default class Tester {
 		if (errors.length === 0) {
 			Colors2.clearScreen();
 			Colors2.success({ msg: "Test complete and no errors found. Thanks for your help ;-)" });
-			Colors2.success({ msg: "Please close this and all other windows that were opened during the test" });
 		} else {
 			Colors2.clearScreen();
 			Colors2.error({ msg: JSON.stringify(errors, null, 4) });
@@ -232,7 +234,7 @@ export default class Tester {
 
 		try {
 			let path = test.Command__c;
-			Colors2.info({ msg: `Check Path: [${path}]` });
+			if (this.config.debug) Colors2.debug({ msg: `Check Path: [${path}]` });
 			await OS2.checkPath({ config: this.config, path });
 		} catch (ex) {
 			let msg = "Error checking path";
@@ -247,8 +249,6 @@ export default class Tester {
 		if (this.config.executeManualChecks) {
 			await Logs2.promptYesNo({ config: this.config, question: test.Command__c });
 		} else {
-			Colors2.error({ msg: "Manual tests are being skipped" });
-			Colors2.error({ msg: "Manual tests are being skipped" });
 			Colors2.error({ msg: "Manual tests are being skipped" });
 		}
 	}
@@ -265,9 +265,7 @@ export default class Tester {
 			test,
 			ignoreExecutionErrors: true,
 			callbackAreWeDone: (response) => {
-				return new Promise((resolve, reject) => {
-					resolve(false);
-				});
+				// Do nothing! :-)
 			}
 		});
 	}
@@ -275,33 +273,20 @@ export default class Tester {
 	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
-		let timer = { clock: null, promise: null };
+		let timer = null;
 		await this.#executeAsyncHelper({
 			test,
 			callbackAreWeDone: (response) => {
-				return new Promise((resolve, reject) => {
-					let promise = { resolve, reject };
+				clearTimeout(timer);
+				timer = setTimeout(() => {
+					response.forceResolve(true);
+				}, 5e3);
 
-					// Stop old clock
-					clearTimeout(timer.clock);
-					if (timer.promise) {
-						timer.promise.resolve(false);
-					}
-
-					// Start new clock
-					timer = {
-						promise,
-						clock: setTimeout(() => {
-							promise.resolve(true);
-						}, 10e3)
-					};
-
-					// Did app close?
-					if (response.eventName === "CLOSE") {
-						clearTimeout(timer.clock);
-						resolve(true);
-					}
-				});
+				// Did app close?
+				if (response.eventName === "CLOSE") {
+					clearTimeout(timer);
+					response.forceResolve(true);
+				}
 			}
 		});
 		if (this.config.executeManualChecks) {
@@ -313,7 +298,7 @@ export default class Tester {
 				throw ex;
 			}
 		} else {
-			Colors2.writeInstruction({ msg: "Manual tests are being skipped, but I am opening them anyways!" });
+			if (this.config.debug) Colors2.debug({ msg: "Manual tests are being skipped, but I am opening them anyways!" });
 		}
 	}
 

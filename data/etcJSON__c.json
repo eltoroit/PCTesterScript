@@ -4,12 +4,12 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006dnNaAAI"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006do8fAAA"
 			},
-			"ETC_Test__c": "a067e00000C7P4tAAF",
+			"ETC_Test__c": "a067e00000C7PZzAAN",
 			"File__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
 			"ForceValue__c": false,
-			"Id": "a037e000006dnNaAAI",
+			"Id": "a037e000006do8fAAA",
 			"IsActive__c": false,
 			"Key__c": "terminal.integrated.shell.windows",
 			"Path__c": ":",
@@ -18,12 +18,12 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006dnNbAAI"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006do8gAAA"
 			},
-			"ETC_Test__c": "a067e00000C7P5JAAV",
+			"ETC_Test__c": "a067e00000C7PaQAAV",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
 			"ForceValue__c": false,
-			"Id": "a037e000006dnNbAAI",
+			"Id": "a037e000006do8gAAA",
 			"IsActive__c": true,
 			"Key__c": "version",
 			"Path__c": ":",
@@ -32,12 +32,12 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006dnNcAAI"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006do8hAAA"
 			},
-			"ETC_Test__c": "a067e00000C7P4tAAF",
+			"ETC_Test__c": "a067e00000C7PZzAAN",
 			"File__c": "C:\\Users\\Admin\\AppData\\Roaming\\Code\\User\\settings.json",
 			"ForceValue__c": false,
-			"Id": "a037e000006dnNcAAI",
+			"Id": "a037e000006do8hAAA",
 			"IsActive__c": false,
 			"Key__c": "salesforcedx-vscode-apex.java.home",
 			"Path__c": ":",
@@ -46,12 +46,12 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006dnNdAAI"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006do8iAAA"
 			},
-			"ETC_Test__c": "a067e00000C7P5JAAV",
+			"ETC_Test__c": "a067e00000C7PaQAAV",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
 			"ForceValue__c": false,
-			"Id": "a037e000006dnNdAAI",
+			"Id": "a037e000006do8iAAA",
 			"IsActive__c": true,
 			"Key__c": "pingServer",
 			"Path__c": "pages",
@@ -60,12 +60,12 @@
 		{
 			"attributes": {
 				"type": "etcJSON__c",
-				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006dnNeAAI"
+				"url": "/services/data/v57.0/sobjects/etcJSON__c/a037e000006do8jAAA"
 			},
-			"ETC_Test__c": "a067e00000C7P5JAAV",
+			"ETC_Test__c": "a067e00000C7PaQAAV",
 			"File__c": "C:\\TH\\ETTrailheadTester\\resources\\app\\src\\LWC4ELECTRON\\resources\\data\\config.json",
 			"ForceValue__c": false,
-			"Id": "a037e000006dnNeAAI",
+			"Id": "a037e000006do8jAAA",
 			"IsActive__c": true,
 			"Key__c": "production",
 			"Path__c": "pages:servers",

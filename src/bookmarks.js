@@ -28,7 +28,7 @@ export default class Bookmarks {
 	async validateBookmarks({ bmChecks }) {
 		ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
 
-		if (this.config.verbose) Colors2.info({ msg: "Validating all bookmarks for all browsers" });
+		if (this.config.debug) Colors2.info({ msg: "Validating all bookmarks for all browsers" });
 
 		// validateBookmarks_Process is not called from here directly because it is going to work asynchronously... invoked from findBookmarks_Firefox.
 		// Do not reverse the order here. First Chrome, then Firefox.
@@ -86,7 +86,7 @@ export default class Bookmarks {
 			}
 		};
 
-		if (this.config.verbose) Colors2.info({ msg: "Finding Chrome bookmarks" });
+		if (this.config.debug) Colors2.info({ msg: "Finding Chrome bookmarks" });
 
 		const data = await this.etJSON.loadFileJson({ path: this.bmChromePath });
 		findBookmarks_Chrome_Children({ node: data["roots"]["bookmark_bar"], path: "" });
@@ -96,13 +96,13 @@ export default class Bookmarks {
 		const findSqlLiteFilePath = async () => {
 			let sqlitepath = "";
 			let folders = await OS2.fsReadDir({ config: this.config, path: this.bmFirefoxPath[0] });
-			if (this.config.debug) Colors2.debug({ msg: `[Firefox Bookmarks][LOLG]: Foders found: ${Colors2.getPrettyJson({ obj: folders })}` });
+			if (this.config.verbose) Colors2.debug({ msg: `[Firefox Bookmarks][LOLG]: Foders found: ${Colors2.getPrettyJson({ obj: folders })}` });
 			let validFolders = folders.filter(async (folder) => {
 				let tmp = `${this.bmFirefoxPath[0]}\\${folder}\\${this.bmFirefoxPath[2]}`;
 				if (this.config.debug) console.log(`Checking path: ${tmp}`);
 				return await OS2.fsExists({ config: this.config, path: tmp });
 			});
-			if (this.config.debug) Colors2.debug({ msg: `Checking paths (output): ${Colors2.getPrettyJson({ obj: validFolders })}` });
+			if (this.config.verbose) Colors2.debug({ msg: `Checking paths (output): ${Colors2.getPrettyJson({ obj: validFolders })}` });
 			if (validFolders.length == 1) {
 				sqlitepath = `${this.bmFirefoxPath[0]}\\${validFolders[0]}\\${this.bmFirefoxPath[2]}`;
 				if (this.config.debug) Colors2.debug({ msg: `[Firefox Bookmarks][OK]: Full bookmars path: ${sqlitepath}` });
@@ -123,7 +123,7 @@ export default class Bookmarks {
 				let path = await OS2.getFullPath({ config: this.config, relativePath: "scripts/sqlite3.exe" });
 				let sql = `SELECT b.id, b.parent, b.title as bTitle, p.title as pTitle, p.url FROM moz_bookmarks AS b LEFT JOIN moz_places AS p ON b.fk = p.id`;
 				let cmd = `${path} -header -line "${sqlitepath}" "${sql}" > ${bmTempFFLinePath}`;
-				if (this.config.verbose) Colors2.debug({ msg: "Executing command: " + cmd });
+				if (this.config.debug) Colors2.debug({ msg: "Executing command: " + cmd });
 				await OS2.execute({ config: this.config, command: cmd });
 				// Add one more line
 				await OS2.fsAppendFile({ config: this.config, path: bmTempFFLinePath, data: "\r\n" });
@@ -234,7 +234,7 @@ export default class Bookmarks {
 			this.bm.Bar = bmBarNew;
 		};
 
-		if (this.config.verbose) Colors2.info({ msg: "Finding Firefox bookmarks" });
+		if (this.config.debug) Colors2.info({ msg: "Finding Firefox bookmarks" });
 		if (this.config.debug) Colors2.debug({ msg: `[Firefox Bookmarks][LOLG]: Searching for Firefox bookmars at path: ${this.bmFirefoxPath[0]}` });
 
 		try {
@@ -268,7 +268,7 @@ export default class Bookmarks {
 	async #validateBookmarks_Process({ bmChecks }) {
 		ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
 
-		if (this.config.verbose) Colors2.info({ msg: "Validating Bookmarks" });
+		if (this.config.debug) Colors2.info({ msg: "Validating Bookmarks" });
 
 		const validateBookmark = async ({ bmCheck }) => {
 			ET_Asserts.hasData({ value: bmChecks, message: "bmChecks" });
@@ -332,7 +332,7 @@ export default class Bookmarks {
 			if (!hasErrors) {
 				try {
 					await this.#openUrl({ urlToCheck: expectedUrl });
-					if (this.config.verbose) Colors2.success({ msg: "VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]" });
+					if (this.config.debug) Colors2.success({ msg: "VALID: Bookmark *" + bmCheck.title + "*, URL [" + expectedUrl + "]" });
 				} catch (ex) {
 					errorCount++;
 					hasErrors = true;

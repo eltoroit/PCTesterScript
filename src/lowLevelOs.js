@@ -38,7 +38,7 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: path, message: "path" });
 
-		if (config.verbose) Colors2.debug({ msg: "Reading file: " + path });
+		if (config.debug) Colors2.debug({ msg: "Reading file: " + path });
 		const fileExists = await LowLevelOS.doesFileExist({ config, path });
 		if (fileExists) {
 			const fileContents = await fs.readFile(path, "utf8");
@@ -147,7 +147,14 @@ export default class LowLevelOS {
 			let response = [];
 			let hasErrors = false;
 
-			const reportData = async ({ eventName, item }) => {
+			const forceResolve = () => {
+				process.stdout.unref();
+				process.stderr.unref();
+				process.unref();
+				resolve();
+			};
+
+			const reportData = ({ eventName, item }) => {
 				ET_Asserts.hasData({ value: eventName, message: "eventName" });
 				ET_Asserts.hasData({ value: item, message: "item" });
 
@@ -156,12 +163,13 @@ export default class LowLevelOS {
 					msg = `${eventName}: ${Colors2.getPrettyJson({ obj: item })}`;
 				}
 				response.push(msg);
-				let notification = { hasErrors, currentTest, eventName, app, args, cwd, msg, response };
-				if (config.verbose) Colors2.debug({ msg: `${notification.currentTest.testName} | ${notification.msg.trim()}` });
-				if (await callbackAreWeDone(notification)) resolve();
+				let notification = { hasErrors, currentTest, eventName, app, args, cwd, msg, response, forceResolve };
+				if (config.debug) Colors2.debug({ msg: `${notification.currentTest.testName} | ${notification.msg.trim()}` });
+				// if (await callbackAreWeDone(notification)) resolve();
+				callbackAreWeDone(notification);
 			};
 
-			const report = async ({ eventName, data }) => {
+			const report = ({ eventName, data }) => {
 				ET_Asserts.hasData({ value: eventName, message: "eventName" });
 				ET_Asserts.hasData({ value: data, message: "data" });
 
@@ -169,16 +177,16 @@ export default class LowLevelOS {
 				if (data.length > 1) {
 					debugger;
 					for (let item of data) {
-						await reportData({ eventName, item });
+						reportData({ eventName, item });
 					}
 				} else {
 					// First element
 					let item = data;
-					await reportData({ eventName, item });
+					reportData({ eventName, item });
 				}
 			};
 
-			const process = spawn(app, args, { shell: true, cwd });
+			const process = spawn(app, args, { detach: true, shell: true, cwd });
 			process.on("spawn", (...data) => {
 				report({ eventName: "SPAWN", data });
 			});
@@ -218,7 +226,7 @@ export default class LowLevelOS {
 		}
 
 		let response;
-		if (config.verbose) Colors2.info({ msg: `Fetch (${method}) ${url}` });
+		if (config.debug) Colors2.info({ msg: `Fetch (${method}) ${url}` });
 		if (method === "GET") {
 			response = await fetch(url);
 		} else {
@@ -238,7 +246,7 @@ export default class LowLevelOS {
 		ET_Asserts.hasData({ value: config, message: "config" });
 		ET_Asserts.hasData({ value: path, message: "path" });
 
-		if (config.verbose) Colors2.info({ msg: "CHECK PATH: [" + path + "]" });
+		if (config.debug) Colors2.info({ msg: "CHECK PATH: [" + path + "]" });
 		let command = `DIR "${path}" /B`;
 		let expected = path.split("\\").pop();
 		if (expected.endsWith("*")) {

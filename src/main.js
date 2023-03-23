@@ -24,7 +24,8 @@ class Main {
 				r: "run"
 			}
 		});
-		const testType = args.test ? "TEST" : "PROD"; // TEST | PROD
+		let testType = args.test ? "TEST" : "PROD"; // TEST | PROD
+		testType = "PROD";
 
 		this.config = null;
 		if (testType == "PROD") {
@@ -39,7 +40,7 @@ class Main {
 				debug: true,
 				verbose: true,
 				checkUrlExists: true,
-				executeManualChecks: false
+				executeManualChecks: true
 			};
 		}
 		this.config.errors = [];

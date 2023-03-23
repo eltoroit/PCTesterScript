@@ -43,7 +43,7 @@ export default class JsonFile {
 		ET_Asserts.hasData({ value: key, message: "key" });
 		ET_Asserts.hasData({ value: value, message: "value" });
 
-		if (this.config.verbose) Colors2.info({ msg: "Editing JSON File: " + appName });
+		if (this.config.debug) Colors2.info({ msg: "Editing JSON File: " + appName });
 		const data = await this.#findData({ path, sections });
 		const fileContents = await this.loadFileJson({ path });
 		if (this.config.debug) Colors2.debug({ msg: "JSON_Action: " + Colors2.getPrettyJson({ obj: { appName, path, sections } }) });
@@ -56,7 +56,7 @@ export default class JsonFile {
 			await OS2.writeFile(path, Colors2.getPrettyJson({ obj: fileContents }));
 			// Has it really been updated? I think I am writing the old data (fileContents)
 			debugger;
-			if (this.config.verbose) Colors2.success({ msg: "VALID: file has been updated: " + path });
+			if (this.config.debug) Colors2.success({ msg: "VALID: file has been updated: " + path });
 			return "File is saved with new information";
 		} catch (ex) {
 			let msg = { appName, path, sections, key, value, msg: "Error editing JSON" };
@@ -72,14 +72,14 @@ export default class JsonFile {
 		ET_Asserts.hasData({ value: key, message: "key" });
 		ET_Asserts.hasData({ value: value, message: "value" });
 
-		if (this.config.verbose) Colors2.info({ msg: "Reading JSON File: " + appName });
+		if (this.config.debug) Colors2.info({ msg: "Reading JSON File: " + appName });
 		const data = await this.#findData({ path, sections });
 
 		if (this.config.debug) Colors2.debug({ msg: "JSON_Action: " + Colors2.getPrettyJson({ obj: { appName, path, sections } }) });
 		if (this.config.debug) Colors2.debug({ msg: "Looking here: " + Colors2.getPrettyJson({ obj: data }) });
 
 		if (data[key] === value) {
-			if (this.config.verbose) Colors2.success({ msg: `VALID: [${appName}]` });
+			if (this.config.debug) Colors2.success({ msg: `VALID: [${appName}]` });
 			return;
 		} else {
 			const err = { appName, path, sections, key, Actual: data[key], expected: value };
