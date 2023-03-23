@@ -134,9 +134,9 @@ export default class LowLevelOS {
 		});
 	}
 
-	static async executeAsync({ config, callback, app, args, cwd }) {
+	static async executeAsync({ config, callbackAreWeDone, app, args, cwd }) {
 		ET_Asserts.hasData({ value: config, message: "config" });
-		ET_Asserts.hasData({ value: callback, message: "callback" });
+		ET_Asserts.hasData({ value: callbackAreWeDone, message: "callbackAreWeDone" });
 		ET_Asserts.hasData({ value: app, message: "app" });
 
 		// Can't do async/await because it has events
@@ -146,50 +146,59 @@ export default class LowLevelOS {
 
 			let response = [];
 			let hasErrors = false;
-			const report = ({ event, data }) => {
-				ET_Asserts.hasData({ value: event, message: "event" });
+
+			const reportData = async ({ eventName, item }) => {
+				ET_Asserts.hasData({ value: eventName, message: "eventName" });
+				ET_Asserts.hasData({ value: item, message: "item" });
+
+				let msg = `${eventName}: ${item.toString()}`;
+				if (eventName === "CLOSE") {
+					msg = `${eventName}: ${Colors2.getPrettyJson({ obj: item })}`;
+				}
+				response.push(msg);
+				let notification = { hasErrors, currentTest, eventName, app, args, cwd, msg, response };
+				if (config.verbose) Colors2.debug({ msg: `${notification.currentTest.testName} | ${notification.msg.trim()}` });
+				if (await callbackAreWeDone(notification)) resolve();
+			};
+
+			const report = async ({ eventName, data }) => {
+				ET_Asserts.hasData({ value: eventName, message: "eventName" });
 				ET_Asserts.hasData({ value: data, message: "data" });
 
 				// More elements
 				if (data.length > 1) {
 					debugger;
 					for (let item of data) {
-						let msg = `${event}: ${item.toString()}`;
-						response.push(msg);
-						let output = { hasErrors, currentTest, app, args, cwd, msg, response };
-						callback(output);
+						await reportData({ eventName, item });
 					}
 				} else {
 					// First element
-					let item = data.toString();
-					let msg = `${event}: ${item}`;
-					response.push(msg);
-					let output = { hasErrors, currentTest, app, args, cwd, msg, response };
-					callback(output);
+					let item = data;
+					await reportData({ eventName, item });
 				}
 			};
 
 			const process = spawn(app, args, { shell: true, cwd });
 			process.on("spawn", (...data) => {
-				report({ event: "SPAWN", data });
+				report({ eventName: "SPAWN", data });
 			});
 
 			process.on("error", (...data) => {
 				hasErrors = true;
-				report({ event: "ERROR", data });
+				report({ eventName: "ERROR", data });
 			});
 
 			process.stdout.on("data", (...data) => {
-				report({ event: "STDOUT", data });
+				report({ eventName: "STDOUT", data });
 			});
 
 			process.stderr.on("data", (...data) => {
 				hasErrors = true;
-				report({ event: "STDERR", data });
+				report({ eventName: "STDERR", data });
 			});
 
 			process.on("close", (code, signal) => {
-				report({ event: "CLOSE", data: { code, signal } });
+				report({ eventName: "CLOSE", data: { code, signal } });
 				if (hasErrors) {
 					reject(response);
 				} else {

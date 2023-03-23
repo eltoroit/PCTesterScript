@@ -26,6 +26,11 @@ export default class Tester {
 	async test({ data }) {
 		ET_Asserts.hasData({ value: data, message: "data" });
 
+		const reportPending = () => {
+			let pending = promises.filter((promise) => !promise.done);
+			Colors2.debug({ msg: `There are still ${pending.length} tests that have not completed...` });
+		};
+
 		// // Parallel
 		// data.tests.forEach(async (test) => {
 		// 	await this.#testItem({ test });
@@ -38,6 +43,10 @@ export default class Tester {
 				await this.#testItem({
 					test,
 					callback: (promise) => {
+						promise.done = false;
+						promise.then(() => {
+							promise.done = true;
+						});
 						promises.push(promise);
 					}
 				});
@@ -45,10 +54,18 @@ export default class Tester {
 				// debugger;
 			}
 		}
-		await Promise.allSettled(promises);
 
 		this.#consolidateErrors();
 		this.#reportResults({ errors: this.config.errors });
+
+		// Notify if there are still promises pending
+		reportPending();
+		let timer = setInterval(() => {
+			reportPending();
+		}, 15e3);
+
+		await Promise.allSettled(promises);
+		clearTimeout(timer);
 	}
 
 	#consolidateErrors() {
@@ -139,9 +156,9 @@ export default class Tester {
 				break;
 			}
 			case "JSON": {
-				// if (!this.skipTestsWhileBuildingApp) {
-				await this.#testJSON({ test });
-				// }
+				if (!this.skipTestsWhileBuildingApp) {
+					await this.#testJSON({ test });
+				}
 				break;
 			}
 			case "Manual": {
@@ -151,9 +168,9 @@ export default class Tester {
 				break;
 			}
 			case "Manual Application": {
-				// if (!this.skipTestsWhileBuildingApp) {
-				await this.#testManualApplication({ test });
-				// }
+				if (!this.skipTestsWhileBuildingApp) {
+					await this.#testManualApplication({ test });
+				}
 				break;
 			}
 			case "Write": {
@@ -253,9 +270,10 @@ export default class Tester {
 		await this.#executeAsyncHelper({
 			test,
 			ignoreExecutionErrors: true,
-			callback: (response) => {
-				debugger;
-				Colors2.error({ msg: Colors2.getPrettyJson({ obj: response.msg }) });
+			callbackAreWeDone: (response) => {
+				return new Promise((resolve, reject) => {
+					resolve(false);
+				});
 			}
 		});
 	}
@@ -263,11 +281,33 @@ export default class Tester {
 	async #testManualApplication({ test }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
 
+		let timer = { clock: null, promise: null };
 		await this.#executeAsyncHelper({
 			test,
-			callback: (response) => {
-				Colors2.error({ msg: Colors2.getPrettyJson({ obj: response.msg }) });
-				debugger;
+			callbackAreWeDone: (response) => {
+				return new Promise((resolve, reject) => {
+					let promise = { resolve, reject };
+
+					// Stop old clock
+					clearTimeout(timer.clock);
+					if (timer.promise) {
+						timer.promise.resolve(false);
+					}
+
+					// Start new clock
+					timer = {
+						promise,
+						clock: setTimeout(() => {
+							promise.resolve(true);
+						}, 10e3)
+					};
+
+					// Did app close?
+					if (response.eventName === "CLOSE") {
+						clearTimeout(timer.clock);
+						resolve(true);
+					}
+				});
 			}
 		});
 		if (this.config.executeManualChecks) {
@@ -283,37 +323,46 @@ export default class Tester {
 		}
 	}
 
-	async #executeAsyncHelper({ test, callback, ignoreExecutionErrors = false }) {
+	async #executeAsyncHelper({ test, callbackAreWeDone, ignoreExecutionErrors = false }) {
 		ET_Asserts.hasData({ value: test, message: "test" });
-		ET_Asserts.hasData({ value: callback, message: "callback" });
+		ET_Asserts.hasData({ value: callbackAreWeDone, message: "callbackAreWeDone" });
 
 		let command = {};
-		try {
-			command = JSON.parse(test.Command__c);
-		} catch (ex) {
-			let parts = test.Command__c.split("\\");
-			let app = parts.pop();
-			let cwd = parts.join("\\");
-			command = {
-				path: test.Command__c,
-				app: `"${app}"`,
-				args: [],
-				cwd
-			};
-		}
-
-		try {
-			if (command.path) {
-				await OS2.checkPath({ config: this.config, path: command.path });
+		let output = {
+			promise: null
+		};
+		const buildCall = () => {
+			try {
+				command = JSON.parse(test.Command__c);
+			} catch (ex) {
+				let parts = test.Command__c.split("\\");
+				let app = parts.pop();
+				let cwd = parts.join("\\");
+				command = {
+					path: test.Command__c,
+					app: `"${app}"`,
+					args: [],
+					cwd
+				};
 			}
-		} catch (ex) {
-			let msg = "Error checking path";
-			Logs2.reportException({ config: this.config, msg, ex });
-			throw ex;
-		}
+		};
+		const validatePath = async () => {
+			try {
+				if (command.path) {
+					await OS2.checkPath({ config: this.config, path: command.path });
+				}
+			} catch (ex) {
+				let msg = "Error checking path";
+				Logs2.reportException({ config: this.config, msg, ex });
+				throw ex;
+			}
+		};
+
+		buildCall();
+		await validatePath();
 
 		try {
-			await OS2.executeAsync({ config: this.config, callback, ...command });
+			await OS2.executeAsync({ config: this.config, callbackAreWeDone, ...command });
 		} catch (ex) {
 			if (!ignoreExecutionErrors) {
 				let msg = "Error executing app";

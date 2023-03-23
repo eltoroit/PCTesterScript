@@ -89,6 +89,7 @@ export default class Colors {
 	}
 
 	static setDebug({ isDebug }) {
+		debugger;
 		ET_Asserts.hasData({ value: isDebug, message: "isDebug" });
 
 		showTimestamp = isDebug;

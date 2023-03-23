@@ -47,8 +47,8 @@ class Main {
 		this.config.adminUser = "Administrator";
 
 		// While building :-)
-		this.config.debug = true;
-		this.config.verbose = true;
+		// this.config.debug = true;
+		// this.config.verbose = true;
 	}
 
 	async start() {
