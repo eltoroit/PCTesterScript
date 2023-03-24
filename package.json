@@ -6,7 +6,7 @@
 	"main": "tester.js",
 	"scripts": {
 		"start": "node src/main.js",
-		"TESTER": "node _TESTS/AsyncPromises.js",
+		"TESTER": "node _TESTS/closeApps.js",
 		"linter": "eslint . > eslintErrors.txt"
 	},
 	"repository": {
@@ -20,8 +20,10 @@
 	},
 	"homepage": "https://github.com/eltoroit/PCTesterScript#readme",
 	"dependencies": {
+		"fkill": "^8.1.0",
 		"minimist": "1.2.6",
-		"node-fetch": "^3.3.1"
+		"node-fetch": "^3.3.1",
+		"tasklist": "^5.0.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.36.0",
