@@ -30,7 +30,7 @@ export default class Tester {
 			if (pending.length > 0) {
 				let msg;
 
-				msg = `${new Date().toJSON()} There are still ${pending.length} tests that have not completed: `;
+				msg = `${new Date().toJSON()} There are still ${pending.length} actions that have not completed: `;
 				Colors2.debug({ msg });
 
 				pending.forEach((promise) => {
